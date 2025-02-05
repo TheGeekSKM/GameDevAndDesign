@@ -7,7 +7,8 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"onClick","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"room_goto_next",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"text","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Play",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"cHover","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF99FFBB",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"cHover","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFCCFFDD",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"cClick","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF4CFF88",},
   ],
   "parent":{
     "name":"UI",

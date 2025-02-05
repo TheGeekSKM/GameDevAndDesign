@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"Born",
+  "%Name":"Born_DropShadow",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":13,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":17,
   "maintainGms1Font":false,
-  "name":"Born",
+  "name":"Born_DropShadow",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

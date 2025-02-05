@@ -78,6 +78,7 @@
   },
   "name":"Prompt2",
   "resources":[
+    {"id":{"name":"Born_DropShadow","path":"fonts/Born_DropShadow/Born_DropShadow.yy",},},
     {"id":{"name":"Born","path":"fonts/Born/Born.yy",},},
     {"id":{"name":"input_controller_object","path":"objects/input_controller_object/input_controller_object.yy",},},
     {"id":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},},
