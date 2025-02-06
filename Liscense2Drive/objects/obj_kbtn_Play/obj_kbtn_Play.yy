@@ -6,8 +6,10 @@
   "name":"obj_kbtn_Play",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_keyboardButton","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"propertyId":{"name":"text","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Play",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_keyboardButton","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"propertyId":{"name":"textColor","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFFFFFFF",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_keyboardButton","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"propertyId":{"name":"textColor","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF000000",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_keyboardButton","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"propertyId":{"name":"onClick","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"room_goto_next",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_keyboardButton","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"propertyId":{"name":"colorHover","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFCBFEE6",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_keyboardButton","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"propertyId":{"name":"colorClick","path":"objects/obj_base_keyboardButton/obj_base_keyboardButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF65FEB8",},
   ],
   "parent":{
     "name":"KeyboardButtons",
@@ -35,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_buttonBox6",
-    "path":"sprites/spr_buttonBox6/spr_buttonBox6.yy",
+    "name":"spr_button",
+    "path":"sprites/spr_button/spr_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

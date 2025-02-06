@@ -1,0 +1,1 @@
+if (canDraw) draw_self();

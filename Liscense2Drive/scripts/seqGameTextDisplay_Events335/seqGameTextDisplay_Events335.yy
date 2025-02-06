@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seqGameTextDisplay_Events335",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seqGameTextDisplay_Events335",
+  "parent":{
+    "name":"Prompt2",
+    "path":"Prompt2.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

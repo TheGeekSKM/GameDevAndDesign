@@ -1,0 +1,1 @@
+OnIndexUpdate(ds_list_size(__keyBoardButtons) - 1);

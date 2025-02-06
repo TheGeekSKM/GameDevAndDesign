@@ -1,27 +1,24 @@
-draw_self();
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_color(textColor);
 
-switch (currentState) {
-	case ButtonState.Idle:
-		image_blend = merge_color(image_blend, colorIdle, 0.1);
-	case ButtonState.Hovered:
-		image_blend = merge_color(image_blend, colorHover, 0.1);
-		ShowPointers();
-	case ButtonState.Clicked:
-		image_blend = colorClick;
-		ShowPointers(true);
+if (hovering) {
+    image_index = 1;
+    draw_set_font(Born_DropShadow);
+    draw_text_transformed(x, y + 4, string_concat("> ", text , " <"), 2, 2, 0);
+    image_blend = merge_color(image_blend, colorHover, 0.1);
+}
+else {
+    image_index = 0;
+    draw_set_font(Born);
+    draw_text_transformed(x, y, text, 2, 2, 0);
+    image_blend = merge_color(image_blend, colorIdle, 0.1);
 }
 
-drawText(x, y, fa_center, fa_middle, Born, textColor, text);
-
-/// @func shows the pointers
-/// @param {Bool} clicked -> if the button has been clicked 
-function ShowPointers(clicked = false) {
-	var leftSide = x - (sprite_width / 2);
-	var rightSide = x + (sprite_width / 2);
-	
-	var col = c_white;
-	if (clicked) col = colorClick;
-	
-	draw_sprite_ext(spritePointer, 0, leftSide - 5, y, 1, 1, 0, col, 1);
-	draw_sprite_ext(spritePointer, 0, rightSide + 5, y, -1, 1, 0, col, 1);
+if (clicked) {
+    image_blend = colorClick;
 }
+    
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
