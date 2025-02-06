@@ -26,8 +26,8 @@
   },
   "name":"seqMainMenu2",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"MainMenu",
+    "path":"folders/Sequences/MainMenu.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,
