@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"seqGameTextDisplay_Events335",
+  "%Name":"EventManager",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"seqGameTextDisplay_Events335",
+  "name":"EventManager",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

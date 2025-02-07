@@ -199,6 +199,7 @@
     {"id":{"name":"__input_window_changed","path":"scripts/__input_window_changed/__input_window_changed.yy",},},
     {"id":{"name":"__input_wrap_underflow","path":"scripts/__input_wrap_underflow/__input_wrap_underflow.yy",},},
     {"id":{"name":"drawText","path":"scripts/drawText/drawText.yy",},},
+    {"id":{"name":"EventManager","path":"scripts/EventManager/EventManager.yy",},},
     {"id":{"name":"input_accessibility_global_cooldown_get","path":"scripts/input_accessibility_global_cooldown_get/input_accessibility_global_cooldown_get.yy",},},
     {"id":{"name":"input_accessibility_global_cooldown_set","path":"scripts/input_accessibility_global_cooldown_set/input_accessibility_global_cooldown_set.yy",},},
     {"id":{"name":"input_accessibility_global_toggle_get","path":"scripts/input_accessibility_global_toggle_get/input_accessibility_global_toggle_get.yy",},},
