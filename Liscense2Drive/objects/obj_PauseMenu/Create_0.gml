@@ -19,9 +19,6 @@ functions = [
     }
 ]
 
-Subscribe("Esc Pressed", function(_id) {
-    vis = !vis;    
-})
 
 selectedIndex = 0;
 

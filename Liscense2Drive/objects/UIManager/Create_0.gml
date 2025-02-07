@@ -118,7 +118,12 @@ _onEnter = function()
             break;           
         case MenuState.PauseMenu:
             global.pause = true;            
-            drawBlackBackground = true;            
+            drawBlackBackground = true; 
+            with (obj_PauseMenu) 
+            {
+                vis = true;
+                selectedIndex = 0;    
+            }                 
             layer_sequence_headdir(pauseMenuSequence, seqdir_right);
             layer_sequence_play(pauseMenuSequence);            
             break;        
