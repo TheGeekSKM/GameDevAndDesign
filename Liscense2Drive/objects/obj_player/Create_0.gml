@@ -33,4 +33,6 @@ function QuestData(_name, _assigner, _recipient, _state) constructor
 	questState = _state;
 }
 
-global.QuestLibrary = [];
+global.QuestLibrary = [
+    
+];

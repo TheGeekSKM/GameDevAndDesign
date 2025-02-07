@@ -9,7 +9,7 @@ switch(selectedIndex)
 {
     case 0:
         draw_set_font(Born_DropShadow);
-        draw_text_transformed(x, y - 50, string_concat("> ", options[0], " <"), 2, 2, 0);
+        draw_text_transformed(x, y - 50, string_concat("> ", options[0], " <"), 2, 2, image_angle);
         
         draw_set_font(Born);
         draw_text(x, y + 50, options[1]);
@@ -20,7 +20,7 @@ switch(selectedIndex)
         draw_text(x, y - 50, options[0]);
         
         draw_set_font(Born_DropShadow);
-        draw_text_transformed(x, y + 50, string_concat("> ", options[1], " <"), 2, 2, 0);
+        draw_text_transformed(x, y + 50, string_concat("> ", options[1], " <"), 2, 2, image_angle);
         
         break;
         

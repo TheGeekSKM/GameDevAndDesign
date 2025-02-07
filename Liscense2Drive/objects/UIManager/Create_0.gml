@@ -72,6 +72,7 @@ _onExit = function()
         case MenuState.NoMenu:
             break;
         case MenuState.QuestMenu:
+            with (obj_questList) { vis = false; }
             layer_sequence_headdir(questMenuSequence, seqdir_left);
             layer_sequence_play(questMenuSequence);
             break;        
@@ -100,6 +101,11 @@ _onEnter = function()
             break;
         case MenuState.QuestMenu:
             global.pause = true;
+            with (obj_questList) 
+            { 
+                vis = false;
+                DrawQuests();
+            }        
             drawBlackBackground = true;            
             layer_sequence_headdir(questMenuSequence, seqdir_right);
             layer_sequence_play(questMenuSequence);
