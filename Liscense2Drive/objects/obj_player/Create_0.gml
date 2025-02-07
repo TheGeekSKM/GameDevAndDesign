@@ -25,7 +25,12 @@ enum QuestState {
     Completed
 }
 
-questData = {
-    findPapers1 : QuestState.Idle,
-    findPapers2 : QuestState.Idle
+function QuestData(_name, _assigner, _recipient, _state) constructor 
+{
+	questName = _name;
+	questAssigner = _assigner;
+	questRecipient = _recipient;
+	questState = _state;
 }
+
+global.QuestLibrary = [];
