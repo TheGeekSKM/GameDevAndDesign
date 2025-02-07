@@ -9,7 +9,10 @@
     "name":"QuestMenu",
     "path":"folders/Objects/UI/QuestMenu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_uiPanel",
+    "path":"objects/obj_uiPanel/obj_uiPanel.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

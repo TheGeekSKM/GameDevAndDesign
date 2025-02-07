@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_questList",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_DialogueSpeaker",
+  "eventList":[],
   "managed":true,
-  "name":"obj_questList",
+  "name":"obj_DialogueSpeaker",
   "overriddenProperties":[],
   "parent":{
-    "name":"QuestMenu",
-    "path":"folders/Objects/UI/QuestMenu.yy",
+    "name":"DialogueMenu",
+    "path":"folders/Objects/UI/DialogueMenu.yy",
   },
   "parentObjectId":{
     "name":"obj_uiPanel",
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"questBoard",
-    "path":"sprites/questBoard/questBoard.yy",
+    "name":"spr_DialogueSpeaker",
+    "path":"sprites/spr_DialogueSpeaker/spr_DialogueSpeaker.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_questList",
+  "%Name":"obj_PauseMenu",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_questList",
+  "name":"obj_PauseMenu",
   "overriddenProperties":[],
   "parent":{
-    "name":"QuestMenu",
-    "path":"folders/Objects/UI/QuestMenu.yy",
+    "name":"PauseMenu",
+    "path":"folders/Objects/UI/PauseMenu.yy",
   },
   "parentObjectId":{
     "name":"obj_uiPanel",
@@ -33,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"questBoard",
-    "path":"sprites/questBoard/questBoard.yy",
+    "name":"spr_pauseMenu",
+    "path":"sprites/spr_pauseMenu/spr_pauseMenu.yy",
   },
   "spriteMaskId":null,
   "visible":true,

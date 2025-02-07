@@ -7,6 +7,8 @@ keyIntJ = 0;
 keyIntL = 0;
 keyIntI = 0;
 
+keyEsc = 0;
+
 moveSpeed = 3;
 
 moveX = 0;

@@ -1,0 +1,1 @@
+textToDisplay = string_concat(collectedItemName, " x", collectedItemNum);

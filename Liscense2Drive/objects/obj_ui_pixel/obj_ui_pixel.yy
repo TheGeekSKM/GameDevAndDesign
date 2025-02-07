@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_questList",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_ui_pixel",
+  "eventList":[],
   "managed":true,
-  "name":"obj_questList",
+  "name":"obj_ui_pixel",
   "overriddenProperties":[],
   "parent":{
-    "name":"QuestMenu",
-    "path":"folders/Objects/UI/QuestMenu.yy",
+    "name":"UI",
+    "path":"folders/Objects/_Base/UI.yy",
   },
   "parentObjectId":{
     "name":"obj_uiPanel",
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"questBoard",
-    "path":"sprites/questBoard/questBoard.yy",
+    "name":"spr_pixel",
+    "path":"sprites/spr_pixel/spr_pixel.yy",
   },
   "spriteMaskId":null,
   "visible":true,
