@@ -39,6 +39,7 @@ Subscribe("I Pressed", function(_id) {
 });
 
 Subscribe("Esc Pressed", function(_id) {
+
     _pressedEscape();   
 });
 

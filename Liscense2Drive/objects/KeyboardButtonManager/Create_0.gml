@@ -2,6 +2,8 @@ __keyBoardButtons = ds_list_create();
 selectedIndex = 0;
 oldIndex = 0;
 selectedButton = noone;
+global.pause = false;
+canStep = true;
 
 /// @desc Adds KeyboardButton to Array
 /// @param {Any} kbBtnID Ideally, this is an obj_base_keyboardButton

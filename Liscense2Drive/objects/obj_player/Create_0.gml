@@ -14,6 +14,8 @@ moveSpeed = 3;
 moveX = 0;
 moveY = 0;
 
+global.pause = false;
+
 inventory = {
     coins : 0
 };

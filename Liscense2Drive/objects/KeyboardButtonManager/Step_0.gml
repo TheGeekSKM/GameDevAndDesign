@@ -1,3 +1,4 @@
+if (!canStep) return;
 var buttonNum = ds_list_size(__keyBoardButtons);
 
 if (keyboard_check_pressed(ord("W")) or keyboard_check_pressed(vk_up)) {
