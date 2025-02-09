@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_InventoryMenu23",
-    "path":"sprites/spr_InventoryMenu23/spr_InventoryMenu23.yy",
+    "name":"spr_InventoryMenu32",
+    "path":"sprites/spr_InventoryMenu32/spr_InventoryMenu32.yy",
   },
   "spriteMaskId":null,
   "visible":true,

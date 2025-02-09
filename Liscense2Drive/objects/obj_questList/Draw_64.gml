@@ -4,16 +4,27 @@ var arrayLength = array_length(global.QuestLibrary);
 
 if (arrayLength == 0)
 {
-	sprite_index = spr_noquests26;
+	sprite_index = spr_noquests30;
 }
 else 
 {
     sprite_index = questBoard;
 }
 
+var keyUp = keyboard_check_pressed(ord("W")) or keyboard_check_pressed(vk_up); 
+var keyDown = keyboard_check_pressed(ord("S")) or keyboard_check_pressed(vk_down); 
+
+if (vis)
+{
+    var diff = keyDown - keyUp;
+    selectedIndex += diff;
+    selectedIndex = loop(selectedIndex, 0, arrayLength - 1);
+}
+
 
 for (var i = 0; i < (array_length(quests)); i++) 
 {
+    if (quests[i][$ "questState"] == QuestState.Idle) return;
     if (i == selectedIndex)
     {
         draw_set_color(c_teal);

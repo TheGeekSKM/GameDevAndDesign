@@ -2,11 +2,13 @@ keyIntJ = keyboard_check_pressed(ord("J"));
 keyIntL = keyboard_check_pressed(ord("L"));
 keyIntI = keyboard_check_pressed(ord("I"));
 keyEsc = keyboard_check_pressed(vk_escape);
+keySpace = keyboard_check_pressed(vk_space);
 
 if (keyIntL) Raise("L Pressed", id);
 if (keyIntJ) Raise("J Pressed", id);
 if (keyIntI) Raise("I Pressed", id);
 if (keyEsc) Raise("Esc Pressed", id);
+if (keySpace) Raise("Space Pressed", id);    
 
 if (global.pause) {
     image_speed = 0;

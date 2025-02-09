@@ -40,6 +40,10 @@ Subscribe("I Pressed", function(_id) {
     else ShowUI(MenuState.InventoryMenu);    
 });
 
+Subscribe("Space Pressed", function(_id) {
+    if (currentState == MenuState.DialogueMenu) ShowUI(MenuState.NoMenu);    
+})
+
 Subscribe("Esc Pressed", function(_id) {
 
     _pressedEscape();   
@@ -106,7 +110,6 @@ _onEnter = function()
             global.pause = true;
             with (obj_questList) 
             { 
-                vis = false;
                 DrawQuests();
             }        
             drawBlackBackground = true;            
