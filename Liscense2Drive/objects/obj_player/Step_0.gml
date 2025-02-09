@@ -38,4 +38,5 @@ if (moveX == 0 and moveY == 0) {
 }
 else image_speed = 2;
     
-move_and_collide(moveX, moveY, obj_block, 4, 0, 0, moveSpeed, -1);
+move_and_collide(moveX, moveY, [obj_block], 4, 0, 0, moveSpeed, -1);
+

@@ -31,11 +31,13 @@ currentState = MenuState.NoMenu;
 drawBlackBackground = false;
 
 Subscribe("L Pressed", function(_id) {
-    ShowUI(MenuState.QuestMenu);    
+    if (currentState == MenuState.QuestMenu) ShowUI(MenuState.NoMenu);
+    else ShowUI(MenuState.QuestMenu);       
 });
 
 Subscribe("I Pressed", function(_id) {
-    ShowUI(MenuState.InventoryMenu);    
+    if (currentState == MenuState.InventoryMenu) ShowUI(MenuState.NoMenu);
+    else ShowUI(MenuState.InventoryMenu);    
 });
 
 Subscribe("Esc Pressed", function(_id) {
