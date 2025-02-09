@@ -40,5 +40,11 @@ if (moveX == 0 and moveY == 0) {
 }
 else image_speed = 2;
     
+
+if (instance_place(x, y, [obj_carDown, obj_carUP]))
+{
+    //game end
+    room_goto(rmEnd);
+}
 move_and_collide(moveX, moveY, [obj_block], 4, 0, 0, moveSpeed, -1);
 
