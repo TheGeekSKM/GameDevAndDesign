@@ -7,7 +7,9 @@
   ],
   "managed":true,
   "name":"obj_npc2_interactable",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_interactable","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"propertyId":{"name":"interactableName","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Jeremy",},
+  ],
   "parent":{
     "name":"Player",
     "path":"folders/Objects/Player.yy",

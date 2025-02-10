@@ -3,6 +3,6 @@ event_inherited();
 
 if (global.QuestLibrary[0].questState == QuestState.Completed and global.QuestLibrary[1].questState == QuestState.Completed)
 {
-    room_goto(rmWin);
+    Transition(rmWin, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 }
 

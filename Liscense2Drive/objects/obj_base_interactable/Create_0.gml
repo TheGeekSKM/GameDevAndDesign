@@ -96,7 +96,7 @@ function OnInteractableDrawGUI()
     draw_set_halign(fa_center);
     draw_set_valign(fa_top);
     draw_set_font(Born);
-    draw_set_color(c_black);
+    draw_set_color(textColor);
             
     draw_text(guiPos.x, guiPos.y, textToDisplay);
             

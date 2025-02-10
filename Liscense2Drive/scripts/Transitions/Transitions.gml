@@ -1,12 +1,15 @@
 global.midTransition = false;
 global.roomTarget = -1;
 
+#macro camX camera_get_view_x(camera_get_active())
+#macro camY camera_get_view_y(camera_get_active())
+
 function TransitionPlace(_type) 
 {
     if (layer_exists("transition")) layer_destroy("transition"); 
     var _layer = layer_create(-9999, "transition");
     
-    layer_sequence_create(_layer, 0, 0, _type);
+    layer_sequence_create(_layer, camX, camY, _type);
 }
 
 function Transition(_roomTarget, _typeOut, _typeIn)

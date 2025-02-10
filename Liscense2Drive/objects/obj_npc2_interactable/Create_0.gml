@@ -32,6 +32,7 @@ OnInteract = function()
             {
                 global.QuestLibrary[questIndex].questState = QuestState.Completed;
                 global.Inventory -= numPapersRequred;
+                DialogueManager.SpawnDialogue(speakingSprite, speakerName, "Oooh! Thank ya kindly!");
                 
             }
             else
@@ -42,6 +43,10 @@ OnInteract = function()
             } 
             break;
         case QuestState.Completed:
+            if (global.QuestLibrary[0].questState != QuestState.Completed)
+            {
+                DialogueManager.SpawnDialogue(speakingSprite, speakerName, "Hey pardner, you best go to Jeffrey before he gets mad!");
+            }
             break;
     }
     

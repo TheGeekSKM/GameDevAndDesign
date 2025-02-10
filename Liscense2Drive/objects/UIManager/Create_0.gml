@@ -14,8 +14,7 @@ if (!layer_exists(layerName))
     layer_create(-9999, layerName);
 }
 
-#macro camX camera_get_view_x(camera_get_active())
-#macro camY camera_get_view_y(camera_get_active())
+
 
 dialogueMenuSequence = layer_sequence_create(layerName, camX, camY, seqDialogueMenu);
 inventoryMenuSequence = layer_sequence_create(layerName, camX, camY, seqInventoryMenu);

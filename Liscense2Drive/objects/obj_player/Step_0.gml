@@ -3,9 +3,11 @@ if (startDeathCounter)
     deathCounter++;
     if (deathCounter >= deathTime)
     {
-        room_goto(rmEnd);
+        Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
     }
 }
+
+global.TimeStruct.realTimeNoMenu += 1/game_get_speed(gamespeed_fps);
 
 keyIntJ = keyboard_check_pressed(ord("J"));
 keyIntL = keyboard_check_pressed(ord("L"));
@@ -24,6 +26,9 @@ if (global.pause) {
     image_index = 0;
     return;
 }
+
+global.TimeStruct.realTime += 1/game_get_speed(gamespeed_fps);
+
 
 
 keyLeft =   keyboard_check(ord("A")) or keyboard_check(vk_left);

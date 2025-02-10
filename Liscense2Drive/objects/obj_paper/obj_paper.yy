@@ -10,6 +10,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_interactable","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"propertyId":{"name":"interactableName","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Documents",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_interactable","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"propertyId":{"name":"interactableDescription","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"(Press J to Pick Up)",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_interactable","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"propertyId":{"name":"interactableRange","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_interactable","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"propertyId":{"name":"textColor","path":"objects/obj_base_interactable/obj_base_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFFFFFFF",},
   ],
   "parent":{
     "name":"Interactables",
