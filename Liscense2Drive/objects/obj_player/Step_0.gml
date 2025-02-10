@@ -1,3 +1,12 @@
+if (startDeathCounter)
+{
+    deathCounter++;
+    if (deathCounter >= deathTime)
+    {
+        room_goto(rmEnd);
+    }
+}
+
 keyIntJ = keyboard_check_pressed(ord("J"));
 keyIntL = keyboard_check_pressed(ord("L"));
 keyIntI = keyboard_check_pressed(ord("I"));
@@ -43,8 +52,8 @@ else image_speed = 2;
 
 if (instance_place(x, y, [obj_carDown, obj_carUP]))
 {
-    //game end
-    room_goto(rmEnd);
+    global.pause = true;
+    startDeathCounter = true;
 }
 move_and_collide(moveX, moveY, [obj_block], 4, 0, 0, moveSpeed, -1);
 

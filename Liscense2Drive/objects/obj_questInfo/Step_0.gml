@@ -1,7 +1,6 @@
 var ind = obj_questList.selectedIndex;
 var quest = global.QuestLibrary[ind];
 
-show_debug_message(ind);
 
 if (quest.questState == QuestState.Idle) return;
     
@@ -20,9 +19,13 @@ function ShowQuestState(_questState)
             returnString = "Completed";
             break;                
     }
+    
+    return returnString;
 }
 
 textToDisplay = string_concat(
     "Quest State: ", ShowQuestState(quest.questState), "\n",
-    "Quest Assigned By: ", quest.questAssigner, "\n"
+    "Quest Assigned By: ", quest.questAssigner, "\n",
+    "Description: ", "\n",
+    quest.questDescription,
 )

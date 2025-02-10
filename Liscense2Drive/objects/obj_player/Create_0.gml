@@ -34,3 +34,7 @@ global.Inventory = 0;
 global.QuestLibrary = [
     
 ];
+
+deathCounter = 0;
+deathTime = 45;
+startDeathCounter = false;

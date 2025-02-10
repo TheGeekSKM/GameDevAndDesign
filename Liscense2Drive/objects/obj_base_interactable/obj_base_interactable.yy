@@ -31,6 +31,7 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"interactableName","filters":[],"listItems":[],"multiselect":false,"name":"interactableName","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Name","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"interactableDescription","filters":[],"listItems":[],"multiselect":false,"name":"interactableDescription","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"(Press J to Interact)","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"interactableRange","filters":[],"listItems":[],"multiselect":false,"name":"interactableRange","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"50","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

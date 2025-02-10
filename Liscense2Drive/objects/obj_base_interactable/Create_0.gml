@@ -1,6 +1,5 @@
 randomize();
 playerInRange = false;
-interactableRange = 50;
 
 //Not Interactable Variables
 turnCounter = 0;
@@ -36,6 +35,11 @@ TurnToLook = function()
             turnCounter = 0;
         }       
     }
+}
+
+RemoveExclamation = function()
+{
+    spriteExclamation = noone;
 }
 
 
@@ -81,7 +85,7 @@ function OnInteractableDraw()
             break;
     }
     
-    if (playerInRange) draw_sprite_ext(spriteExclamation, 0, x, y - ((sprite_height / 2) + 5), 1, 1, 0, c_white, 1);
+    if (playerInRange and spriteExclamation != noone) draw_sprite_ext(spriteExclamation, 0, x, y - ((sprite_height / 2) + 5), 1, 1, 0, c_white, 1);
 }
 
 function OnInteractableDrawGUI()
@@ -100,26 +104,12 @@ function OnInteractableDrawGUI()
     draw_set_valign(fa_top);
 }
 
-function OnInteractableStep()
+
+
+LookAtPlayer = function()
 {
-    if (point_distance(x, y, obj_player.x, obj_player.y) <= interactableRange)
-    {
-        playerInRange = true;
-        SwitchState(InteractableState.Interactable);
-    }
-    else {
-        playerInRange = false;
-    }
-    
-    switch (currentInteractableState)
-    {
-        case InteractableState.NotInteractable: 
-            TurnToLook();
-            break;
-        case InteractableState.Interactable:
-            var dir = point_direction(x, y, obj_player.x, obj_player.y);
-            image_angle = dir;
-    }
+    var dir = point_direction(x, y, obj_player.x, obj_player.y);
+    image_angle = dir;
 }
 
 function SwitchState(_state)

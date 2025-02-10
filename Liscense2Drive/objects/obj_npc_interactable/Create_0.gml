@@ -28,9 +28,10 @@ OnInteract = function()
             DialogueManager.SpawnDialogue(speakingSprite, speakerName, speakingText);
             break;
         case QuestState.Started:
-            if (global.Inventory > numPapersRequred)
+            if (global.Inventory >= numPapersRequred)
             {
                 global.QuestLibrary[questIndex].questState = QuestState.Completed;
+                global.Inventory -= numPapersRequred;
                 DialogueManager.SpawnDialogue(speakingSprite, speakerName, "Oh! Thank you! Now head over to Jeffrey.");
             }
             else

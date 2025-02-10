@@ -4,15 +4,15 @@ image_speed = 0;
 speakingSprite = npc2;
 speakerName = "Jeremy";
 numPapersRequred = irandom_range(5, 10);
-speakingText = string_concat("Hey! If you're here for your driver's test,\nyou're gonna need at least ", numPapersRequred, " documents!\nTurn the documents into me and then, go to Jeremy!")
+speakingText = string_concat("Howdy, partner! Oh I see you got past Jeffrey. \nWell jokes on you, You're gonna need ", numPapersRequred, " more papers with me, buckaroo.")
 
-papersQuest = new QuestData("Get Papers #1", speakerName, speakerName, QuestState.Idle, string_concat("You need at least ", numPapersRequred, " documents."));
+papersQuest = new QuestData("Get Papers #2", speakerName, speakerName, QuestState.Idle, string_concat("You need at least ", numPapersRequred, " documents."));
 questIndex = array_length(global.QuestLibrary);
 array_push(global.QuestLibrary, papersQuest);
 
 questInProgressText = [
-    string_concat("Mmmm. You still need ", numPapersRequred - global.Inventory, " more papers..."),
-    "Uhh..Can I help you",
+    string_concat("Pardner, Imma need you to grab ", numPapersRequred - global.Inventory, " more papers..."),
+    "yee? haw?",
     "Sir, Imma need you to grab your documents.",
     "Documents?",
     "Yes?",
@@ -28,10 +28,11 @@ OnInteract = function()
             DialogueManager.SpawnDialogue(speakingSprite, speakerName, speakingText);
             break;
         case QuestState.Started:
-            if (global.Inventory > numPapersRequred)
+            if (global.Inventory >= numPapersRequred)
             {
                 global.QuestLibrary[questIndex].questState = QuestState.Completed;
-                DialogueManager.SpawnDialogue(speakingSprite, speakerName, "Oh! Thank you! Now head over to Jeffrey.");
+                global.Inventory -= numPapersRequred;
+                
             }
             else
             {
@@ -41,7 +42,6 @@ OnInteract = function()
             } 
             break;
         case QuestState.Completed:
-            DialogueManager.SpawnDialogue(speakingSprite, speakerName, "Please...please go to Jeffrey...");
             break;
     }
     
