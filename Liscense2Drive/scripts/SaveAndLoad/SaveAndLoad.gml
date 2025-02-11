@@ -1,8 +1,12 @@
 function SaveGame(){
-    var _string = json_stringify(global.TimeStruct);
-    var _file = file_text_open_write("save.json");
-    file_text_write_string(_file, _string);
-    file_text_close(_file);
+	if (global.TimeStruct.realTimeNoMenu < global.OldTimeStruct.oldRealTimeNoMenu or !file_exists("save.json"))
+	{
+	
+	    var _string = json_stringify(global.TimeStruct);
+	    var _file = file_text_open_write("save.json");
+	    file_text_write_string(_file, _string);
+	    file_text_close(_file);
+	}
 }
 
 function LoadGame()

@@ -14,6 +14,14 @@ moveSpeed = 3;
 moveX = 0;
 moveY = 0;
 
+global.OldTimeStruct = {
+	oldRealTime : global.TimeStruct.realTime,
+	oldRealTimeNoMenu : global.TimeStruct.realTimeNoMenu
+}
+
+global.TimeStruct.realTimeNoMenu = 0;
+global.TimeStruct.realTime = 0;
+
 global.pause = false;
 
 inventory = {
