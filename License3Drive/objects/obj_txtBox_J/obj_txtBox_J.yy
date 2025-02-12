@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_buttonContainer",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_txtBox_J",
+  "eventList":[],
   "managed":true,
-  "name":"obj_buttonContainer",
+  "name":"obj_txtBox_J",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"TextBoxes",
+    "path":"folders/Objects/UI/TextBoxes.yy",
   },
   "parentObjectId":{
     "name":"obj_ui_parent",
@@ -32,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_JToSelect",
+    "path":"sprites/spr_JToSelect/spr_JToSelect.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

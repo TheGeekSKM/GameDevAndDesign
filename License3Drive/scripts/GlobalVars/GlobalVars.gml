@@ -1,14 +1,13 @@
-global.pause = false;
-
-function Vector2(_x, _y) constructor 
-{
-    x = _x;
-    y = _y;
-}
-
 enum ButtonState {
     Idle,
     Hovered,
     Clicked
 }
 
+font_enable_effects(VCR_OS_Mono_Effects, true, {
+    dropShadowEnable: true,
+    dropShadowSoftness: 7,
+    dropShadowOffsetX: 2,
+    dropShadowOffsetY: 2,
+    dropShadowAlpha: 1
+});
