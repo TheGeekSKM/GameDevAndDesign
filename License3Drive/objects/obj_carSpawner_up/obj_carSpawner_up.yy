@@ -1,22 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_car_down",
+  "%Name":"obj_carSpawner_up",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_car_down",
+  "name":"obj_carSpawner_up",
   "overriddenProperties":[],
   "parent":{
     "name":"Cars",
     "path":"folders/Objects/Cars.yy",
   },
-  "parentObjectId":{
-    "name":"obj_car",
-    "path":"objects/obj_car/obj_car.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -35,9 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_car",
-    "path":"sprites/spr_car/spr_car.yy",
+    "name":"spr_carSpawner",
+    "path":"sprites/spr_carSpawner/spr_carSpawner.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_carSpawner",
+    "path":"sprites/spr_carSpawner/spr_carSpawner.yy",
+  },
   "visible":true,
 }
