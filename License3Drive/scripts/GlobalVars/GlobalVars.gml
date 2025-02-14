@@ -11,3 +11,10 @@ font_enable_effects(VCR_OS_Mono_Effects, true, {
     dropShadowOffsetY: 2,
     dropShadowAlpha: 1
 });
+
+enum CarDirection {
+    Up,
+    Down
+}
+
+
