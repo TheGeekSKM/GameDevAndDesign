@@ -493,6 +493,7 @@
     {"id":{"name":"seqQuestMenu","path":"sequences/seqQuestMenu/seqQuestMenu.yy",},},
     {"id":{"name":"seqTrans_In_CornerSlide","path":"sequences/seqTrans_In_CornerSlide/seqTrans_In_CornerSlide.yy",},},
     {"id":{"name":"seqTrans_Out_CornerSlide","path":"sequences/seqTrans_Out_CornerSlide/seqTrans_Out_CornerSlide.yy",},},
+    {"id":{"name":"Sequence12","path":"sequences/Sequence12/Sequence12.yy",},},
     {"id":{"name":"bottomDownCar","path":"sprites/bottomDownCar/bottomDownCar.yy",},},
     {"id":{"name":"buildings","path":"sprites/buildings/buildings.yy",},},
     {"id":{"name":"endScreen","path":"sprites/endScreen/endScreen.yy",},},
