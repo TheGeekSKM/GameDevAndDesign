@@ -1,3 +1,5 @@
+if (global.pause) return;
+
 nextY = y - (sprite_height * 2.5) - yModifier;
 nextX = x - (sprite_width / 2);
 

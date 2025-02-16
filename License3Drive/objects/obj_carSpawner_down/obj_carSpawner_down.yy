@@ -12,7 +12,10 @@
     "name":"Cars",
     "path":"folders/Objects/Cars.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_rm_pausable",
+    "path":"objects/obj_rm_pausable/obj_rm_pausable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
