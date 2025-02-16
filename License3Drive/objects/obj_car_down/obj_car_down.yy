@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_car",
-    "path":"sprites/spr_car/spr_car.yy",
+    "name":"spr_car_down",
+    "path":"sprites/spr_car_down/spr_car_down.yy",
   },
   "spriteMaskId":null,
   "visible":true,

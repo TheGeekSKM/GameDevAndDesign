@@ -5,21 +5,24 @@ if (carDirection == CarDirection.Up) carSpeed *= -1;
 
 defaultSpeed = carSpeed;
 
-checkForCars = random(100) < 20 ? false : true;
-checkForPlayer = random(100) < 70 ? false : true;
-stopSpeed = random_range(0.09, 0.1);
+checkForCars = random_range(0, 100) < 10 ? false : true;
+checkForPlayer = random_range(0, 100) < 30 ? false : true;
+stopSpeed = 0.2;
 
 image_blend = make_color_hsv(irandom(255), 75, irandom_range(100, 255));
 
 nextX = 0;
 nextY = 0;
 
+yModifier = irandom_range(0, 10);
+frontCar = noone;
+
 function CheckForCarInFront()
 {
-    var frontCar = collision_rectangle(x + (sprite_width / 2), y + (sprite_width / 2), nextX, nextY, obj_car, false, true);
+    frontCar = collision_rectangle(x + (sprite_width / 2), y + (sprite_width / 2), nextX, nextY, obj_car, false, true);
     if (frontCar) 
     {
-        carSpeed = lerp(carSpeed, frontCar.carSpeed, stopSpeed);
+        carSpeed = frontCar.carSpeed;
     } 
     else 
     {

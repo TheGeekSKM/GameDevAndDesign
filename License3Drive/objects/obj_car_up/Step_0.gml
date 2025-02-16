@@ -1,4 +1,4 @@
-nextY = y - (sprite_height / 2) - (sprite_height * 2);
+nextY = y - (sprite_height * 2.5) - yModifier;
 nextX = x - (sprite_width / 2);
 
 if (checkForCars) CheckForCarInFront();

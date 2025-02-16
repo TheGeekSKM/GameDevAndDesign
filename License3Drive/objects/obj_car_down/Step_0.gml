@@ -1,5 +1,5 @@
 nextX = x - (sprite_width / 2)
-nextY = y + (sprite_height * 2.5);
+nextY = y + (sprite_height * 2.5) + yModifier;
 
 if (checkForCars) CheckForCarInFront();
 if (checkForPlayer) CheckForPlayerInFront();    
