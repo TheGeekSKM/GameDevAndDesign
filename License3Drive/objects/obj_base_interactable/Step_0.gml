@@ -1,4 +1,4 @@
-if (point_distance(x, y, obj_player.x, obj_player.y)) playerInRange = true;
+if (point_distance(x, y, obj_player.x, obj_player.y) < interactionRange) playerInRange = true;
 else playerInRange = false;
     
 if (input_check_pressed("accept") && playerInRange) OnInteract();

@@ -1,5 +1,9 @@
 moveX = (input_check("right") - input_check("left")) * moveSpeed;
 moveY = (input_check("down") - input_check("up")) * moveSpeed;
+if (keyboard_check_pressed(vk_period)) global.debug = !global.debug;
+if (input_check_pressed("action")) Raise("K Pressed", id);  
+    
+if (global.pause) return;  
 
 if (moveX != 0) moveY = 0;
 if (moveY != 0) moveX = 0;

@@ -22,7 +22,7 @@ function __input_config_verbs()
             
             accept:  input_binding_key("J"),
             cancel:  input_binding_key(vk_backspace),
-            action:  input_binding_key(vk_enter),
+            action:  input_binding_key("K"),
             special: input_binding_key(vk_shift),
             
             //No aiming verbs since we use the mouse for that (see below for aiming verb examples)

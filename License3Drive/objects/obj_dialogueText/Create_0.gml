@@ -1,0 +1,2 @@
+vis = false;
+speakerText = "";

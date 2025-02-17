@@ -1,5 +1,9 @@
 global.pause = false;
 global.debug = false;
+
+#macro camX camera_get_view_x(camera_get_active())
+#macro camY camera_get_view_y(camera_get_active())
+
 randomize();
 
 function Vector2(_x, _y) constructor 

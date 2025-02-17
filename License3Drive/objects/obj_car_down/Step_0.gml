@@ -6,10 +6,13 @@ nextY = y + (sprite_height * 2.5) + yModifier;
 if (checkForCars) CheckForCarInFront();
 if (checkForPlayer) CheckForPlayerInFront();    
 
-var otherCar = collision_rectangle(x - (sprite_width / 2), y - (sprite_height / 2), x + (sprite_width / 2), y + (sprite_height / 2), obj_car, false, true)
+var otherCar = collision_rectangle(x - (sprite_width / 2) - 2, y - (sprite_height / 2) - 2, x + (sprite_width / 2) + 2, y + (sprite_height / 2) + 2, obj_car, true, true)
 if (otherCar)
 {
-    //spawn explosion and car parts
+    instance_destroy(otherCar);
+    instance_create_layer(x, y, "Collectibles", obj_gear);
+    Raise("Crash", new Vector2(x, y));
+    instance_destroy();
 }
 
 y += carSpeed;
