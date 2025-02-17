@@ -53,5 +53,5 @@ if (collision_rectangle(x - (sprite_width / 2), y - (sprite_height / 2), x + (sp
     moveSpeed = lerp(moveSpeed, defaultMoveSpeed + 3, 0.4);
 }
 else {
-    moveSpeed = lerp(moveSpeed, defaultMoveSpeed, 0.01);
+    moveSpeed = lerp(moveSpeed, defaultMoveSpeed, 0.1);
 }    

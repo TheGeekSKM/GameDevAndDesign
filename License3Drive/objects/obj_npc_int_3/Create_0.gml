@@ -17,7 +17,7 @@ interactableName,
 
 questStartingText = string_concat("Huh? Oh. Mornin'. [c_yellow][wave]Jeremy[/wave][c_white] sent you? Why?",
 "..HE DID WHAT??! ARGH!!! Fine. Listen, you're gonna have to get me ", numItemsRequired, " car parts. However, I don't",
-" have like a warehouse, so you're gonna have to find crashes. Here, take this [c_green]Crash Detector[c_white] and [c_green]Compass[c_white].",
+" have like a warehouse, so you're gonna have to find [c_red][wave]crashes[/wave][c_white]. Here, take this [c_green]Crash Detector[c_white] and [c_green]Compass[c_white].",
 " You'll find them in your inventory. Equip them.");
 
 questOnGoingText = [
