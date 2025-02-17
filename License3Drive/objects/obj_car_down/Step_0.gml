@@ -5,7 +5,7 @@ nextY = y + (sprite_height * 2.5) + yModifier;
 
 if (checkForCars) CheckForCarInFront();
 if (checkForPlayer) CheckForPlayerInFront();    
-
+    
 var otherCar = collision_rectangle(x - (sprite_width / 2) - 2, y - (sprite_height / 2) - 2, x + (sprite_width / 2) + 2, y + (sprite_height / 2) + 2, obj_car, true, true)
 if (otherCar)
 {

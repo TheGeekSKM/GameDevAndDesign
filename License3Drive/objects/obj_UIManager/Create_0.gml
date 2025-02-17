@@ -144,7 +144,6 @@ function OnEnter()
             layer_sequence_play(inventoryMenuSequence);          
             break;        
         case MenuState.Dialogue:
-            global.pause = true;
             drawBlackBackground = true;        
             with (obj_dialogueSpeaker) 
             {

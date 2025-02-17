@@ -7,8 +7,14 @@ paperAmount = 0;
 carPartsAmount = 0;
 recievedScanner = false;
 
-bloodScale = 0.1;;
-bloodRot = random(360)
+bloodScale = 0.1;
+bloodRot = random(360);
+
+global.TimeStruct = {
+    time : 0,
+    timeNoMenu : 0,
+    won : false
+}
 
 function AddItem(_type, _count)
 {

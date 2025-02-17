@@ -6,8 +6,12 @@ if (keyboard_check_pressed(vk_period)) {
     global.debug = !global.debug;
 }
 if (input_check_pressed("action")) Raise("K Pressed", id);  
+
+global.TimeStruct.timeNoMenu += 1/game_get_speed(gamespeed_fps);
     
-if (global.pause) return;  
+if (global.pause) return;
+    
+global.TimeStruct.time += 1/game_get_speed(gamespeed_fps);  
     
 if (isDead) 
 {
@@ -15,12 +19,15 @@ if (isDead)
     return;
 }
 
-if (collision_rectangle(x - (sprite_width / 2), y - (sprite_height / 2), x + (sprite_width / 2), y + (sprite_height / 2), obj_car, true, true))
+if (!global.debug)
 {
-    isDead = true;
-    alarm[1] = 120;
-    image_speed = 0;
-} 
+    if (collision_rectangle(x - (sprite_width / 2), y - (sprite_height / 2), x + (sprite_width / 2), y + (sprite_height / 2), obj_car, true, true))
+    {
+        isDead = true;
+        alarm[1] = 120;
+        image_speed = 0;
+    } 
+}
 
 
 
