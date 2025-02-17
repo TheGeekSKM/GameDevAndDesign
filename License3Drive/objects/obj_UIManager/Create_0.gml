@@ -65,13 +65,17 @@ Subscribe("ItemEquipped", function(_itemName){
         
             layer_sequence_headdir(crashDetectorSequence, seqdir_right);
             layer_sequence_play(crashDetectorSequence);
+            with (obj_crashDetector) { vis = true; }
+            with (obj_compass) { vis = false; }
             break;
         case "Compass":
             layer_sequence_headdir(compassSequence, seqdir_right);
             layer_sequence_play(compassSequence);                
         
             layer_sequence_headdir(crashDetectorSequence, seqdir_left);
-            layer_sequence_play(crashDetectorSequence);            
+            layer_sequence_play(crashDetectorSequence);
+            with (obj_crashDetector) { vis = false; }   
+            with (obj_compass) { vis = true; }                  
             break;
     }    
 })

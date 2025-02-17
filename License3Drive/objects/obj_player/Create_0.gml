@@ -33,6 +33,7 @@ function AddItem(_type, _count)
     }
 }
 
+
 QuestLibrary = [ ];
 lastCrash = new Vector2(0,0);
 

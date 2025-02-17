@@ -643,6 +643,8 @@
     {"id":{"name":"Background_Game_Towers17","path":"sprites/Background_Game_Towers17/Background_Game_Towers17.yy",},},
     {"id":{"name":"endScreen","path":"sprites/endScreen/endScreen.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
+    {"id":{"name":"spr_arrow","path":"sprites/spr_arrow/spr_arrow.yy",},},
+    {"id":{"name":"spr_arrow2","path":"sprites/spr_arrow2/spr_arrow2.yy",},},
     {"id":{"name":"spr_blood","path":"sprites/spr_blood/spr_blood.yy",},},
     {"id":{"name":"spr_bounds","path":"sprites/spr_bounds/spr_bounds.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
