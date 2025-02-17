@@ -1,0 +1,1 @@
+y = lerp(y, lastPos, 0.1);

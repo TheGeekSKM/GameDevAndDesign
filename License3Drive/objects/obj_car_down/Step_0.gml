@@ -11,6 +11,7 @@ if (otherCar)
 {
     instance_destroy(otherCar);
     instance_create_layer(x, y, "Collectibles", obj_gear);
+    instance_create_layer(x, y, "Oil", obj_oilSpill);
     Raise("Crash", new Vector2(x, y));
     instance_destroy();
 }

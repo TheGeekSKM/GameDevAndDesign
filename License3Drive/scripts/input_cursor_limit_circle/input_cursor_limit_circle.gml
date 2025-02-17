@@ -1,5 +1,5 @@
 // Feather disable all
-/// @desc    Limits the cursor’s motion inside a circle centred at the given point
+/// @desc    Limits the cursor's motion inside a circle centred at the given point
 /// @param   x
 /// @param   y
 /// @param   radius

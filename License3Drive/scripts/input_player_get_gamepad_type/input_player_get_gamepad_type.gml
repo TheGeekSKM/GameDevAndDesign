@@ -1,5 +1,5 @@
 // Feather disable all
-/// @desc    Returns the player’s gamepad’s type (after SDL remapping) as a string
+/// @desc    Returns the player's gamepad's type (after SDL remapping) as a string
 /// @param   [playerIndex=0]
 /// @param   [binding]
 

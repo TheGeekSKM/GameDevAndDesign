@@ -9,12 +9,12 @@
 ///          The failure callback, if one is provided, is executed when binding fails for some
 ///          reason. It is executed with one parameter, the error coded. This corresponds to
 ///          a member of the INPUT_BINDING_SCAN_EVENT enum:
-///              .SOURCE_INVALID         Player’s source is invalid, usually because they have no sources assigned or their gamepad has been disconnected
-///              .SOURCE_CHANGED         The player’s source (or sources) have been modified
+///              .SOURCE_INVALID         Player's source is invalid, usually because they have no sources assigned or their gamepad has been disconnected
+///              .SOURCE_CHANGED         The player's source (or sources) have been modified
 ///              .SOURCE_FILTER_EMPTY    Source filter array is empty
 ///              .PLAYER_IS_GHOST        Player is a ghost and cannot receive hardware input
 ///              .PLAYER_DISCONNECTED    The player disconnected
-///              .SCAN_TIMEOUT           Either the player didn’t enter a new binding or a stuck key prevented the system from working. The timeout period is defined by INPUT_BINDING_SCAN_TIMEOUT
+///              .SCAN_TIMEOUT           Either the player didn't enter a new binding or a stuck key prevented the system from working. The timeout period is defined by INPUT_BINDING_SCAN_TIMEOUT
 ///              .LOST_FOCUS             The application lost focus
 ///              .ABORTED                Binding scan was aborted early due to input_binding_scan_abort() being called
 ///          

@@ -1,4 +1,4 @@
-image_blend = make_color_hsv(irandom(255), irandom(150), irandom(100));
+image_blend = make_color_hsv(irandom(255), irandom(150), irandom(75));
 timeToPickNewPoint = irandom_range(180, 360);
 alarm[1] = (random(100) >= 30 ? timeToPickNewPoint : random(25));
 

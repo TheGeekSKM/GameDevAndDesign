@@ -1,0 +1,1 @@
+Transition(rmLose,seqTrans_In_CornerSlide,seqTrans_Out_CornerSlide);

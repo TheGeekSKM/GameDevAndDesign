@@ -24,7 +24,7 @@ else {
     canWalk = false;
     
     timeToPickNewPoint = irandom_range(180, 360);
-    alarm[1] = (random(100) >= 30 ? timeToPickNewPoint : random(25));;
+    alarm[1] = (random(100) >= 30 ? timeToPickNewPoint : random(25));
 }
 
 if (point_distance(x, y, obj_player.x, obj_player.y) < 10 and input_check_pressed("accept"))

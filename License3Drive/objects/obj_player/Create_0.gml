@@ -1,9 +1,14 @@
 moveSpeed = 4;
-collidables = [obj_wall, obj_car];
+defaultMoveSpeed = moveSpeed;
+collidables = [obj_wall];
+isDead = false;
 
 paperAmount = 0;
 carPartsAmount = 0;
 recievedScanner = false;
+
+bloodScale = 0.1;;
+bloodRot = random(360)
 
 function AddItem(_type, _count)
 {
@@ -14,6 +19,16 @@ function AddItem(_type, _count)
             break;
         case ItemType.CarParts:
             carPartsAmount += _count;
+            break;
+        case ItemType.CrashDetector:
+            Raise("CrashReciever Recieved", id);
+            var p = instance_create_layer(x, y, "GUI", obj_pickUpText);
+            p.Init(new ItemData("Crash Dectector", 1, new Vector2(x, y)));    
+            break;
+        case ItemType.Compass:
+            Raise("Compass Recieved", id);
+            var q = instance_create_layer(x, y, "GUI", obj_pickUpText);
+            q.Init(new ItemData("Compass", 1, new Vector2(x, y)));        
             break;
     }
 }

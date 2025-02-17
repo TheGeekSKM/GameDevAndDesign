@@ -1,5 +1,5 @@
 // Feather disable all
-/// @desc    Returns whether any of the player’s sources are connected and available for use
+/// @desc    Returns whether any of the player's sources are connected and available for use
 /// @param   [playerIndex=0]
 /// @param   [includeGhost=true]
 

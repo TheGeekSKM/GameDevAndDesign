@@ -1,6 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
+scribble_anim_wave(2, 0.75, 0.2);
+
 scribble(speakerText)
     .align(fa_left, fa_top)
     .starting_format("VCR_OS_Mono", c_white)

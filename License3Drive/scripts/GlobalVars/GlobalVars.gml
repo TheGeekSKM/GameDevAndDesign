@@ -20,8 +20,33 @@ enum CarDirection {
 
 enum ItemType {
     Paper,
-    CarParts
+    CarParts,
+    CrashDetector,
+    Compass
 }
+
+///@pure
+function ItemTypeToString(_type)
+{
+    var rtr = "";
+    switch(_type)
+    {
+        case ItemType.Paper:
+            rtr = "Documents";
+            break;
+        case ItemType.CarParts:
+            rtr = "Car Parts";            
+            break;
+        case ItemType.CrashDetector:
+            rtr = "Crash Detector";            
+            break;
+        case ItemType.Compass:
+            rtr = "Compass";            
+            break;
+    }
+    return rtr;
+}
+
 
 enum QuestState {
     Started,
@@ -84,4 +109,11 @@ function DialogueData(_speakerColor, _text) constructor
 {
     color = _speakerColor;
     text = _text;
+}
+
+function ItemData (_itemType, _itemCount, _pickUpLocation) constructor 
+{
+    itemType = _itemType;
+    itemCount = _itemCount;
+    pickUpLocation = _pickUpLocation;
 }

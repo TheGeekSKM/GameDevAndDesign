@@ -10,27 +10,34 @@ questData = new QuestData("The Missing Documents", string_concat(
 "Get ", numItemsRequired, " documents so that Jeffrey will let you take your test!"
 ));
 
+questData2 = new QuestData("Find Jeremy", 
+    string_concat(
+        "In a clearly not so nice tone,", interactableName, " pointed you across the asphalt pond to find Jeremy...", 
+        "I suppose you don't have much choice..."
+    )
+)
+
 questStartingText = string_concat("Good Morning! It appears you're hear for your Driver's Test, yes? Well, it seems I have lost ",
-"your documents, hehehehee. I need at least, ", numItemsRequired, " documents before I let you take the test. Bring them to me once", 
-"you have collected them! Mwahhaahahha!!!");
+"your documents, hehehehee. I need at least, ", numItemsRequired, " documents before I let you take the test. Bring them to me once ", 
+"you have collected them! [wave]Mwahhaahahha!!![/wave]");
 
 questOnGoingText = [
-    "Oh, you’re back? And yet… still utterly useless.",
+    "Oh, you're back? And yet… still utterly useless.",
     "Let me guess—you got distracted by traffic? Boo-hoo. Get back out there.",
     "I require *exactly* the number I asked for. Not a page less. Not a page more. Try again.",
     "You must enjoy wasting my time. Unfortunately for you, I have *infinite* patience. Do you?",
     "Did I stutter? Bring. Me. The. Documents.",
-    "Ah yes, the smell of incompetence. Bring the correct number, or don’t come back.",
-    "Do you think I’m running a charity? The DMV demands perfection, and you bring… *this*?",
-    "I’d tell you to take a number, but your number is already *failure*.",
-    "Look, I don’t make the rules. I just enforce them with *soul-crushing precision*.",
-    "If you don’t return with the right amount next time, I might just *lose* your paperwork… forever."
+    "Ah yes, the smell of incompetence. Bring the correct number, or don't come back.",
+    "Do you think I'm running a charity? The DMV demands perfection, and you bring… *this*?",
+    "I'd tell you to take a number, but your number is already *failure*.",
+    "Look, I don't make the rules. I just enforce them with *soul-crushing precision*.",
+    "If you don't return with the right amount next time, I might just *lose* your paperwork… forever."
 ];
 
-questCompletedText = "Hmph. Fine. Find Jeremy [c_yellow]on the other side [c_white]and he'll help you...ugh..."
+questCompletedText = "Hmph. Fine. Find Jeremy [c_yellow][wave]directly on the other side [/wave][c_white]and he'll help you...ugh..."
 
 
-image_blend = make_color_rgb(irandom(255), irandom(255), irandom(255));
+image_blend = make_color_hsv(irandom(255), 200, 255);
 counter = 0;
 image_speed = 0;
 
@@ -46,7 +53,7 @@ function OnInteract()
     }
     else if (obj_player.QuestLibrary[questIndex].questState == QuestState.Started)
     {
-        if (obj_player.paperAmount > numItemsRequired)
+        if (obj_player.paperAmount >= numItemsRequired)
         {
             obj_player.paperAmount -= numItemsRequired;
             obj_player.QuestLibrary[questIndex].questState = QuestState.Completed;

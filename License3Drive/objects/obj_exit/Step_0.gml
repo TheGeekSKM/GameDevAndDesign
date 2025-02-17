@@ -1,0 +1,1 @@
+if (input_check_pressed("action")) game_end();

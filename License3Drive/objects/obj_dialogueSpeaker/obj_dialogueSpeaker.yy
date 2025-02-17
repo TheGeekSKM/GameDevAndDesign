@@ -9,8 +9,8 @@
   "name":"obj_dialogueSpeaker",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menus",
-    "path":"folders/Objects/UI/Menus.yy",
+    "name":"Player",
+    "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":{
     "name":"obj_ui_parent",
