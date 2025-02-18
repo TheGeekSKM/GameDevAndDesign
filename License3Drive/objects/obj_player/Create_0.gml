@@ -16,6 +16,7 @@ global.TimeStruct = {
     won : false
 }
 
+
 function AddItem(_type, _count)
 {
     switch(_type)

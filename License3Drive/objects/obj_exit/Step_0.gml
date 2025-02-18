@@ -1,1 +1,1 @@
-if (input_check_pressed("action")) game_end();
+if (input_check_pressed("action")) game_restart();

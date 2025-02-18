@@ -1,6 +1,6 @@
 vis = false;
 
-buttons = ["Resume", "Quest Log", "Inventory", "Exit"];
+buttons = ["Resume", "Quest Log", "Inventory", "Main Menu", "Exit"];
 buttonFuncs = [
     function() {
         Raise("Resume", id);
@@ -10,6 +10,11 @@ buttonFuncs = [
     }, 
     function() {
         Raise("Inventory", id);        
+    },
+    function() {
+        
+        game_restart();
+        obj_UIManager.ShowUI(MenuState.NoMenu);        
     },
     function() {
         Raise("Exit", id);        

@@ -1,3 +1,9 @@
+function ResetValues()
+{
+	global.pause = false;
+	global.debug = false;
+}
+
 global.pause = false;
 global.debug = false;
 

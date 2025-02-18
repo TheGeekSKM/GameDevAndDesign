@@ -1,3 +1,9 @@
+function ResetTransitionValues()
+{
+	global.midTransition = false;
+	global.roomTarget = -1;	
+}
+
 global.midTransition = false;
 global.roomTarget = -1;
 
