@@ -1,1 +1,1 @@
-if (input_check_pressed("action")) game_end();
+if (input_check_pressed("action")) Transition(rmMainMenu, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);

@@ -177,3 +177,10 @@ function Raise(_event, _data)
     }
     return false;
 }
+
+function ResetEventManager()
+{
+	UnsubscribeAll();
+	global.EventManager.RemoveAllEvents();
+	global.EventManager.RemoveDeadInstances();
+}
