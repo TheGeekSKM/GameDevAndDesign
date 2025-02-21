@@ -2,6 +2,8 @@ buttons = [];
 selectedIndex = 0;
 oldIndex = 0;
 
+checkForInput = false;
+
 function AddToManager(_button) { array_push(buttons, _button); }
 
 function IncrementIndex(num)
@@ -20,3 +22,4 @@ function UpdateButtons()
 }
 
 alarm[0] = 2;
+alarm[1] = 10;

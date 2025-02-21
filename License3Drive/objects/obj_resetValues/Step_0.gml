@@ -1,1 +1,0 @@
-if (input_check_pressed("action")) Transition(rmGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);

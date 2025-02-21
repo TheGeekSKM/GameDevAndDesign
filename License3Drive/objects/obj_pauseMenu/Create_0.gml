@@ -13,7 +13,7 @@ buttonFuncs = [
     },
     function() {
         
-        game_restart();
+        Transition(rmMainMenu, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
         obj_UIManager.ShowUI(MenuState.NoMenu);        
     },
     function() {
