@@ -12,11 +12,11 @@ interactableName,
 numItemsRequired, 
 " car parts so that ", 
 interactableName, 
-" will approve the fix to [c_yellow][wave]Jeremy's[c_white][/wave] car."
+" will approve the fix to [c_yellow]Jeremy's[c_white] car."
 ));
 
-questStartingText = string_concat("Whaddya want? [c_yellow][wave]James[/wave][c_white] sent you? Why? He a corporate spy?",
-"Oh, you need me to approve things huh? Alrighty, listen here. I'm robbing this place blind. If you scratch my back, I'll scratch yours. Now get me ", numItemsRequired, " car parts, ", 
+questStartingText = string_concat("Whaddya want? James sent you? Why? He a corporate spy?",
+"Oh, you need me to approve things huh? Alrighty, listen here. I'm robbing this place blind. If you scratch my back, I'll scratch yours. Now get me [wave][c_yellow]", numItemsRequired, " car parts,[/wave][c_white] ", 
 "and maybe-just maybe-I'll approve ya.");
 
 questOnGoingText = [

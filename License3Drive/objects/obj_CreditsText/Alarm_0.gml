@@ -1,0 +1,2 @@
+defaultPos = y;
+canMove = true;

@@ -11,7 +11,7 @@ interactableName, " seems to have lost some more documents. It looks like you're
 ));
 
 questStartingText = string_concat("Howdy, pardner. I...uh...I lost the papers that you needed....uhhh. ",
-"Tell you what, you get me ", numItemsRequired, " documents, and I will test you like none before. Now scurry along, friendo!", 
+"Tell you what, you get me [wave][c_yellow]", numItemsRequired, " documents[c_white][/wave], and I will test you like none before. Now scurry along, friendo!", 
 "you have collected them!");
 
 questOnGoingText = [
