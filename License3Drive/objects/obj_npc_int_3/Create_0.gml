@@ -62,6 +62,7 @@ function OnInteract()
         else {
             questIndex = array_length(obj_player.QuestLibrary)
             array_push(obj_player.QuestLibrary, questData);
+            Raise("NotificationIn", "New Quest Added");
             Raise("Dialogue", new DialogueData(image_blend, questStartingText));
             obj_player.AddItem(ItemType.CrashDetector, 1);
             obj_player.AddItem(ItemType.Compass, 1);

@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Inventory",
-    "path":"sprites/spr_Inventory/spr_Inventory.yy",
+    "name":"spr_Inventory2",
+    "path":"sprites/spr_Inventory2/spr_Inventory2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

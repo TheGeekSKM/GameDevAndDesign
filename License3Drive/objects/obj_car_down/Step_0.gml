@@ -10,6 +10,7 @@ var otherCar = collision_rectangle(x - (sprite_width / 2) - 2, y - (sprite_heigh
 if (otherCar)
 {
     instance_destroy(otherCar);
+    instance_create_layer(x, y, "Explosions", obj_explosion);
     instance_create_layer(x, y, "Collectibles", obj_gear);
     instance_create_layer(x, y, "Oil", obj_oilSpill);
     Raise("Crash", new Vector2(x, y));
@@ -19,3 +20,11 @@ if (otherCar)
 y += carSpeed;
 
 if (y > (room_height + sprite_height)) instance_destroy();
+    
+if (collision_rectangle(x - (sprite_width / 2), y - (sprite_height / 2), x + (sprite_width / 2), y + (sprite_height / 2), [obj_oilSpill, obj_bloodSpill], true, true))
+{
+    carSpeed = lerp(carSpeed, defaultSpeed + 3, 0.4);
+}
+else {
+    carSpeed = lerp(carSpeed, defaultSpeed, 0.1);
+}    

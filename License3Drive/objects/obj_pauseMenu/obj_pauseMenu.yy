@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_pauseMenu",
-    "path":"sprites/spr_pauseMenu/spr_pauseMenu.yy",
+    "name":"spr_pauseMenu2",
+    "path":"sprites/spr_pauseMenu2/spr_pauseMenu2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

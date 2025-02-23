@@ -1,6 +1,6 @@
 vis = false;
 
-buttons = ["Resume", "Quest Log", "Inventory", "Main Menu", "Exit"];
+buttons = ["Resume", "Quest Log", "Items", "Main Menu", "Exit"];
 buttonFuncs = [
     function() {
         Raise("Resume", id);

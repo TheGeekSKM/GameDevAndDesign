@@ -41,6 +41,7 @@ function OnInteract()
     {
         questIndex = array_length(obj_player.QuestLibrary)
         array_push(obj_player.QuestLibrary, questData);
+        Raise("NotificationIn", "New Quest Added");
         Raise("Dialogue", new DialogueData(image_blend, questStartingText));
         numInteraction++;
     }

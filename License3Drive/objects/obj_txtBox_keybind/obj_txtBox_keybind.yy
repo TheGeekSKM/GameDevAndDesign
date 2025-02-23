@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_keystroke",
-    "path":"sprites/spr_keystroke/spr_keystroke.yy",
+    "name":"spr_keystroke2",
+    "path":"sprites/spr_keystroke2/spr_keystroke2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -24,6 +24,7 @@ inventoryMenuSequence = layer_sequence_create(layerName, 0, 0, seq_Inventory);
 dialogueMenuSequence = layer_sequence_create(layerName, 0, 0, seq_Dialogue);
 crashDetectorSequence = layer_sequence_create(layerName, 0, 0, seq_CrashDetector);
 compassSequence = layer_sequence_create(layerName, 0, 0, seq_Compass);
+notificationSequence = layer_sequence_create(layerName, 0, 0, seq_InGame_NotificationIn);
 
 layer_sequence_pause(pauseMenuSequence);
 layer_sequence_pause(inventoryMenuSequence);
@@ -31,6 +32,7 @@ layer_sequence_pause(questMenuSequence);
 layer_sequence_pause(dialogueMenuSequence);
 layer_sequence_pause(crashDetectorSequence);
 layer_sequence_pause(compassSequence);
+layer_sequence_pause(notificationSequence);
 
 layer_sequence_headdir(pauseMenuSequence, seqdir_right);
 layer_sequence_headpos(pauseMenuSequence, 0);
@@ -49,6 +51,10 @@ layer_sequence_headpos(crashDetectorSequence, 0);
 
 layer_sequence_headdir(compassSequence, seqdir_right);
 layer_sequence_headpos(compassSequence, 0);
+
+layer_sequence_headdir(notificationSequence, seqdir_right);
+layer_sequence_headpos(notificationSequence, 0);
+
 
 currentState = MenuState.NoMenu;
 drawBlackBackground = false;
@@ -76,9 +82,22 @@ Subscribe("Dialogue", function(_dialogue) {
 Subscribe("Exit", function(id) {
     game_end();
 });
-Subscribe("K Pressed", function(id) {
-    PressedEscape();
+Subscribe("K Pressed", function() {
+    if (currentState != MenuState.NoMenu) PressedEscape();
+})
+Subscribe("Menu", function(id) {
+    ShowUI(MenuState.Pause);
 });
+
+Subscribe("NotificationIn", function(_string) {
+    layer_sequence_headdir(notificationSequence, seqdir_right);
+    layer_sequence_play(notificationSequence);   
+})
+
+Subscribe("NotificationOut", function(_id) {
+    layer_sequence_headdir(notificationSequence, seqdir_left);
+    layer_sequence_play(notificationSequence);        
+})
 
 Subscribe("ItemEquipped", function(_itemName){
     switch(_itemName)
