@@ -33,7 +33,11 @@ questOnGoingText = [
     "If you don't return with the right amount next time, I might just *lose* your paperwork… forever."
 ];
 
-questCompletedText = "Hmph. Fine. Find Jeremy [c_yellow][wave]directly on the other side [/wave][c_white]and he'll help you...ugh..."
+questCompletedText = string_concat(
+"Hmph. Fine. Here. Use this Compass to find Jeremy. It'll be an item in your [rainbow][wave]inventory[/wave][/rainbow]. Find Jeremy [c_yellow][wave]directly on the other side [/wave][c_white] at (",
+obj_npc_int_2.x, ", ", obj_npc_int_2.y, ") and he'll help you...ugh..."
+
+)
 
 
 image_blend = make_color_hsv(irandom(255), 200, 255);
@@ -58,12 +62,14 @@ function OnInteract()
             obj_player.paperAmount -= numItemsRequired;
             obj_player.QuestLibrary[questIndex].questState = QuestState.Completed;
             Raise("Dialogue", new DialogueData(image_blend, questCompletedText));
+            obj_player.AddItem(ItemType.Compass, 1);
             questCompleted = true;
         }
         else Raise("Dialogue", new DialogueData(image_blend, questOnGoingText[irandom_range(0, 9)]));
     }
     else if (obj_player.QuestLibrary[questIndex].questState == QuestState.Completed)
     {
-        Raise("Dialogue", new DialogueData(image_blend, "Get away from me..."));
+        Raise("Dialogue", new DialogueData(image_blend, string_concat("Use this Compass to find Jeremy. It'll be an item in your [rainbow][wave]inventory[/wave][/rainbow]. Find Jeremy [c_yellow][wave]directly on the other side [/wave][c_white] at (",
+        obj_npc_int_2.x, ", ", obj_npc_int_2.y, ") and he'll help you...ugh...")));
     }
 }

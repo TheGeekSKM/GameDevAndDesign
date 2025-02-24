@@ -5,7 +5,7 @@ if (carDirection == CarDirection.Up) carSpeed *= -1;
 
 defaultSpeed = carSpeed;
 
-checkForCars = random_range(0, 100) < 40 ? false : true;
+checkForCars = random_range(0, 100) < 30 ? false : true;
 checkForPlayer = false;
 stopSpeed = 0.2;
 

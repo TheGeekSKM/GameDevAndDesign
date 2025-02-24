@@ -43,7 +43,10 @@ previousQuestNotFinishedText = [
 ];
 
 
-questCompletedText = "Thanks. Listen, you're not gonna like this, but I need [c_yellow][wave]Jordan-who's across and a bit south[c_white][/wave] to approve this. Talk to him and you should be good."
+questCompletedText = string_concat( 
+    "Thanks. Listen, you're not gonna like this, but I need [c_yellow][wave]Jordan-who's across and a bit south[c_white][/wave] at (", 
+    , obj_npc_int_4.x, ", ", obj_npc_int_4.y, ") to approve this. Talk to him and you should be good."
+)
 
 
 image_blend = make_color_hsv(irandom(255), 200, 255);
@@ -65,7 +68,6 @@ function OnInteract()
             Raise("NotificationIn", "New Quest Added");
             Raise("Dialogue", new DialogueData(image_blend, questStartingText));
             obj_player.AddItem(ItemType.CrashDetector, 1);
-            obj_player.AddItem(ItemType.Compass, 1);
             
             numInteraction++;
         }

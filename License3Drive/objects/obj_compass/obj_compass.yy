@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_compass",
-    "path":"sprites/spr_compass/spr_compass.yy",
+    "name":"spr_textBox",
+    "path":"sprites/spr_textBox/spr_textBox.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,5 +1,5 @@
 
-scale = random_range(2, 2.5);
+scale = random_range(1.5, 2);
 image_xscale = 0.01;
 image_yscale = 0.01;
 

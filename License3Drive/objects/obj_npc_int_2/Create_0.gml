@@ -27,8 +27,11 @@ questOnGoingText = [
     "Look, friend, I'd bend the rules if I could, but the last fella who tried disappeared into the back room. Ain't seen him since. Reckon he's still in line."
 ];
 
-questCompletedText = "Boy, you're really yeeing my haw!! Actually...wait a minute...my car doesn't have any parts in it!!! Can you find [c_yellow][wave] James a bit down south[/wave][c_white] and let him know!?"
+questCompletedText = string_concat(
+"Boy, you're really yeeing my haw!! Actually...wait a minute...my car doesn't have any parts in it!!! Can you find [c_yellow][wave] James a bit down south[/wave][c_white] at (",
+obj_npc_int_3.x, ", ", obj_npc_int_3.y, ") and let him know!?"
 
+)
 
 image_blend = make_color_hsv(irandom(255), 200, 255);
 counter = 0;
