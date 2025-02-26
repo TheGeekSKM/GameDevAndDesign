@@ -4,7 +4,6 @@ var displayText = "";
 var font = "";
 var textPos = new Vector2(x, y);
 
-echo(currentState);
 
 switch (currentState)
 {

@@ -1,0 +1,43 @@
+{
+  "$GMObject":"",
+  "%Name":"obj_textBox_Shift",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
+  "managed":true,
+  "name":"obj_textBox_Shift",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Left Shift to Select",},
+  ],
+  "parent":{
+    "name":"TextBoxes",
+    "path":"folders/Objects/UI/TextBoxes.yy",
+  },
+  "parentObjectId":{
+    "name":"obj_textBox",
+    "path":"objects/obj_textBox/obj_textBox.yy",
+  },
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":1,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[],
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":{
+    "name":"spr_TextBox",
+    "path":"sprites/spr_TextBox/spr_TextBox.yy",
+  },
+  "spriteMaskId":null,
+  "visible":true,
+}

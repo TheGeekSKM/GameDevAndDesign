@@ -24,6 +24,10 @@ switch (currentState)
     
     case ButtonState.Click:
         image_blend = clickColor;
+        displayText = string_concat("> ", text, " <")
+        font = "CustomFont_Effects";
+        textPos.Set(x, y + 4);
+        sprite_index = downSprite;    
         break;    
 }
 

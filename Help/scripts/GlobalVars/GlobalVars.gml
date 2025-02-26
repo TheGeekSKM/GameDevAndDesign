@@ -13,8 +13,11 @@ enum ContainerType
     LeftRight
 }
 
+#macro camY 0
+#macro camX 0
 
-function vars() constructor {
+
+function Vars() constructor {
     pause = false;
     debug = false;
     single = false;
@@ -29,7 +32,6 @@ function vars() constructor {
         pause = false;
     }
 }
-global.vars = new vars();
 
 font_enable_effects(CustomFont_Effects, true, {
     outlineEnable : true,
