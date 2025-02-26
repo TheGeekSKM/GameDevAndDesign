@@ -1,20 +1,4 @@
-function vars() constructor {
-	pause = false;
-    debug = false;
-    single = false;
-	
-	function PauseGame(_id) {
-		Raise("Pause", _id);
-		pause = true;
-	}
-	
-	function ResumeGame(_id) {
-		Raise("Resume", _id);
-		pause = false;
-	}
-}
 
-global.vars = new vars();
 
 enum ButtonState
 {
@@ -28,6 +12,24 @@ enum ContainerType
     UpDown,
     LeftRight
 }
+
+
+function vars() constructor {
+    pause = false;
+    debug = false;
+    single = false;
+    
+    function PauseGame(_id) {
+        Raise("Pause", _id);
+        pause = true;
+    }
+    
+    function ResumeGame(_id) {
+        Raise("Resume", _id);
+        pause = false;
+    }
+}
+global.vars = new vars();
 
 font_enable_effects(CustomFont_Effects, true, {
     outlineEnable : true,
