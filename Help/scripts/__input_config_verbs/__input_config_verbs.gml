@@ -15,10 +15,10 @@ function __input_config_verbs()
     return {
         keyboard_and_mouse:
         {
-            up:    [input_binding_key(vk_up),    input_binding_key("W")],
-            down:  [input_binding_key(vk_down),  input_binding_key("S")],
-            left:  [input_binding_key(vk_left),  input_binding_key("A")],
-            right: [input_binding_key(vk_right), input_binding_key("D")],
+            up:    [input_binding_key(vk_up),    input_binding_key("W"), input_binding_key("I")],
+            down:  [input_binding_key(vk_down),  input_binding_key("S"), input_binding_key("K")],
+            left:  [input_binding_key(vk_left),  input_binding_key("A"), input_binding_key("J")],
+            right: [input_binding_key(vk_right), input_binding_key("D"), input_binding_key("L")],
             
             accept:  input_binding_key(vk_space),
             cancel:  input_binding_key(vk_backspace),

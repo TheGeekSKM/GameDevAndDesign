@@ -6,5 +6,5 @@ downSprite = sprButtonDown;
 alarm[0] = 2;
 
 function OnClick() { 
-    Transition(rmCharSelectMultiple, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    Transition(rmGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 }
