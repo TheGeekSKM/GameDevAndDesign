@@ -14,7 +14,9 @@ dir = 0;
 moveX = 0;
 moveY = 0;
 
-collisionObjects = [obj_PlayerBase];
+doOnce = false;
+
+collisionObjects = [obj_PlayerBase, obj_wall];
 
 function SetControlScheme(_f, _b, _l, _r, _i)
 {
@@ -26,4 +28,4 @@ function SetControlScheme(_f, _b, _l, _r, _i)
 }
 
 image_speed = 0;
-image_index = 0;
+image_index = 1;

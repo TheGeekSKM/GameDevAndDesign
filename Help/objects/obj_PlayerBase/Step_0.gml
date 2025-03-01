@@ -16,10 +16,17 @@ if (moveX<0) image_angle = 180;
 if (moveY>0) image_angle = 270;
 if (moveY<0) image_angle = 90;
     
-if (moveX != 0 or moveY != 0) image_speed = 1; 
+if (moveX != 0 or moveY != 0) {
+    if (!doOnce) {
+        image_index = ChooseFromArray([0, 2]);
+        doOnce = true;
+    }
+    image_speed = 1;
+} 
 else 
 {
-    image_index = 0;
+    doOnce = false;
+    image_index = 1;
     image_speed = 0;
 }
     
