@@ -1,0 +1,1 @@
+if (keyboard_check_pressed(vk_lshift)) Transition(rmMainMenu, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);

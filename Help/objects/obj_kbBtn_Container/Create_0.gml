@@ -22,6 +22,7 @@ function ClickStart()
 
 function ClickEnd()
 {
+    if (!allBtns[selectIndex].currentState == ButtonState.Click) return;
     allBtns[selectIndex].currentState = ButtonState.Idle;
     allBtns[selectIndex].OnClick();
 }

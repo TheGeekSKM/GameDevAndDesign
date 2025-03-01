@@ -9,14 +9,14 @@ rightWard = undefined;
 
 interact = undefined;
 
-spd = 4;
+spd = 2;
 dir = 0;
 moveX = 0;
 moveY = 0;
 
 doOnce = false;
 
-collisionObjects = [obj_PlayerBase, obj_wall];
+collisionObjects = [obj_wall];
 
 function SetControlScheme(_f, _b, _l, _r, _i)
 {
