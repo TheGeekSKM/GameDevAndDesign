@@ -6,8 +6,8 @@
   "name":"obj_questList_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Inventory",
-    "path":"folders/Objects/UI/Menus/Inventory.yy",
+    "name":"Quest",
+    "path":"folders/Objects/UI/Menus/Quest.yy",
   },
   "parentObjectId":{
     "name":"obj_ui_parent",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_inventory",
-    "path":"sprites/spr_inventory/spr_inventory.yy",
+    "name":"spr_questList",
+    "path":"sprites/spr_questList/spr_questList.yy",
   },
   "spriteMaskId":null,
   "visible":true,

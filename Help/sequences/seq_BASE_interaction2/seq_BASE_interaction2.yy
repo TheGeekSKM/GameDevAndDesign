@@ -26,8 +26,8 @@
   },
   "name":"seq_BASE_interaction2",
   "parent":{
-    "name":"player1",
-    "path":"folders/Sequences/player1.yy",
+    "name":"player2",
+    "path":"folders/Sequences/player2.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,
