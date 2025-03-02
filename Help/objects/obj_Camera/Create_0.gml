@@ -18,5 +18,4 @@ for (var i = 0; i < array_length(global.vars.playerList); i++)
     view_xport[i] = camWidth * i;
     view_wport[i] = camWidth;
 }
-    
-surface_resize(application_surface, width, height);
+surface_resize(application_surface, width * 2, height * 2);

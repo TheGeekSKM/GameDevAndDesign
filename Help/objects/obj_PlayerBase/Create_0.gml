@@ -15,6 +15,7 @@ moveY = 0;
 
 doOnce = false;
 
+
 collisionObjects = [obj_wall];
 inventory = new Inventory().SetData(20);
 
@@ -34,13 +35,14 @@ attributes.AddAttrChangeCallback(function(_statType) {
 
 spd = attributes.Dexterity;
 
-function SetControlScheme(_f, _b, _l, _r, _i)
+function SetControlScheme(_f, _b, _l, _r, _i, _m)
 {
     forward = _f;
     backward = _b;
     leftWard = _l;
     rightWard = _r;
     interact  = _i;
+    menu = _m;
 }
 
 
@@ -53,3 +55,13 @@ sprite_index = spr_human;
 image_blend = global.vars.playerColors[playerIndex];
 image_speed = 0;
 image_index = 1;
+
+playerHealth = attributes.Constitution * 10;
+
+function TakeDamage(_dmg)
+{
+    if (playerHealth - _dmg <= 0)
+    {
+        Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    }
+}

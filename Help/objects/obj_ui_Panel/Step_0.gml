@@ -18,12 +18,12 @@ switch (screenType)
         selectEnd = keyboard_check_released(vk_space);
         break;
     case ScreenType.Right:
-        selectStart = keyboard_check_pressed(vk_numpad0);
-        selectEnd = keyboard_check_released(vk_numpad0);
+        selectStart = keyboard_check_pressed(vk_rcontrol);
+        selectEnd = keyboard_check_released(vk_rcontrol);
         break;
     case ScreenType.Left:
-        selectStart = keyboard_check_pressed(vk_lshift);
-        selectEnd = keyboard_check_released(vk_lshift);
+        selectStart = keyboard_check_pressed(ord("E"));
+        selectEnd = keyboard_check_released(ord("E"));
         break;        
 }
 

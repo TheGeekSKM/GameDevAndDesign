@@ -7,7 +7,7 @@
   "managed":true,
   "name":"obj_textBox_Shift",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Left Shift to Select",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"E to Select",},
   ],
   "parent":{
     "name":"TextBoxes",

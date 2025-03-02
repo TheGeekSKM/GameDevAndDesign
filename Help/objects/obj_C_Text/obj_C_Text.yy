@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ControlsForeground",
-    "path":"sprites/spr_ControlsForeground/spr_ControlsForeground.yy",
+    "name":"spr_ControlsForeground29",
+    "path":"sprites/spr_ControlsForeground29/spr_ControlsForeground29.yy",
   },
   "spriteMaskId":null,
   "visible":true,

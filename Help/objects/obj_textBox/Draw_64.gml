@@ -1,7 +1,7 @@
 var text = scribble(textToDisplay)
     .align(fa_center, fa_middle)
     .starting_format("CustomFont", c_white)
-    .transform(1, 1, image_angle);
+    .transform(scale, scale, image_angle);
 
 var bbox = text.get_bbox(x, y);
 var xScale = (bbox.width + 12) / sprite_width;

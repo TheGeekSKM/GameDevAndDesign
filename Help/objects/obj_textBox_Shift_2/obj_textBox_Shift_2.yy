@@ -8,7 +8,7 @@
   "managed":true,
   "name":"obj_textBox_Shift_2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Left Shift to Exit",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"E to Exit",},
   ],
   "parent":{
     "name":"TextBoxes",

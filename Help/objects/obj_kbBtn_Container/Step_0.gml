@@ -10,5 +10,5 @@ if ((selectIndex + movement) != oldIndex)
     UpdateHover();
 }
 
-if (keyboard_check_pressed(vk_lshift)) ClickStart(); 
-if (keyboard_check_released(vk_lshift)) ClickEnd(); 
+if (keyboard_check_pressed(ord("E"))) ClickStart(); 
+if (keyboard_check_released(ord("E"))) ClickEnd(); 

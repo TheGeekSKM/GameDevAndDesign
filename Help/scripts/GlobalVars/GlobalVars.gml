@@ -33,7 +33,32 @@ function Vars() constructor {
     playerColors = [
         make_color_rgb(0, 148, 255),
         make_color_rgb(55, 183, 0)
-    ]
+    ];
+    npcNames = [
+        "Garret Holloway",
+        "Marla Vex",
+        "Dorian Blackwood",
+        "Lysandra Thorn",
+        "Silas Crowe",
+        "Tobias Wren",
+        "Eleanor Graves",
+        "Victor Ashford",
+        "Ophelia Darkmere",
+        "Cedric Vale",
+        "Rowan Hargrove",
+        "Matilda Fenshaw",
+        "Felix Draeven",
+        "Isolde Whitmore",
+        "Cassius Varn",
+        "Theron Greaves",
+        "Lucinda Moray",
+        "Edwin Hollowbrook",
+        "Selene Duskbane",
+        "Roderic Faulkner"
+    ];
+    questLibrary = [];
+    
+    function AddQuest(_quest) { array_push(questLibrary, _quest); }
     
     function PauseGame(_id) {
         Raise("Pause", _id);
@@ -49,6 +74,18 @@ function Vars() constructor {
     {
         array_push(playerList, _id);
     }
+}
+
+enum QuestState
+{
+    Started,
+    Completed
+}
+function Quest(_n, _d) constructor 
+{
+    self.name = _n;
+    self.description = _d;
+    self.state = QuestState.Started; 
 }
 
 function Button(_id) constructor 

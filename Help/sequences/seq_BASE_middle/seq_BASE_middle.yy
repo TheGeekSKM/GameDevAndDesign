@@ -1,6 +1,6 @@
 {
   "$GMSequence":"",
-  "%Name":"seq_BASE",
+  "%Name":"seq_BASE_middle",
   "autoRecord":true,
   "backdropHeight":448,
   "backdropImageOpacity":0.5,
@@ -24,7 +24,7 @@
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"seq_BASE",
+  "name":"seq_BASE_middle",
   "parent":{
     "name":"Sequences",
     "path":"folders/Sequences.yy",

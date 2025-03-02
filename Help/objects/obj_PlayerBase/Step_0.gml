@@ -1,10 +1,18 @@
-if (forward == undefined or backward == undefined or leftWard == undefined or rightWard == undefined or interact == undefined) return;
-if (global.vars.pause) return;    
+if (forward == undefined or 
+    backward == undefined or 
+    leftWard == undefined or 
+    rightWard == undefined or 
+    interact == undefined or 
+    menu == undefined) return;
+
+if (global.vars.pause) return;
 
 var up = keyboard_check(forward);
 var down = keyboard_check(backward);
 var left = keyboard_check(leftWard);
 var right = keyboard_check(rightWard);
+
+Raise("MenuOpen", id);
 
 moveX = (right - left) * spd;
 moveY = (down - up) * spd;
@@ -55,7 +63,8 @@ for (var i = 0; i < array_length(interactableList); i++)
         array_delete(interactableList, i, 1);
         break;
     }
-    if (point_distance(x, y, interactableList[i].x, interactableList[i].y) > interactionRange)
+    var dist = point_distance(x, y, interactableList[i].x, interactableList[i].y);
+    if (dist > interactionRange)
     {
         interactableList[i].playerInRange = noone;
         array_delete(interactableList, i, 1);

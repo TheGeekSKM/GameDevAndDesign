@@ -12,10 +12,10 @@ switch (screenType)
         textToDisplay = "IJKL to Move, Space to Select";
         break;
     case ScreenType.Right:
-        textToDisplay = "ArrowKeys to Move, Numpad0 to Select";
+        textToDisplay = "ArrowKeys to Move, Right Control to Select";
         break;
     case ScreenType.Left:
-        textToDisplay = "WASD to Move, Left Shift to Select";
+        textToDisplay = "WASD to Move, E to Select";
         break;      
 }
 
