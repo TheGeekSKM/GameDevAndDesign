@@ -7,6 +7,7 @@ function Initialize(_item, _itemCount)
 {
     currentItem = _item;
     itemCount = _itemCount;
+    interactableName = currentItem.name;
     sprite_index = currentItem.sprite;
 }
 

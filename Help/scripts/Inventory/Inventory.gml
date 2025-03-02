@@ -12,6 +12,19 @@ function Inventory() constructor
         return self;
     }
     
+    function ToString()
+    {
+        var str = string_concat("Player #", self.owner.playerIndex);
+        for (var i = 0; i < array_length(self.items); i++)
+        {
+            if (i == 0) {
+                str = string_concat(str, ": ", self.items[i].item.name, " x", self.items[i].itemCount);
+            }
+            else str = string_concat(str, ", ", self.items[i].item.name, " x", self.items[i].itemCount);
+        }
+        return str;
+    }
+    
     function ContainsItem(_item)
     {
         for (var i = 0; i < array_length(self.items); i++)
@@ -39,11 +52,10 @@ function Inventory() constructor
         }
         else // item isn't in inventory
         {
+            index = array_length(self.items);
             array_push(self.items, 
                 new InventorySlot(_item, _itemCount));
         }
-        
-        self.currentWeight += weight;
         
         for (var i = 0; i < _itemCount; i++)
         {

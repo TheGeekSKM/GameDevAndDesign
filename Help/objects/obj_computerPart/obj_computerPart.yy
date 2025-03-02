@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_base_collectible",
+  "%Name":"obj_computerPart",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_base_collectible",
+  "name":"obj_computerPart",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactables",
-    "path":"folders/Objects/_Base/Interactables.yy",
+    "name":"Items",
+    "path":"folders/Objects/Items.yy",
   },
   "parentObjectId":{
-    "name":"obj_base_interactable",
-    "path":"objects/obj_base_interactable/obj_base_interactable.yy",
+    "name":"obj_base_collectible",
+    "path":"objects/obj_base_collectible/obj_base_collectible.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
