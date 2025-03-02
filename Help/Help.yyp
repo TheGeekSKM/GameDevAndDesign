@@ -701,6 +701,7 @@
     {"id":{"name":"spr_human1","path":"sprites/spr_human1/spr_human1.yy",},},
     {"id":{"name":"spr_human2","path":"sprites/spr_human2/spr_human2.yy",},},
     {"id":{"name":"spr_inventory","path":"sprites/spr_inventory/spr_inventory.yy",},},
+    {"id":{"name":"spr_inventory31","path":"sprites/spr_inventory31/spr_inventory31.yy",},},
     {"id":{"name":"spr_loseScreen","path":"sprites/spr_loseScreen/spr_loseScreen.yy",},},
     {"id":{"name":"spr_MainMenuBackground","path":"sprites/spr_MainMenuBackground/spr_MainMenuBackground.yy",},},
     {"id":{"name":"spr_MainMenuTitle","path":"sprites/spr_MainMenuTitle/spr_MainMenuTitle.yy",},},
