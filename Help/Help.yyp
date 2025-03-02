@@ -535,6 +535,7 @@
     {"id":{"name":"input_x","path":"scripts/input_x/input_x.yy",},},
     {"id":{"name":"input_xy","path":"scripts/input_xy/input_xy.yy",},},
     {"id":{"name":"input_y","path":"scripts/input_y/input_y.yy",},},
+    {"id":{"name":"Inventory","path":"scripts/Inventory/Inventory.yy",},},
     {"id":{"name":"scr_seedpod_basics","path":"scripts/scr_seedpod_basics/scr_seedpod_basics.yy",},},
     {"id":{"name":"scr_seedpod_instances","path":"scripts/scr_seedpod_instances/scr_seedpod_instances.yy",},},
     {"id":{"name":"scr_seedpod_strings","path":"scripts/scr_seedpod_strings/scr_seedpod_strings.yy",},},
