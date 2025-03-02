@@ -5,14 +5,14 @@ if (forward == undefined or
     interact == undefined or 
     menu == undefined) return;
 
-if (global.vars.pause) return;
+if (global.vars.pause or inputPause) return;
 
 var up = keyboard_check(forward);
 var down = keyboard_check(backward);
 var left = keyboard_check(leftWard);
 var right = keyboard_check(rightWard);
 
-Raise("MenuOpen", id);
+if (keyboard_check_pressed(menu)) Raise("PauseOpen", id);
 
 moveX = (right - left) * spd;
 moveY = (down - up) * spd;

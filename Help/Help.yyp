@@ -179,6 +179,8 @@
     {"id":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},},
     {"id":{"name":"obj_ui_Panel","path":"objects/obj_ui_Panel/obj_ui_Panel.yy",},},
     {"id":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},},
+    {"id":{"name":"obj_ui_pixel_LEFT","path":"objects/obj_ui_pixel_LEFT/obj_ui_pixel_LEFT.yy",},},
+    {"id":{"name":"obj_ui_pixel_RIGHT","path":"objects/obj_ui_pixel_RIGHT/obj_ui_pixel_RIGHT.yy",},},
     {"id":{"name":"obj_ui_pixel","path":"objects/obj_ui_pixel/obj_ui_pixel.yy",},},
     {"id":{"name":"obj_ui_transitionParent","path":"objects/obj_ui_transitionParent/obj_ui_transitionParent.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},

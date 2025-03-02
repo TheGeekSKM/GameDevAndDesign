@@ -14,6 +14,7 @@ moveX = 0;
 moveY = 0;
 
 doOnce = false;
+inputPause = false;
 
 
 collisionObjects = [obj_wall];

@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_questDesc_1",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_ui_pixel_LEFT",
+  "eventList":[],
   "managed":true,
-  "name":"obj_questDesc_1",
+  "name":"obj_ui_pixel_LEFT",
   "overriddenProperties":[],
   "parent":{
-    "name":"Quest",
-    "path":"folders/Objects/UI/Menus/Quest.yy",
+    "name":"Transitions",
+    "path":"folders/ImportedAssets/Transitions.yy",
   },
   "parentObjectId":{
-    "name":"obj_ui_parent",
-    "path":"objects/obj_ui_parent/obj_ui_parent.yy",
+    "name":"obj_ui_transitionParent",
+    "path":"objects/obj_ui_transitionParent/obj_ui_transitionParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_questDescription",
-    "path":"sprites/spr_questDescription/spr_questDescription.yy",
+    "name":"spr_pixel",
+    "path":"sprites/spr_pixel/spr_pixel.yy",
   },
   "spriteMaskId":null,
   "visible":true,
