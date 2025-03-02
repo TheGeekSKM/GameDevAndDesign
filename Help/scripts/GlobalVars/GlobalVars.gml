@@ -173,3 +173,53 @@ function Button(_id) constructor
     }
 }
 
+
+enum AttributeType
+{
+    Strength,
+    Dexterity,
+    Constitution
+}
+function Attributes() constructor
+{
+    self.Strength = 1;
+    self.Dexterity = 1;
+    self.Constitution = 1;
+    
+    self.attrChangeCallbacks = [];
+    
+    function Initialize(_s = undefined, _d = undefined, _c = undefined)
+    {
+        self.Strength = _s == undefined ? irandom_range(1, 4) : _s;
+        self.Dexterity = _d == undefined ? irandom_range(1, 4) : _d;
+        self.Constitution = _c == undefined ? irandom_range(1, 4) : _c;
+        return self;
+    }
+    
+    function AddStat(_statType, _statAmount)
+    {
+        switch(_statType)
+        {
+            case AttributeType.Strength:
+                self.Strength += _statAmount;
+                break;
+            case AttributeType.Dexterity:
+                self.Dexterity += _statAmount;
+                break;
+            case AttributeType.Constitution:
+                self.Constitution += _statAmount;
+                break;
+        }
+        
+        for (var i = 0; i < array_length(self.attrChangeCallbacks); i++)
+        {
+            self.attrChangeCallbacks[i](_statType);
+        }
+    }
+    
+    function AddAttrChangeCallback(_func)
+    {
+        array_push(self.attrChangeCallbacks, _func);
+    }
+}
+

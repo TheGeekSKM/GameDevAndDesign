@@ -9,7 +9,6 @@ rightWard = undefined;
 
 interact = undefined;
 
-spd = 2;
 dir = 0;
 moveX = 0;
 moveY = 0;
@@ -17,6 +16,23 @@ moveY = 0;
 doOnce = false;
 
 collisionObjects = [obj_wall];
+inventory = new Inventory().SetData(20);
+
+attributes = new Attributes().Initialize();
+attributes.AddAttrChangeCallback(function(_statType) {
+    switch(_statType)
+    {
+        case AttributeType.Strength:
+            break;
+        case AttributeType.Dexterity:
+            spd = attributes.Dexterity;
+            break;
+        case AttributeType.Constitution:
+            break;
+    }    
+})
+
+spd = attributes.Dexterity;
 
 function SetControlScheme(_f, _b, _l, _r, _i)
 {
@@ -29,3 +45,7 @@ function SetControlScheme(_f, _b, _l, _r, _i)
 
 image_speed = 0;
 image_index = 1;
+
+tempInteractableList = ds_list_create();
+interactableList = [];
+interactionRange = 20;
