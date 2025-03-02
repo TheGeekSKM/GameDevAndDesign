@@ -30,6 +30,10 @@ function Vars() constructor {
     single = false;
     playerList = [];
     cameras = [];
+    playerColors = [
+        make_color_rgb(0, 148, 255),
+        make_color_rgb(55, 183, 0)
+    ]
     
     function PauseGame(_id) {
         Raise("Pause", _id);

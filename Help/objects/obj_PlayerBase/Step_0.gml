@@ -40,7 +40,7 @@ for (var i = 0; i < ds_list_size(tempInteractableList); i++)
     // if an item is in range and has no owner, become its owner
     if (tempInteractableList[| i].playerInRange == noone)
     {
-        tempInteractableList[| i].playerInRange == id;
+        tempInteractableList[| i].playerInRange = id;
         array_push(interactableList, tempInteractableList[| i]);
     }
 }

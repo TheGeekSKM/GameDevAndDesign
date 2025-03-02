@@ -43,9 +43,13 @@ function SetControlScheme(_f, _b, _l, _r, _i)
     interact  = _i;
 }
 
-image_speed = 0;
-image_index = 1;
+
 
 tempInteractableList = ds_list_create();
 interactableList = [];
 interactionRange = 20;
+
+sprite_index = spr_human;
+image_blend = global.vars.playerColors[playerIndex];
+image_speed = 0;
+image_index = 1;
