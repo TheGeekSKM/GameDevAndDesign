@@ -22,7 +22,7 @@ if (moveX != 0 or moveY != 0) {
         image_index = ChooseFromArray([0, 2]);
         doOnce = true;
     }
-    image_speed = spd / 3;
+    image_speed = spd / 2;
 } 
 else 
 {
