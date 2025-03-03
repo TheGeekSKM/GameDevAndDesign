@@ -4,7 +4,8 @@ enum MenuState
     Pause,
     Quest,
     Inventory,
-    Dialogue
+    Dialogue,
+    Attributes
 }
 
 layerName = "GUISequence";
@@ -21,23 +22,26 @@ p1_dialogue = layer_sequence_create(layerName, 0, 0, seq_LEFT_Dialogue);
 p1_inventory = layer_sequence_create(layerName, 0, 0, seq_LEFT_Inventory);
 p1_pause = layer_sequence_create(layerName, 0, 0, seq_LEFT_Pause);
 p1_quest = layer_sequence_create(layerName, 0, 0, seq_LEFT_Quest);
+p1_attributes = layer_sequence_create(layerName, 0, 0, seq_LEFT_Attributes);
 
 p2_keybind = layer_sequence_create(layerName, 400, 0, seq_BASE_interaction2);
 p2_dialogue = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Dialogue);
 p2_inventory = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Inventory);
 p2_pause = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Pause);
 p2_quest = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Quest);
-
+p2_attributes = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Attributes);
 
 layer_sequence_pause(p1_dialogue);
 layer_sequence_pause(p1_inventory);
 layer_sequence_pause(p1_pause);
 layer_sequence_pause(p1_quest);
+layer_sequence_pause(p1_attributes);
 
 layer_sequence_pause(p2_dialogue);
 layer_sequence_pause(p2_inventory);
 layer_sequence_pause(p2_pause);
 layer_sequence_pause(p2_quest);
+layer_sequence_pause(p2_attributes);
 
 Subscribe("PauseOpen", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
@@ -55,6 +59,10 @@ Subscribe("QuestOpen", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Quest);
     else ShowMenuStateRight(MenuState.Quest);
 });
+Subscribe("AttributeOpen", function (_id) {
+    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Attributes);
+    else ShowMenuStateRight(MenuState.Attributes);    
+})
 
 Subscribe("PauseClose", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.NoMenu);
@@ -72,6 +80,10 @@ Subscribe("QuestClose", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
     else ShowMenuStateRight(MenuState.Pause);
 });
+Subscribe("AttributeClose", function(_id) {
+    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
+    else ShowMenuStateRight(MenuState.Pause);    
+})
 
 function LeftOnExit()
 {
@@ -102,6 +114,11 @@ function LeftOnExit()
             layer_sequence_play(p1_quest);
             with (obj_questList_1) { vis = false; }
             with (obj_questDesc_1) { vis = false; }           
+            break;
+        case MenuState.Attributes:
+            layer_sequence_headdir(p1_attributes, seqdir_left);
+            layer_sequence_play(p1_attributes);
+            with (obj_attributes_1) { vis = false; }
             break;
     }
 }
@@ -144,7 +161,13 @@ function LeftOnEnter()
             obj_Player1.inputPause = true;  
             with (obj_questList_1) { vis = true; }
             with (obj_questDesc_1) { vis = true; }              
-            break;        
+            break;
+        case MenuState.Attributes:
+            layer_sequence_headdir(p1_attributes, seqdir_right);
+            layer_sequence_play(p1_attributes);
+            obj_Player1.inputPause = true;
+            with (obj_attributes_1) { vis = true; }         
+            break;
     }
 }
 
@@ -178,6 +201,11 @@ function RightOnExit()
             with (obj_questList_2) { vis = false; }
             with (obj_questDesc_2) { vis = false; }         
             break;
+        case MenuState.Attributes:
+            layer_sequence_headdir(p2_attributes, seqdir_left);
+            layer_sequence_play(p2_attributes);
+            with (obj_attributes_2) { vis = false; }
+            break;        
     }
 }
 function RightOnEnter()
@@ -219,7 +247,13 @@ function RightOnEnter()
             obj_Player2.inputPause = true;
             with (obj_questList_2) { vis = true; }
             with (obj_questDesc_2) { vis = true; }                
-            break;        
+            break;
+        case MenuState.Attributes:
+            layer_sequence_headdir(p2_attributes, seqdir_right);
+            layer_sequence_play(p2_attributes);
+            obj_Player2.inputPause = true;
+            with (obj_attributes_2) { vis = true; }         
+            break;                
     }
 }
 

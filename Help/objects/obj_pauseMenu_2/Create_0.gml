@@ -3,7 +3,7 @@ event_inherited();
 
 vis = false;
 
-buttons = ["Resume", "Inventory", "Quests", "Main Menu", "Exit"];
+buttons = ["Resume", "Inventory", "Quests", "Attributes", "Main Menu", "Exit"];
 buttonFunc = [
     function() {
         Raise("PauseClose", obj_Player2);
@@ -13,6 +13,9 @@ buttonFunc = [
     },
     function() {
         Raise("QuestOpen", obj_Player2);
+    },
+    function() {
+        Raise("AttributeOpen", obj_Player2);
     },
     function() {
         Transition(rmMainMenu, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
