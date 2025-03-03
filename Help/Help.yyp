@@ -754,6 +754,7 @@
     {"id":{"name":"spr_loseScreen","path":"sprites/spr_loseScreen/spr_loseScreen.yy",},},
     {"id":{"name":"spr_MainMenuBackground","path":"sprites/spr_MainMenuBackground/spr_MainMenuBackground.yy",},},
     {"id":{"name":"spr_MainMenuTitle","path":"sprites/spr_MainMenuTitle/spr_MainMenuTitle.yy",},},
+    {"id":{"name":"spr_npc_Speaekr","path":"sprites/spr_npc_Speaekr/spr_npc_Speaekr.yy",},},
     {"id":{"name":"spr_pauseMenu","path":"sprites/spr_pauseMenu/spr_pauseMenu.yy",},},
     {"id":{"name":"spr_pcParts","path":"sprites/spr_pcParts/spr_pcParts.yy",},},
     {"id":{"name":"spr_pixel","path":"sprites/spr_pixel/spr_pixel.yy",},},

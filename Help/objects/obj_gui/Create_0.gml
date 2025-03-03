@@ -52,9 +52,19 @@ Subscribe("PauseOpen", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
     else ShowMenuStateRight(MenuState.Pause);
 });
-Subscribe("DialogueOpen", function(_id) {
-    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Dialogue);
-    else ShowMenuStateRight(MenuState.Dialogue);
+Subscribe("DialogueOpen", function(_dialogueData) {
+    if (_dialogueData.playerID.playerIndex == 0) 
+    {
+        with (obj_dialogueText_1) { SetText(_dialogueData); }
+        with (obj_dialogueSpeaker_1) { SetSpeaker(_dialogueData); }
+        ShowMenuStateLeft(MenuState.Dialogue);
+    }
+    else 
+    {
+        with (obj_dialogueText_2) { SetText(_dialogueData); }
+        with (obj_dialogueSpeaker_2) { SetSpeaker(_dialogueData); }
+        ShowMenuStateRight(MenuState.Dialogue);
+    }
 });
 Subscribe("InventoryOpen", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Inventory);
@@ -294,14 +304,12 @@ function RightOnEnter()
 
 function ShowMenuStateLeft(_state) 
 {
-    show_debug_message(_state);
     LeftOnExit();
     player1State = _state;
     LeftOnEnter();
 }
 function ShowMenuStateRight(_state) 
 {
-    show_debug_message(_state);
     RightOnExit();
     player2State = _state;
     RightOnEnter();

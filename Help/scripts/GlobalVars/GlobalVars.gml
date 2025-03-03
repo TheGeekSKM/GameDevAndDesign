@@ -23,6 +23,13 @@ enum ScreenType
 #macro camY 0
 #macro camX 0
 
+function DialogueData(_speaker, _text, _playerID) constructor 
+{
+    self.speaker = _speaker;
+    self.text = _text;
+    self.playerID = _playerID;
+}
+
 
 function Vars() constructor {
     pause = false;

@@ -5,7 +5,7 @@
   "managed":true,
   "name":"obj_txtBox_dialogue1",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"text","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Press E to Continue",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"text","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"L.Shift to Continue",},
   ],
   "parent":{
     "name":"Dialogue",

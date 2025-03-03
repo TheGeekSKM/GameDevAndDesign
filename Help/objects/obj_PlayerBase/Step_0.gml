@@ -44,7 +44,7 @@ else
     
 move_and_collide(moveX, moveY, collisionObjects, 4, 0, 0, spd, -1);
 
-
+ds_list_clear(tempInteractableList);
 collision_circle_list(x, y, interactionRange, obj_base_interactable, false, true, tempInteractableList, false);
 for (var i = 0; i < ds_list_size(tempInteractableList); i++)
 { 
