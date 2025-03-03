@@ -12,6 +12,14 @@ function Inventory() constructor
         return self;
     }
     
+    function GetItemCount(_item)
+    {
+        var index = ContainsItem(_item);
+        if (index == -1) return 0;
+            
+        return self.items[index].itemCount;
+    }
+    
     function ToString()
     {
         var str = string_concat("Player #", self.owner.playerIndex);

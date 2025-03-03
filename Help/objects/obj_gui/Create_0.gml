@@ -5,7 +5,8 @@ enum MenuState
     Quest,
     Inventory,
     Dialogue,
-    Attributes
+    Attributes,
+    Computer
 }
 
 layerName = "GUISequence";
@@ -23,6 +24,7 @@ p1_inventory = layer_sequence_create(layerName, 0, 0, seq_LEFT_Inventory);
 p1_pause = layer_sequence_create(layerName, 0, 0, seq_LEFT_Pause);
 p1_quest = layer_sequence_create(layerName, 0, 0, seq_LEFT_Quest);
 p1_attributes = layer_sequence_create(layerName, 0, 0, seq_LEFT_Attributes);
+p1_computer = layer_sequence_create(layerName, 0, 0, seq_LEFT_Computer);
 
 p2_keybind = layer_sequence_create(layerName, 400, 0, seq_BASE_interaction2);
 p2_dialogue = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Dialogue);
@@ -30,18 +32,21 @@ p2_inventory = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Inventory);
 p2_pause = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Pause);
 p2_quest = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Quest);
 p2_attributes = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Attributes);
+p2_computer = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Computer);
 
 layer_sequence_pause(p1_dialogue);
 layer_sequence_pause(p1_inventory);
 layer_sequence_pause(p1_pause);
 layer_sequence_pause(p1_quest);
 layer_sequence_pause(p1_attributes);
+layer_sequence_pause(p1_computer);
 
 layer_sequence_pause(p2_dialogue);
 layer_sequence_pause(p2_inventory);
 layer_sequence_pause(p2_pause);
 layer_sequence_pause(p2_quest);
 layer_sequence_pause(p2_attributes);
+layer_sequence_pause(p2_computer);
 
 Subscribe("PauseOpen", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
@@ -63,6 +68,10 @@ Subscribe("AttributeOpen", function (_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Attributes);
     else ShowMenuStateRight(MenuState.Attributes);    
 })
+Subscribe("ComputerOpen", function(_id) {
+    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Computer);
+    else ShowMenuStateRight(MenuState.Computer);          
+})
 
 Subscribe("PauseClose", function(_id) {
     if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.NoMenu);
@@ -73,16 +82,20 @@ Subscribe("DialogueClose", function(_id) {
     else ShowMenuStateRight(MenuState.NoMenu);
 });
 Subscribe("InventoryClose", function(_id) {
-    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
-    else ShowMenuStateRight(MenuState.Pause);
+    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.NoMenu);
+    else ShowMenuStateRight(MenuState.NoMenu);
 });
 Subscribe("QuestClose", function(_id) {
-    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
-    else ShowMenuStateRight(MenuState.Pause);
+    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.NoMenu);
+    else ShowMenuStateRight(MenuState.NoMenu);
 });
 Subscribe("AttributeClose", function(_id) {
-    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.Pause);
-    else ShowMenuStateRight(MenuState.Pause);    
+    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.NoMenu);
+    else ShowMenuStateRight(MenuState.NoMenu);    
+})
+Subscribe("ComputerClose", function(_id) {
+    if (_id.playerIndex == 0) ShowMenuStateLeft(MenuState.NoMenu);
+    else ShowMenuStateRight(MenuState.NoMenu);          
 })
 
 function LeftOnExit()
@@ -120,6 +133,11 @@ function LeftOnExit()
             layer_sequence_play(p1_attributes);
             with (obj_attributes_1) { vis = false; }
             break;
+        case MenuState.Computer:
+            layer_sequence_headdir(p1_computer, seqdir_left);
+            layer_sequence_play(p1_computer);
+            with (obj_computerScreen_1) { vis = false; }
+            break;        
     }
 }
 function LeftOnEnter()
@@ -130,7 +148,7 @@ function LeftOnEnter()
             layer_sequence_headdir(p1_keybind, seqdir_right);
             layer_sequence_play(p1_keybind);
             drawBlackBackgroundLeft = false;
-            alarm[0] = 10;
+            alarm[0] = 30;
             break;
         case MenuState.Dialogue:
             layer_sequence_headdir(p1_dialogue, seqdir_right);
@@ -168,6 +186,12 @@ function LeftOnEnter()
             obj_Player1.inputPause = true;
             with (obj_attributes_1) { vis = true; }         
             break;
+        case MenuState.Computer:
+            layer_sequence_headdir(p1_computer, seqdir_right);
+            layer_sequence_play(p1_computer);
+            obj_Player1.inputPause = true;
+            with (obj_computerScreen_1) { vis = true; }         
+            break;        
     }
 }
 
@@ -205,7 +229,12 @@ function RightOnExit()
             layer_sequence_headdir(p2_attributes, seqdir_left);
             layer_sequence_play(p2_attributes);
             with (obj_attributes_2) { vis = false; }
-            break;        
+            break;
+        case MenuState.Computer:
+            layer_sequence_headdir(p2_computer, seqdir_left);
+            layer_sequence_play(p2_computer);
+            with (obj_computerScreen_2) { vis = false; }
+            break;                 
     }
 }
 function RightOnEnter()
@@ -216,7 +245,7 @@ function RightOnEnter()
             layer_sequence_headdir(p2_keybind, seqdir_right);
             layer_sequence_play(p2_keybind);
             drawBlackBackgroundLeft = false;
-            alarm[1] = 10;
+            alarm[1] = 30;
             break;
         case MenuState.Dialogue:
             layer_sequence_headdir(p2_dialogue, seqdir_right);
@@ -253,7 +282,13 @@ function RightOnEnter()
             layer_sequence_play(p2_attributes);
             obj_Player2.inputPause = true;
             with (obj_attributes_2) { vis = true; }         
-            break;                
+            break;
+        case MenuState.Computer:
+            layer_sequence_headdir(p2_computer, seqdir_right);
+            layer_sequence_play(p2_computer);
+            obj_Player2.inputPause = true;
+            with (obj_computerScreen_2) { vis = true; }         
+            break;
     }
 }
 

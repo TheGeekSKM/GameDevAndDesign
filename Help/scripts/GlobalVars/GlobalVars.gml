@@ -58,6 +58,9 @@ function Vars() constructor {
     ];
     questLibrary = [];
     
+    attributesOne = undefined;
+    attributesTwo = undefined;
+    
     function AddQuest(_quest) { array_push(questLibrary, _quest); }
     
     function PauseGame(_id) {
@@ -245,11 +248,11 @@ function StatCounter(_statType, _statAmount, _totalTime, _attributes) constructo
     }
 }
 
-function Attributes() constructor
+function Attributes(_str = 1, _dex = 1, _con = 1) constructor
 {
-    self.Strength = 1;
-    self.Dexterity = 1;
-    self.Constitution = 1;
+    self.Strength = _str;
+    self.Dexterity = _dex;
+    self.Constitution = _con;
     
     self.attrChangeCallbacks = [];
     
