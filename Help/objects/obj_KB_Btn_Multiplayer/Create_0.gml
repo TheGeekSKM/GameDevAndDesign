@@ -7,5 +7,5 @@ alarm[0] = 2;
 
 function OnClick() { 
     global.vars.single = false;
-    Transition(rmGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    Transition(rmCharSelectMultiple, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 }

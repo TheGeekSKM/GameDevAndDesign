@@ -1,3 +1,5 @@
+
+
 //if (drawBlackBackgroundLeft)
 //{
     //with (obj_ui_pixel_LEFT)

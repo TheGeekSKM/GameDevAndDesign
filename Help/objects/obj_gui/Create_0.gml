@@ -294,12 +294,14 @@ function RightOnEnter()
 
 function ShowMenuStateLeft(_state) 
 {
+    show_debug_message(_state);
     LeftOnExit();
     player1State = _state;
     LeftOnEnter();
 }
 function ShowMenuStateRight(_state) 
 {
+    show_debug_message(_state);
     RightOnExit();
     player2State = _state;
     RightOnEnter();

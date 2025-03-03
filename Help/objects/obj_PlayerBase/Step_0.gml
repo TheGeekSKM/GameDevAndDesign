@@ -5,6 +5,7 @@ if (forward == undefined or
     interact == undefined or 
     menu == undefined) return;
 
+show_debug_message(inputPause)
 if (global.vars.pause or inputPause) return;
     
 attributes.Step();

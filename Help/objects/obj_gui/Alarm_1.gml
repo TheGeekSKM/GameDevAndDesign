@@ -1,1 +1,1 @@
-obj_Player2.inputPause = false;
+if (player2State == MenuState.NoMenu) obj_Player2.inputPause = false;
