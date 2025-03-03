@@ -201,6 +201,8 @@
     {"id":{"name":"obj_txtBox_computer_2","path":"objects/obj_txtBox_computer_2/obj_txtBox_computer_2.yy",},},
     {"id":{"name":"obj_txtBox_dialogue1","path":"objects/obj_txtBox_dialogue1/obj_txtBox_dialogue1.yy",},},
     {"id":{"name":"obj_txtBox_dialogue2","path":"objects/obj_txtBox_dialogue2/obj_txtBox_dialogue2.yy",},},
+    {"id":{"name":"obj_txtBox_Health_1","path":"objects/obj_txtBox_Health_1/obj_txtBox_Health_1.yy",},},
+    {"id":{"name":"obj_txtBox_Health_2","path":"objects/obj_txtBox_Health_2/obj_txtBox_Health_2.yy",},},
     {"id":{"name":"obj_txtBox_inventory_1a","path":"objects/obj_txtBox_inventory_1a/obj_txtBox_inventory_1a.yy",},},
     {"id":{"name":"obj_txtBox_inventory_1b","path":"objects/obj_txtBox_inventory_1b/obj_txtBox_inventory_1b.yy",},},
     {"id":{"name":"obj_txtBox_inventory_2a","path":"objects/obj_txtBox_inventory_2a/obj_txtBox_inventory_2a.yy",},},

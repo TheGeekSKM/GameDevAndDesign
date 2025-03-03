@@ -21,10 +21,6 @@ if (horizontal != 0 and totalPoints > 0 and !ready)
 
 if (select) 
 {
-    if (totalPoints == 0) ready = false;
-    else 
-    {
-        ready = !ready;
-        global.vars.attributesTwo = new Attributes(strPoints, dexPoints, conPoints);
-    }     
+    ready = !ready;
+    global.vars.attributesTwo = new Attributes(strPoints, dexPoints, conPoints);    
 }

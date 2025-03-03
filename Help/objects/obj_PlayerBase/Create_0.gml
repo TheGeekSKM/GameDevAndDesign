@@ -17,7 +17,7 @@ doOnce = false;
 inputPause = false;
 
 
-collisionObjects = [obj_wall];
+collisionObjects = [obj_wall, obj_computer];
 inventory = new Inventory().SetData(20);
 
 attributes = new Attributes().Initialize();
