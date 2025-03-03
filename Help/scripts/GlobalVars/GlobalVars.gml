@@ -290,7 +290,7 @@ function Attributes(_str = 1, _dex = 1, _con = 1) constructor
         
         for (var i = 0; i < array_length(self.attrChangeCallbacks); i++)
         {
-            self.attrChangeCallbacks[i](_statType);
+            self.attrChangeCallbacks[i](_statType, _statAmount);
         }
     }
     
@@ -312,7 +312,8 @@ function Attributes(_str = 1, _dex = 1, _con = 1) constructor
         
         for (var i = 0; i < array_length(self.attrChangeCallbacks); i++)
         {
-            self.attrChangeCallbacks[i](_statType);
+            
+            self.attrChangeCallbacks[i](_statType, _statAmount);
         }
         
         array_push(counters, new StatCounter(_statType, _statAmount, _statTime, self)); 
@@ -329,6 +330,7 @@ function Attributes(_str = 1, _dex = 1, _con = 1) constructor
         {
             counters[i].Step();
         }
+        
     }
 }
 

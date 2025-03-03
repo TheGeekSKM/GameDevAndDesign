@@ -22,15 +22,28 @@ collisionObjects = [obj_wall, obj_computer];
 inventory = new Inventory().SetData(20);
 
 attributes = new Attributes().Initialize();
-attributes.AddAttrChangeCallback(function(_statType) {
+attributes.AddAttrChangeCallback(function(_statType, _amount) {
+    echo("change");
     switch(_statType)
     {
         case AttributeType.Strength:
+            var text = instance_create_depth(x, y, 0, obj_pickUpText);
+            text.Init(string_concat("Strength Modified"));
+            echo("str")
+            attackDamage = attributes.Strength * 2;
             break;
         case AttributeType.Dexterity:
+            var text1 = instance_create_depth(x, y, 0, obj_pickUpText);
+            text1.Init(string_concat("Dexterity Modified"));
+            echo("Dex")        
             spd = attributes.Dexterity;
+            attackSpeed = max(10, 60 - (attributes.Dexterity * 4));
             break;
         case AttributeType.Constitution:
+            var text2 = instance_create_depth(x, y, 0, obj_pickUpText);
+            echo("con")        
+            text2.Init(string_concat("Constitution Modified"));            
+            playerHealth = attributes.Constitution * 10;
             break;
     }    
 })

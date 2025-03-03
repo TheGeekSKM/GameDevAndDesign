@@ -1,5 +1,6 @@
 if (playerInRange != noone)
 {
+    
     var guiPos = new Vector2(x, y);
     
     if (!global.vars.single) guiPos = RoomToGUICoordsView(x, y + ((sprite_height / 2) - 25), playerInRange.playerIndex);

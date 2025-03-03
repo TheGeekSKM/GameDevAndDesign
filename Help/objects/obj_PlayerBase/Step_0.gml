@@ -10,6 +10,11 @@ if (global.vars.pause or inputPause) return;
     
 attributes.Step();
 
+attackSpeed = max(10, 60 - (attributes.Dexterity * 4));
+attackDamage = attributes.Strength * 2;
+
+spd = attributes.Dexterity;
+
 var up = keyboard_check(forward);
 var down = keyboard_check(backward);
 var left = keyboard_check(leftWard);

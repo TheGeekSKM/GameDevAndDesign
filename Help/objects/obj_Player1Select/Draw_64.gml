@@ -61,3 +61,35 @@ if (ready)
         .sdf_outline(c_black, 2)
         .draw(x, y);    
 }
+else {
+    if (selectIndex == 0)
+    {
+        scribble(string_concat("INFO: Constitution increases your health!"))
+            .align(fa_center, fa_top)
+            .starting_format("CustomFont", global.vars.playerColors[0])
+            .transform(1, 1, 0)
+            .sdf_outline(c_black, 2)
+            .wrap(150)
+            .draw(x, y + 120);
+    }
+    else if (selectIndex == 1)
+    {
+        scribble(string_concat("INFO: Strength increases the amount of damage you do on each shot!"))
+            .align(fa_center, fa_top)
+            .starting_format("CustomFont", global.vars.playerColors[0])
+            .transform(1, 1, 0)
+            .sdf_outline(c_black, 2)
+            .wrap(150)        
+            .draw(x, y + 120);
+    }
+    else if (selectIndex == 2)
+    {
+        scribble(string_concat("INFO: Dexterity increases your speed and your attack speed for each shot!"))
+            .align(fa_center, fa_top)
+            .starting_format("CustomFont", global.vars.playerColors[0])
+            .transform(1, 1, 0)
+            .sdf_outline(c_black, 2)
+            .wrap(150)        
+            .draw(x, y + 120);
+    }        
+}
