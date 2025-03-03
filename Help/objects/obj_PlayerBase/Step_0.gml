@@ -5,7 +5,7 @@ if (forward == undefined or
     interact == undefined or 
     menu == undefined) return;
 
-show_debug_message(inputPause)
+
 if (global.vars.pause or inputPause) return;
     
 attributes.Step();
@@ -83,3 +83,30 @@ if (keyboard_check_pressed(interact) and !inputPause)
 }
 
 // show_debug_message(inventory.ToString());
+
+// Check if inputPause is false
+if (!inputPause) {
+    var nearestEnemy = noone;
+    var shortestDist = attackRange + 1; 
+
+    // Find the nearest enemy
+    with (obj_Enemy_Chase) {
+        var dist = point_distance(x, y, other.x, other.y);
+        if (dist < shortestDist) {
+            shortestDist = dist;
+            nearestEnemy = id;
+        }
+    }
+
+    // If an enemy is in range and attack cooldown is ready, shoot a bullet
+    if (nearestEnemy != noone && attackCooldown <= 0) {
+        var bullet = instance_create_layer(x, y, "Bullets", obj_playerBullet);
+        bullet.direction = point_direction(x, y, nearestEnemy.x, nearestEnemy.y);
+        bullet.damage = attackDamage;
+        
+        attackCooldown = attackSpeed; // Reset cooldown
+    }
+}
+
+// Reduce attack cooldown timer
+if (attackCooldown > 0) attackCooldown--;

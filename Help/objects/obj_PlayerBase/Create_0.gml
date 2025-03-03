@@ -17,6 +17,7 @@ doOnce = false;
 inputPause = false;
 
 
+
 collisionObjects = [obj_wall, obj_computer];
 inventory = new Inventory().SetData(20);
 
@@ -33,6 +34,12 @@ attributes.AddAttrChangeCallback(function(_statType) {
             break;
     }    
 })
+
+
+attackRange = 100;
+attackCooldown = 0;
+attackSpeed = max(10, 60 - (attributes.Dexterity * 4));
+attackDamage = attributes.Strength * 2;
 
 spd = attributes.Dexterity;
 
@@ -64,5 +71,8 @@ function TakeDamage(_dmg)
     if (playerHealth - _dmg <= 0)
     {
         Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    }
+    else {
+        playerHealth -= _dmg;
     }
 }

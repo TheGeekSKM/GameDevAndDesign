@@ -17,7 +17,7 @@ function OnInteract()
     
     if (timesInteracted == 0) {
         global.vars.AddQuest(quest);
-        Raise("DialogueOpen", new DialogueData(id, "Greetings, brave heroes. It seems that the Ultimate Gaming PC is missing some parts and needs your help. First, [wave]find the Ultimate Gaming PC[/wave], and then [wave]drop the parts it needs[/wave] to save the world!!", playerInRange));
+        Raise("DialogueOpen", new DialogueData(id, "Listen! We need your help! [c_yellow]Feed the Gaming PC by dropping parts that it requires.[c_white] Be careful though, the vicious viruses are deadly. [c_yellow]Stand still to shoot them.[c_white] Stay safe!!", playerInRange));
         timesInteracted++;
     }
     else {

@@ -1,4 +1,4 @@
-var _text = scribble(string_concat("HP: ", obj_Player1.playerHealth))
+var _text = scribble(string_concat("HP: ", obj_Player2.playerHealth))
     .align(fa_center, fa_middle)
     .transform(1, 1, image_angle)
     .starting_format("CustomFont", c_white)

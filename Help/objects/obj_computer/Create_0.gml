@@ -1,9 +1,9 @@
 // Inherit the parent event
 event_inherited();
 
-gpuRequirements = irandom_range(10, 30);
-cpuRequirements = irandom_range(10, 30);
-ramRequirements = irandom_range(10, 30);
+gpuRequirements = irandom_range(10, 20);
+cpuRequirements = irandom_range(10, 20);
+ramRequirements = irandom_range(10, 20);
 
 found = false;
 
