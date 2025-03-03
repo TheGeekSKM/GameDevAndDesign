@@ -29,7 +29,7 @@ function Inventory() constructor
     {
         for (var i = 0; i < array_length(self.items); i++)
         {
-            if (self.items[i].CompareTo(_item))
+            if (self.items[i].item.CompareTo(_item))
             {
                 return i;
             }
@@ -60,6 +60,30 @@ function Inventory() constructor
         for (var i = 0; i < _itemCount; i++)
         {
             self.items[index].item.OnPickUp();
+        }
+    }
+    
+    function Consume(_item)
+    {
+        var index = ContainsItem(_item);
+        if (index == -1)
+        {
+            return;
+        }
+        
+        var item = self.items[index].item;
+        for (var i = 0; i < array_length(item.statIncreases); i++)
+        {
+            self.owner.attributes.AddStatTemp(
+                item.statIncreases[i].stat, 
+                item.statIncreases[i].statAmount, 
+                item.statIncreases[i].statTime);
+        }
+        
+        self.items[index].AddCount(-1);
+        if (self.items[index].itemCount <= 0)
+        {
+            array_delete(self.items, index, 1);
         }
     }
     
@@ -104,12 +128,21 @@ function InventorySlot(_item, _itemCount) constructor
     }
 }
 
+function StatIncrease(_stat, _statAmount, _statTime) constructor 
+{
+    self.stat = _stat;
+    self.statAmount = _statAmount;
+    self.statTime = _statTime;
+    
+}
+
 function Item() constructor 
 {
     self.name = "";
     self.description = "";
     self.weight = 1;
     self.sprite = noone;
+    self.statIncreases = [];
     
     function SetName(_name)
     {
@@ -131,6 +164,16 @@ function Item() constructor
         self.sprite = _spr;
         return self;
     }
+    function SetConsumeCallback(_func)
+    {
+        OnConsume = _func;
+        return self;
+    }
+    function AddStatIncrease(_statIncrease)
+    {
+        array_push(statIncreases, _statIncrease);
+        return self;
+    }
     
     function CompareTo(_otherItem) 
     {
@@ -142,4 +185,5 @@ function Item() constructor
     
     function OnPickUp() {}
     function OnDrop() {}
+    function OnConsume(_playerID) {}
 }

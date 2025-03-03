@@ -9,6 +9,7 @@ else {
 }
 
 var movement = keyboard_check_pressed(ord("S")) - keyboard_check_pressed(ord("W"));
+
 if (movement != 0)
 {
     selectIndex = ModWrap(selectIndex + movement, array_length(buttons));

@@ -28,13 +28,12 @@ p2_inventory = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Inventory);
 p2_pause = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Pause);
 p2_quest = layer_sequence_create(layerName, 400, 0, seq_RIGHT_Quest);
 
-layer_sequence_pause(p1_keybind);
+
 layer_sequence_pause(p1_dialogue);
 layer_sequence_pause(p1_inventory);
 layer_sequence_pause(p1_pause);
 layer_sequence_pause(p1_quest);
 
-layer_sequence_pause(p2_keybind);
 layer_sequence_pause(p2_dialogue);
 layer_sequence_pause(p2_inventory);
 layer_sequence_pause(p2_pause);
@@ -114,7 +113,7 @@ function LeftOnEnter()
             layer_sequence_headdir(p1_keybind, seqdir_right);
             layer_sequence_play(p1_keybind);
             drawBlackBackgroundLeft = false;
-            obj_Player1.inputPause = false;
+            alarm[0] = 10;
             break;
         case MenuState.Dialogue:
             layer_sequence_headdir(p1_dialogue, seqdir_right);
@@ -189,7 +188,7 @@ function RightOnEnter()
             layer_sequence_headdir(p2_keybind, seqdir_right);
             layer_sequence_play(p2_keybind);
             drawBlackBackgroundLeft = false;
-            obj_Player2.inputPause = false;
+            alarm[1] = 10;
             break;
         case MenuState.Dialogue:
             layer_sequence_headdir(p2_dialogue, seqdir_right);

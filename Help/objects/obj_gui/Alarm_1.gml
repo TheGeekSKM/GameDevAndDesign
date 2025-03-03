@@ -1,0 +1,1 @@
+obj_Player2.inputPause = false;

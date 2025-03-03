@@ -6,6 +6,8 @@ if (forward == undefined or
     menu == undefined) return;
 
 if (global.vars.pause or inputPause) return;
+    
+attributes.Step();
 
 var up = keyboard_check(forward);
 var down = keyboard_check(backward);
@@ -71,7 +73,7 @@ for (var i = 0; i < array_length(interactableList); i++)
     }
 }
 
-if (keyboard_check_pressed(interact))
+if (keyboard_check_pressed(interact) and !inputPause)
 {
     for (var i = 0; i < array_length(interactableList); i++)
     {

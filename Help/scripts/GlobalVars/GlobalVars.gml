@@ -221,6 +221,30 @@ enum AttributeType
     Dexterity,
     Constitution
 }
+function StatCounter(_statType, _statAmount, _totalTime, _attributes) constructor 
+{
+    self.totalTime = _totalTime;
+    self.statType = _statType;
+    self.statAmount = _statAmount;
+    self.ownerAttributes = _attributes;
+    
+    self.finished = false;
+    
+    self._count = round(self.totalTime * game_get_speed(gamespeed_fps));
+    
+    function Step()
+    {
+        if (self.finished) return;
+        self._count--;
+        
+        if (self._count <= 0)
+        {
+            self.ownerAttributes.AddStat(self.statType, -1 * self.statAmount);
+            self.finished = true;
+        }
+    }
+}
+
 function Attributes() constructor
 {
     self.Strength = 1;
@@ -228,6 +252,8 @@ function Attributes() constructor
     self.Constitution = 1;
     
     self.attrChangeCallbacks = [];
+    
+    self.counters = [];
     
     function Initialize(_s = undefined, _d = undefined, _c = undefined)
     {
@@ -258,9 +284,41 @@ function Attributes() constructor
         }
     }
     
+    function AddStatTemp(_statType, _statAmount, _statTime)
+    {
+        
+        switch(_statType)
+        {
+            case AttributeType.Strength:
+                self.Strength += _statAmount;
+                break;
+            case AttributeType.Dexterity:
+                self.Dexterity += _statAmount;
+                break;
+            case AttributeType.Constitution:
+                self.Constitution += _statAmount;
+                break;
+        }
+        
+        for (var i = 0; i < array_length(self.attrChangeCallbacks); i++)
+        {
+            self.attrChangeCallbacks[i](_statType);
+        }
+        
+        array_push(counters, new StatCounter(_statType, _statAmount, _statTime, self)); 
+    }
+    
     function AddAttrChangeCallback(_func)
     {
         array_push(self.attrChangeCallbacks, _func);
+    }
+    
+    function Step()
+    {
+        for (var i = 0; i < array_length(counters); i++)
+        {
+            counters[i].Step();
+        }
     }
 }
 
