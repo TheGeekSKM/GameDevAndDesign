@@ -618,7 +618,6 @@
     {"id":{"name":"mainMenuTitle","path":"sprites/mainMenuTitle/mainMenuTitle.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
     {"id":{"name":"spr_Button","path":"sprites/spr_Button/spr_Button.yy",},},
-    {"id":{"name":"spr_NormalFont","path":"sprites/spr_NormalFont/spr_NormalFont.yy",},},
     {"id":{"name":"spr_pixel","path":"sprites/spr_pixel/spr_pixel.yy",},},
   ],
   "resourceType":"GMProject",
