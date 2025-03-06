@@ -1,4 +1,4 @@
-function vars() constructor {
+function Vars() constructor {
 	pause = false;
 	
 	function PauseGame(_id) {
@@ -12,4 +12,12 @@ function vars() constructor {
 	}
 }
 
-global.vars = new vars();
+global.vars = new Vars();
+global.mainColor = make_color_rgb(196, 129, 126);
+
+enum ButtonState
+{
+    Idle,
+    Hovered,
+    Clicked    
+}

@@ -7,6 +7,13 @@ function Vector2(_x, _y) constructor
 {
     x = _x;
     y = _y;
+    
+    function Set(_x, _y)
+    {
+        x = _x;
+        y = _y;
+        return self;
+    }
 }
 
 /// @function RoomToGUICoords(x, y)
