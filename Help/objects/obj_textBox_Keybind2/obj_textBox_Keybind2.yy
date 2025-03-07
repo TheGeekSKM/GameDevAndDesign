@@ -7,7 +7,7 @@
   "managed":true,
   "name":"obj_textBox_Keybind2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Numpad0 for Menus",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"R.Shift for Menus",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"propertyId":{"name":"scale","path":"objects/obj_textBox/obj_textBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":".75",},
   ],
   "parent":{

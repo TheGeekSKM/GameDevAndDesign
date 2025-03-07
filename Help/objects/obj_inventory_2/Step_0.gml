@@ -2,8 +2,8 @@ if (!vis) return;
     
 var movement = keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
 var select = keyboard_check_pressed(vk_rcontrol);
-var back = keyboard_check_pressed(vk_numpad0);
-var drop = keyboard_check_pressed(vk_rshift);
+var back = keyboard_check_pressed(vk_rshift);
+var drop = keyboard_check_pressed(vk_enter);
 
 if (movement != 0)
 {

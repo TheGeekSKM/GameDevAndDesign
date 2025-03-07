@@ -5,7 +5,7 @@
   "managed":true,
   "name":"obj_txtBox_quest_2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"text","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Press Numpad 0 to Exit",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"text","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Press R.Shift to Exit",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"playerIndex","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{

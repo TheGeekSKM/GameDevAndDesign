@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(vk_numpad0))
+if (keyboard_check_pressed(vk_rshift))
 {
     Raise("AttributeClose", obj_Player2);
 }
