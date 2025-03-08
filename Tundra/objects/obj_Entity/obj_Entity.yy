@@ -33,7 +33,7 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"MainSprite","filters":[
         "GMSprite",
-      ],"listItems":[],"multiselect":false,"name":"MainSprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_npc","path":"sprites/spr_npc/spr_npc.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_npc","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"MainSprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_npc","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"HighlightSprite","filters":[
         "GMSprite",
       ],"listItems":[],"multiselect":false,"name":"HighlightSprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_npcHighlight","path":"sprites/spr_npcHighlight/spr_npcHighlight.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_npcHighlight","varType":5,},
