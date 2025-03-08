@@ -31,6 +31,14 @@
     {"$GMObjectProperty":"v1","%Name":"FollowingObject","filters":[
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"FollowingObject","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"StartingState","filters":[],"listItems":[
+        "CameraMode.FollowObject",
+        "CameraMode.FollowMouseDrag",
+        "CameraMode.FollowMouseBorder",
+        "CameraMode.FollowMousePeek",
+        "CameraMode.MoveToTarget",
+        "CameraMode.MoveToFollowTarget",
+      ],"multiselect":false,"name":"StartingState","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"CameraMode.FollowMousePeek","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

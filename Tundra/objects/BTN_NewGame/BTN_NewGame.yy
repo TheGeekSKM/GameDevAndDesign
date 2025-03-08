@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"BTN_NewGame",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"BTN_NewGame",
   "overriddenProperties":[
@@ -33,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Button",
-    "path":"sprites/spr_Button/spr_Button.yy",
+    "name":"spr_button13",
+    "path":"sprites/spr_button13/spr_button13.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -19,7 +19,7 @@ switch (currentState)
             .sdf_outline(c_black, 2)
             .transform(1, 1, image_angle)
             .sdf_shadow(c_black, 0.65, 0, 0, 3)
-            .draw(x, y);
+            .draw(x, y + 4);
     break;
     
     case ButtonState.Clicked: 
@@ -29,6 +29,6 @@ switch (currentState)
             .sdf_outline(c_black, 2)   
             .transform(1, 1, image_angle)
             .sdf_shadow(c_black, 0.65, 0, 0, 3)
-            .draw(x, y);    
+            .draw(x, y + 4);    
     break;
 }

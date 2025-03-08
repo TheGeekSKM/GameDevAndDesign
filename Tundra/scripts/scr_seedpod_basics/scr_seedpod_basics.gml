@@ -16,6 +16,21 @@ function Vector2(_x, _y) constructor
     }
 }
 
+function Vector3(_x, _y, _z) constructor 
+{
+    x = _x;
+    y = _y;
+    z = _z;
+    
+    function Set(_x = 0, _y = 0, _z = 0)
+    {
+        x = _x;
+        y = _y;
+        z = _z;
+        return self;
+    }
+}
+
 /// @function RoomToGUICoords(x, y)
 /// @param {Real} x The Room X Coordinate that you want to convert to a GUI Coordinate
 /// @param {Real} y The Room Y Coordinate that you want to conver to a GUI Coordinate
