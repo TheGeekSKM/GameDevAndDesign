@@ -3,7 +3,6 @@ currentState = MouseState.Normal;
 
 Subscribe("MouseOver", function(_type) {
     currentState = _type;
-    echo(currentState)
 });
 
 
