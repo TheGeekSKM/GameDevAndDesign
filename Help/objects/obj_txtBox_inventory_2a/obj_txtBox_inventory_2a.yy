@@ -5,7 +5,7 @@
   "managed":true,
   "name":"obj_txtBox_inventory_2a",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"text","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"L.Control to Consume | R.Shift to Drop",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"text","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"L.Control to Consume | Enter to Drop",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_textObject_base","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"propertyId":{"name":"playerIndex","path":"objects/obj_textObject_base/obj_textObject_base.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{

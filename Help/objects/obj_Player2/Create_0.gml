@@ -2,7 +2,7 @@
 event_inherited();
 
 
-SetControlScheme(vk_up, vk_down, vk_left, vk_right, vk_rcontrol, vk_numpad0);
+SetControlScheme(vk_up, vk_down, vk_left, vk_right, vk_rcontrol, vk_rshift);
 attributes = global.vars.attributesTwo;
 spd = attributes.Dexterity;
 playerHealth = attributes.Constitution * 15;
