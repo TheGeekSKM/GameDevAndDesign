@@ -3,7 +3,7 @@ if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), x, y,
     if (!hoverCounter < 60) { hoverCounter++; } 
     if (!hovered) {
         hovered = true;
-        obj_mouse.IsOverUI = true;
+        Raise("MouseOverUI", id);
     }
 }
 else
@@ -11,6 +11,6 @@ else
     hoverCounter = 0; 
     if (hovered) {
         hovered = false;
-        obj_mouse.IsOverUI = false;
+        Raise("MouseNotOverUI", id);
     }
 }
