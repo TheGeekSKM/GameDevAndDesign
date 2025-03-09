@@ -1,5 +1,3 @@
-
-
 // check GUI elements first
 ds_list_clear(interactableList);
 var count = instance_position_list(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), obj_GUI_interactable, interactableList, false);
@@ -15,8 +13,7 @@ if (currentInteractable == noone) {
 
 if (currentInteractable != oldInteractable)
 {
-    currentInteractable.OnMouseEnter();
-
+    currentMouseState = currentInteractable.OnMouseEnter();
 }
 
 if (currentInteractable != noone)
@@ -26,4 +23,34 @@ if (currentInteractable != noone)
 }
 
 oldInteractable = currentInteractable;
-echo(currentInteractable != noone ? "Hovering Over Object" : "Not Hovering Over Object")
+
+if (currentInteractable == noone) return;
+if (mouse_check_button_pressed(mb_left)) 
+{
+    currentInteractable.OnMouseLeftClick();
+}
+
+if (mouse_check_button(mb_left))
+{
+    currentInteractable.OnMouseLeftHeld();
+}
+
+if (mouse_check_button_released(mb_left))
+{
+    currentInteractable.OnMouseLeftClickRelease();
+}
+
+if (mouse_check_button_pressed(mb_right))
+{
+    currentInteractable.OnMouseRightClick();
+}
+
+if (mouse_check_button(mb_right))
+{
+    currentInteractable.OnMouseRightHeld();
+}
+
+if (mouse_check_button_released(mb_right))
+{
+    currentInteractable.OnMouseRightClickRelease();
+}

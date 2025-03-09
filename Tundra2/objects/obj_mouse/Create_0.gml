@@ -1,6 +1,7 @@
 currentInteractable = noone;
 oldInteractable = currentInteractable;
 interactableList = ds_list_create();
+currentMouseState = InteractableType.Normal;
 
 ///@pure
 function FindLowestDepthElement()
@@ -24,4 +25,5 @@ function FindLowestDepthElement()
 function ResetCurrentInteractable() {
     currentInteractable.OnMouseExit();
     currentInteractable = noone;
+    currentMouseState = InteractableType.Normal;
 }

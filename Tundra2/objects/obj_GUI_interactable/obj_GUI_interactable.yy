@@ -7,7 +7,9 @@
   ],
   "managed":true,
   "name":"obj_GUI_interactable",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"propertyId":{"name":"Type","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"InteractableType.Point",},
+  ],
   "parent":{
     "name":"Interactable",
     "path":"folders/Objects/_Base/Interactable.yy",

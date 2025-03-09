@@ -1,4 +1,4 @@
-function vars() constructor {
+function Vars() constructor {
 	pause = false;
 	
 	function PauseGame(_id) {
@@ -10,6 +10,15 @@ function vars() constructor {
 		Raise("Resume", _id);
 		pause = false;
 	}
+    
+    highlightColors = [
+        c_white,
+        c_white,
+        c_red,
+        c_yellow,
+        c_aqua,
+        c_black,
+    ];
 }
 
-global.vars = new vars();
+global.vars = new Vars();

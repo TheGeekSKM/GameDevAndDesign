@@ -1,2 +1,2 @@
 RestartEventSystem();
-global.vars = new vars();
+global.vars = new Vars();

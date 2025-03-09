@@ -126,6 +126,7 @@
     {"id":{"name":"__snowstate_config","path":"scripts/__snowstate_config/__snowstate_config.yy",},},
     {"id":{"name":"draw_text_scribble_ext","path":"scripts/draw_text_scribble_ext/draw_text_scribble_ext.yy",},},
     {"id":{"name":"draw_text_scribble","path":"scripts/draw_text_scribble/draw_text_scribble.yy",},},
+    {"id":{"name":"Enums","path":"scripts/Enums/Enums.yy",},},
     {"id":{"name":"EventManager","path":"scripts/EventManager/EventManager.yy",},},
     {"id":{"name":"GlobalVars","path":"scripts/GlobalVars/GlobalVars.yy",},},
     {"id":{"name":"scr_seedpod_basics","path":"scripts/scr_seedpod_basics/scr_seedpod_basics.yy",},},
