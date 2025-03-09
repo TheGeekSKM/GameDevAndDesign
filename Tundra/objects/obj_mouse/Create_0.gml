@@ -6,7 +6,6 @@ Subscribe("MouseOver", function(_type) {
     currentState = _type;
 });
 
-
 Subscribe("MouseLeave", function(_type) {
     currentState = MouseState.Normal;
 });
@@ -18,4 +17,9 @@ Subscribe("MouseOverUI", function(_type) {
 Subscribe("MouseNotOverUI", function(_type) {
     IsOverUI = false;
 });
+
+function FindLowestDepthElement()
+{
+    
+}
 
