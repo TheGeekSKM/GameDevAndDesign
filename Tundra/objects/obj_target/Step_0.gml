@@ -1,4 +1,4 @@
-if (obj_mouse.currentState != MouseState.Normal) { image_alpha = 0; return; }
+if (obj_mouse.currentState != MouseState.Normal or obj_mouse.IsOverUI) { image_alpha = 0; return; }
 
 if   (mouse_check_button(mb_left))
     {

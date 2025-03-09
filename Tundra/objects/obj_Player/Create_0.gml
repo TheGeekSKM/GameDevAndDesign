@@ -8,3 +8,4 @@ entityMovementData = new EntityMovementData()
     .SetSpeeds(4, 2, 1);
 
 hoverColor = make_color_rgb(0, 255, 0);
+healthSystem = new HealthSystem(50, id);

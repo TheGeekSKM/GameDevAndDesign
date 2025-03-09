@@ -37,3 +37,8 @@ else
 {
     image_speed = speed / 3;
 }
+
+if (keyboard_check_pressed(ord("D"))) 
+{
+    healthSystem.TakeDamage(2);
+}

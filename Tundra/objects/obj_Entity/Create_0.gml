@@ -3,6 +3,9 @@ image_speed = 0;
 image_index = 1;
 
 mouseOver = false;
+discovered = false;
+infoName = "DefaultEntity"
+infoString = $"This is a default Entity";
 
 function OnClick() {}
 
@@ -11,3 +14,4 @@ entityMovementData = new EntityMovementData()
     .SetSpeeds(4 + irandom(1), 2 + irandom(1), 1 + irandom(1));
 
 hoverColor = global.vars.highlightColors[InteractableType];
+hoverCounter = 0;
