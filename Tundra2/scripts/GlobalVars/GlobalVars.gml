@@ -19,6 +19,9 @@ function Vars() constructor {
         c_aqua,
         c_black,
     ];
+    
+    mainColor = make_color_rgb(196, 129, 126);
+    mainColorLight = make_color_rgb(193, 176, 176);
 }
 
 global.vars = new Vars();

@@ -7,3 +7,10 @@ enum InteractableType
     Talk = 4,
     Null = 5,
 }
+
+enum ButtonState
+{
+    Idle,
+    Hover,
+    Click
+}
