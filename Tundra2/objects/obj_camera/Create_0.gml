@@ -20,8 +20,8 @@ function SetCameraMode(_state, _following = noone, _targetPos = new Vector2(-1, 
 {
     currentState = _state;
     FollowingObject = _following;
-    if (_targetPos.x == -1 || _targetPos.y == -1) target.Set(x, y);
-    else target.Set(_targetPos.x, _targetPos.y); 
+    if (_targetPos.x != -1 || _targetPos.y != -1) target.Set(x, y);
+    else target = new Vector2(_targetPos.x, _targetPos.y); 
 }
 
 view_camera[CameraIndex] = camera_create_view(0, 0, CamWidth, CamHeight);
