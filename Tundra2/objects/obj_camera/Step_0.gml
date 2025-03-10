@@ -53,7 +53,7 @@ switch (currentState)
     break;
 }
 
-//cX = clamp(cX, 0, room_width - CamWidth);
-//cY = clamp(cY, 0, room_height - CamHeight);
+cX = clamp(cX, 0, room_width - CamWidth);
+cY = clamp(cY, 0, room_height - CamHeight);
 
 camera_set_view_pos(view_camera[CameraIndex], cX, cY);
