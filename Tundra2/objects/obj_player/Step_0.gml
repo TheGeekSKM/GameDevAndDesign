@@ -9,15 +9,15 @@ image_angle -= min(abs(dd), 10) * sign(dd);
         
 if (distance_to_point(obj_target.x,obj_target.y) > 64)
 {
-    move_towards_point(obj_target.x,obj_target.y,3);	
+    move_towards_point(obj_target.x,obj_target.y,moveSpeed);	
 }
 else if (distance_to_point(obj_target.x,obj_target.y) > 20)
 {
-    move_towards_point(obj_target.x,obj_target.y,2);
+    move_towards_point(obj_target.x,obj_target.y,moveSpeed / 2);
 }
 else if (distance_to_point(obj_target.x,obj_target.y) >= 5)
 {
-    move_towards_point(obj_target.x,obj_target.y,1);
+    move_towards_point(obj_target.x,obj_target.y,moveSpeed / 4);
 }
 else 
 {

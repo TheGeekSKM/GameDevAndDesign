@@ -266,6 +266,7 @@
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
     {"id":{"name":"spr_game_background","path":"sprites/spr_game_background/spr_game_background.yy",},},
+    {"id":{"name":"spr_game_foreground","path":"sprites/spr_game_foreground/spr_game_foreground.yy",},},
     {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},},
     {"id":{"name":"spr_mouse","path":"sprites/spr_mouse/spr_mouse.yy",},},
     {"id":{"name":"spr_npc","path":"sprites/spr_npc/spr_npc.yy",},},
