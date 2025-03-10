@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+currentState = ButtonState.Idle;
 
 function OnMouseEnter() {
     return Type;

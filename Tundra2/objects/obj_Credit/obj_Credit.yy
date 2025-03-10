@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ui_pixel",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_Credit",
+  "eventList":[],
   "managed":true,
-  "name":"obj_ui_pixel",
+  "name":"obj_Credit",
   "overriddenProperties":[],
   "parent":{
-    "name":"Transitions",
-    "path":"folders/ImportedAssets/Transitions.yy",
+    "name":"MainMenu",
+    "path":"folders/Objects/UI/MainMenu.yy",
   },
   "parentObjectId":{
-    "name":"obj_ui_transitionParent",
-    "path":"objects/obj_ui_transitionParent/obj_ui_transitionParent.yy",
+    "name":"obj_BASE_FloatingText",
+    "path":"objects/obj_BASE_FloatingText/obj_BASE_FloatingText.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_pixel",
-    "path":"sprites/spr_pixel/spr_pixel.yy",
+    "name":"mainMenuCredits",
+    "path":"sprites/mainMenuCredits/mainMenuCredits.yy",
   },
   "spriteMaskId":null,
   "visible":true,

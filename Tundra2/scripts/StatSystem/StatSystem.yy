@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"StatSystem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"StatSystem",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

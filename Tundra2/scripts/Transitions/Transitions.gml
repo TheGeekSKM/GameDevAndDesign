@@ -1,3 +1,6 @@
+#macro camX 0
+#macro camY 0
+
 function ResetTransitionValues()
 {
 	global.midTransition = false;

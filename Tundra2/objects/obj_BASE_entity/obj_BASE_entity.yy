@@ -1,21 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"BTN_NewGame",
+  "%Name":"obj_BASE_entity",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"BTN_NewGame",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Button","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"propertyId":{"name":"Text","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"New Game",},
-  ],
+  "name":"obj_BASE_entity",
+  "overriddenProperties":[],
   "parent":{
-    "name":"MainMenu",
-    "path":"folders/Objects/UI/MainMenu.yy",
+    "name":"Interactable",
+    "path":"folders/Objects/_Base/Interactable.yy",
   },
   "parentObjectId":{
-    "name":"obj_BASE_Button",
-    "path":"objects/obj_BASE_Button/obj_BASE_Button.yy",
+    "name":"obj_ROOM_interactable",
+    "path":"objects/obj_ROOM_interactable/obj_ROOM_interactable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_button",
-    "path":"sprites/spr_button/spr_button.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
