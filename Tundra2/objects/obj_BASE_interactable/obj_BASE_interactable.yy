@@ -38,6 +38,11 @@
         "InteractableType.Talk",
         "InteractableType.Null",
       ],"multiselect":false,"name":"Type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"InteractableType.Normal","varType":6,},
+    {"$GMObjectProperty":"v1","%Name":"Name","filters":[],"listItems":[],"multiselect":false,"name":"Name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"DefaultName","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"IntType","filters":[],"listItems":[
+        "IntVisType.Room",
+        "IntVisType.GUI",
+      ],"multiselect":false,"name":"IntType","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"IntVisType.Room","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

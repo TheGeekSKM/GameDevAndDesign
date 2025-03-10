@@ -1,5 +1,6 @@
 function Vars() constructor {
 	pause = false;
+    debug = false;
 	
 	function PauseGame(_id) {
 		Raise("Pause", _id);
@@ -10,6 +11,8 @@ function Vars() constructor {
 		Raise("Resume", _id);
 		pause = false;
 	}
+    
+    function SetDebug(_debug) { debug = _debug; }
     
     highlightColors = [
         c_white,
