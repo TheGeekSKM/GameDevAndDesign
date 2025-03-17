@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CamScriptBothPlayers",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CamScriptBothPlayers",
+  "parent":{
+    "name":"CameraScripts",
+    "path":"folders/Scripts/CameraScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
