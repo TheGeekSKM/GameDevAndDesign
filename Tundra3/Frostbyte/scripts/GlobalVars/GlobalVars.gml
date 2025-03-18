@@ -13,6 +13,8 @@ function Vars() constructor {
 
 	Cameras = [];
 	Players = [];
+    
+    PlayerStats = [undefined, undefined];
 }
 
 global.vars = new Vars();

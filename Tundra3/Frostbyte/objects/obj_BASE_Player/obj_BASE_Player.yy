@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_BASE_Entity",
+  "%Name":"obj_BASE_Player",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_BASE_Entity",
+  "name":"obj_BASE_Player",
   "overriddenProperties":[],
   "parent":{
     "name":"Base",
     "path":"folders/Objects/Entities/Base.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_BASE_Entity",
+    "path":"objects/obj_BASE_Entity/obj_BASE_Entity.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,7 +28,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"PlayerIndex","filters":[],"listItems":[],"multiselect":false,"name":"PlayerIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
