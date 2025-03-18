@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"HealthSystem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"HealthSystem",
+  "parent":{
+    "name":"Systems",
+    "path":"folders/Scripts/Systems.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
