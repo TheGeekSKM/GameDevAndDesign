@@ -16,3 +16,10 @@ function Vars() constructor {
 }
 
 global.vars = new Vars();
+
+enum ButtonState
+{
+    Idle,
+    Hovered,
+    Clicked
+}
