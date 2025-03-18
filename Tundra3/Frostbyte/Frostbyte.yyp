@@ -111,7 +111,6 @@
   },
   "name":"Frostbyte",
   "resources":[
-    {"id":{"name":"AnimationCurve1","path":"animcurves/AnimationCurve1/AnimationCurve1.yy",},},
     {"id":{"name":"font_console","path":"fonts/font_console/font_console.yy",},},
     {"id":{"name":"Font","path":"fonts/Font/Font.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},

@@ -8,8 +8,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Player","path":"objects/obj_BASE_Player/obj_BASE_Player.yy",},"propertyId":{"name":"PlayerIndex","path":"objects/obj_BASE_Player/obj_BASE_Player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{
-    "name":"Entities",
-    "path":"folders/Objects/Entities.yy",
+    "name":"Players",
+    "path":"folders/Objects/Entities/Players.yy",
   },
   "parentObjectId":{
     "name":"obj_BASE_Player",

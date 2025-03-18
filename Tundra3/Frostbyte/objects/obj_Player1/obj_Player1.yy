@@ -6,8 +6,8 @@
   "name":"obj_Player1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entities",
-    "path":"folders/Objects/Entities.yy",
+    "name":"Players",
+    "path":"folders/Objects/Entities/Players.yy",
   },
   "parentObjectId":{
     "name":"obj_BASE_Player",
