@@ -1,4 +1,6 @@
-var cam = global.vars.Cameras[0];
+var cam = camera_get_active();
+
+global.playerBounds = [0, 0, 0, 0];
 
 // Set the camera to the center of the players
 var newX = (global.playerBounds[0] + global.playerBounds[2] - camera_get_view_width(cam)) * 0.5;
