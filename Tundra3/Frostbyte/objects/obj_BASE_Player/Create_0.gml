@@ -1,5 +1,9 @@
 isUndead = false;
 canAttack = false;
+canMove = true;
+
+collisionObjects = [];
+doOnce = false;
 
 stats = global.vars.PlayerStats[PlayerIndex];
 inventory = new Inventory(stats, id);
@@ -15,3 +19,5 @@ entityData = {
         moveSpeed = stats.GetMoveSpeed(inventory.GetCurrentWeight());
     },
 }
+
+controller = new PlayerController(id);

@@ -13,7 +13,7 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
 
     closestEnemy = noone;
 
-    function Attack() {
+    function Attack(_attackPoint) {
         if (inventory.GetEquippedWeapon() == undefined) return;
 
         var weapon = inventory.GetEquippedWeapon();
@@ -22,16 +22,16 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
         {
             case WeaponType.Melee:
                 damage += stats.GetMeleeDamage();
-                show_debug_message($"Spawn a melee attack object with damage: {damage}");
+                show_debug_message($"Spawn a melee attack object with damage: {damage} at point {_attackPoint}");
                 break;
             case WeaponType.Ranged:
                 damage += stats.GetRangedDamage();
-                show_debug_message($"Spawn a ranged attack object with damage: {damage} and aim it towards {closestEnemy}");
+                show_debug_message($"Spawn a ranged attack object with damage: {damage} at {_attackPoint} and aim it towards {closestEnemy}");
                 break;
         }
     }
 
-    function Step()
+    function Step(_attackPoint)
     {
         if (enemyObject == noone) return;
         closestEnemy = instance_nearest(owner.x, owner.y, enemyObject);
@@ -55,7 +55,7 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
         if (attackTimer >= attackCooldown)
         {
             attackTimer = 0;
-            Attack();
+            Attack(_attackPoint);
         }
     }
 }

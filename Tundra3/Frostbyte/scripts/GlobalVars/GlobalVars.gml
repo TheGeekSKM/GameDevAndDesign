@@ -15,6 +15,7 @@ function Vars() constructor {
 	Players = [];
     
     PlayerStats = [undefined, undefined];
+	InputManager = new InputSystem();
 }
 
 global.vars = new Vars();
