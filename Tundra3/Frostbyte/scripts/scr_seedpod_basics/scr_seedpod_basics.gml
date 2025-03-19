@@ -13,7 +13,7 @@ function Vector2(_x, _y) constructor
 /// @param {Real} x The Room X Coordinate that you want to convert to a GUI Coordinate
 /// @param {Real} y The Room Y Coordinate that you want to conver to a GUI Coordinate
 /// @description This function takes a Room X and Y Coordinate and returns a Vector2 of GUI Coords
-/// @returns {Vector2} The Vector2 with GUI Coords
+/// @returns {Struct} The Vector2 with GUI Coords
 /// @pure
 function RoomToGUICoords(_x, _y)
 {

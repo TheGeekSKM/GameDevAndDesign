@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CarnivoreAIController",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CarnivoreAIController",
+  "parent":{
+    "name":"Controllers",
+    "path":"folders/Scripts/Systems/ControllerSystem/Controllers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

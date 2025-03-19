@@ -51,6 +51,13 @@ function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equip
         return desc;
     }
 
+    function GetItemRotationAffector()
+    {
+        var minWeight = 1, maxWeight = 5;
+        var minValue = 0.4, maxValue = 1;
+        return maxValue - ((weight - minWeight) / (maxWeight - minWeight)) * (maxValue - minValue);
+    }
+
     function GetItemType()
     {
         return type;

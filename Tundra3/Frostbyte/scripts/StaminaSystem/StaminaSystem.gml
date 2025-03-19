@@ -8,8 +8,14 @@ function StaminaSystem(_stats, _owner) constructor {
 
     currentStamina = maxStamina;
 
+    /// @desc Use stamina
+    /// @param {Real} amount the amount of stamina to use
+    /// @returns {Bool} whether the stamina can be used or not
     function UseStamina(amount) {
+        if (currentStamina < amount) return false;
+
         currentStamina = max(0, currentStamina - amount);
+        return true;
     }
 
     function GetStamina() {

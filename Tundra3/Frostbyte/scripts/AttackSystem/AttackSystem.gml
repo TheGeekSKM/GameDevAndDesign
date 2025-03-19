@@ -5,16 +5,19 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
     enemyObject = _enemyObject;
 
     attackTimer = 0;
-    attackCooldown = 0.5;
+    attackCooldown = 0;
+    attackDirection = 0;
 
     function GetAttackCooldownPercentage() {
         return attackTimer / attackCooldown;
     }
 
-    closestEnemy = noone;
-
     function Attack(_attackPoint) {
-        if (inventory.GetEquippedWeapon() == undefined) return;
+        if (inventory.GetEquippedWeapon() == undefined) 
+        {
+            show_debug_message("No weapon equipped");
+            return;
+        }
 
         var weapon = inventory.GetEquippedWeapon();
         var damage = weapon.GetDamage();
@@ -26,16 +29,13 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
                 break;
             case WeaponType.Ranged:
                 damage += stats.GetRangedDamage();
-                show_debug_message($"Spawn a ranged attack object with damage: {damage} at {_attackPoint} and aim it towards {closestEnemy}");
+                show_debug_message($"Spawn a ranged attack object with damage: {damage} at {_attackPoint} and aim it towards {self.attackDirection}");
                 break;
         }
     }
 
-    function Step(_attackPoint)
+    function Step(_attackPoint, _attackDirection)
     {
-        if (enemyObject == noone) return;
-        closestEnemy = instance_nearest(owner.x, owner.y, enemyObject);
-        if (closestEnemy == undefined) return;
 
         var weapon = inventory.GetEquippedWeapon();
         if (weapon != undefined)
@@ -43,14 +43,16 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
             switch (weapon.GetWeaponType())
             {
                 case WeaponType.Melee:
-                    attackCooldown = game_get_speed(gamespeed_fps) / stats.GetMeleeAttackSpeed();
+                    attackCooldown = game_get_speed(gamespeed_fps) / (stats.GetMeleeAttackSpeed() + (weapon.GetItemRotationAffector() * 2));
                     break;
                 case WeaponType.Ranged:
-                    attackCooldown = game_get_speed(gamespeed_fps) / stats.GetRangedAttackSpeed();
+                    attackCooldown = game_get_speed(gamespeed_fps) / (stats.GetRangedAttackSpeed() + (weapon.GetItemRotationAffector() * 2));
                     break;
             }
         }
-
+        
+        self.attackDirection = _attackDirection;
+        if (attackCooldown <= 0) attackCooldown = 60;
         attackTimer++;
         if (attackTimer >= attackCooldown)
         {

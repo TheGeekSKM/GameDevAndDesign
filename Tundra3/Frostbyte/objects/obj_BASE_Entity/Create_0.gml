@@ -6,12 +6,6 @@ inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);
 hunger = new HungerSystem(stats, id);
+temperature = new TemperatureSystem(stats, entityHealth, id);
 attack = new AttackSystem(stats, inventory, id);
-
-entityData = {
-    moveSpeed: stats.GetMoveSpeed(inventory.GetCurrentWeight()),
-    
-    Step: function() {
-        moveSpeed = stats.GetMoveSpeed(inventory.GetCurrentWeight());
-    },
-}
+entityData = new EntityData(stats, inventory);

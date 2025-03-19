@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ControllerSystem",
   "parent":{
-    "name":"Systems",
-    "path":"folders/Scripts/Systems.yy",
+    "name":"Structs",
+    "path":"folders/Scripts/Systems/ControllerSystem/Structs.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -20,7 +20,7 @@ function InputSystem() constructor {
     function IsPressed(_playerIndex, _actionType)
     {
         var action = ActionTypeToString(_actionType);
-        var _player = _playerIndex == 1 ? player1 : player2;
+        var _player = _playerIndex == 0 ? player1 : player2;
         return keyboard_check_pressed(_player[$ action]);
     }
 
@@ -31,7 +31,7 @@ function InputSystem() constructor {
     function IsDown(_playerIndex, _actionType)
     {
         var action = ActionTypeToString(_actionType);
-        var _player = _playerIndex == 1 ? player1 : player2;
+        var _player = _playerIndex == 0 ? player1 : player2;
         return keyboard_check(_player[$ action]);
     }
 
@@ -42,7 +42,7 @@ function InputSystem() constructor {
     function IsReleased(_playerIndex, _actionType)
     {
         var action = ActionTypeToString(_actionType);
-        var _player = _playerIndex == 1 ? player1 : player2;
+        var _player = _playerIndex == 0 ? player1 : player2;
         return keyboard_check_released(_player[$ action]);
     }
 

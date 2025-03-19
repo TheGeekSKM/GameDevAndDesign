@@ -35,7 +35,8 @@ function StatSystem(_str, _dex, _con) constructor {
     function GetMoveSpeed(currentWeight) 
     { 
         var base_speed = 2 + (self.dexterity * 0.15) - (self.strength * 0.05);
-        return max(0.5, base_speed - self.GetEncumberancePenalty(currentWeight));
+        var decimalSpeed = max(0.5, base_speed - self.GetEncumberancePenalty(currentWeight));
+        return ceil(decimalSpeed);
         // Speed is reduced if over carry limit
     }
     
@@ -73,7 +74,9 @@ function StatSystem(_str, _dex, _con) constructor {
     }
     
     // Survival
-    function GetTempResistance() { return (self.constitution * 2) + (self.strength * 1); }
+    function GetMaxTemperature() { return 100 + (self.constitution * 5) + (self.strength * 2); }
+    function GetTemperatureRate() { return 0.5 + (self.constitution * 0.1) - (self.strength * 0.05); }
+
     function GetHungerRate() { return max(0.5, 2 - (self.constitution * 0.1) + (self.strength * 0.05)); } 
     function GetMaxHunger() { return 100 + (self.constitution * 5) + (self.strength * 2); }
 

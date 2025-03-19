@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_human1",
+    "path":"sprites/spr_human1/spr_human1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

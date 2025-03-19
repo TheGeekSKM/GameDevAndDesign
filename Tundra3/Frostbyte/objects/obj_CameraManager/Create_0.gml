@@ -35,12 +35,11 @@ view_set_hport(2, splitViewHeight);
 // Create the cameras
 CAMERA_COMBINED = camera_create_view(0, 0, fullWidth, fullHeight);
 view_set_camera(0, CAMERA_COMBINED);
-camera_set_update_script(CAMERA_COMBINED, CamScriptBothPlayers);
 
-CAMERA_TOP = camera_create_view(0, 0, fullWidth, splitViewHeight, 0, obj_Player1);
+CAMERA_TOP = camera_create_view(0, 0, fullWidth, splitViewHeight, 0, global.vars.Players[0], -1, -1, fullWidth, splitViewHeight);
 view_set_camera(1, CAMERA_TOP);
 
-CAMERA_BOTTOM = camera_create_view(0, bottomCameraY, fullWidth, splitViewHeight, 0, obj_Player2);
+CAMERA_BOTTOM = camera_create_view(0, bottomCameraY, fullWidth, splitViewHeight, 0, global.vars.Players[1], -1, -1, fullWidth, splitViewHeight);
 view_set_camera(2, CAMERA_BOTTOM);
 
 array_push(global.vars.Cameras, CAMERA_COMBINED);
@@ -48,3 +47,6 @@ array_push(global.vars.Cameras, CAMERA_TOP);
 array_push(global.vars.Cameras, CAMERA_BOTTOM);
 
 global.playerBounds = [0, 0, 0, 0];
+
+window_set_size(fullWidth * 2, fullHeight * 2);
+surface_resize(application_surface, fullWidth * 2, fullHeight * 2);

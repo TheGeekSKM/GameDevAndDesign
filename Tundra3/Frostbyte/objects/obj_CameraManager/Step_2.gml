@@ -15,9 +15,16 @@ global.playerBounds[1] = minY;
 global.playerBounds[2] = maxX;
 global.playerBounds[3] = maxY;
 
-var borderSize = 112;
 
-if ((maxX - minX) > (camera_get_view_width(CAMERA_COMBINED) - 2 * borderSize) || (maxY - minY) > (camera_get_view_height(CAMERA_COMBINED) - 2 * borderSize)) 
+// Set the camera to the center of the players
+var newX = (global.playerBounds[0] + global.playerBounds[2] - camera_get_view_width(CAMERA_COMBINED)) * 0.5;
+var newY = (global.playerBounds[1] + global.playerBounds[3] - camera_get_view_height(CAMERA_COMBINED)) * 0.5;
+
+camera_set_view_pos(CAMERA_COMBINED, newX, newY);
+
+var borderSize = 50;
+
+if ((maxX - minX) > (camera_get_view_width(CAMERA_COMBINED) - 3 * borderSize) || (maxY - minY) > (camera_get_view_height(CAMERA_COMBINED) - 2 * borderSize)) 
 {
     if (view_visible[0])
     {
@@ -36,3 +43,4 @@ else
         view_visible[2] = false;
     }
 }
+

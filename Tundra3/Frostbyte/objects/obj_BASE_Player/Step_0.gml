@@ -9,12 +9,10 @@ hunger.Step();
 
 if (canAttack) 
 {
+    target.Step();
+    image_angle = point_direction(x, y, target.x, target.y);
     var pointInFront = new Vector2(x + lengthdir_x(5, image_angle), y + lengthdir_y(5, image_angle));
-    attack.Step(pointInFront);
-
-    // make targetObject visible
-    // make movement keys move the targetObject instead of the player
-    // make the player face the targetObject
+    attack.Step(pointInFront, image_angle);
 }
 
 if (canMove)
@@ -36,11 +34,7 @@ if (canMove)
     if (moveY<0) image_angle = 90;
         
     if (moveX != 0 or moveY != 0) {
-        if (!doOnce) {
-            image_index = ChooseFromArray([0, 2]);
-            doOnce = true;
-        }
-        image_speed = entityData.moveSpeed / 2;
+        image_speed = entityData.moveSpeed / 3;
     } 
     else 
     {
@@ -52,5 +46,4 @@ if (canMove)
     move_and_collide(moveX, moveY, collisionObjects, 4, 0, 0, entityData.moveSpeed, -1);
 }
 
-
-
+// echo($"Player #{PlayerIndex + 1}'s State: {controller.stateMachine.get_current_state()}", true);
