@@ -86,6 +86,13 @@ function InputSystem() constructor {
             IsDown(_playerIndex, ActionType.Up) || 
             IsDown(_playerIndex, ActionType.Down);
     }
+
+    function GetKey(_playerIndex, _actionType)
+    {
+        var action = ActionTypeToString(_actionType);
+        var _player = _playerIndex == 0 ? player1 : player2;
+        return _player[$ action];
+    }
 }
 
 enum ActionType
@@ -97,4 +104,37 @@ enum ActionType
     Action1,
     Action2,
     Menu
+}
+
+function KeybindToString(_key)
+{
+    switch(_key)
+    {
+        case ord("A"): return "A";
+        case ord("B"): return "B";
+        case ord("C"): return "C";
+        case ord("D"): return "D";
+        case ord("E"): return "E";
+        case ord("F"): return "F";
+        case ord("G"): return "G";
+        case ord("H"): return "H";
+        case ord("I"): return "I";
+        case ord("J"): return "J";
+        case ord("K"): return "K";
+        case ord("L"): return "L";
+        case ord("M"): return "M";
+        case ord("N"): return "N";
+        case ord("O"): return "O";
+        case ord("P"): return "P";
+        case ord("Q"): return "Q";
+        case ord("R"): return "R";
+        case ord("S"): return "S";
+        case ord("T"): return "T";
+        case ord("U"): return "U";
+        case ord("V"): return "V";
+        case ord("W"): return "W";
+        case ord("X"): return "X";
+        case ord("Y"): return "Y";
+        case ord("Z"): return "Z";
+    }
 }
