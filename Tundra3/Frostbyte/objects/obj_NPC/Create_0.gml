@@ -4,6 +4,8 @@ canMove = false;
 fleeing = false;
 walkToStartingPos = false;
 
+collisionObjects = [];
+
 attackRange = 64;
 
 stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8));
