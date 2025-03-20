@@ -10,6 +10,8 @@ function TemperatureSystem(_stats, _health, _owner, _enabled = true) constructor
     function UseTemperature(amount) { currentTemperature = max(0, currentTemperature - amount); }
     function GetTemperature() { return currentTemperature; }
 
+    function AddWarmth(amount) { currentTemperature = min(maxTemperature, currentTemperature + amount); }
+
     function Step() 
     {
         if (!enabled) return;   

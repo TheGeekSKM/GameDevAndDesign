@@ -7,6 +7,8 @@ plantRanges = [
     [0, 0]
 ]
 
+cherryItem = new ConsumableItem("Cherry", 4, 0, 0, spr_pixel, 5); 
+
 currentPlantState = 0;
 image_index = currentPlantState;
 
@@ -15,7 +17,7 @@ function OnInteract()
     currentPlantState = max(0, currentPlantState - 1);
     image_index = currentPlantState;
 
-    playerInRange.inventory.AddItem(ITEM_cherry, irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]));    
+    playerInRange.inventory.AddItem(cherryItem, irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]));    
 }
 
 alarm[0] = 2;

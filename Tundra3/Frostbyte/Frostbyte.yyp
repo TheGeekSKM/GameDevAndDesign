@@ -104,6 +104,7 @@
     {"$GMFolder":"","%Name":"Controllers","folderPath":"folders/Scripts/Systems/ControllerSystem/Controllers.yy","name":"Controllers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Structs","folderPath":"folders/Scripts/Systems/ControllerSystem/Structs.yy","name":"Structs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ItemSystem","folderPath":"folders/Scripts/Systems/ItemSystem.yy","name":"ItemSystem","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"AllItems","folderPath":"folders/Scripts/Systems/ItemSystem/AllItems.yy","name":"AllItems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Helper","folderPath":"folders/Scripts/Systems/ItemSystem/Helper.yy","name":"Helper","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ItemStructs","folderPath":"folders/Scripts/Systems/ItemSystem/ItemStructs.yy","name":"ItemStructs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},

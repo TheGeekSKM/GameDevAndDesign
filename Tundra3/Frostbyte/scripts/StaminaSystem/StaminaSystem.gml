@@ -18,6 +18,10 @@ function StaminaSystem(_stats, _owner) constructor {
         return true;
     }
 
+    function AddStamina(amount) {
+        currentStamina = min(maxStamina, currentStamina + amount);
+    }
+
     function GetStamina() {
         return currentStamina;
     }
