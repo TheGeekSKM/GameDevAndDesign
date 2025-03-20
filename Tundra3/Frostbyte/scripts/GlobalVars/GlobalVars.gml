@@ -13,8 +13,9 @@ function Vars() constructor {
 
 	Cameras = [];
 	Players = [];
-    
     PlayerStats = [undefined, undefined];
+	PlayerColors = [make_color_rgb(70, 190, 94), make_color_rgb(70, 156, 190)];
+
 	InputManager = new InputSystem();
 }
 

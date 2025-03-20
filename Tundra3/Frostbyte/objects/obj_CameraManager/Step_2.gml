@@ -1,10 +1,10 @@
-var p1 = obj_Player1;
+var p1 = global.vars.Players[0];
 var minX = p1.x;
 var maxX = p1.x;
 var minY = p1.y;
 var maxY = p1.y;
 
-var p2 = obj_Carnivore
+var p2 = global.vars.Players[1];
 minX = min(minX, p2.x);
 minY = min(minY, p2.y);
 maxX = max(maxX, p2.x);
