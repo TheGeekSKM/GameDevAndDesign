@@ -10,7 +10,7 @@ function HungerSystem(_stats, _owner, _enabled = true) constructor {
         if (!enabled) return;
         maxHunger = stats.GetMaxHunger();
 
-        if (currentHunger < maxHunger && owner.speed != 0)
+        if (currentHunger > 0 && owner.canMove)
         {
             currentHunger -= stats.GetHungerRate();
         }
@@ -18,7 +18,7 @@ function HungerSystem(_stats, _owner, _enabled = true) constructor {
         if (currentHunger <= 0)
         {
             currentHunger = 0;
-            owner.health.TakeDamage(1, DamageType.HUNGER, owner.id);
+            owner.entityHealth.TakeDamage(0.05, DamageType.HUNGER, owner.id);
         }
     }
 

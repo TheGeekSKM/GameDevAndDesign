@@ -22,7 +22,7 @@ function TemperatureSystem(_stats, _health, _owner, _enabled = true) constructor
 
         if (currentTemperature < 0) 
         {
-            health.TakeDamage(1, DamageType.COLD, owner.id);
+            owner.entityHealth.TakeDamage(0.05, DamageType.COLD, owner.id);
             currentTemperature = 0;
         }
     }

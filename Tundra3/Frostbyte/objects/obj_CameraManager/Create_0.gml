@@ -39,7 +39,7 @@ view_set_camera(0, CAMERA_COMBINED);
 CAMERA_TOP = camera_create_view(0, 0, fullWidth, splitViewHeight, 0, global.vars.Players[0], -1, -1, fullWidth, splitViewHeight);
 view_set_camera(1, CAMERA_TOP);
 
-CAMERA_BOTTOM = camera_create_view(0, bottomCameraY, fullWidth, splitViewHeight, 0, global.vars.Players[1], -1, -1, fullWidth, splitViewHeight);
+CAMERA_BOTTOM = camera_create_view(0, bottomCameraY, fullWidth, splitViewHeight, 0, obj_Carnivore, -1, -1, fullWidth, splitViewHeight);
 view_set_camera(2, CAMERA_BOTTOM);
 
 array_push(global.vars.Cameras, CAMERA_COMBINED);

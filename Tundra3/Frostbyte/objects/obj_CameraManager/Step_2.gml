@@ -4,7 +4,7 @@ var maxX = p1.x;
 var minY = p1.y;
 var maxY = p1.y;
 
-var p2 = obj_Player2
+var p2 = obj_Carnivore
 minX = min(minX, p2.x);
 minY = min(minY, p2.y);
 maxX = max(maxX, p2.x);

@@ -1,8 +1,10 @@
 isUndead = false;
 
 canAttack = false;
-attackRange = 10;
+attackRange = 32;
 attacker = noone;
+
+collisionObjects = [obj_Wall, obj_BASE_Entity]
 
 canMove = true;
 wanderRandomly = true;
@@ -17,9 +19,9 @@ fleePosition = new Vector2(0, 0);
 canCheckForPrey = false;
 nearestPrey = ds_list_create();
 preyTarget = noone;
-checkForPreyRange = 120;
+checkForPreyRange = 800;
 
-stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8));
+stats = new StatSystem(irandom_range(3, 6), irandom_range(3, 6), irandom_range(3, 6));
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);
@@ -28,6 +30,8 @@ temperature = new TemperatureSystem(stats, entityHealth, id);
 attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 
+xMove = ChooseFromArray([-1, 1]) * 3;
+yMove = ChooseFromArray([-1, 1]) * 3;
 
 
 function StartCheckingForPrey() {

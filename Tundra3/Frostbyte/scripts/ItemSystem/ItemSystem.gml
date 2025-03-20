@@ -241,6 +241,11 @@ function Inventory(_stats, _owner) constructor {
     {
         return equippedWeapon;
     }
+    
+    function GetEquippedArmor()
+    {
+        return equippedArmor;
+    }
 
     function Step()
     {

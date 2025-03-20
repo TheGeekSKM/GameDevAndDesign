@@ -130,10 +130,6 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("idle");
             }
 
-            if (self.owner.hunger.IsHungry()) {
-                self.stateMachine.change("hungryWander");
-            }
-
             if (point_distance(self.owner.x, self.owner.y, self.owner.fleePosition.x, self.owner.fleePosition.y) < 10) {
                 self.stateMachine.change("heal");
             }
