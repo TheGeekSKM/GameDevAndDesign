@@ -41,9 +41,16 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
         .SetStep(function() {
             // canMove = true;
             // pick direction that is opposite of image_angle
-            // run forward
-            // wait 3 seconds
-            // change state to hungryWander
+            // run forward for 1-3 seconds after, change state to heal
+        });
+    
+    var heal = new StateStruct("heal")
+        .SetStep(function() {
+            // canMove = false
+            // canAttack = false
+            // wait for 3 seconds
+            // heal 10% of max health
+            // change to idle state
         });
 
     self.AddState(idle);
@@ -51,5 +58,6 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
     self.AddState(hunt);
     self.AddState(attack);
     self.AddState(lowHealth);
+    self.AddState(heal);
 }
 

@@ -18,7 +18,7 @@ function HungerSystem(_stats, _owner, _enabled = true) constructor {
         if (currentHunger <= 0)
         {
             currentHunger = 0;
-            owner.health.TakeDamage(1, DamageType.HUNGER);
+            owner.health.TakeDamage(1, DamageType.HUNGER, owner.id);
         }
     }
 }

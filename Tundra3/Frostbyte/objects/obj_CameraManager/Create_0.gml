@@ -50,3 +50,11 @@ global.playerBounds = [0, 0, 0, 0];
 
 window_set_size(fullWidth * 2, fullHeight * 2);
 surface_resize(application_surface, fullWidth * 2, fullHeight * 2);
+
+function UpdateCameraCombined(minX, minY, maxX, maxY)
+{
+    // Set the camera to the center of the players
+    var newX = (minX + maxX - camera_get_view_width(CAMERA_COMBINED)) * 0.5;
+    var newY = (minY + maxY - camera_get_view_height(CAMERA_COMBINED)) * 0.5;
+    camera_set_view_pos(CAMERA_COMBINED, newX, newY);
+}

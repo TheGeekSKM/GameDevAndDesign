@@ -22,6 +22,8 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
     currentHealth = maxHealth;
     isUndead = _isUndead;
     multipliers = [1, 1.2, 0.8, 1, 1, 1, -1, 1];
+
+    recentAttacker = noone;
     
     timedMultipliers = [];
 
@@ -40,8 +42,9 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         AddMultiplier(_damageType, _value);
     }
     
-    function TakeDamage(amount, damageType)
+    function TakeDamage(amount, damageType, _attackerID)
     {
+        recentAttacker = _attackerID;
         if (self.isUndead and damageType = DamageType.HEALING)
         {
             echo($"HEALTHSYSTEM -> Healing burns the undead.", true);
@@ -49,7 +52,7 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         }
 
         var armor = inventory.GetEquippedArmor();
-        if (armor != undefined)
+        if (armor != undefined and damageType != DamageType.HEALING)
         {
             amount = max(0, 
                 amount - stats.GetDamageReduction(
@@ -76,6 +79,11 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         if (damageType == DamageType.DARK and self.isUndead) return 0.5;
         return multipliers[damageType];
     }
+
+    function IsBadlyDamaged()
+    {
+        return self.currentHealth <= self.maxHealth / 4;
+    }
     
     ///@pure
     function IsDead()
@@ -100,6 +108,11 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
                 AddMultiplier(timedMultipliers[i].damageType, (1 / timedMultipliers[i].value));
                 array_delete(timedMultipliers, i, 1);
             }
+        }
+
+        if (!instance_exists(recentAttacker))
+        {
+            recentAttacker = noone;
         }
     }
 }
