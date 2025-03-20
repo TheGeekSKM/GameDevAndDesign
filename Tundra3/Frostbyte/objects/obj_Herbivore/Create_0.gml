@@ -35,7 +35,7 @@ hunger = new HungerSystem(stats, id);
 temperature = new TemperatureSystem(stats, entityHealth, id);
 entityData = new EntityData(stats, inventory);
 
-controller = new HerbivoreAIController(id);
+
 
 function StartCheckingForPredators()
 {
@@ -69,4 +69,6 @@ function StopEating()
 {
     canEat = false;
 }
+
+controller = new HerbivoreAIController(id);
 

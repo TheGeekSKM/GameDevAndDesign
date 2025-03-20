@@ -44,11 +44,13 @@ if (canAttack)
     var preyDist = instance_exists(preyTarget) ? point_distance(x, y, preyTarget.x, preyTarget.y) : 10000000;
 
     var target = attackerDist < preyDist ? attacker : preyTarget;
-    if (point_distance(x, y, target.x, target.y) < attackRange)
+    
+    var dir = point_direction(x, y, target.x, target.y);
+    image_angle = dir;
+    var pointInFront = new Vector2(x + lengthdir_x(5, dir), y + lengthdir_y(5, dir));
+    
+    if (point_distance(x, y, target.x, target.y) <= attackRange)
     {
-        var dir = point_direction(x, y, target.x, target.y);
-        image_angle = dir;
-        var pointInFront = new Vector2(x + lengthdir_x(5, dir), y + lengthdir_y(5, dir));
         attack.Step(pointInFront, image_angle);
     }
 }

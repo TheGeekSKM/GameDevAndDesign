@@ -28,7 +28,7 @@ temperature = new TemperatureSystem(stats, entityHealth, id);
 attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 
-controller = new CarnivoreAIController(id);
+
 
 function StartCheckingForPrey() {
     canCheckForPrey = true;
@@ -37,3 +37,5 @@ function StartCheckingForPrey() {
 function StopCheckingForPrey() {
     canCheckForPrey = false;
 }
+
+controller = new CarnivoreAIController(id);

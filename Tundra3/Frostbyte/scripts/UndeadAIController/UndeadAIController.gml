@@ -56,6 +56,7 @@ function UndeadAIController(_owner) : AIController(_owner) constructor
             
         })
         .SetStep(function() {
+            self.owner.canMove = false;
             // if target is outside of attackRange, change state to chase
             // if target is outside of 120 pixels, change state to wander
 
@@ -67,7 +68,7 @@ function UndeadAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("chase");
             }
 
-            if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > 120) {
+            if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > self.owner.chaseRange) {
                 self.stateMachine.change("idle");
             }
         })

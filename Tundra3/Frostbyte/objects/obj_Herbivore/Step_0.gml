@@ -9,7 +9,6 @@ if (canMove)
 {
     if (wanderRandomly)
     {
-        wanderDirection = 0;
         wanderCounter++;
         if (wanderCounter >= wanderTime)
         {
