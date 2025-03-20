@@ -1,0 +1,2 @@
+ds_list_destroy(nearbyPredators);
+ds_list_destroy(nearbyFoodSources);
