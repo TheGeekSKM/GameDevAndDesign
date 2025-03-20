@@ -12,20 +12,26 @@ if (canMove)
         wanderCounter++;
         if (wanderCounter >= wanderTime)
         {
+            xMove = ChooseFromArray([-1, 1]) * entityData.moveSpeed;
+            yMove = ChooseFromArray([-1, 1]) * entityData.moveSpeed;
+
             wanderCounter = 0;
-            wanderTime = irandom_range(60, 600);
-            wanderDirection = point_direction(x, y, irandom_range(0, room_width), irandom_range(0, room_height));
         }
-        move_towards_point(x + lengthdir_x(1, wanderDirection), 
-            y + lengthdir_y(1, wanderDirection), stats.GetMoveSpeed()
-        );
+        image_angle = point_direction(x, y, x + xMove, y + yMove);
+        move_and_collide(xMove, yMove, collisionObjects);
     }
     else if (moveTowardsFoodSource)
     {
-        move_towards_point(targetFoodSource.x, targetFoodSource.y, stats.GetMoveSpeed());
+        image_angle = point_direction(x, y, targetFoodSource.x, targetFoodSource.y);
+        xMove = lengthdir_x(stats.GetMoveSpeed(), image_angle);
+        yMove = lengthdir_y(stats.GetMoveSpeed(), image_angle);
+        move_and_collide(xMove, yMove, collisionObjects);
     }
     else if (fleeing)
     {
-        move_towards_point(fleePosition.x, fleePosition.y, stats.GetMoveSpeed() * 1.5);
+        image_angle = point_direction(x, y, fleePosition.x, fleePosition.y);
+        xMove = lengthdir_x(stats.GetMoveSpeed() * 1.5, image_angle);
+        yMove = lengthdir_y(stats.GetMoveSpeed() * 1.5, image_angle);
+        move_and_collide(xMove, yMove, collisionObjects);
     }
 }

@@ -29,12 +29,16 @@ if (canMove)
     else if (chaseTarget)
     {
         image_angle = point_direction(x, y, preyTarget.x, preyTarget.y);
-        move_towards_point(preyTarget.x, preyTarget.y, stats.GetMoveSpeed());
+        xMove = lengthdir_x(stats.GetMoveSpeed(), image_angle);
+        yMove = lengthdir_y(stats.GetMoveSpeed(), image_angle);
+        move_and_collide(xMove, yMove, collisionObjects);
     }
     else if (fleeing)
     { 
         image_angle = point_direction(x, y, fleePosition.x, fleePosition.y);
-        move_towards_point(fleePosition.x, fleePosition.y, stats.GetMoveSpeed());
+        xMove = lengthdir_x(stats.GetMoveSpeed(), image_angle);
+        yMove = lengthdir_y(stats.GetMoveSpeed(), image_angle);
+        move_and_collide(xMove, yMove, collisionObjects);
     }
 
     x = clamp(x, 0, room_width);

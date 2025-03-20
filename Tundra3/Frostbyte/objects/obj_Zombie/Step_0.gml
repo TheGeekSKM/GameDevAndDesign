@@ -14,17 +14,20 @@ if (canMove)
         wanderCounter++;
         if (wanderCounter >= wanderTime)
         {
+            xMove = ChooseFromArray([-1, 1]) * entityData.moveSpeed;
+            yMove = ChooseFromArray([-1, 1]) * entityData.moveSpeed;
+
             wanderCounter = 0;
-            wanderTime = irandom_range(60, 600);
-            wanderDirection = point_direction(x, y, irandom_range(0, room_width), irandom_range(0, room_height));
         }
-        move_towards_point(x + lengthdir_x(1, wanderDirection), 
-            y + lengthdir_y(1, wanderDirection), stats.GetMoveSpeed()
-        );
+        image_angle = point_direction(x, y, x + xMove, y + yMove);
+        move_and_collide(xMove, yMove, collisionObjects);
     }
     else if (chase)
     {
-        move_towards_point(prey.x, prey.y, stats.GetMoveSpeed());
+        image_angle = point_direction(x, y, prey.x, prey.y);
+        xMove = lengthdir_x(stats.GetMoveSpeed(), image_angle);
+        yMove = lengthdir_y(stats.GetMoveSpeed(), image_angle);
+        move_and_collide(xMove, yMove, collisionObjects);
     }
 }
 else {
