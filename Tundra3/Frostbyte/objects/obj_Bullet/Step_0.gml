@@ -1,6 +1,7 @@
 if (bulletItem == undefined) {
     show_message("Bullet item not set for {id}");
     instance_destroy();
+    return;
 }
 
 if (x < 0 || x > room_width || y < 0 || y > room_height) {
@@ -8,10 +9,22 @@ if (x < 0 || x > room_width || y < 0 || y > room_height) {
 }
 image_angle = direction;
 
-var nextPosition = new Vector2(x + lengthdir_x(speed, direction), y + lengthdir_y(speed, direction));
-var collision = instance_place(x, y, targets);
 
-if (instance_exists(collision)) {
-    collision.TakeDamage(damage, damageType, shooter);
-    instance_destroy();
+ds_list_clear(hitObjectList);
+var hitCount = instance_place_list(x, y, targets, hitObjectList, false);
+
+if (hitCount > 0) {
+    for (var i = 0; i < hitCount; i++) 
+    {
+        var hitObject = hitObjectList[| i];
+        if (hitObject != shooter) 
+        {
+            hitObject.TakeDamage(damage, damageType);
+            if (!hitMultiple) 
+            {
+                instance_destroy();
+                return;
+            }
+        }
+    }
 }
