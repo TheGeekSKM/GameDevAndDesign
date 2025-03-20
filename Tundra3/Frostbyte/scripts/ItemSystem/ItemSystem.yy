@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ItemSystem",
   "parent":{
-    "name":"Systems",
-    "path":"folders/Scripts/Systems.yy",
+    "name":"ItemSystem",
+    "path":"folders/Scripts/Systems/ItemSystem.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -77,6 +77,14 @@ function ConsumableItem(_name, _durability, _staminaCost, _weight, _consumeEffec
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system
+
+    function Use()
+    {
+        var stats = owner.stats;
+        for (var i = 0; i < array_length(effects); i++) {
+            stats.AddStatForTime(effects[i]);
+        }
+    }
 }
 
 function WeaponItem(_name, _weaponType, _durability, _staminaCost, _weight, _attackEffects) : Item(_name, _durability, _staminaCost, _weight, ItemType.Weapon, _attackEffects, true) constructor {
@@ -113,10 +121,35 @@ function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defe
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system on equip
+    stats = owner.stats;
+    stamina = owner.stamina;
     armorValue = _armorValue;
+
+    function Equip()
+    {
+        for(var i = 0; i < array_length(effects); i++) {
+            stats.AddStat(effects[i]);
+        }
+    }
+
+    function Unequip()
+    {
+        for(var i = 0; i < array_length(effects); i++) {
+            stats.RemoveStat(effects[i]);
+        }
+    }
 
     function GetArmorValue()
     {
+        durability -= 1;
+        stamina.UseStamina(staminaCost);
+
+        if (durability <= 0) {
+            owner.inventory.DeleteItem(self, 1);
+            delete self;
+            return 0;
+        }
+
         return armorValue;
     }
 }

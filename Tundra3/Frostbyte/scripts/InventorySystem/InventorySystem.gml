@@ -104,9 +104,16 @@ function Inventory(_stats, _owner) constructor {
         if (slot.quantity < _count) {array_delete(allItems, _itemIndex, 1); return true; }
 
         slot.quantity -= _count;
-        if (slot.quantity == 0) {array_delete(allItems, _itemIndex, 1); return true;}
         currentWeight -= slot.item.weight * _count;
         return false;
+    }
+
+    function DeleteItem(_item, _count)
+    {
+        var index = ContainsItem(_item);
+        if (index == -1) return false;
+        RemoveItem(index, _count);
+        return true;
     }
     
     function GetCurrentWeight()

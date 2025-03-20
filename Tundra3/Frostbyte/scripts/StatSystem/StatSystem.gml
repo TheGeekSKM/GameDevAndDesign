@@ -2,7 +2,7 @@ enum StatType
 {
     Strength,
     Dexterity,
-    Constutition
+    Constitution
 }
 
 /// @function StatSystem(_str, _dex, _con)
@@ -86,7 +86,7 @@ function StatSystem(_str, _dex, _con) constructor {
         {
             case StatType.Strength: strength += _statusEffect.value; break;
             case StatType.Dexterity: dexterity += _statusEffect.value; break;
-            case StatType.Constutition: constitution += _statusEffect.value; break;
+            case StatType.Constitution: constitution += _statusEffect.value; break;
         }
     }
 
@@ -96,7 +96,7 @@ function StatSystem(_str, _dex, _con) constructor {
         {
             case StatType.Strength: strength -= _statusEffect.value; break;
             case StatType.Dexterity: dexterity -= _statusEffect.value; break;
-            case StatType.Constutition: constitution -= _statusEffect.value; break;
+            case StatType.Constitution: constitution -= _statusEffect.value; break;
         }
     }
 
@@ -112,7 +112,7 @@ function StatSystem(_str, _dex, _con) constructor {
         for (var i = array_length(timedStats) - 1; i >= 0; i--)
         {
             timedStats[i].duration -= 1;
-            if (timedStats[i].duration <= 0)
+            if (timedStats[i].duration == 0)
             {
                 RemoveStat(timedStats[i]);
                 array_delete(timedStats, i, 1);
