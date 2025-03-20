@@ -5,6 +5,8 @@ stamina.Step();
 entityData.Step();
 hunger.Step();
 
+controller.Step();
+
 attacker = entityHealth.recentAttacker;
 
 if (canMove)

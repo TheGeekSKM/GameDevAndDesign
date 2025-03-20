@@ -6,4 +6,6 @@ if (canEat)
         // Eat food source
         
     }
+
+    alarm[2] = irandom_range(15, 45);
 }

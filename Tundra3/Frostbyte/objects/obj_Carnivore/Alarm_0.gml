@@ -10,4 +10,6 @@ if (canCheckForPrey)
     {
         preyTarget = noone;
     }
+
+    alarm[0] = irandom_range(20, 30);
 }
