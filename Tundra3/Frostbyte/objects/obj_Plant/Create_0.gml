@@ -14,6 +14,7 @@ image_index = currentPlantState;
 
 function OnInteract() 
 {
+    DecreaseFood()
     playerInRange.inventory.AddItem(cherryItem, irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]));    
 }
 
