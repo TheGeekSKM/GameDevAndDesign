@@ -7,7 +7,9 @@
   ],
   "managed":true,
   "name":"obj_Plant",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Interactable","path":"objects/obj_BASE_Interactable/obj_BASE_Interactable.yy",},"propertyId":{"name":"interactableName","path":"objects/obj_BASE_Interactable/obj_BASE_Interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Cherry Bush",},
+  ],
   "parent":{
     "name":"Interactables",
     "path":"folders/Objects/Interactables.yy",
@@ -33,7 +35,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_foodBush",
+    "path":"sprites/spr_foodBush/spr_foodBush.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

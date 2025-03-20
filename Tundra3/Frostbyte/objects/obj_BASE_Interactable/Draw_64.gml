@@ -1,12 +1,13 @@
 if (instance_exists(playerInRange))
 {
-    var guiPos = new Vector2(0, 0);
-
-    guiPos = RoomToGUICoordsView(x, y + ((sprite_height / 2) - 25), playerInRange.PlayerIndex);
-
-    scribble($"[c_player{playerInRange.PlayerIndex}]{interactableName}\n[/c]{interactText}")
+    var guiPos = new Vector2(x, y);
+        
+    guiPos = RoomToGUICoordsView(x, y + ((sprite_height / 2) - 50), playerInRange.PlayerIndex);
+    
+    scribble(string_concat("[c_player", playerInRange.PlayerIndex, "]", interactableName, "[/c]\n", interactText))
         .align(fa_center, fa_middle)
         .starting_format("Font", c_white)
         .transform(1, 1, 0)
+        .sdf_outline(c_black, 2)
         .draw(guiPos.x, guiPos.y);
 }

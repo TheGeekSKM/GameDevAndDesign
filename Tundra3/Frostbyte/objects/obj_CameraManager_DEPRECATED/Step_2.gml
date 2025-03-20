@@ -24,7 +24,7 @@ if ((maxX - minX) > (camera_get_view_width(CAMERA_COMBINED) - 3 * borderSize) ||
 }
 else
 {
-    if (!view_visible[0])
+    if (!view_visible[0] and !alwaysSplit)
     {
         view_visible[0] = true;
         view_visible[1] = false;

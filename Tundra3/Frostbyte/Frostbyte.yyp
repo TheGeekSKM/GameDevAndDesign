@@ -136,6 +136,7 @@
     {"id":{"name":"obj_BASE_KBManager","path":"objects/obj_BASE_KBManager/obj_BASE_KBManager.yy",},},
     {"id":{"name":"obj_BASE_Player","path":"objects/obj_BASE_Player/obj_BASE_Player.yy",},},
     {"id":{"name":"obj_Bullet","path":"objects/obj_Bullet/obj_Bullet.yy",},},
+    {"id":{"name":"obj_CameraManager_DEPRECATED","path":"objects/obj_CameraManager_DEPRECATED/obj_CameraManager_DEPRECATED.yy",},},
     {"id":{"name":"obj_CameraManager","path":"objects/obj_CameraManager/obj_CameraManager.yy",},},
     {"id":{"name":"obj_Carnivore","path":"objects/obj_Carnivore/obj_Carnivore.yy",},},
     {"id":{"name":"obj_FloatingText_MainMenu","path":"objects/obj_FloatingText_MainMenu/obj_FloatingText_MainMenu.yy",},},

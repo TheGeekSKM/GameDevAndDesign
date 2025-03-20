@@ -14,11 +14,14 @@ image_index = currentPlantState;
 
 function OnInteract() 
 {
-    currentPlantState = max(0, currentPlantState - 1);
-    image_index = currentPlantState;
-
     playerInRange.inventory.AddItem(cherryItem, irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]));    
 }
 
-alarm[0] = 2;
+function DecreaseFood()
+{
+    currentPlantState = min(3, currentPlantState + 1);
+    image_index = currentPlantState;
+}
+
+alarm[0] = irandom_range(5, 20) * 60;
 image_angle = irandom(360);
