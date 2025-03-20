@@ -105,6 +105,11 @@ function Inventory(_stats, _owner) constructor {
 
         slot.quantity -= _count;
         currentWeight -= slot.item.weight * _count;
+
+        if (slot.item.Equals(equippedWeapon)) equippedWeapon = undefined;
+        else if (slot.item.Equals(equippedArmor)) equippedArmor = undefined;
+        else if (slot.item.Equals(equippedBullet)) equippedBullet = undefined;
+
         return false;
     }
 
@@ -129,6 +134,11 @@ function Inventory(_stats, _owner) constructor {
     function GetEquippedArmor()
     {
         return equippedArmor;
+    }
+
+    function GetEquippedBullet()
+    {
+        return equippedBullet;
     }
 
     function Step()

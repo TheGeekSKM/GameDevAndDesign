@@ -20,6 +20,7 @@ if (hitCount > 0) {
         if (hitObject != shooter) 
         {
             hitObject.TakeDamage(damage, damageType);
+            bulletItem.Use(new Vector2(x, y))
             if (!hitMultiple) 
             {
                 instance_destroy();

@@ -18,4 +18,5 @@ function SetBulletData(_bulletItem, _speed, _targets, _direction)
     shooter = _bulletItem.owner;
     alarm[0] = _bulletItem.lifeTime;
     hitMultiple = _bulletItem.hitMultiple;
+    sprite_index = _bulletItem.sprite;
 }

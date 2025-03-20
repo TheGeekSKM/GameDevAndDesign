@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BulletItem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BulletItem",
+  "parent":{
+    "name":"ItemStructs",
+    "path":"folders/Scripts/Systems/ItemSystem/ItemStructs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
