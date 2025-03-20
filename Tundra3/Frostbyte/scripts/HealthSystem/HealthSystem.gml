@@ -52,7 +52,7 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         }
 
         var armor = inventory.GetEquippedArmor();
-        if (armor != undefined and damageType != DamageType.HEALING)
+        if (armor != undefined and damageType != DamageType.HUNGER)
         {
             amount = max(0, 
                 amount - stats.GetDamageReduction(

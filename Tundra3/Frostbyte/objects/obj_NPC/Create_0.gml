@@ -20,3 +20,5 @@ entityData = new EntityData(stats, inventory);
 controller = new NPCAIController(id);
 
 startingPos = new Vector2(x, y);
+
+targets = [obj_Herbivore, obj_Carnivore, obj_BASE_Player, obj_Zombie];

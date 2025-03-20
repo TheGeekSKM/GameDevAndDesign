@@ -9,3 +9,5 @@ hunger = new HungerSystem(stats, id);
 temperature = new TemperatureSystem(stats, entityHealth, id);
 attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
+
+targets = [];

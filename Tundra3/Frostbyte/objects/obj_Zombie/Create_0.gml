@@ -40,3 +40,5 @@ function StopCheckingForPrey()
 }
 
 controller = new UndeadAIController(id);
+
+targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Carnivore];

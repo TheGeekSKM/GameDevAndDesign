@@ -111,10 +111,22 @@ function RangedWeaponItem(_name, _durability, _staminaCost, _weight, _attackEffe
     // apply effects to stat system on equip
 }
 
-function BulletItem(_name, _durability, _staminaCost, _weight, _attackEffects) : Item(_name, _durability, _staminaCost, _weight, ItemType.Bullet, _attackEffects, true) constructor {
+function BulletItem(_name, _speed, _damage, _damageType, _weight, _hitFunctions) : Item(_name, -1, 0, _weight, ItemType.Bullet, [], true) constructor {
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system
+    speed = _speed;
+    damage = _damage;
+    damageType = _damageType;
+    hitFunctions = _hitFunctions;
+
+    function Use(_position)
+    {
+        for (var i = 0; i < array_length(hitFunctions); i++) {
+            hitFunctions[i](_position);
+        }
+    }
+
 }
 
 function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defenseEffects) : Item(_name, _durability, _staminaCost, _weight, ItemType.Armor, _defenseEffects, true) constructor {

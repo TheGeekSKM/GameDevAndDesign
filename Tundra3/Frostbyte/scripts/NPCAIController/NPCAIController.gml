@@ -45,7 +45,7 @@ function NPCAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("walkToStartingPos");
             }
 
-            self.owner.entityHealth.TakeDamage(-0.5, DamageType.HEALING, self.owner);
+            self.owner.entityHealth.Heal(0.5);
             if (!self.owner.entityHealth.IsBadlyDamaged()) self.stateMachine.change("walkToStartingPos");
         })
         .SetLeave(function() {
