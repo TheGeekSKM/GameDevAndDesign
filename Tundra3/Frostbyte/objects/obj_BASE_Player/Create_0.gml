@@ -20,3 +20,7 @@ entityData = new EntityData(stats, inventory);
 controller = new PlayerController(id);
 
 global.vars.Players[PlayerIndex] = id;
+
+tempInteractableList = ds_list_create();
+interactableArray = [];
+interactionRange = 20;

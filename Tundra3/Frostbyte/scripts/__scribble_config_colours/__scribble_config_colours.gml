@@ -33,6 +33,8 @@ function __scribble_config_colours()
         c_teal:    c_teal,
         c_white:   c_white,
         c_yellow:  c_yellow,
+        c_player0: make_color_rgb(70, 190, 94),
+        c_player1: make_color_rgb(70, 156, 190),
     
         //Here are some example colours
         c_coquelicot: scribble_rgb_to_bgr(0xff3800),

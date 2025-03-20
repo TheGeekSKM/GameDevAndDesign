@@ -32,6 +32,30 @@ function RoomToGUICoords(_x, _y)
     return new Vector2(guiX, guiY);
 }
 
+/// @function RoomToGUICoordsView(x, y, viewIndex)
+/// @param {Real} x The Room X Coordinate that you want to convert to a GUI Coordinate
+/// @param {Real} y The Room Y Coordinate that you want to conver to a GUI Coordinate
+/// @param {Real} viewIndex The index of the view to use for the conversion
+function RoomToGUICoordsView(_x, _y, _viewIndex)
+{
+    var cx = camera_get_view_x(view_camera[_viewIndex]);
+    var cy = camera_get_view_y(view_camera[_viewIndex]);
+    
+    var off_x = _x - cx;
+    var off_y = _y - cy;
+    
+    var offXPercent = off_x / camera_get_view_width(view_camera[_viewIndex]);
+    var offYPercent = off_y / camera_get_view_height(view_camera[_viewIndex]);
+    
+    var gui_width = display_get_gui_width() / 2; // Adjust for split-screen
+    var gui_x_offset = _viewIndex * gui_width;   // Offset for each view
+
+    var guiX = (offXPercent * gui_width) + gui_x_offset;
+    var guiY = offYPercent * display_get_gui_height();
+    
+    return new Vector2(guiX, guiY);
+}
+
 // Seedpod Basics includes general purpose APIs that make GameMaker programming easier
 
 /// @function echo(_debugString, _data...)

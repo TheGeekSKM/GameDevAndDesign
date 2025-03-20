@@ -46,4 +46,43 @@ if (canMove)
     move_and_collide(moveX, moveY, collisionObjects, 4, 0, 0, entityData.moveSpeed, -1);
 }
 
-// echo($"Player #{PlayerIndex + 1}'s State: {controller.stateMachine.get_current_state()}", true);
+ds_list_clear(tempInteractableList);
+collision_circle_list(x, y, interactionRange, obj_BASE_Interactable, false, true, tempInteractableList, false);
+
+for (var i = 0; i < ds_list_size(tempInteractableList); i += 1) 
+{
+    var interactable = ds_list_find_value(tempInteractableList, i);
+    if (instance_exists(interactable))
+    {
+        if (interactable.playerInRange == noone)
+        {
+            interactable.playerInRange = id;
+            array_push(interactableArray, interactable);
+        }
+    }   
+}
+
+for (var i = array_length(interactableArray) - 1; i >= 0; i--) 
+{
+    var interactable = interactableArray[i];
+    if (!instance_exists(interactable))
+    {
+        array_delete(interactableArray, i, 1);
+        break;
+    }
+
+    var dist = point_distance(x, y, interactable.x, interactable.y);
+    if (dist > interactionRange) 
+    {
+        interactable.playerInRange = noone;
+        array_delete(interactableArray, i, 1);
+    }
+}
+
+if (global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Action1)) 
+{
+    for (var i = 0; i < array_length(interactableArray); i += 1) 
+    {
+        interactableArray[i].OnInteract();    
+    }
+}
