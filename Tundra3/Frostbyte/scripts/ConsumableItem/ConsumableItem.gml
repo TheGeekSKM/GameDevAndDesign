@@ -24,4 +24,32 @@ function ConsumableItem(_name, _durability, _weight, _consumeEffects, _sprite, _
             owner.inventory.DeleteItem(self, 1);
         }
     }
+
+    function InventoryUse()
+    {
+        Use();
+    }
+
+    function GetDescription() {
+        var desc = $"Item: {name}\n";
+        for (var i = 0; i < array_length(effects); i++) {
+            desc = string_concat(desc, $"Effect #{i + 1}: {effects[i].value} {effects[i].statType}\n");
+        }
+       
+        var hunger = "";
+        hunger = string_concat(hunger, $"Satiety: {hungerRemoved}\n");
+        
+        var _health = "";
+        _health = string_concat(_health, $"Healing: {healthAdded}\n");
+
+        var stamina = "";
+        stamina = string_concat(stamina, $"Stamina: {staminaAdded}\n");
+
+        var warmth = "";
+        warmth = string_concat(warmth, $"Warmth: {warmthAdded}\n");
+
+        desc = string_concat(desc, hunger, _health, stamina, warmth);
+
+        return desc;
+    }
 }

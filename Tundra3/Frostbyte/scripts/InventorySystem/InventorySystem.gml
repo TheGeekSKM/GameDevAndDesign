@@ -21,7 +21,7 @@ function Inventory(_stats, _owner) constructor {
     {
         for (var i = 0; i < array_length(allItems); i += 1) 
         {
-            if (allItems[i].item.Equals(_item)) return i;
+            if (allItems[i].item.name == _item.name) return i;
         }
         return -1;
     }
@@ -71,12 +71,24 @@ function Inventory(_stats, _owner) constructor {
         var slot = allItems[index];
         if (slot.quantity < _count) return false;
         
-        var brokenItem = false;
         for (var i = 0; i < _count; i += 1) {
-            brokenItem = !slot.item.Use();
+            slot.item.InventoryUse();
         }
 
-        if (brokenItem) RemoveItem(index, _count);
+        return true;
+    }
+
+    function UseItemByIndex(_index, _count)
+    {
+        if (_index < 0 or _index >= array_length(allItems)) return false;
+        var slot = allItems[_index];
+        if (slot.quantity < _count) return false;
+        
+        for (var i = 0; i < _count; i += 1) {
+            slot.item.InventoryUse();
+            echo("Used item");
+        }
+
         return true;
     }
 
@@ -160,6 +172,29 @@ function Inventory(_stats, _owner) constructor {
             str = string_concat(str, allItems[i].item.name, " x", string(allItems[i].quantity), "\n");
         }
         return str;
+    }
+
+    function GetTotalDamage()
+    {
+        var totalDamage = 0;
+        if (equippedWeapon != undefined and equippedWeapon.GetWeaponType() == WeaponType.Melee) totalDamage += equippedWeapon.damage;
+        if (equippedBullet != undefined) totalDamage += equippedBullet.damage;
+        return totalDamage;
+    }
+
+    function GetWeaponAttackSpeed()
+    {
+        if (equippedWeapon == undefined) return 0;
+        if (equippedWeapon.GetWeapnType() == WeaponType.Melee) return stats.GetMeleeAttackSpeed();
+        else return stats.GetRangedAttackSpeed();
+    }
+
+    function GetDefense()
+    {
+        defense = 0;
+        if (equippedArmor != undefined) defense += equippedArmor.armorValue;
+        defense += stats.GetNaturalResistance();
+        return defense;
     }
 }
 

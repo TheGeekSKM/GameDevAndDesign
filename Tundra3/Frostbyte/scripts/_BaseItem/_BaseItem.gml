@@ -12,6 +12,8 @@ function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equip
 
     // override this function in child classes
     function Use() {}
+    function InventoryUse() {}
+
     function PickUp(_owner) {
         owner = _owner;
     }
@@ -46,9 +48,9 @@ function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equip
     function Equals(_item)
     {
         if (_item == undefined) return false;
-        var sameName = name == _item.name;
-        var sameType = type == _item.type;
-        var sameEffects = array_length(effects) == array_length(_item.effects);
+        var sameName = (name == _item.name);
+        var sameType = (type == _item.type);
+        var sameEffects = (array_length(effects) == array_length(_item.effects));
         return sameName and sameType and sameEffects;
     }
 }
