@@ -11,5 +11,3 @@ else if (timeOfDay <= 0)
 }
 timeOfDay = clamp(timeOfDay, 0, 1);
 alphaValue = timeOfDay * 0.85;
-
-echo($"Time: {timeOfDay}, AlphaValue: {alphaValue}")

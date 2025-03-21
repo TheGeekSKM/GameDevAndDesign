@@ -50,14 +50,14 @@ function StatSystem(_str, _dex, _con) constructor {
     function GetRangedAttackSpeed() { return 1 + (self.dexterity * 0.15) - (self.strength * 0.05); }
     
     // Armor Resistances
-    function GetArmorResistance() 
+    function GetNaturalResistance() 
     { 
-        return (self.constitution * 1.5) + (self.strength * 0.5);
+        return (self.constitution * 0.25) + (self.strength * 0.15);
         // CON is the main factor, STR adds some physical resistance 
     }
     function GetDamageReduction(armorValue) 
     { 
-        return armorValue * (self.GetArmorResistance() / 100);
+        return armorValue + (self.GetNaturalResistance() / 100);
         // Armor absorbs more damage based on CON and STR 
     }
     
@@ -67,7 +67,7 @@ function StatSystem(_str, _dex, _con) constructor {
         return min(50, 5 + (self.dexterity * 2));
         // DEX gives crit chance, capped at 50% 
     }
-    function GetCritDamage() 
+    function GetCritDamageMultiplier() 
     { 
         return 1.5 + (self.strength * 0.1);
         // STR increases the crit multiplier (default 1.5x)
@@ -75,9 +75,9 @@ function StatSystem(_str, _dex, _con) constructor {
     
     // Survival
     function GetMaxTemperature() { return 100 + (self.constitution * 5) + (self.strength * 2); }
-    function GetTemperatureRate() { return 0.5 + (self.constitution * 0.1) - (self.strength * 0.05); }
+    function GetTemperatureRate() { return max(0.5, 0.2 + (self.constitution * 0.1) - (self.strength * 0.05)); }
 
-    function GetHungerRate() { return max(0.5, 2 - (self.constitution * 0.1) + (self.strength * 0.05)); } 
+    function GetHungerRate() { return max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05)); } 
     function GetMaxHunger() { return 100 + (self.constitution * 5) + (self.strength * 2); }
 
     function AddStat(_statusEffect)
@@ -122,19 +122,21 @@ function StatSystem(_str, _dex, _con) constructor {
 
     function ToString()
     {
-        var str = $"Attributes:\n- Strength: {strength}\n- Dexterity: {dexterity}\n- Constitution: {constitution}\n\n";
+        var str = "";
         
+        // str = string_concat(str, "--------------------------------------------------\n");
+        str = string_concat(str, $"Stats:\n");
+        str = string_concat(str, $"- Strength: {strength}, Dexterity: {dexterity}, Constitution: {constitution}\n\n");
+
         str = string_concat(str, $"Health and Stamina:\n");
-        str = string_concat(str, $"- Max Health: {GetMaxHealth()}\n");
-        str = string_concat(str, $"- Max Stamina: {GetMaxStamina()}\n\n");
+        str = string_concat(str, $"- Max Health: {GetMaxHealth()}, Max Stamina: {GetMaxStamina()}\n\n");
         
         str = string_concat(str, $"Encumbrance:\n");
         str = string_concat(str, $"- Max Carry Weight: {GetMaxCarryWeight()}\n");
         str = string_concat(str, $"- Current Move Speed: {GetMoveSpeed(0)}\n\n");
         
         str = string_concat(str, $"Combat General:\n");
-        str = string_concat(str, $"- Crit Chance: {GetCritChance()}\n");
-        str = string_concat(str, $"- Crit Damage: {GetCritDamage()}\n\n");
+        str = string_concat(str, $"- Crit Chance: {GetCritChance()}, Crit Damage Multiplier: {GetCritDamageMultiplier()}x\n\n");
 
         str = string_concat(str, $"Melee Combat:\n");
         str = string_concat(str, $"- Melee Attack Speed: {GetMeleeAttackSpeed()}\n");
@@ -146,13 +148,15 @@ function StatSystem(_str, _dex, _con) constructor {
         str = string_concat(str, $"- Ranged Attack Speed: {GetRangedAttackSpeed()}\n\n");
         
         str = string_concat(str, $"Defense:\n");
-        str = string_concat(str, $"- Armor Resistance: {GetArmorResistance()}\n");
+        str = string_concat(str, $"- Natural Resistance: {GetNaturalResistance()}\n\n");
         
         str = string_concat(str, $"Survival:\n");
         str = string_concat(str, $"- Max Temperature: {GetMaxTemperature()}\n");
         str = string_concat(str, $"- Temperature Rate: {GetTemperatureRate()}\n");
-        str = string_concat(str, $"- Hunger Rate: {GetHungerRate()}\n");
         str = string_concat(str, $"- Max Hunger: {GetMaxHunger()}\n");
+        str = string_concat(str, $"- Hunger Rate: {GetHungerRate()}\n");
+        // str = string_concat(str, "--------------------------------------------------\n");
+
         
         return str;
     }

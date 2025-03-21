@@ -25,4 +25,4 @@ tempInteractableList = ds_list_create();
 interactableArray = [];
 interactionRange = 30;
 
-targets = [obj_Herbivore, obj_Carnivore, obj_Zombie, obj_NPC];
+targets = [obj_BASE_Entity];

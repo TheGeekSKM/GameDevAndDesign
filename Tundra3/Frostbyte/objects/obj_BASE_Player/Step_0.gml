@@ -96,4 +96,4 @@ if (global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Action1))
     }
 }
 
-if (keyboard_check_pressed(vk_period)) echo(inventory.ToString());
+if (keyboard_check_pressed(vk_period)) CameraShake(PlayerIndex, 50, 50);

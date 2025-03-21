@@ -20,7 +20,7 @@ function PlayerController(_owner) : BaseController(_owner) constructor
             self.owner.image_speed = 1;
             self.owner.canMove = true;
             self.owner.image_index = ChooseFromArray([0, 2]);
-            echo($"Player {owner.PlayerIndex + 1} is moving with image_index {owner.image_index}", true);
+            // echo($"Player {owner.PlayerIndex + 1} is moving with image_index {owner.image_index}", true);
         })
         .SetStep(function() {
             if (!global.vars.InputManager.IsMoving(self.owner.PlayerIndex)) stateMachine.change("idle");
