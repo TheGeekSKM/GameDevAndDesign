@@ -23,6 +23,6 @@ global.vars.Players[PlayerIndex] = id;
 
 tempInteractableList = ds_list_create();
 interactableArray = [];
-interactionRange = 40;
+interactionRange = 30;
 
 targets = [obj_Herbivore, obj_Carnivore, obj_Zombie, obj_NPC];

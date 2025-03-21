@@ -32,6 +32,11 @@ function Inventory(_stats, _owner) constructor {
     ///@return bool - True if the item was added, false if it couldn't be added
     function AddItem(_item, _count)
     {
+        if (_count == 0) 
+        {
+            echo($"{_item.name} has not count...")
+            return false;
+        }
         var index = ContainsItem(_item);
         if (index == -1) 
         {
@@ -47,6 +52,7 @@ function Inventory(_stats, _owner) constructor {
         for (var i = 0; i < _count; i += 1) {
             _item.PickUp(owner);
         }
+        
         return true;
     }
 
@@ -144,6 +150,16 @@ function Inventory(_stats, _owner) constructor {
     function Step()
     {
         maxWeight = stats.GetMaxCarryWeight();
+    }
+
+    function ToString()
+    {
+        var str = $"Owner: {owner}\nWeight: {currentWeight}/{maxWeight}\n";
+        for (var i = 0; i < array_length(allItems); i += 1) 
+        {
+            str = string_concat(str, allItems[i].item.name, " x", string(allItems[i].quantity), "\n");
+        }
+        return str;
     }
 }
 

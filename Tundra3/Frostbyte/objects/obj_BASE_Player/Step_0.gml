@@ -46,6 +46,11 @@ if (canMove)
     move_and_collide(moveX, moveY, collisionObjects, 4, 0, 0, entityData.moveSpeed, -1);
 }
 
+if (!ds_exists(tempInteractableList, ds_type_list)) 
+{
+    return;
+}
+
 ds_list_clear(tempInteractableList);
 collision_circle_list(x, y, interactionRange, obj_BASE_Interactable, false, true, tempInteractableList, false);
 
@@ -86,3 +91,5 @@ if (global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Action1))
         interactableArray[i].OnInteract();    
     }
 }
+
+if (keyboard_check_pressed(vk_period)) echo(inventory.ToString());

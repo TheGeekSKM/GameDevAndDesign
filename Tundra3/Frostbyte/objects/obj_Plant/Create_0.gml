@@ -7,15 +7,16 @@ plantRanges = [
     [0, 0]
 ]
 
-cherryItem = new ConsumableItem("Cherry", 4, 0, 0, spr_pixel, 5); 
+cherryItem = new ConsumableItem("Cherry", 4, 0, [], spr_pixel, 5); 
 
 currentPlantState = 0;
 image_index = currentPlantState;
 
 function OnInteract() 
 {
-    DecreaseFood()
+    echo($"CurrentPlantState: {currentPlantState}")
     playerInRange.inventory.AddItem(cherryItem, irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]));    
+    DecreaseFood();
 }
 
 function DecreaseFood()

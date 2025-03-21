@@ -1,5 +1,11 @@
 // increase the currentPlantState by 1
-currentPlantState = max(0, currentPlantState - 1);
+currentPlantState--;
+
+if (currentPlantState < 0)
+{
+    currentPlantState = 0;
+}
+
 image_index = currentPlantState;
 
 // set the alarm to a random value between the current range
