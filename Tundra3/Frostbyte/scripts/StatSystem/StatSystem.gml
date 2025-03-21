@@ -119,4 +119,41 @@ function StatSystem(_str, _dex, _con) constructor {
             }
         }
     }
+
+    function ToString()
+    {
+        var str = $"Attributes:\n- Strength: {strength}\n- Dexterity: {dexterity}\n- Constitution: {constitution}\n\n";
+        
+        str = string_concat(str, $"Health and Stamina:\n");
+        str = string_concat(str, $"- Max Health: {GetMaxHealth()}\n");
+        str = string_concat(str, $"- Max Stamina: {GetMaxStamina()}\n\n");
+        
+        str = string_concat(str, $"Encumbrance:\n");
+        str = string_concat(str, $"- Max Carry Weight: {GetMaxCarryWeight()}\n");
+        str = string_concat(str, $"- Current Move Speed: {GetMoveSpeed(0)}\n\n");
+        
+        str = string_concat(str, $"Combat General:\n");
+        str = string_concat(str, $"- Crit Chance: {GetCritChance()}\n");
+        str = string_concat(str, $"- Crit Damage: {GetCritDamage()}\n\n");
+
+        str = string_concat(str, $"Melee Combat:\n");
+        str = string_concat(str, $"- Melee Attack Speed: {GetMeleeAttackSpeed()}\n");
+        str = string_concat(str, $"- Melee Damage: {GetMeleeDamage()}\n");
+        str = string_concat(str, $"- Melee Knockback: {GetMeleeKnockback()}\n\n");
+        
+        str = string_concat(str, $"Ranged Combat:\n");
+        str = string_concat(str, $"- Ranged Damage: {GetRangedDamage()}\n");
+        str = string_concat(str, $"- Ranged Attack Speed: {GetRangedAttackSpeed()}\n\n");
+        
+        str = string_concat(str, $"Defense:\n");
+        str = string_concat(str, $"- Armor Resistance: {GetArmorResistance()}\n");
+        
+        str = string_concat(str, $"Survival:\n");
+        str = string_concat(str, $"- Max Temperature: {GetMaxTemperature()}\n");
+        str = string_concat(str, $"- Temperature Rate: {GetTemperatureRate()}\n");
+        str = string_concat(str, $"- Hunger Rate: {GetHungerRate()}\n");
+        str = string_concat(str, $"- Max Hunger: {GetMaxHunger()}\n");
+        
+        return str;
+    }
 }
