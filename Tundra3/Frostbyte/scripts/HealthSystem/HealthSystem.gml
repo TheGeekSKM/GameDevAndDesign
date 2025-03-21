@@ -93,7 +93,6 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
     
     function Die()
     {
-        instance_destroy(owner);
     }
 
     function Step()

@@ -4,6 +4,7 @@ if (canEat)
     {
         targetFoodSource.DecreaseFood();
         entityHealth.Heal(0.5);
+        hunger.Eat(500);
         // Eat food source
     }
 

@@ -36,12 +36,12 @@ function UndeadAIController(_owner) : AIController(_owner) constructor
             }
 
             // if target is within attackRange, change state to attack
-            if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) <= self.owner.attackRange) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) <= self.owner.attackRange) {
                 self.stateMachine.change("attack");
             }
 
             // if target is outside of 120 pixels, change state to wander
-            if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > 120) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > 120) {
                 self.stateMachine.change("idle");
             }
         })
@@ -64,11 +64,11 @@ function UndeadAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("idle");
             }
 
-            if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > self.owner.attackRange) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > self.owner.attackRange) {
                 self.stateMachine.change("chase");
             }
 
-            if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > self.owner.chaseRange) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.prey.x, self.owner.prey.y) > self.owner.chaseRange) {
                 self.stateMachine.change("idle");
             }
         })

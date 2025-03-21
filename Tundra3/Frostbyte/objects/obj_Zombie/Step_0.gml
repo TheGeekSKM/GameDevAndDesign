@@ -5,6 +5,8 @@ stamina.Step();
 entityData.Step();
 hunger.Step();
 
+if (entityHealth.IsDead()) instance_destroy();
+
 controller.Step();
 
 if (canMove)

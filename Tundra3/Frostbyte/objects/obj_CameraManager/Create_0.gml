@@ -3,6 +3,7 @@ view_enabled = true;
 var width = 400;
 var height = 224;
 var scale = 1.5;
+
     
 for (var i = 0; i < array_length(global.vars.Players); i++)
 {
@@ -16,7 +17,9 @@ for (var i = 0; i < array_length(global.vars.Players); i++)
         
     // Viewport
     view_xport[i] = camWidth * i;
+    view_yport[i] = 0;
     view_wport[i] = camWidth;
+    view_hport[i] = height;
 }
 window_set_size(800, 448);
 surface_resize(application_surface, width * 2, height * 2);

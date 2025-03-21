@@ -4,7 +4,7 @@ canAttack = false;
 attackRange = 32;
 attacker = noone;
 
-collisionObjects = [obj_Wall, obj_BASE_Entity]
+collisionObjects = [obj_Wall]
 targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Zombie];
 
 canMove = true;

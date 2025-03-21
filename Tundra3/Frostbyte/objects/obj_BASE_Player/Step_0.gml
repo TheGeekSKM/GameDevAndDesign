@@ -1,4 +1,4 @@
-controller.Step()
+
 
 stats.Step();
 entityHealth.Step();
@@ -6,6 +6,10 @@ inventory.Step();
 stamina.Step();
 entityData.Step();
 hunger.Step();
+
+if (entityHealth.IsDead()) instance_destroy();
+
+controller.Step()
 
 if (canAttack) 
 {

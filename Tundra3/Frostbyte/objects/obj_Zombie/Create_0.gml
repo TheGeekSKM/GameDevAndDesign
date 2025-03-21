@@ -26,7 +26,7 @@ entityData = new EntityData(stats, inventory);
 
 xMove = ChooseFromArray([-1, 1]) * entityData.moveSpeed;
 yMove = ChooseFromArray([-1, 1]) * entityData.moveSpeed;
-collisionObjects = [obj_BASE_Entity];
+collisionObjects = [obj_Wall];
 
 function StartCheckingForPrey()
 {

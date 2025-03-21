@@ -12,11 +12,11 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("lowHealth");
             }
 
-            if (instance_exists(self.owner.entityHealth.recentAttacker)) {
+            else if (instance_exists(self.owner.entityHealth.recentAttacker)) {
                 self.stateMachine.change("hunt");
             }
 
-            if (self.owner.hunger.IsHungry()) {
+            else if (self.owner.hunger.IsHungry()) {
                 self.stateMachine.change("hungryWander");
             }
         })
@@ -39,11 +39,11 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("lowHealth");
             }
 
-            if (!self.owner.hunger.IsHungry()) {
+            else if (!self.owner.hunger.IsHungry()) {
                 self.stateMachine.change("idle");
             }
 
-            if (instance_exists(self.owner.preyTarget)) {
+            else if (instance_exists(self.owner.preyTarget)) {
                 self.stateMachine.change("hunt");
             }
         })
@@ -66,15 +66,15 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("lowHealth");
             }
 
-            if (!self.owner.hunger.IsHungry()) {
+            else if (!self.owner.hunger.IsHungry()) {
                 self.stateMachine.change("idle");
             }
 
-            if (!instance_exists(self.owner.preyTarget)) {
+            else if (!instance_exists(self.owner.preyTarget)) {
                 self.stateMachine.change("hungryWander");
             }
 
-            if (point_distance(self.owner.x, self.owner.y, self.owner.preyTarget.x, self.owner.preyTarget.y) < self.owner.attackRange) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.preyTarget.x, self.owner.preyTarget.y) < self.owner.attackRange) {
                 self.stateMachine.change("attack");
             }
         })
@@ -102,12 +102,10 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
             if (self.owner.entityHealth.IsBadlyDamaged()) {
                 self.stateMachine.change("lowHealth");
             }
-
-            if (!instance_exists(self.owner.preyTarget)) {
+            else if (!instance_exists(self.owner.preyTarget)) {
                 self.stateMachine.change("hungryWander");
             }
-
-            if (point_distance(self.owner.x, self.owner.y, self.owner.preyTarget.x, self.owner.preyTarget.y) > self.owner.attackRange) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.preyTarget.x, self.owner.preyTarget.y) > self.owner.attackRange) {
                 self.stateMachine.change("hunt");
             }
         })
@@ -130,7 +128,7 @@ function CarnivoreAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("idle");
             }
 
-            if (point_distance(self.owner.x, self.owner.y, self.owner.fleePosition.x, self.owner.fleePosition.y) < 10) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.fleePosition.x, self.owner.fleePosition.y) < 10) {
                 self.stateMachine.change("heal");
             }
         })

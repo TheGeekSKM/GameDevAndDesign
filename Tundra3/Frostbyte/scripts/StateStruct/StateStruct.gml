@@ -9,31 +9,31 @@ function StateStruct(_name) constructor
 
     function SetEnter(_enter)
     {
-        enter = _enter;
+        self.enter = _enter;
         return self;
     }
 
     function SetStep(_step)
     {
-        step = _step;
+        self.step = _step;
         return self;
     }
 
     function SetDraw(_draw)
     {
-        draw = _draw;
+        self.draw = _draw;
         return self;
     }
 
     function SetDrawGUI(_drawGUI)
     {
-        drawGUI = _drawGUI;
+        self.drawGUI = _drawGUI;
         return self;
     }
 
     function SetLeave(_leave)
     {
-        leave = _leave;
+        self.leave = _leave;
         return self;
     }
 }

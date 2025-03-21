@@ -1,4 +1,7 @@
 event_inherited();
+
+if (entityHealth.IsDead()) instance_destroy();
+
 controller.Step();
 
 if (canMove)

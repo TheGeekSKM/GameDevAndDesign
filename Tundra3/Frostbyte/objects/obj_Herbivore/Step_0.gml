@@ -4,6 +4,9 @@ inventory.Step();
 stamina.Step();
 entityData.Step();
 hunger.Step();
+if (entityHealth.IsDead()) instance_destroy();
+
+controller.Step();
 
 if (canMove)
 {
@@ -35,3 +38,4 @@ if (canMove)
         move_and_collide(xMove, yMove, collisionObjects);
     }
 }
+

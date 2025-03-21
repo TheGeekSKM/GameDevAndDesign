@@ -15,7 +15,7 @@ function HerbivoreAIController(_owner) : AIController(_owner) constructor
             }
             
             // if hungry, change state to hungryWander
-            if (self.owner.hunger.IsHungry() or self.owner.entityHealth.IsBadlyDamaged()) {
+            else if (self.owner.hunger.IsHungry() or self.owner.entityHealth.IsBadlyDamaged()) {
                 self.stateMachine.change("hungryWander");
             }
         })
@@ -40,12 +40,12 @@ function HerbivoreAIController(_owner) : AIController(_owner) constructor
             }
             
             // if food source detected within range, change state to moveToFoodSource
-            if (self.owner.foodFound) {
+            else if (self.owner.foodFound) {
                 self.stateMachine.change("moveToFoodSource");
             }
             
             // if no longer hungry, change state to idle
-            if (!self.owner.hunger.IsHungry() and !self.owner.entityHealth.IsBadlyDamaged()) {
+            else if (!self.owner.hunger.IsHungry() and !self.owner.entityHealth.IsBadlyDamaged()) {
                 self.stateMachine.change("idle");
             }
         })
@@ -70,17 +70,17 @@ function HerbivoreAIController(_owner) : AIController(_owner) constructor
             }
             
             // if food source is reached, change state to eat
-            if (!instance_exists(self.owner.targetFoodSource)) {
+            else if (!instance_exists(self.owner.targetFoodSource)) {
                 self.stateMachine.change("hungryWander");
             }
 
             // if food source is reached, change state to eat
-            if (point_distance(self.owner.x, self.owner.y, self.owner.targetFoodSource.x, self.owner.targetFoodSource.y) <= self.owner.foodEatRange) {
+            else if (point_distance(self.owner.x, self.owner.y, self.owner.targetFoodSource.x, self.owner.targetFoodSource.y) <= self.owner.foodEatRange) {
                 self.stateMachine.change("eat");
             }
 
             // if no longer hungry, change state to idle
-            if (!self.owner.hunger.IsHungry() and !self.owner.entityHealth.IsBadlyDamaged()) {
+            else if (!self.owner.hunger.IsHungry() and !self.owner.entityHealth.IsBadlyDamaged()) {
                 self.stateMachine.change("idle");
             }
         })
@@ -103,12 +103,12 @@ function HerbivoreAIController(_owner) : AIController(_owner) constructor
                 self.stateMachine.change("runAway");
             }
 
-            if (!instance_exists(self.owner.targetFoodSource)) {
+            else if (!instance_exists(self.owner.targetFoodSource)) {
                 self.stateMachine.change("hungryWander");
             }
             
             // if no longer hungry, change state to idle
-            if (!self.owner.hunger.IsHungry() and !self.owner.entityHealth.IsBadlyDamaged()) {
+            else if (!self.owner.hunger.IsHungry() and !self.owner.entityHealth.IsBadlyDamaged()) {
                 self.stateMachine.change("idle");
             }
         })
@@ -128,8 +128,7 @@ function HerbivoreAIController(_owner) : AIController(_owner) constructor
         })
         .SetStep(function() {
             // if predator is no longer detected, change state to wander
-            if (!self.owner.predatorsFound or 
-                !instance_exists(self.owner.closestPredator) or 
+            if ((!self.owner.predatorsFound and !instance_exists(self.owner.closestPredator)) or 
                 point_distance(self.owner.x, self.owner.y, self.owner.fleePosition.x, self.owner.fleePosition.y) < 10) {
                 self.stateMachine.change("idle");
             }
