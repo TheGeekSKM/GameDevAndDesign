@@ -89,6 +89,8 @@ function Inventory(_stats, _owner) constructor {
             echo("Used item");
         }
 
+        if (slot.quantity == 0) array_delete(allItems, _index, 1);
+
         return true;
     }
 
