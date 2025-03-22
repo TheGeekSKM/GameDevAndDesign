@@ -23,6 +23,7 @@ function WeaponItem(_name, _weaponType, _durability, _staminaCost, _weight, _equ
             stats.RemoveStat(effects[i]);
         }
     }
+    
 }
 
 function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _staminaCost, _weight,  _equipEffects, _sprite) : WeaponItem(_name, WeaponType.Melee, _durability, _staminaCost, _weight, _equipEffects, _sprite) constructor {
@@ -56,6 +57,12 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
         if (durability <= 0) {
             owner.inventory.DeleteItem(self, 1);;
         }
+    }
+
+    function GetCopy()
+    {
+        var copy = new MeleeWeaponItem(name, color, durability, damage, damageType, staminaCost, weight, effects, sprite);
+        return copy;
     }
 }
 
@@ -91,4 +98,12 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
             owner.inventory.DeleteItem(self, 1);
         }
     }
+
+    function GetCopy()
+    {
+        var copy = new RangedWeaponItem(name, durability, speed, staminaCost, weight, effects, sprite);
+        return copy;
+    }
+
 }
+

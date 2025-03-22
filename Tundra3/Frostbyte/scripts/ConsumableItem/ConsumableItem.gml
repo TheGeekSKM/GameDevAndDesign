@@ -52,4 +52,10 @@ function ConsumableItem(_name, _durability, _weight, _consumeEffects, _sprite, _
 
         return desc;
     }
+
+    function GetCopy()
+    {
+        var copy = new ConsumableItem(name, durability, weight, effects, sprite, hungerRemoved, healthAdded, staminaAdded, warmthAdded);
+        return copy;
+    }
 }

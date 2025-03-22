@@ -16,4 +16,10 @@ function BulletItem(_name, _hitMultiple, _lifeTime, _damage, _damageType, _weigh
         }
     }
 
+    function GetCopy()
+    {
+        var copy = new BulletItem(name, hitMultiple, lifeTime, damage, damageType, weight, hitFunctions, sprite);
+        return copy;
+    }
+
 }

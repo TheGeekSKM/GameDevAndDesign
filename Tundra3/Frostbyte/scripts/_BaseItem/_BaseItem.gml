@@ -48,9 +48,12 @@ function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equip
     function Equals(_item)
     {
         if (_item == undefined) return false;
-        var sameName = (name == _item.name);
-        var sameType = (type == _item.type);
-        var sameEffects = (array_length(effects) == array_length(_item.effects));
-        return sameName and sameType and sameEffects;
+        return (self.name == _item.name) and (self.type == _item.type) and (array_length(self.effects) == array_length(_item.effects));
+    }
+
+    function GetCopy()
+    {
+        var copy = new Item(name, durability, staminaCost, weight, type, effects, equippable, sprite);
+        return copy;
     }
 }

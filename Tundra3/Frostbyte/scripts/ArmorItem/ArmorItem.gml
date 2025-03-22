@@ -35,4 +35,10 @@ function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defe
 
         return armorValue;
     }
+
+    function GetCopy()
+    {
+        var copy = new ArmorItem(name, armorValue, durability, staminaCost, weight, effects, sprite);
+        return copy;
+    }
 }

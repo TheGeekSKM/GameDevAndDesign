@@ -37,6 +37,7 @@ for (var i = 0; i < maxDisplay; i += 1) {
 }
 
 // draw item info at 245, 28
+selectedIndex = clamp(selectedIndex, 0, array_length(obj_Player2.inventory.allItems));
 var slot = obj_Player2.inventory.allItems[selectedIndex];
 var itemInfo = slot.item.GetDescription();
 scribble(itemInfo)

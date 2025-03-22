@@ -21,7 +21,7 @@ function Inventory(_stats, _owner) constructor {
     {
         for (var i = 0; i < array_length(allItems); i += 1) 
         {
-            if (allItems[i].item.name == _item.name) return i;
+            if (allItems[i].item.Equals(_item)) return i;
         }
         return -1;
     }
@@ -32,25 +32,26 @@ function Inventory(_stats, _owner) constructor {
     ///@return bool - True if the item was added, false if it couldn't be added
     function AddItem(_item, _count)
     {
+        var item = _item.GetCopy();
         if (_count == 0) 
         {
-            echo($"{_item.name} has not count...")
+            echo($"{item.name} has not count...")
             return false;
         }
-        var index = ContainsItem(_item);
+        var index = ContainsItem(item);
         if (index == -1) 
         {
-            var slot = new InventorySlot(_item, _count);
+            var slot = new InventorySlot(item, _count);
             array_push(allItems, slot);
         }
         else 
         {
             allItems[index].quantity += _count;
         }
-        currentWeight += _item.weight * _count;
+        currentWeight += item.weight * _count;
 
         for (var i = 0; i < _count; i += 1) {
-            _item.PickUp(self.owner);
+            item.PickUp(self.owner);
         }
         
         return true;
