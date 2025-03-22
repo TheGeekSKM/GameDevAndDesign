@@ -31,5 +31,6 @@ function OnButtonClickEnd()
     if (buttons[selectIndex].fsm.state_is("clicked"))
     {
         buttons[selectIndex].fsm.change("hovered");
+        buttons[selectIndex].OnClickEnd();
     }
 }

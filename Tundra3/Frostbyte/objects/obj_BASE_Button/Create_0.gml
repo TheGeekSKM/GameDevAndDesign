@@ -52,3 +52,8 @@ fsm.add("clicked", {
             .draw(x, y + 5);
     },
 });
+
+function OnClickEnd()
+{
+    
+}
