@@ -120,41 +120,42 @@ function StatSystem(_str, _dex, _con) constructor {
         }
     }
 
-    function ToString()
+    function ToString(_index)
     {
         var str = "";
         
+        var textColor = $"[c_player{_index}_darker]";
+
         // str = string_concat(str, "--------------------------------------------------\n");
-        str = string_concat(str, $"Stats:\n");
-        str = string_concat(str, $"- Strength: {strength}, Dexterity: {dexterity}, Constitution: {constitution}\n\n");
+        str = string_concat(str, $"{textColor}[scale, 1.25]-----STATS:-----[/c]\n");
+        str = string_concat(str, $"Strength: [c_player{_index}]{strength}[/c]\n");
+        str = string_concat(str, $"Dexterity: [c_player{_index}]{dexterity}[/c]\n");
+        str = string_concat(str, $"Constitution: [c_player{_index}]{constitution}[/c]\n\n");
 
-        str = string_concat(str, $"Health and Stamina:\n");
-        str = string_concat(str, $"- Max Health: {GetMaxHealth()}, Max Stamina: {GetMaxStamina()}\n\n");
+        str = string_concat(str, $"{textColor}[scale, 1.25]-----HEALTH AND STAMINA:-----[/c]\n");
+        str = string_concat(str, $"Max Health: [c_player{_index}]{GetMaxHealth()}[/c]\n");
+        str = string_concat(str, $"Max Stamina: [c_player{_index}]{GetMaxStamina()}[/c]\n\n");
         
-        str = string_concat(str, $"Encumbrance:\n");
-        str = string_concat(str, $"- Max Carry Weight: {GetMaxCarryWeight()}\n");
-        str = string_concat(str, $"- Current Move Speed: {GetMoveSpeed(0)}\n\n");
+        str = string_concat(str, $"{textColor}[scale, 1.25]-----ENCUMBRANCE:-----[/c]\n");
+        str = string_concat(str, $"Max Carry Weight: [c_player{_index}]{GetMaxCarryWeight()}[/c]\n");
+        str = string_concat(str, $"Current Move Speed: [c_player{_index}]{GetMoveSpeed(0)}[/c]\n\n");
         
-        str = string_concat(str, $"Combat General:\n");
-        str = string_concat(str, $"- Crit Chance: {GetCritChance()}, Crit Damage Multiplier: {GetCritDamageMultiplier()}x\n\n");
-
-        str = string_concat(str, $"Melee Combat:\n");
-        str = string_concat(str, $"- Melee Attack Speed: {GetMeleeAttackSpeed()}\n");
-        str = string_concat(str, $"- Melee Damage: {GetMeleeDamage()}\n");
-        str = string_concat(str, $"- Melee Knockback: {GetMeleeKnockback()}\n\n");
+        str = string_concat(str, $"{textColor}[scale, 1.25]-----COMBAT:-----[/c]\n");
+        str = string_concat(str, $"Crit Chance: [c_player{_index}]{GetCritChance()}%[/c]\n");
+        str = string_concat(str, $"Crit Damage Multiplier: [c_player{_index}]{GetCritDamageMultiplier()}x[/c]\n");
+        str = string_concat(str, $"Melee Attack Speed: [c_player{_index}]{GetMeleeAttackSpeed()}[/c]\n");
+        str = string_concat(str, $"Melee Damage: [c_player{_index}]{GetMeleeDamage()}[/c]\n");
+        str = string_concat(str, $"Ranged Attack Speed: [c_player{_index}]{GetRangedAttackSpeed()}[/c]\n");
+        str = string_concat(str, $"Ranged Damage: [c_player{_index}]{GetRangedDamage()}[/c]\n\n");
         
-        str = string_concat(str, $"Ranged Combat:\n");
-        str = string_concat(str, $"- Ranged Damage: {GetRangedDamage()}\n");
-        str = string_concat(str, $"- Ranged Attack Speed: {GetRangedAttackSpeed()}\n\n");
+        str = string_concat(str, $"{textColor}[scale, 1.25]-----DEFENSE:-----[/c]\n");
+        str = string_concat(str, $"Natural Resistance: [c_player{_index}]{GetNaturalResistance()}[/c]\n\n");
         
-        str = string_concat(str, $"Defense:\n");
-        str = string_concat(str, $"- Natural Resistance: {GetNaturalResistance()}\n\n");
-        
-        str = string_concat(str, $"Survival:\n");
-        str = string_concat(str, $"- Max Temperature: {GetMaxTemperature()}\n");
-        str = string_concat(str, $"- Temperature Rate: {GetTemperatureRate()}\n");
-        str = string_concat(str, $"- Max Hunger: {GetMaxHunger()}\n");
-        str = string_concat(str, $"- Hunger Rate: {GetHungerRate()}\n");
+        str = string_concat(str, $"{textColor}[scale, 1.25]-----SURVIVAL:-----[/c]\n");
+        str = string_concat(str, $"Max Temperature: [c_player{_index}]{GetMaxTemperature()}[/c]\n");
+        str = string_concat(str, $"Temperature Rate: [c_player{_index}]{GetTemperatureRate()} per tick[/c]\n");
+        str = string_concat(str, $"Max Hunger: [c_player{_index}]{GetMaxHunger()}[/c]\n");
+        str = string_concat(str, $"Hunger Rate: [c_player{_index}]{GetHungerRate()} per tick[/c]\n\n");
         // str = string_concat(str, "--------------------------------------------------\n");
 
         
