@@ -24,6 +24,10 @@ function Vars() constructor {
 	InputManager = new InputSystem();
 
 	QuestList = {};
+
+	CPU = new ConsumableItem("CPU", 1, 2, [new StatusEffects(StatType.Constitution, 2, 10)], spr_CPU);
+	GPU = new ConsumableItem("GPU", 1, 2, [new StatusEffects(StatType.Strength, 2, 10)], spr_GPU);
+	RAM = new ConsumableItem("RAM", 1, 2, [new StatusEffects(StatType.Dexterity, 2, 10)], spr_RAM);
 }
 
 global.vars = new Vars();
