@@ -4,6 +4,7 @@ function NPCAIController(_owner) : AIController(_owner) constructor
         .SetEnter(function() {
             self.owner.canMove = false;
             self.owner.canAttack = false;
+            self.owner.image_speed = 0;
         })
         .SetStep(function() {
             if (self.owner.entityHealth.recentAttacker != noone) 
@@ -16,6 +17,7 @@ function NPCAIController(_owner) : AIController(_owner) constructor
         .SetEnter(function() {
             self.owner.canAttack = true;
             self.owner.canMove = false;
+            self.owner.image_speed = 0;
         })
         .SetStep(function() {
             if (self.owner.entityHealth.IsBadlyDamaged())

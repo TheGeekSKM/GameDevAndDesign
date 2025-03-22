@@ -10,8 +10,8 @@
   "name":"obj_TextBox",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/_Base/UI.yy",
+    "name":"HiddenBase",
+    "path":"folders/Objects/_Base/UI/HiddenBase.yy",
   },
   "parentObjectId":null,
   "persistent":false,

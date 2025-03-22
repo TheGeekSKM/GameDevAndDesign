@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_BASE_KBManager",
+  "%Name":"obj_Menu_Duplicate",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_BASE_KBManager",
+  "name":"obj_Menu_Duplicate",
   "overriddenProperties":[],
   "parent":{
-    "name":"HiddenBase",
-    "path":"folders/Objects/_Base/UI/HiddenBase.yy",
+    "name":"UI",
+    "path":"folders/Objects/_Base/UI.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_ui_menu",
+    "path":"objects/obj_ui_menu/obj_ui_menu.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

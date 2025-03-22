@@ -22,6 +22,8 @@ function Vars() constructor {
 	PlayerColors = [make_color_rgb(70, 190, 94), make_color_rgb(70, 156, 190)];
 
 	InputManager = new InputSystem();
+
+	QuestList = {};
 }
 
 global.vars = new Vars();

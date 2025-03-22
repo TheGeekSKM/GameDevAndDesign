@@ -9,8 +9,8 @@
   "name":"obj_FloatingText",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/_Base/UI.yy",
+    "name":"HiddenBase",
+    "path":"folders/Objects/_Base/UI/HiddenBase.yy",
   },
   "parentObjectId":{
     "name":"obj_ui_parent",

@@ -16,6 +16,7 @@ if (canMove)
             var motion_x = lengthdir_x(spd, dir);
             var motion_y = lengthdir_y(spd, dir);
 
+            image_angle = dir;
             move_and_collide(motion_x, motion_y, collisionObjects, 4, 0, 0, spd, -1);
         }
     }
@@ -26,8 +27,11 @@ if (canMove)
         var motion_x = lengthdir_x(spd, dir);
         var motion_y = lengthdir_y(spd, dir);
 
+        image_angle = dir;
         move_and_collide(motion_x, motion_y, collisionObjects, 4, 0, 0, spd, -1);
     }
+
+    image_speed = entityData.moveSpeed / 3;
 }
 
 if (canAttack)
@@ -40,4 +44,10 @@ if (canAttack)
         var pointInFront = new Vector2(x + lengthdir_x(5, dir), y + lengthdir_y(5, dir));
         attack.Step(pointInFront, image_angle);
     }
+}
+
+if (playerInRange != noone)
+{
+    var key = global.vars.InputManager.GetKey(playerInRange.PlayerIndex, ActionType.Action1);
+    InteractText = $"\"{KeybindToString(key)}\" to talk";
 }

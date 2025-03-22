@@ -56,7 +56,7 @@ if (!ds_exists(tempInteractableList, ds_type_list))
 }
 
 ds_list_clear(tempInteractableList);
-collision_circle_list(x, y, interactionRange, obj_BASE_Interactable, false, true, tempInteractableList, false);
+collision_circle_list(x, y, interactionRange, [obj_BASE_Interactable, obj_NPC], false, true, tempInteractableList, false);
 
 for (var i = 0; i < ds_list_size(tempInteractableList); i += 1) 
 {

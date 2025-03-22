@@ -8,8 +8,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextBox","path":"objects/obj_TextBox/obj_TextBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_TextBox/obj_TextBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"WASD + E",},
   ],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/_Base/UI.yy",
+    "name":"AttributeSelection",
+    "path":"folders/Objects/UI/AttributeSelection.yy",
   },
   "parentObjectId":{
     "name":"obj_TextBox",
