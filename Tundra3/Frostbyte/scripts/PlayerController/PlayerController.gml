@@ -72,4 +72,14 @@ function PlayerController(_owner) : BaseController(_owner) constructor
     self.AddState(moving);
     self.AddState(attacking);
     self.AddState(paused);
+
+    function CloseMenu()
+    {
+        stateMachine.change("idle");
+    }
+
+    function OpenMenu()
+    {
+        stateMachine.change("paused");
+    }
 }

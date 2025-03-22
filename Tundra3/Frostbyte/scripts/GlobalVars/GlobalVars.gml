@@ -43,3 +43,4 @@ function CameraShake(_camIndex, _strength, _duration)
 		global.vars.CameraShake[_camIndex].duration = _duration * game_get_speed(gamespeed_fps);
 	}
 }
+

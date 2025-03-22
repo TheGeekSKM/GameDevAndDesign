@@ -26,6 +26,13 @@ targets = [obj_Herbivore, obj_Carnivore, obj_BASE_Player, obj_Zombie];
 playerInRange = noone;
 textToDisplay = $"{Name}\n{InteractText}";
 
+scene = new DialogueScene()
+    .AddDialogue(spr_carnivore_1, "Hello there!")
+    .AddDialogue(spr_carnivore_1, "I am a carnivore!")
+    .AddDialogue(spr_carnivore_1, "I like to eat meat!");
 
 
-function OnInteract() {}
+
+function OnInteract() {
+    StartDialogue(scene, playerInRange.PlayerIndex);
+}
