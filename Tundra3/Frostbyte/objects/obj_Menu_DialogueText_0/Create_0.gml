@@ -8,6 +8,7 @@ currentDialogueScene = undefined;
 
 function StartDialogue(_dialogueScene)
 {
+    if (_dialogueScene.finished) return;
     currentDialogueScene = _dialogueScene;
     text = currentDialogueScene.GetNextDialogue();
     global.vars.Players[playerIndex].controller.OpenMenu();
@@ -17,7 +18,7 @@ function StartDialogue(_dialogueScene)
 function DrawGUI()
 {
     if (text == undefined) return;
-    scribble($"{text.speaker}: {text.text}")
+    scribble($"{text.speaker}: {text.line}")
         .align(fa_center, fa_middle)
         .starting_format("Font", c_white)
         .transform(0.75, 0.75, image_angle)
@@ -29,12 +30,17 @@ function Step()
     var action = global.vars.InputManager.IsPressed(playerIndex, ActionType.Action1);
     if (action)
     {
-        if (currentDialogueScene == undefined and !currentDialogueScene.CanContinue()) 
-        {
-            global.vars.Players[playerIndex].controller.CloseMenu();
+        if (currentDialogueScene == undefined) 
+        { 
             return;
         }
+        
         text = currentDialogueScene.GetNextDialogue();
         Raise($"Player{playerIndex}Dialogue", text);
+        
+        if (!currentDialogueScene.CanContinue())
+        {
+           global.vars.Players[playerIndex].controller.CloseMenu(); 
+        }
     }    
 }

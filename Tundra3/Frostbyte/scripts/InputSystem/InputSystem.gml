@@ -80,7 +80,7 @@ function InputSystem() constructor {
     ///@return {bool} - True if the player is moving
     function IsMoving(_playerIndex)
     {
-        var _player = _playerIndex == 1 ? player1 : player2;
+        var _player = _playerIndex == 0 ? player1 : player2;
         return IsDown(_playerIndex, ActionType.Left) || 
             IsDown(_playerIndex, ActionType.Right) || 
             IsDown(_playerIndex, ActionType.Up) || 

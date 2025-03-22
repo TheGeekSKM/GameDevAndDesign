@@ -1,6 +1,7 @@
 function DialogueScene() constructor {
 	dialogues = [];
 	currentLine = 0;
+    finished = false;
 
 	function GetNextDialogue()
 	{
@@ -12,6 +13,7 @@ function DialogueScene() constructor {
 		}
 		else
 		{
+            finished = true;
 			return undefined;
 		}
 	}
@@ -39,10 +41,10 @@ function StartDialogue(_dialogueScene, _playerIndex)
     switch(_playerIndex)
     {
         case 0: 
-            obj_Menu_DialogueText_0.StartDialogue(_dialogueScene);
+            show_message("Make Dialogue for Player 1 Pop up");
         break;
         case 1: 
-            obj_Menu_DialogueText_1.StartDialogue(_dialogueScene);
+            show_message("Make Dialogue for Player 2 Popup!");
         break;
     }
 }

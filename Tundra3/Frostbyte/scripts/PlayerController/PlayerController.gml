@@ -7,12 +7,18 @@ function PlayerController(_owner) : BaseController(_owner) constructor
             self.owner.canMove = false;
         })
         .SetStep(function() {
-            if (global.vars.InputManager.IsMoving(self.owner.PlayerIndex)) stateMachine.change("moving");
+            if (global.vars.InputManager.IsMoving(self.owner.PlayerIndex)) {
+                stateMachine.change("moving");
+            }
             else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Action2)) stateMachine.change("attacking");
-            else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) stateMachine.change("paused");
+            else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) {
+                //stateMachine.change("paused");
+            }
         })
         .SetDraw(function() {
             with(self.owner) draw_self();
+        })
+        .SetLeave(function() {     
         });
     
     var moving = new StateStruct("moving")
@@ -42,7 +48,9 @@ function PlayerController(_owner) : BaseController(_owner) constructor
         })
         .SetStep(function() {
             if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Action2)) stateMachine.change("idle");
-            else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) stateMachine.change("paused");
+            else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) {
+                stateMachine.change("paused");
+            }
         })
         .SetLeave(function() {
             self.owner.canAttack = false;   
