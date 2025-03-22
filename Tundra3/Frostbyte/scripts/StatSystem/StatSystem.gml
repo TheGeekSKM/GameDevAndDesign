@@ -75,9 +75,9 @@ function StatSystem(_str, _dex, _con) constructor {
     
     // Survival
     function GetMaxTemperature() { return 100 + (self.constitution * 5) + (self.strength * 2); }
-    function GetTemperatureRate() { return (max(0.5, 0.2 + (self.constitution * 0.1) - (self.strength * 0.05))) / 2; }
+    function GetTemperatureRate() { return (max(0.5, 0.2 + (self.constitution * 0.1) - (self.strength * 0.05))) / game_get_speed(gamespeed_fps); }
 
-    function GetHungerRate() { return (max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05))) / 2; } 
+    function GetHungerRate() { return 2 * (max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05))) / game_get_speed(gamespeed_fps); } 
     function GetMaxHunger() { return 100 + (self.constitution * 5) + (self.strength * 2); }
 
     function AddStat(_statusEffect)

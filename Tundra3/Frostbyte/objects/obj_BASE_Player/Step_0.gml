@@ -2,10 +2,11 @@
 
 stats.Step();
 entityHealth.Step();
-inventory.Step();
 stamina.Step();
-entityData.Step();
 hunger.Step();
+temperature.Step();
+attack.Step();
+entityData.Step();
 
 if (entityHealth.IsDead()) instance_destroy();
 

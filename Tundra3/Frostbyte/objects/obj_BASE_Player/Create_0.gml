@@ -13,7 +13,7 @@ inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);
 hunger = new HungerSystem(stats, id);
-temperature = new TemperatureSystem(stats, entityHealth, id);
+temperature = new TemperatureSystem(stats, entityHealth, id, true);
 attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 

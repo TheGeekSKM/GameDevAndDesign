@@ -20,6 +20,7 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
     inventory = _inventory;
     maxHealth = _stats.GetMaxHealth();
     currentHealth = maxHealth;
+    followHealth = 0;
     isUndead = _isUndead;
     multipliers = [1, 1.2, 0.8, 1, 1, 1, -1, 1];
 
@@ -113,6 +114,20 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         {
             recentAttacker = noone;
         }
+        
+        followHealth = lerp(followHealth, currentHealth, 0.1);
+        followHealth = clamp(followHealth, 0, maxHealth);
+    }
+
+    function Draw(_width ,_height, _x, _y, _healthColor, _followColor)
+    {
+        var healthBarWidth = _width;
+        var healthBarHeight = _height;
+        var healthBarX = _x;
+        var healthBarY =_y;
+        
+        draw_healthbar(healthBarX, healthBarY, healthBarX + healthBarWidth, healthBarY + healthBarHeight, (followHealth / maxHealth) * 100, _followColor, _followColor, _followColor, 0, false, false);
+        draw_healthbar(healthBarX, healthBarY, healthBarX + healthBarWidth, healthBarY + healthBarHeight, (currentHealth / maxHealth) * 100, _healthColor, _healthColor, _healthColor, 0, false, false);
     }
 }
 
