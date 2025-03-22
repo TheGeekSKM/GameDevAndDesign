@@ -22,11 +22,12 @@ for (var i = 0; i < maxDisplay; i += 1) {
 
     if (index == selectedIndex) 
     {
-        txt = $"[c_yellow]> {slot.item.name} x{slot.quantity} <[/c]";
+        
+        txt = $"[{sprite_get_name(slot.item.sprite)}][c_yellow]> {slot.item.name} x{slot.quantity} <[/c]";
     }
     else
     {
-        txt = $"{slot.item.name} x{slot.quantity}";
+        txt = $"[{sprite_get_name(slot.item.sprite)}] {slot.item.name} x{slot.quantity}";
     }
 
     scribble(txt)

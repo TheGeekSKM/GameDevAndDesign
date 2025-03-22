@@ -21,5 +21,4 @@ for (var i = 0; i < array_length(global.vars.Players); i++)
     view_wport[i] = camWidth;
     view_hport[i] = height;
 }
-window_set_size(800, 448);
 surface_resize(application_surface, width * 2, height * 2);

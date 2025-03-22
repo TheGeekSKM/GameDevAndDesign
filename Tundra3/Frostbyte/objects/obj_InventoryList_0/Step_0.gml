@@ -25,9 +25,11 @@ if (down)
     }
 }
 
+
+if (array_length(inventory.allItems) == 0) return;
+
 if (select)
 {
     echo("Player 1 pressed Select")
-    if (array_length(inventory.allItems) == 0) return;
     obj_Player1.inventory.UseItemByIndex(selectedIndex, 1, PlayerIndex);
 }

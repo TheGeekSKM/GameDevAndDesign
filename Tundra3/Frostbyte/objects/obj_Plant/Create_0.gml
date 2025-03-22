@@ -7,7 +7,7 @@ plantRanges = [
     [0, 0]
 ]
 
-cherryItem = new ConsumableItem("Cherry", 1, 0, [], spr_pixel, 5); 
+cherryItem = new ConsumableItem("Cherry", 1, 0, [], spr_CPU, 5); 
 
 currentPlantState = 0;
 image_index = currentPlantState;
