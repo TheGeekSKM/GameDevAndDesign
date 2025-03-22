@@ -1,8 +1,9 @@
-timeOfDay = 0; // 0 = day, 1 = night
-dayLength = game_get_speed(gamespeed_fps) * 60 * 5; // 5 minutes
-nightColor = make_color_rgb(10, 10, 40);
-dir = 1;
+// Declare variables in the create event
+timeOfDay = 1;       // 1 = Day, 0 = Night
+dayLength = 60 * 60; // 1 minute transition (60 FPS * 60 sec)
+holdTime = 4 * 60 * 60; // 4 minutes hold (60 FPS * 60 sec * 4)
 
-alphaValue = 0;
+transitionSpeed = 1 / dayLength;
+holdTimer = 0;
 
-light_surface = surface_create(room_width, room_height);
+state = "DAY_HOLD"; // Initial state

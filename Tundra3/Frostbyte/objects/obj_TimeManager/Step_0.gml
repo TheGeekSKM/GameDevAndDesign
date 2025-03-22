@@ -1,13 +1,34 @@
-timeOfDay += (1 / dayLength) * dir;
-if (timeOfDay >= 1)
-{
-    timeOfDay = 1;
-    dir = -1;
+if (state == "DAY_HOLD") {
+    holdTimer += 1;
+    if (holdTimer >= holdTime) {
+        holdTimer = 0;
+        state = "DAY_TO_NIGHT";
+    }
 }
-else if (timeOfDay <= 0)
-{
-    timeOfDay = 0;
-    dir = 1;
+else if (state == "DAY_TO_NIGHT") {
+    timeOfDay -= transitionSpeed;
+    if (timeOfDay <= 0) {
+        timeOfDay = 0;
+        holdTimer = 0;
+        state = "NIGHT_HOLD";
+    }
 }
-timeOfDay = clamp(timeOfDay, 0, 1);
-alphaValue = timeOfDay * 0.85;
+else if (state == "NIGHT_HOLD") {
+    holdTimer += 1;
+    if (holdTimer >= holdTime) {
+        holdTimer = 0;
+        state = "NIGHT_TO_DAY";
+    }
+}
+else if (state == "NIGHT_TO_DAY") {
+    timeOfDay += transitionSpeed;
+    if (timeOfDay >= 1) {
+        timeOfDay = 1;
+        holdTimer = 0;
+        state = "DAY_HOLD";
+    }
+}
+
+// Update alpha for visuals
+alphaValue = 1 - timeOfDay;
+echo(alphaValue)

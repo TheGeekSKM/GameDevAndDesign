@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_TimeManager",
+  "%Name":"obj_Darkness",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_TimeManager",
+  "name":"obj_Darkness",
   "overriddenProperties":[],
   "parent":{
-    "name":"__Managers",
-    "path":"folders/Objects/__Managers.yy",
+    "name":"Game",
+    "path":"folders/Objects/UI/Game.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_ui_parent",
+    "path":"objects/obj_ui_parent/obj_ui_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_darkness41",
+    "path":"sprites/spr_darkness41/spr_darkness41.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
