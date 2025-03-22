@@ -8,7 +8,9 @@
   ],
   "managed":true,
   "name":"obj_InventoryList_1",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"Depth","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-5",},
+  ],
   "parent":{
     "name":"Inventory",
     "path":"folders/Objects/UI/Inventory.yy",

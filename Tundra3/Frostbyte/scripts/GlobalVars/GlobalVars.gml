@@ -20,6 +20,8 @@ function Vars() constructor {
 	Players = [];
     PlayerStats = [undefined, undefined];
 	PlayerColors = [make_color_rgb(70, 190, 94), make_color_rgb(70, 156, 190)];
+	PlayerDarkerColors = [make_color_rgb(50, 140, 70), make_color_rgb(50, 120, 140)];
+	PlayerLighterColors = [make_color_rgb(90, 240, 120), make_color_rgb(90, 200, 240)];
 
 	InputManager = new InputSystem();
 
@@ -28,6 +30,8 @@ function Vars() constructor {
 	CPU = new ConsumableItem("CPU", 1, 2, [new StatusEffects(StatType.Constitution, 2, 10)], spr_CPU);
 	GPU = new ConsumableItem("GPU", 1, 2, [new StatusEffects(StatType.Strength, 2, 10)], spr_GPU);
 	RAM = new ConsumableItem("RAM", 1, 2, [new StatusEffects(StatType.Dexterity, 2, 10)], spr_RAM);
+
+	DiscoveredRecipes = [];
 }
 
 global.vars = new Vars();

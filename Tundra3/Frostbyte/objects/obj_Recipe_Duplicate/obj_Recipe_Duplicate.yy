@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Menu_DialogueText_0",
+  "%Name":"obj_Recipe_Duplicate",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Menu_DialogueText_0",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"Depth","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-5",},
-  ],
+  "name":"obj_Recipe_Duplicate",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Dialogue",
-    "path":"folders/Objects/UI/Dialogue.yy",
+    "name":"Interactables",
+    "path":"folders/Objects/_Base/Interactables.yy",
   },
   "parentObjectId":{
-    "name":"obj_ui_menu",
-    "path":"objects/obj_ui_menu/obj_ui_menu.yy",
+    "name":"obj_Recipe",
+    "path":"objects/obj_Recipe/obj_Recipe.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dialogueText",
-    "path":"sprites/spr_dialogueText/spr_dialogueText.yy",
+    "name":"spr_recipe",
+    "path":"sprites/spr_recipe/spr_recipe.yy",
   },
   "spriteMaskId":null,
   "visible":true,

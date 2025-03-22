@@ -26,3 +26,7 @@ interactableArray = [];
 interactionRange = 30;
 
 targets = [obj_BASE_Entity];
+
+
+
+

@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Menu_DialogueText_0",
+  "%Name":"obj_Menu_Crafting_0",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Menu_DialogueText_0",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"Depth","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-5",},
-  ],
+  "name":"obj_Menu_Crafting_0",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Dialogue",
-    "path":"folders/Objects/UI/Dialogue.yy",
+    "name":"Crafting",
+    "path":"folders/Objects/UI/Crafting.yy",
   },
   "parentObjectId":{
     "name":"obj_ui_menu",
@@ -35,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dialogueText",
-    "path":"sprites/spr_dialogueText/spr_dialogueText.yy",
+    "name":"spr_CraftingMenu",
+    "path":"sprites/spr_CraftingMenu/spr_CraftingMenu.yy",
   },
   "spriteMaskId":null,
   "visible":true,
