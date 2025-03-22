@@ -150,6 +150,7 @@
     {"id":{"name":"obj_InventoryEquipped_0","path":"objects/obj_InventoryEquipped_0/obj_InventoryEquipped_0.yy",},},
     {"id":{"name":"obj_InventoryEquipped_1","path":"objects/obj_InventoryEquipped_1/obj_InventoryEquipped_1.yy",},},
     {"id":{"name":"obj_InventoryList_0","path":"objects/obj_InventoryList_0/obj_InventoryList_0.yy",},},
+    {"id":{"name":"obj_InventoryList_1","path":"objects/obj_InventoryList_1/obj_InventoryList_1.yy",},},
     {"id":{"name":"obj_MainMenu_BlackScreen","path":"objects/obj_MainMenu_BlackScreen/obj_MainMenu_BlackScreen.yy",},},
     {"id":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},},
     {"id":{"name":"obj_Plant","path":"objects/obj_Plant/obj_Plant.yy",},},

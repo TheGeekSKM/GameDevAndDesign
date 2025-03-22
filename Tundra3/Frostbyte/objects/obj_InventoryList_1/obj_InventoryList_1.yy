@@ -1,24 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_InventoryEquipped_1",
+  "%Name":"obj_InventoryList_1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_InventoryEquipped_1",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"Depth","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_InventoryEquipped_0","path":"objects/obj_InventoryEquipped_0/obj_InventoryEquipped_0.yy",},"propertyId":{"name":"PlayerIndex","path":"objects/obj_InventoryEquipped_0/obj_InventoryEquipped_0.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
-  ],
+  "name":"obj_InventoryList_1",
+  "overriddenProperties":[],
   "parent":{
     "name":"Inventory",
     "path":"folders/Objects/UI/Inventory.yy",
   },
   "parentObjectId":{
-    "name":"obj_InventoryEquipped_0",
-    "path":"objects/obj_InventoryEquipped_0/obj_InventoryEquipped_0.yy",
+    "name":"obj_ui_parent",
+    "path":"objects/obj_ui_parent/obj_ui_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,13 +30,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"PlayerIndex","filters":[],"listItems":[],"multiselect":false,"name":"PlayerIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_InventoryEquipped",
-    "path":"sprites/spr_InventoryEquipped/spr_InventoryEquipped.yy",
+    "name":"spr_InventoryAllItems",
+    "path":"sprites/spr_InventoryAllItems/spr_InventoryAllItems.yy",
   },
   "spriteMaskId":null,
   "visible":true,

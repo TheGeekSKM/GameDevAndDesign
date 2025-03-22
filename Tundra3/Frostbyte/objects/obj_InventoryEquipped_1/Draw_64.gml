@@ -3,7 +3,7 @@ draw_self();
 
 //draw eqiupped weapon at 120, 50
 var equippedWeaponPos = new Vector2(topLeft.x + 120, topLeft.y + 50);
-var equippedWeapon = obj_Player1.inventory.GetEquippedWeapon();
+var equippedWeapon = obj_Player2.inventory.GetEquippedWeapon();
 var weaponName = "---NO WEAPON EQUIPPED---"
 if (!equippedWeapon == undefined)
 {
@@ -17,7 +17,7 @@ scribble(weaponName)
 
 //draw equipped armor at 120, 85
 var equippedArmorPos = new Vector2(topLeft.x + 120, topLeft.y + 85);
-var equippedArmor = obj_Player1.inventory.GetEquippedArmor();
+var equippedArmor = obj_Player2.inventory.GetEquippedArmor();
 var armorName = "---NO ARMOR EQUIPPED---"
 if (!equippedArmor == undefined)
 {
@@ -31,7 +31,7 @@ scribble(armorName)
 
 // draw equipped bullet at 120, 122
 var equippedBulletPos = new Vector2(topLeft.x + 120, topLeft.y + 122);
-var equippedBullet = obj_Player1.inventory.GetEquippedBullet();
+var equippedBullet = obj_Player2.inventory.GetEquippedBullet();
 var bulletName = "---NO AMMO EQUIPPED---"
 if (!equippedBullet == undefined)
 {
@@ -54,6 +54,3 @@ scribble($"{damageText}\n\n{attackSpeedText}\n\n{defenseText}")
     .transform(0.5, 0.5, image_angle)
     .wrap(98*2)
     .draw(topLeft.x + 245, topLeft.y + 29);
-
-
-

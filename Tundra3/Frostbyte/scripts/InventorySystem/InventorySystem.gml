@@ -50,7 +50,7 @@ function Inventory(_stats, _owner) constructor {
         currentWeight += _item.weight * _count;
 
         for (var i = 0; i < _count; i += 1) {
-            _item.PickUp(owner);
+            _item.PickUp(self.owner);
         }
         
         return true;
@@ -78,7 +78,7 @@ function Inventory(_stats, _owner) constructor {
         return true;
     }
 
-    function UseItemByIndex(_index, _count)
+    function UseItemByIndex(_index, _count, _PlayerIndex)
     {
         if (_index < 0 or _index >= array_length(allItems)) return false;
         var slot = allItems[_index];
@@ -86,7 +86,7 @@ function Inventory(_stats, _owner) constructor {
         
         for (var i = 0; i < _count; i += 1) {
             slot.item.InventoryUse();
-            echo("Used item");
+            echo($"{owner.PlayerIndex}'s Item used by {_PlayerIndex}");
         }
 
         if (slot.quantity == 0) array_delete(allItems, _index, 1);
@@ -164,6 +164,10 @@ function Inventory(_stats, _owner) constructor {
     function Step()
     {
         maxWeight = stats.GetMaxCarryWeight();
+        
+        for (var i = 0; i < array_length(self.allItems); i++) {
+            self.allItems[i].item.owner = owner;
+        }
     }
 
     function ToString()

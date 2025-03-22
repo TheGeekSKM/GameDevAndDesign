@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-if (array_length(obj_Player1.inventory.allItems) == 0) {
+if (array_length(obj_Player2.inventory.allItems) == 0) {
     scribble("No Items in Inventory")
         .align(fa_left, fa_top)
         .starting_format("Font", c_black)
@@ -12,11 +12,11 @@ if (array_length(obj_Player1.inventory.allItems) == 0) {
 
 for (var i = 0; i < maxDisplay; i += 1) {
     var index = i + scrollOffset;
-    if (index >= array_length(obj_Player1.inventory.allItems)) break;
+    if (index >= array_length(obj_Player2.inventory.allItems)) break;
 
     var yPos = topLeft.y + 28 + (i * 32);
     var xPos = topLeft.x + 13;
-    var slot = obj_Player1.inventory.allItems[index];
+    var slot = obj_Player2.inventory.allItems[index];
 
     var txt = "";
 
@@ -37,7 +37,7 @@ for (var i = 0; i < maxDisplay; i += 1) {
 }
 
 // draw item info at 245, 28
-var slot = obj_Player1.inventory.allItems[selectedIndex];
+var slot = obj_Player2.inventory.allItems[selectedIndex];
 var itemInfo = slot.item.GetDescription();
 scribble(itemInfo)
     .align(fa_left, fa_top)
