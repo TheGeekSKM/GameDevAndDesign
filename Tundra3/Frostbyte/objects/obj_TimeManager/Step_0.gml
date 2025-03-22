@@ -31,4 +31,3 @@ else if (state == "NIGHT_TO_DAY") {
 
 // Update alpha for visuals
 alphaValue = 1 - timeOfDay;
-echo(alphaValue)

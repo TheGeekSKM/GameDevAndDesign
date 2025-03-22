@@ -29,6 +29,7 @@ function PlayerController(_owner) : BaseController(_owner) constructor
             // echo($"Player {owner.PlayerIndex + 1} is moving with image_index {owner.image_index}", true);
         })
         .SetStep(function() {
+            if (!instance_exists(self.owner)) return;
             if (!global.vars.InputManager.IsMoving(self.owner.PlayerIndex)) stateMachine.change("idle");
             else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Action2)) stateMachine.change("attacking");
             else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) stateMachine.change("paused");
