@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Menus",
-    "path":"folders/Sprites/Menus.yy",
+    "name":"Quests",
+    "path":"folders/Sprites/Menus/Quests.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

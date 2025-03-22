@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"Menus",
-    "path":"folders/Sprites/Menus.yy",
+    "name":"PlayerStats",
+    "path":"folders/Sprites/Menus/PlayerStats.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Backgrounds",
-    "path":"folders/Sprites/Backgrounds.yy",
+    "name":"WinLose",
+    "path":"folders/Sprites/Backgrounds/WinLose.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"MainMenu",
-    "path":"folders/Sprites/MainMenu.yy",
+    "path":"folders/Sprites/Backgrounds/MainMenu.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
