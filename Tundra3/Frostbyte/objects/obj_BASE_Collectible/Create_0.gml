@@ -21,8 +21,5 @@ function OnInteract() {
     if (currentItem == undefined) return;
     playerInRange.inventory.AddItem(currentItem, itemCount);
     
-    var text = instance_create_depth(x, y, 0, obj_PopUpText);
-    text.Init(string_concat(currentItem.name, " x", itemCount));
-    
     if (destroyOnPickUp) instance_destroy();
 }

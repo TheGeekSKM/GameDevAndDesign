@@ -106,6 +106,12 @@ enum ActionType
     Menu
 }
 
+function MovementKeysToString(_playerIndex)
+{
+    var _player = _playerIndex == 0 ? global.vars.InputManager.player1 : global.vars.InputManager.player2;
+    return $"{KeybindToString(_player.left)}, {KeybindToString(_player.right)}, {KeybindToString(_player.up)}, {KeybindToString(_player.down)} - Move";
+}
+
 function KeybindToString(_key)
 {
     switch(_key)

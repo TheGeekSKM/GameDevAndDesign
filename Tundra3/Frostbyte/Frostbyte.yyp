@@ -238,6 +238,7 @@
     {"id":{"name":"obj_Menu_QuestList_1","path":"objects/obj_Menu_QuestList_1/obj_Menu_QuestList_1.yy",},},
     {"id":{"name":"obj_Notification_0","path":"objects/obj_Notification_0/obj_Notification_0.yy",},},
     {"id":{"name":"obj_Notification_1","path":"objects/obj_Notification_1/obj_Notification_1.yy",},},
+    {"id":{"name":"obj_NPC_Crafting","path":"objects/obj_NPC_Crafting/obj_NPC_Crafting.yy",},},
     {"id":{"name":"obj_NPC_Duplicate","path":"objects/obj_NPC_Duplicate/obj_NPC_Duplicate.yy",},},
     {"id":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},},
     {"id":{"name":"obj_PCManager","path":"objects/obj_PCManager/obj_PCManager.yy",},},
