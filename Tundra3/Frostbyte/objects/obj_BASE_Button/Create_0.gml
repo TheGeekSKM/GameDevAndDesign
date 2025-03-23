@@ -66,3 +66,5 @@ function OnClickEnd()
 }
 
 Manager.AddButtonToList(id);
+
+depth = Depth;

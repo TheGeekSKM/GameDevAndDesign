@@ -61,6 +61,7 @@ function DrawGUI()
 }
 function Step()
 {
+    if (!vis) return;
     var up = global.vars.InputManager.IsPressed(playerIndex, ActionType.Up);
     var down = global.vars.InputManager.IsPressed(playerIndex, ActionType.Down);
 
@@ -94,5 +95,11 @@ function Step()
         if (GetNumberOfCrafting() == 0) return;
         var recipe = GetCraftingByIndex(selectedIndex);
         recipe.Craft(global.vars.Players[playerIndex]);
+    }
+
+    var menu = global.vars.InputManager.IsPressed(playerIndex, ActionType.Menu);
+    if (menu)
+    {
+        Raise("CraftingClose", playerIndex);
     }
 }

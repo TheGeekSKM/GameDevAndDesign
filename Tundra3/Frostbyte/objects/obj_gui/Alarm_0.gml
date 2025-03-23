@@ -1,0 +1,1 @@
+global.vars.Players[0].Pause(false);

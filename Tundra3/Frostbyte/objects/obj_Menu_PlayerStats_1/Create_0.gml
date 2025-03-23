@@ -17,3 +17,13 @@ function DrawGUI()
         .wrap(330 * (1 / textScale))
         .draw(x, topLeft.y + 25);
 }
+
+function Step()
+{
+    if (!vis) return;
+    var menu = global.vars.InputManager.IsPressed(playerIndex, ActionType.Menu);
+    if (menu)
+    {
+        Raise("StatsClose", playerIndex);
+    }
+}

@@ -56,3 +56,18 @@ function CameraShake(_camIndex, _strength, _duration)
 	}
 }
 
+
+enum UIMenuState {
+    noUI,
+    crafting,
+    dialogue,
+    inventory,
+    pause,
+    pcView,
+    quest,
+    stats
+}
+function ShowUIState(_playerIndex, _state)
+{
+}
+

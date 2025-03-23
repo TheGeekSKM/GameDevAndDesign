@@ -1,0 +1,1 @@
+global.vars.Players[1].Pause(false);

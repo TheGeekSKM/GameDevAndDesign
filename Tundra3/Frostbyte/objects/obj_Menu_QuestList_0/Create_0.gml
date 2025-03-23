@@ -10,6 +10,7 @@ alarm[0] = 1;
 
 function Step()
 {
+    if (!vis) return;
     var up = global.vars.InputManager.IsPressed(playerIndex, ActionType.Up);
     var down = global.vars.InputManager.IsPressed(playerIndex, ActionType.Down);
 
@@ -35,6 +36,12 @@ function Step()
         }
 
         Raise($"Player{playerIndex}QuestSelected", selectedIndex);
+    }
+
+    var menu = global.vars.InputManager.IsPressed(playerIndex, ActionType.Menu);
+    if (menu)
+    {
+        Raise("QuestClose", playerIndex);
     }
 }
 
@@ -77,4 +84,6 @@ function DrawGUI()
                 .draw(xPos, yPos);
         }
     }
+
+    
 }

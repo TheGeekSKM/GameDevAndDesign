@@ -11,9 +11,6 @@ function PlayerController(_owner) : BaseController(_owner) constructor
                 stateMachine.change("moving");
             }
             else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Action2)) stateMachine.change("attacking");
-            else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) {
-                //stateMachine.change("paused");
-            }
         })
         .SetDraw(function() {
             with(self.owner) draw_self();
@@ -32,7 +29,6 @@ function PlayerController(_owner) : BaseController(_owner) constructor
             if (!instance_exists(self.owner)) return;
             if (!global.vars.InputManager.IsMoving(self.owner.PlayerIndex)) stateMachine.change("idle");
             else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Action2)) stateMachine.change("attacking");
-            else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) stateMachine.change("paused");
         })
         .SetLeave(function() {
             self.owner.canMove = false;   
@@ -49,46 +45,15 @@ function PlayerController(_owner) : BaseController(_owner) constructor
         })
         .SetStep(function() {
             if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Action2)) stateMachine.change("idle");
-            else if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) {
-                stateMachine.change("paused");
-            }
         })
         .SetLeave(function() {
             self.owner.canAttack = false;   
         })    
         .SetDraw(function() {
             with(self.owner) draw_self();
-        });
-
-    var paused = new StateStruct("paused")
-        .SetEnter(function() {
-            self.owner.canMove = false;
-            self.owner.canAttack = false;
-            Raise("MenuOpen", self.owner.PlayerIndex);
-        })
-        .SetStep(function() {
-            if (global.vars.InputManager.IsPressed(self.owner.PlayerIndex, ActionType.Menu)) 
-            {
-                stateMachine.change("idle"); 
-                Raise("MenuClose", self.owner.PlayerIndex);
-            }
-        })
-        .SetDraw(function() {
-            with(self.owner) draw_self();
-        });        
+        });       
     
     self.AddState(idle);
     self.AddState(moving);
     self.AddState(attacking);
-    self.AddState(paused);
-
-    function CloseMenu()
-    {
-        stateMachine.change("idle");
-    }
-
-    function OpenMenu()
-    {
-        stateMachine.change("paused");
-    }
 }

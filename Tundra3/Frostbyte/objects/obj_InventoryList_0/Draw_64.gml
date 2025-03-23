@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+if (!vis) return;
 
 if (array_length(obj_Player1.inventory.allItems) == 0) {
     scribble("No Items in Inventory")

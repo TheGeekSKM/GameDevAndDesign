@@ -27,6 +27,7 @@ function DrawGUI()
 }
 function Step()
 {
+    if (!vis) return;
     var action = global.vars.InputManager.IsPressed(playerIndex, ActionType.Action1);
     if (action)
     {
@@ -40,7 +41,7 @@ function Step()
         
         if (!currentDialogueScene.CanContinue())
         {
-        global.vars.Players[playerIndex].controller.CloseMenu(); 
+           Raise("DialogueClose", playerIndex);
         }
     }    
 }

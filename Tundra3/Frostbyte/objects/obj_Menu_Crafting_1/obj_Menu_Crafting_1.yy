@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"obj_Menu_Crafting_1",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"Depth","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-4",},
+  ],
   "parent":{
     "name":"Crafting",
     "path":"folders/Objects/UI/Crafting.yy",

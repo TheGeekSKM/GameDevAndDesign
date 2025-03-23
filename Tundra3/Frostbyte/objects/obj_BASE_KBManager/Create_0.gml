@@ -4,6 +4,14 @@ playerIndex = 0;
 leftRight = false;
 maxNumOfButtons = 10;
 
+vis = false;
+
+function SetData(_playerIndex, _leftRight)
+{
+    playerIndex = _playerIndex;
+    leftRight = _leftRight;
+}
+
 function AddButtonToList(kbBTNID)
 {
     if (!array_contains(buttons, kbBTNID))
@@ -43,3 +51,5 @@ function OnButtonClickEnd()
 }
 
 alarm[0] = 5;
+
+depth = Depth;

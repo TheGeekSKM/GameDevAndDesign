@@ -13,7 +13,6 @@ resources = ["CPU", "GPU", "RAM"];
 
 function OnInteract()
 {
-    global.vars.Players[playerInRange.PlayerIndex].controller.OpenMenu();
 }
 
 function ToString()

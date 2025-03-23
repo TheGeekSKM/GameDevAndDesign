@@ -1,5 +1,7 @@
 ///
 
+if (!vis) return;
+
 var up = global.vars.InputManager.IsPressed(playerIndex, ActionType.Up);
 var down = global.vars.InputManager.IsPressed(playerIndex, ActionType.Down);
 var left = global.vars.InputManager.IsPressed(playerIndex, ActionType.Left);
@@ -13,7 +15,6 @@ movement = leftRight ? right - left : down - up;
 if (movement != 0)
 {
     selectIndex = ModWrap(selectIndex + movement, array_length(buttons))
-    echo($"SelectIndex: {selectIndex}");
     UpdateButton();
 }
 

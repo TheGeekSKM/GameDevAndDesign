@@ -5,6 +5,7 @@ SetPlayerIndex(0);
 currentQuest = undefined;
 
 Subscribe($"Player{playerIndex}QuestSelected", function(index) {
+    if (GetNumberOfQuests() == 0) return;
     currentQuest = GetQuestByIndex(index);
 });
 

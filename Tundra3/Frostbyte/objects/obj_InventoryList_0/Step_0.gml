@@ -1,3 +1,4 @@
+if (!vis) return;
 inventory = obj_Player1.inventory;
 topLeft = new Vector2(x - (sprite_width / 2), y - (sprite_height / 2));
 
@@ -25,6 +26,12 @@ if (down)
     }
 }
 
+var menu = global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Menu);
+echo("visible")
+if (menu)
+{
+    Raise("InventoryClose", PlayerIndex);
+}
 
 if (array_length(inventory.allItems) == 0) return;
 
@@ -33,3 +40,4 @@ if (select)
     echo("Player 1 pressed Select")
     obj_Player1.inventory.UseItemByIndex(selectedIndex, 1, PlayerIndex);
 }
+

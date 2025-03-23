@@ -18,14 +18,15 @@
   <tpe x="806" y="1346" tpage="default_2.bz2">Font_Frostbyte_Font.tpe</tpe>
   <tpe x="1606" y="1538" tpage="default_0.bz2">spr_PlayerStats34_Frostbyte_8a66bf35-9881-4d3d-83d4-ee69682f512e.tpe</tpe>
   <tpe x="1610" y="1086" tpage="default_1.bz2">spr_PCBackground46_Frostbyte_894cd1cf-dee6-4795-b5b2-ff396f8b0b1a.tpe</tpe>
-  <tpe x="1610" y="1340" tpage="default_1.bz2">spr_dialogueText_Frostbyte_3b1ef8a8-4aaa-48fd-8fee-5eb1d8d0bec7.tpe</tpe>
-  <tpe x="1610" y="1514" tpage="default_1.bz2">spr_questInfo_Frostbyte_caaa8e9c-01dc-4a45-821b-c990543d36ef.tpe</tpe>
+  <tpe x="1610" y="1340" tpage="default_1.bz2">spr_pauseMenu_Frostbyte_9826fe27-15af-4d13-9e29-7e94a534a133.tpe</tpe>
+  <tpe x="1610" y="1690" tpage="default_1.bz2">spr_dialogueText_Frostbyte_3b1ef8a8-4aaa-48fd-8fee-5eb1d8d0bec7.tpe</tpe>
+  <tpe x="1610" y="1864" tpage="default_1.bz2">spr_questInfo_Frostbyte_caaa8e9c-01dc-4a45-821b-c990543d36ef.tpe</tpe>
   <tpe x="2" y="1890" tpage="default_0.bz2">spr_CraftingMenu_Frostbyte_27a6e2f8-cd1c-405f-b8a1-41cd2fdf9839.tpe</tpe>
   <tpe x="358" y="1890" tpage="default_0.bz2">spr_InventoryAllItems_Frostbyte_370af9cd-5d20-40b2-9313-b4c39c75d5d7.tpe</tpe>
   <tpe x="714" y="1890" tpage="default_0.bz2">spr_InventoryEquipped_Frostbyte_50ae9910-32ab-46cf-9baf-30a158212478.tpe</tpe>
-  <tpe x="1610" y="1678" tpage="default_1.bz2">spr_Attribute_Frostbyte_ed14dbf1-bbc7-487d-9f8b-830fa782fe99.tpe</tpe>
-  <tpe x="1610" y="1842" tpage="default_1.bz2">spr_attribute_info_Frostbyte_a4f5fca3-6db4-4874-bd8d-09dd8963eb75.tpe</tpe>
-  <tpe x="806" y="1606" tpage="default_2.bz2">spr_dialogueSpeaker_Frostbyte_17e6ec38-610e-4b2c-9c27-4ca47fcd6c8b.tpe</tpe>
+  <tpe x="806" y="1606" tpage="default_2.bz2">spr_Attribute_Frostbyte_ed14dbf1-bbc7-487d-9f8b-830fa782fe99.tpe</tpe>
+  <tpe x="806" y="1770" tpage="default_2.bz2">spr_attribute_info_Frostbyte_a4f5fca3-6db4-4874-bd8d-09dd8963eb75.tpe</tpe>
+  <tpe x="1098" y="1606" tpage="default_2.bz2">spr_dialogueSpeaker_Frostbyte_17e6ec38-610e-4b2c-9c27-4ca47fcd6c8b.tpe</tpe>
   <tpe x="1070" y="1890" tpage="default_0.bz2">scribble_fallback_font_Frostbyte_scribble_fallback_font.tpe</tpe>
   <tpe x="1330" y="1890" tpage="default_0.bz2">spr_questList_Frostbyte_b01f560d-fea7-4080-99ba-565c4e33e732.tpe</tpe>
   <tpe x="1566" y="1944" tpage="default_0.bz2">spr_HUD_Top_Frostbyte_9375f934-d5f1-4569-9eb1-04117c10b948.tpe</tpe>

@@ -27,6 +27,12 @@ function DialogueScene() constructor {
 
 	function CanContinue()
 	{
+		var canContinue = currentLine < array_length(dialogues);
+		if (!canContinue)
+		{
+			currentLine = 0;
+			finished = true;
+		}
 		return currentLine < array_length(dialogues);
 	}
 }
@@ -36,15 +42,7 @@ function DialogueLine(_speaker, _line) constructor {
 	line = _line;
 }
 
-function StartDialogue(_dialogueScene, _playerIndex)
+function StartDialogueScene(_dialogueScene, _playerIndex)
 {
-    switch(_playerIndex)
-    {
-        case 0: 
-            show_message("Make Dialogue for Player 1 Pop up");
-        break;
-        case 1: 
-            show_message("Make Dialogue for Player 2 Popup!");
-        break;
-    }
+	show_message("start the scene in the appropriate dialogue text object")
 }

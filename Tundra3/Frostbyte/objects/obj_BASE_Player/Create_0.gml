@@ -2,6 +2,8 @@ isUndead = false;
 canAttack = false;
 canMove = true;
 
+paused = false;
+
 collisionObjects = [obj_Wall, obj_Collector, obj_PCManager];
 doOnce = false;
 
@@ -26,6 +28,12 @@ interactableArray = [];
 interactionRange = 30;
 
 targets = [obj_BASE_Entity];
+
+function Pause(_value)
+{
+    paused = _value;
+    controller.stateMachine.change("idle");
+}
 
 
 // inventory.AddItem(global.vars.Sword);
