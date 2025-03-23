@@ -20,7 +20,10 @@ if (hitCount > 0) {
         var hitObject = hitObjectList[| i];
         if (hitObject != shooter) 
         {
-            hitObject.entityHealth.TakeDamage(damage, damageType);
+            var isCrit = random(100) < bulletItem.owner.stats.GetCritChance();
+            var dmg = isCrit ? bulletItem.owner.stats.GetCritDamageMultiplier() * damage : damage;
+
+            hitObject.entityHealth.TakeDamage(dmg, damageType, bulletItem.owner, isCrit);
             bulletItem.Use(new Vector2(x, y))
             if (!hitMultiple) 
             {

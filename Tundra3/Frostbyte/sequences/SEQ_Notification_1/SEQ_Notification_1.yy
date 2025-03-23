@@ -26,8 +26,8 @@
   },
   "name":"SEQ_Notification_1",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Notification",
+    "path":"folders/Sequences/Notification.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,

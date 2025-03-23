@@ -29,14 +29,14 @@ function Inventory(_stats, _owner) constructor {
     ///@desc Adds an item to the inventory
     ///@param {Struct} _item - The item to add
     ///@param {real} _count - The quantity of the item to add
-    ///@return bool - True if the item was added, false if it couldn't be added
+    ///@return {Struct} - the item if the item was added, undefined if it couldn't be added
     function AddItem(_item, _count = 1)
     {
         var item = _item.GetCopy();
         if (_count == 0) 
         {
             echo($"{item.name} has not count...")
-            return false;
+            return undefined;
         }
         var index = ContainsItem(item);
         if (index == -1) 
@@ -54,7 +54,7 @@ function Inventory(_stats, _owner) constructor {
             item.PickUp(self.owner);
         }
         
-        return true;
+        return _item;
     }
 
     ///@desc Uses an item from the inventory

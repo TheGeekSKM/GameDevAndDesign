@@ -15,7 +15,7 @@ for (var i = 0; i < maxDisplay; i += 1) {
     var index = i + scrollOffset;
     if (index >= array_length(obj_Player1.inventory.allItems)) break;
 
-    var yPos = topLeft.y + 28 + (i * 32);
+    var yPos = topLeft.y + 28 + (i * 20);
     var xPos = topLeft.x + 13;
     var slot = obj_Player1.inventory.allItems[index];
 
@@ -24,11 +24,11 @@ for (var i = 0; i < maxDisplay; i += 1) {
     if (index == selectedIndex) 
     {
         
-        txt = $"[{sprite_get_name(slot.item.sprite)}][c_yellow]> {slot.item.name} x{slot.quantity} <[/c]";
+        txt = $"[{sprite_get_name(slot.item.sprite)}][c_yellow]> {slot.item.name} x{slot.quantity}{ slot.item.equipped ? " (Equipped)" : ""} <[/c]";
     }
     else
     {
-        txt = $"[{sprite_get_name(slot.item.sprite)}] {slot.item.name} x{slot.quantity}";
+        txt = $"[{sprite_get_name(slot.item.sprite)}] {slot.item.name} x{slot.quantity}{ slot.item.equipped ? " (Equipped)" : ""}";
     }
 
     scribble(txt)

@@ -15,7 +15,7 @@ for (var i = 0; i < maxDisplay; i += 1) {
     var index = i + scrollOffset;
     if (index >= array_length(obj_Player2.inventory.allItems)) break;
 
-    var yPos = topLeft.y + 28 + (i * 32);
+    var yPos = topLeft.y + 28 + (i * 20);
     var xPos = topLeft.x + 13;
     var slot = obj_Player2.inventory.allItems[index];
 

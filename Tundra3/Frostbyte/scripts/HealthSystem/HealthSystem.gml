@@ -43,7 +43,7 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         AddMultiplier(_damageType, _value);
     }
     
-    function TakeDamage(amount, damageType, _attackerID)
+    function TakeDamage(amount, damageType, _attackerID, crit = false)
     {
         recentAttacker = _attackerID;
         if (self.isUndead and damageType = DamageType.HEALING)
@@ -64,6 +64,19 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         
         var multiplier = self.GetDamageMultipler(damageType);
         self.currentHealth = max(0, self.currentHealth - (amount * multiplier));
+
+        if (amount > 0)
+        {
+            var textPopUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+            if (crit)
+            {
+                textPopUp.Init(amount, c_red);
+            }
+            else
+            {
+                textPopUp.Init(amount, c_white);
+            }
+        }
         
         if (self.currentHealth <= 0) self.Die();
     }
