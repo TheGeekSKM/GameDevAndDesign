@@ -2,29 +2,29 @@ function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defe
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system on equip
-    stats = owner.stats;
-    stamina = owner.stamina;
     armorValue = _armorValue;
 
     function Equip()
     {
         for(var i = 0; i < array_length(effects); i++) {
-            stats.AddStat(effects[i]);
+            owner.stats.AddStat(effects[i]);
         }
+        equipped = true;
     }
 
     function Unequip()
     {
         for(var i = 0; i < array_length(effects); i++) {
-            stats.RemoveStat(effects[i]);
+            owner.stats.RemoveStat(effects[i]);
         }
+        equipped = false;
     }
 
     function GetArmorValue()
     {
         durability -= 1;
-        stamina.UseStamina(staminaCost);
-        if (stamina.GetCurrentStamina() <= 0) {
+        owner.stamina.UseStamina(staminaCost);
+        if (owner.stamina.GetStamina() <= 0) {
             return 0;
         }
 
@@ -40,5 +40,15 @@ function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defe
     {
         var copy = new ArmorItem(name, armorValue, durability, staminaCost, weight, effects, sprite);
         return copy;
+    }
+
+    function InventoryUse()
+    {
+        if (equipped) {
+            owner.inventory.Unequip(self);
+        }
+        else {
+            owner.inventory.Equip(self);
+        }
     }
 }

@@ -5,7 +5,7 @@ draw_self();
 var equippedWeaponPos = new Vector2(topLeft.x + 120, topLeft.y + 50);
 var equippedWeapon = obj_Player1.inventory.GetEquippedWeapon();
 var weaponName = "---NO WEAPON EQUIPPED---"
-if (!equippedWeapon == undefined)
+if (equippedWeapon != undefined)
 {
     weaponName = equippedWeapon.name;
 }
@@ -19,7 +19,7 @@ scribble(weaponName)
 var equippedArmorPos = new Vector2(topLeft.x + 120, topLeft.y + 85);
 var equippedArmor = obj_Player1.inventory.GetEquippedArmor();
 var armorName = "---NO ARMOR EQUIPPED---"
-if (!equippedArmor == undefined)
+if (equippedArmor != undefined)
 {
     armorName = equippedArmor.name;
 }
@@ -33,7 +33,7 @@ scribble(armorName)
 var equippedBulletPos = new Vector2(topLeft.x + 120, topLeft.y + 122);
 var equippedBullet = obj_Player1.inventory.GetEquippedBullet();
 var bulletName = "---NO AMMO EQUIPPED---"
-if (!equippedBullet == undefined)
+if (equippedBullet != undefined)
 {
     bulletName = equippedBullet.name;
 }

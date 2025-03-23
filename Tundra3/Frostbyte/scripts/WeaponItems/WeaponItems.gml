@@ -3,7 +3,6 @@ function WeaponItem(_name, _weaponType, _durability, _staminaCost, _weight, _equ
     // get ref to stat system
     // apply effects to stat system on equip
     weaponType = _weaponType;
-    stats = owner.stats;
 
     function GetWeaponType()
     {
@@ -13,15 +12,32 @@ function WeaponItem(_name, _weaponType, _durability, _staminaCost, _weight, _equ
     function Equip()
     {
         for(var i = 0; i < array_length(effects); i++) {
-            stats.AddStat(effects[i]);
+            owner.stats.AddStat(effects[i]);
         }
+        equipped = true;
     }
 
     function Unequip()
     {
         for(var i = 0; i < array_length(effects); i++) {
-            stats.RemoveStat(effects[i]);
+            owner.stats.RemoveStat(effects[i]);
         }
+        equipped = false;
+    }
+
+    function InventoryUse()
+    {
+        if (equipped) {
+            owner.inventory.Unequip(self);
+        }
+        else {
+            owner.inventory.Equip(self);
+        }
+    }
+
+    function GetDamage()
+    {
+        return 0;
     }
     
 }
@@ -36,8 +52,7 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
 
     function Use()
     {
-        if (owner.stamina.GetCurrentStamina() <= 0) {
-            show_message("Not enough stamina to swing.");
+        if (owner.stamina.GetStamina() <= staminaCost) {
             return;
         }
         else
@@ -45,7 +60,7 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
             owner.stamina.UseStamina(staminaCost);
         }
 
-        var meleeSwing = new BulletItem($"{name}'s Swing", true, 1, damage, damageType, 0, [], spr_meleeSlash);
+        var meleeSwing = new BulletItem($"{name}'s Swing", true, 0.5, damage, damageType, 0, [], spr_meleeSlash);
         meleeSwing.owner = self.owner;
         
         var meleeSwingObject = instance_create_layer(owner.x, owner.y, "MeleeSwing", obj_Bullet);
@@ -64,6 +79,11 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
         var copy = new MeleeWeaponItem(name, color, durability, damage, damageType, staminaCost, weight, effects, sprite);
         return copy;
     }
+
+    function GetDamage()
+    {
+        return damage;
+    }
 }
 
 function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _equipEffects, _sprite) : WeaponItem(_name, WeaponType.Ranged, _durability, _staminaCost, _weight, _equipEffects, _sprite) constructor {
@@ -74,8 +94,7 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
 
     function Use()
     {
-        if (owner.stamina.GetCurrentStamina() <= 0) {
-            show_message("Not enough stamina to shoot.");
+        if (owner.stamina.GetStamina() <= staminaCost) {
             return;
         }
         else
@@ -90,7 +109,7 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
             return;
         }
 
-        var bulletObject = instance_create_layer(owner.x, owner.y, "Bullet", obj_Bullet);
+        var bulletObject = instance_create_layer(owner.x, owner.y, "Bullets", obj_Bullet);
         bulletObject.SetBulletData(bullet, speed, owner.targets, owner.image_angle);
         
         durability -= 1;

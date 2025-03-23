@@ -16,10 +16,28 @@ function BulletItem(_name, _hitMultiple, _lifeTime, _damage, _damageType, _weigh
         }
     }
 
+    function Equip() {
+        equipped = true;
+    }
+
+    function Unequip() {
+        equipped = false;
+    }
+
     function GetCopy()
     {
         var copy = new BulletItem(name, hitMultiple, lifeTime, damage, damageType, weight, hitFunctions, sprite);
         return copy;
+    }
+
+    function InventoryUse()
+    {
+        if (equipped) {
+            owner.inventory.Unequip(self);
+        }
+        else {
+            owner.inventory.Equip(self);
+        }
     }
 
 }

@@ -32,7 +32,7 @@ function StaminaSystem(_stats, _owner) constructor {
         maxStamina = stats.GetMaxStamina();
 
         if (currentStamina < maxStamina && owner.speed == 0) {
-            currentStamina = min(maxStamina, currentStamina + 1);
+            currentStamina = min(maxStamina, currentStamina + stats.GetStaminaRegenRate());
         }
 
         if (currentStamina > maxStamina) {

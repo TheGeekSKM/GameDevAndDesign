@@ -30,7 +30,7 @@ function Inventory(_stats, _owner) constructor {
     ///@param {Struct} _item - The item to add
     ///@param {real} _count - The quantity of the item to add
     ///@return bool - True if the item was added, false if it couldn't be added
-    function AddItem(_item, _count)
+    function AddItem(_item, _count = 1)
     {
         var item = _item.GetCopy();
         if (_count == 0) 
@@ -192,7 +192,7 @@ function Inventory(_stats, _owner) constructor {
     function GetWeaponAttackSpeed()
     {
         if (equippedWeapon == undefined) return 0;
-        if (equippedWeapon.GetWeapnType() == WeaponType.Melee) return stats.GetMeleeAttackSpeed();
+        if (equippedWeapon.GetWeaponType() == WeaponType.Melee) return stats.GetMeleeAttackSpeed();
         else return stats.GetRangedAttackSpeed();
     }
 
@@ -202,6 +202,34 @@ function Inventory(_stats, _owner) constructor {
         if (equippedArmor != undefined) defense += equippedArmor.armorValue;
         defense += stats.GetNaturalResistance();
         return defense;
+    }
+
+    function Equip(_item)
+    {
+        if (_item == undefined) return;
+        var index = ContainsItem(_item);
+        if (index == -1) return;
+
+        var slot = allItems[index];
+        if (slot.item.type == ItemType.Weapon) {Unequip(equippedWeapon); equippedWeapon = slot.item;}
+        else if (slot.item.type == ItemType.Armor) {Unequip(equippedArmor); equippedArmor = slot.item;}
+        else if (slot.item.type == ItemType.Bullet) {Unequip(equippedBullet); equippedBullet = slot.item;}
+
+        slot.item.Equip();
+    }
+
+    function Unequip(_item)
+    {
+        if (_item == undefined) return;
+        var index = ContainsItem(_item);
+        if (index == -1) return;
+
+        var slot = allItems[index];
+        if (slot.item.type == ItemType.Weapon) equippedWeapon = undefined;
+        else if (slot.item.type == ItemType.Armor) equippedArmor = undefined;
+        else if (slot.item.type == ItemType.Bullet) equippedBullet = undefined;
+
+        slot.item.Unequip();
     }
 }
 

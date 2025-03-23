@@ -28,5 +28,7 @@ interactionRange = 30;
 targets = [obj_BASE_Entity];
 
 
-
+inventory.AddItem(global.vars.Sword);
+inventory.AddItem(global.vars.Bow);
+inventory.AddItem(global.vars.Arrow);
 

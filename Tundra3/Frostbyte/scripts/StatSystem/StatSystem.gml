@@ -20,6 +20,8 @@ function StatSystem(_str, _dex, _con) constructor {
     // Health and Stamina
     function GetMaxHealth() { return 50 + (self.constitution * 5) + (self.strength * 2); }
     function GetMaxStamina() { return 100 + (self.constitution * 5) + (self.dexterity * 2); }
+
+    function GetStaminaRegenRate() { return (1 + (self.constitution * 0.1) + (self.dexterity * 0.05)) / 60; }
     
     // Encumberance System
     function GetMaxCarryWeight() { return 20 + (self.strength * 5) + (self.constitution * 2); }

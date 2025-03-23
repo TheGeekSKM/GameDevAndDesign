@@ -13,59 +13,58 @@
   <tpe x="806" y="1538" tpage="default_1.bz2">spr_darkness41_Frostbyte_943ff77d-beed-4486-8f50-91f3e6baa5bf.tpe</tpe>
   <tpe x="2" y="1086" tpage="default_2.bz2">spr_ViewBorders_Frostbyte_d0514489-bb5e-415c-a951-6eb7e37e4879.tpe</tpe>
   <tpe x="2" y="1538" tpage="default_2.bz2">WinBackground_Frostbyte_8fd610b9-5aab-48d2-99ba-3b9e7cfcacef.tpe</tpe>
-  <tpe x="806" y="1086" tpage="default_2.bz2">spr_game_foreground_Frostbyte_e463fed1-b4e9-4474-ac00-040de653eb6c.tpe</tpe>
   <tpe x="1606" y="1086" tpage="default_0.bz2">spr_darkness_Frostbyte_4ff446a9-4df1-43b3-a21a-8de50d5ae92f.tpe</tpe>
-  <tpe x="1606" y="1538" tpage="default_0.bz2">spr_PlayerStats_Frostbyte_2b49e573-74fc-4ea2-9abd-c6daa75f6685.tpe</tpe>
-  <tpe x="806" y="1546" tpage="default_2.bz2">font_console_Frostbyte_font_console.tpe</tpe>
-  <tpe x="1322" y="1546" tpage="default_2.bz2">Font_Frostbyte_Font.tpe</tpe>
-  <tpe x="1610" y="1086" tpage="default_1.bz2">spr_PlayerStats34_Frostbyte_8a66bf35-9881-4d3d-83d4-ee69682f512e.tpe</tpe>
-  <tpe x="1610" y="1492" tpage="default_1.bz2">spr_PCBackground46_Frostbyte_894cd1cf-dee6-4795-b5b2-ff396f8b0b1a.tpe</tpe>
-  <tpe x="1610" y="1746" tpage="default_1.bz2">spr_dialogueText_Frostbyte_3b1ef8a8-4aaa-48fd-8fee-5eb1d8d0bec7.tpe</tpe>
-  <tpe x="1575" y="1086" tpage="default_2.bz2">spr_questInfo_Frostbyte_caaa8e9c-01dc-4a45-821b-c990543d36ef.tpe</tpe>
+  <tpe x="806" y="1086" tpage="default_2.bz2">font_console_Frostbyte_font_console.tpe</tpe>
+  <tpe x="806" y="1346" tpage="default_2.bz2">Font_Frostbyte_Font.tpe</tpe>
+  <tpe x="1606" y="1538" tpage="default_0.bz2">spr_PlayerStats34_Frostbyte_8a66bf35-9881-4d3d-83d4-ee69682f512e.tpe</tpe>
+  <tpe x="1610" y="1086" tpage="default_1.bz2">spr_PCBackground46_Frostbyte_894cd1cf-dee6-4795-b5b2-ff396f8b0b1a.tpe</tpe>
+  <tpe x="1610" y="1340" tpage="default_1.bz2">spr_dialogueText_Frostbyte_3b1ef8a8-4aaa-48fd-8fee-5eb1d8d0bec7.tpe</tpe>
+  <tpe x="1610" y="1514" tpage="default_1.bz2">spr_questInfo_Frostbyte_caaa8e9c-01dc-4a45-821b-c990543d36ef.tpe</tpe>
   <tpe x="2" y="1890" tpage="default_0.bz2">spr_CraftingMenu_Frostbyte_27a6e2f8-cd1c-405f-b8a1-41cd2fdf9839.tpe</tpe>
   <tpe x="358" y="1890" tpage="default_0.bz2">spr_InventoryAllItems_Frostbyte_370af9cd-5d20-40b2-9313-b4c39c75d5d7.tpe</tpe>
   <tpe x="714" y="1890" tpage="default_0.bz2">spr_InventoryEquipped_Frostbyte_50ae9910-32ab-46cf-9baf-30a158212478.tpe</tpe>
-  <tpe x="1575" y="1250" tpage="default_2.bz2">spr_Attribute_Frostbyte_ed14dbf1-bbc7-487d-9f8b-830fa782fe99.tpe</tpe>
-  <tpe x="806" y="1806" tpage="default_2.bz2">spr_attribute_info_Frostbyte_a4f5fca3-6db4-4874-bd8d-09dd8963eb75.tpe</tpe>
-  <tpe x="1098" y="1806" tpage="default_2.bz2">spr_dialogueSpeaker_Frostbyte_17e6ec38-610e-4b2c-9c27-4ca47fcd6c8b.tpe</tpe>
+  <tpe x="1610" y="1678" tpage="default_1.bz2">spr_Attribute_Frostbyte_ed14dbf1-bbc7-487d-9f8b-830fa782fe99.tpe</tpe>
+  <tpe x="1610" y="1842" tpage="default_1.bz2">spr_attribute_info_Frostbyte_a4f5fca3-6db4-4874-bd8d-09dd8963eb75.tpe</tpe>
+  <tpe x="806" y="1606" tpage="default_2.bz2">spr_dialogueSpeaker_Frostbyte_17e6ec38-610e-4b2c-9c27-4ca47fcd6c8b.tpe</tpe>
   <tpe x="1070" y="1890" tpage="default_0.bz2">scribble_fallback_font_Frostbyte_scribble_fallback_font.tpe</tpe>
   <tpe x="1330" y="1890" tpage="default_0.bz2">spr_questList_Frostbyte_b01f560d-fea7-4080-99ba-565c4e33e732.tpe</tpe>
   <tpe x="1566" y="1944" tpage="default_0.bz2">spr_HUD_Top_Frostbyte_9375f934-d5f1-4569-9eb1-04117c10b948.tpe</tpe>
-  <tpe x="1768" y="1944" tpage="default_0.bz2">spr_HUD_Bottom_Frostbyte_8a85dcfd-2460-4166-bbe8-b6cb394f0eb4.tpe</tpe>
-  <tpe x="1610" y="1920" tpage="default_1.bz2">MainMenuForeground_Frostbyte_1c906611-4ee3-4096-8b48-0adf6bce8d85.tpe</tpe>
-  <tpe x="1968" y="1538" tpage="default_0.bz2">spr_pc_Frostbyte_9007b6bf-e808-4ae0-8d35-e5ba5e736739.tpe</tpe>
+  <tpe x="1854" y="1538" tpage="default_0.bz2">spr_HUD_Bottom_Frostbyte_8a85dcfd-2460-4166-bbe8-b6cb394f0eb4.tpe</tpe>
+  <tpe x="1768" y="1944" tpage="default_0.bz2">MainMenuForeground_Frostbyte_1c906611-4ee3-4096-8b48-0adf6bce8d85.tpe</tpe>
+  <tpe x="1768" y="1987" tpage="default_0.bz2">spr_pc_Frostbyte_9007b6bf-e808-4ae0-8d35-e5ba5e736739.tpe</tpe>
   <tpe x="1566" y="1890" tpage="default_0.bz2">spr_collector_Frostbyte_e4824540-2c4a-456b-8c9d-0874ea4e126f.tpe</tpe>
-  <tpe x="1964" y="1944" tpage="default_0.bz2">spr_collector_Frostbyte_f04d9478-c503-4218-a3df-aa5e2206c9cf.tpe</tpe>
-  <tpe x="1964" y="1982" tpage="default_0.bz2">spr_collector_Frostbyte_f1868d69-7dff-4dd8-96c3-d5451a7411de.tpe</tpe>
-  <tpe x="2002" y="1583" tpage="default_0.bz2">spr_textBox_Frostbyte_c50f94d4-d5d4-446c-b357-ad0b5ea864b7.tpe</tpe>
-  <tpe x="2002" y="1619" tpage="default_0.bz2">spr_button_Frostbyte_cc1b6d79-7ea2-4752-9c93-24032d79b504.tpe</tpe>
-  <tpe x="2002" y="1654" tpage="default_0.bz2">spr_foodBush_Frostbyte_0cc77fc8-f227-4237-9d66-e934561d439f.tpe</tpe>
-  <tpe x="2002" y="1688" tpage="default_0.bz2">spr_foodBush_Frostbyte_303b0797-77ed-4034-9d1c-9a62a92294a5.tpe</tpe>
-  <tpe x="2002" y="1722" tpage="default_0.bz2">spr_foodBush_Frostbyte_50d43fa7-1b42-41a4-ac07-aea64c47e777.tpe</tpe>
-  <tpe x="2002" y="1756" tpage="default_0.bz2">spr_foodBush_Frostbyte_ac13dd78-6aaf-4bd1-8e04-fa6187d691ad.tpe</tpe>
-  <tpe x="2002" y="1790" tpage="default_0.bz2">spr_button_Frostbyte_c1e837d0-905f-4bef-a706-5e4b2720a228.tpe</tpe>
-  <tpe x="1968" y="1583" tpage="default_0.bz2">spr_meleeSlash_Frostbyte_73887cba-075d-4155-8ccb-6aa42e87e7fa.tpe</tpe>
+  <tpe x="2008" y="1623" tpage="default_0.bz2">spr_collector_Frostbyte_f04d9478-c503-4218-a3df-aa5e2206c9cf.tpe</tpe>
+  <tpe x="1844" y="1987" tpage="default_0.bz2">spr_collector_Frostbyte_f1868d69-7dff-4dd8-96c3-d5451a7411de.tpe</tpe>
+  <tpe x="2008" y="1661" tpage="default_0.bz2">spr_textBox_Frostbyte_c50f94d4-d5d4-446c-b357-ad0b5ea864b7.tpe</tpe>
+  <tpe x="1854" y="1623" tpage="default_0.bz2">spr_button_Frostbyte_cc1b6d79-7ea2-4752-9c93-24032d79b504.tpe</tpe>
+  <tpe x="1882" y="1987" tpage="default_0.bz2">spr_foodBush_Frostbyte_0cc77fc8-f227-4237-9d66-e934561d439f.tpe</tpe>
+  <tpe x="2008" y="1697" tpage="default_0.bz2">spr_foodBush_Frostbyte_303b0797-77ed-4034-9d1c-9a62a92294a5.tpe</tpe>
+  <tpe x="1890" y="1623" tpage="default_0.bz2">spr_foodBush_Frostbyte_50d43fa7-1b42-41a4-ac07-aea64c47e777.tpe</tpe>
+  <tpe x="1854" y="1658" tpage="default_0.bz2">spr_foodBush_Frostbyte_ac13dd78-6aaf-4bd1-8e04-fa6187d691ad.tpe</tpe>
+  <tpe x="1917" y="1987" tpage="default_0.bz2">spr_button_Frostbyte_c1e837d0-905f-4bef-a706-5e4b2720a228.tpe</tpe>
+  <tpe x="2008" y="1731" tpage="default_0.bz2">spr_meleeSlash_Frostbyte_73887cba-075d-4155-8ccb-6aa42e87e7fa.tpe</tpe>
   <tpe x="1070" y="2022" tpage="default_0.bz2">gooey_Frostbyte_c0f54926-adf2-4be7-bd61-12d28b85d061.tpe</tpe>
-  <tpe x="1768" y="2029" tpage="default_0.bz2">spr_herbivore_1_Frostbyte_82447068-f25c-4c4d-9239-dbec4b84f61e.tpe</tpe>
+  <tpe x="1844" y="2025" tpage="default_0.bz2">spr_herbivore_1_Frostbyte_82447068-f25c-4c4d-9239-dbec4b84f61e.tpe</tpe>
   <tpe x="1566" y="1928" tpage="default_0.bz2">spr_carnivore_1_Frostbyte_dbf6358e-ca4d-4608-a9b7-8be6d78eb615.tpe</tpe>
-  <tpe x="1964" y="2020" tpage="default_0.bz2">spr_human_Frostbyte_6d86ed4f-dc27-40d4-a6c5-ac6a01664ce5.tpe</tpe>
-  <tpe x="2002" y="1822" tpage="default_0.bz2">spr_human1_Frostbyte_f68e5350-be60-4b91-8a09-d82fb5e0452d.tpe</tpe>
-  <tpe x="1968" y="1621" tpage="default_0.bz2">spr_human2_Frostbyte_2f3c0155-a845-4d50-89e4-6dd65d55ffb3.tpe</tpe>
-  <tpe x="1102" y="2022" tpage="default_0.bz2">spr_monster_Frostbyte_cee71cf2-69aa-4654-9d41-b5d84e02d90e.tpe</tpe>
-  <tpe x="1984" y="2020" tpage="default_0.bz2">spr_target_Frostbyte_461c35e7-db79-4602-b139-1986366d3c6e.tpe</tpe>
-  <tpe x="1806" y="2029" tpage="default_0.bz2">spr_Wall_Frostbyte_56aeacac-eaba-4fb4-9cf5-61498f6a965f.tpe</tpe>
-  <tpe x="2022" y="1822" tpage="default_0.bz2">spr_human_Frostbyte_2c431ac6-e8a7-4daa-81f5-5bc4220bf423.tpe</tpe>
-  <tpe x="1968" y="1842" tpage="default_0.bz2">spr_human1_Frostbyte_5fe8a9a3-8abc-4d6a-90a2-d47fb343b977.tpe</tpe>
-  <tpe x="1122" y="2022" tpage="default_0.bz2">spr_human2_Frostbyte_03c328f4-ac39-4146-b24f-85b4fa9f5fb6.tpe</tpe>
-  <tpe x="2004" y="1842" tpage="default_0.bz2">spr_human_Frostbyte_f0379f59-2703-49ee-bfd2-fe28db309375.tpe</tpe>
-  <tpe x="1826" y="2029" tpage="default_0.bz2">spr_human1_Frostbyte_db1d4635-8033-45c7-9aa3-c61283fdeef5.tpe</tpe>
-  <tpe x="1968" y="1861" tpage="default_0.bz2">spr_human2_Frostbyte_6af38608-0263-4f97-8b80-28b11f8fef45.tpe</tpe>
-  <tpe x="1968" y="1641" tpage="default_0.bz2">spr_human_Frostbyte_7188c8a9-1891-4c2d-9fcb-df27cb701258.tpe</tpe>
-  <tpe x="1142" y="2022" tpage="default_0.bz2">spr_human1_Frostbyte_06a068b5-536b-4463-9064-3558ad391024.tpe</tpe>
-  <tpe x="2004" y="1860" tpage="default_0.bz2">spr_human2_Frostbyte_e2672450-68bb-4280-8986-fc1d2c63bf37.tpe</tpe>
-  <tpe x="2024" y="1841" tpage="default_0.bz2">spr_CPU_Frostbyte_875c6c69-a71f-449c-ae75-b08cc0f8f5ae.tpe</tpe>
-  <tpe x="1846" y="2029" tpage="default_0.bz2">spr_GPU_Frostbyte_e1fd4d70-9129-4f50-be61-eeef8d7ffc71.tpe</tpe>
-  <tpe x="1968" y="1879" tpage="default_0.bz2">spr_RAM_Frostbyte_dd67f288-757d-4de9-840a-7b049aa2aa1f.tpe</tpe>
-  <tpe x="1988" y="1621" tpage="default_0.bz2">scribble_fallback_bulletpoint_Frostbyte_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
-  <tpe x="2037" y="1654" tpage="default_0.bz2">spr_pixel_Frostbyte_c6297ff6-6c93-44e7-bce1-c01ad1373730.tpe</tpe>
+  <tpe x="1882" y="2021" tpage="default_0.bz2">spr_human_Frostbyte_6d86ed4f-dc27-40d4-a6c5-ac6a01664ce5.tpe</tpe>
+  <tpe x="1925" y="1623" tpage="default_0.bz2">spr_human1_Frostbyte_f68e5350-be60-4b91-8a09-d82fb5e0452d.tpe</tpe>
+  <tpe x="1890" y="1657" tpage="default_0.bz2">spr_human2_Frostbyte_2f3c0155-a845-4d50-89e4-6dd65d55ffb3.tpe</tpe>
+  <tpe x="1854" y="1692" tpage="default_0.bz2">spr_monster_Frostbyte_cee71cf2-69aa-4654-9d41-b5d84e02d90e.tpe</tpe>
+  <tpe x="1953" y="1987" tpage="default_0.bz2">spr_target_Frostbyte_461c35e7-db79-4602-b139-1986366d3c6e.tpe</tpe>
+  <tpe x="1917" y="2019" tpage="default_0.bz2">spr_Wall_Frostbyte_56aeacac-eaba-4fb4-9cf5-61498f6a965f.tpe</tpe>
+  <tpe x="2008" y="1769" tpage="default_0.bz2">spr_human_Frostbyte_2c431ac6-e8a7-4daa-81f5-5bc4220bf423.tpe</tpe>
+  <tpe x="1102" y="2022" tpage="default_0.bz2">spr_human1_Frostbyte_5fe8a9a3-8abc-4d6a-90a2-d47fb343b977.tpe</tpe>
+  <tpe x="1945" y="1623" tpage="default_0.bz2">spr_human2_Frostbyte_03c328f4-ac39-4146-b24f-85b4fa9f5fb6.tpe</tpe>
+  <tpe x="1768" y="2032" tpage="default_0.bz2">spr_human_Frostbyte_f0379f59-2703-49ee-bfd2-fe28db309375.tpe</tpe>
+  <tpe x="1925" y="1643" tpage="default_0.bz2">spr_human1_Frostbyte_db1d4635-8033-45c7-9aa3-c61283fdeef5.tpe</tpe>
+  <tpe x="1889" y="1677" tpage="default_0.bz2">spr_human2_Frostbyte_6af38608-0263-4f97-8b80-28b11f8fef45.tpe</tpe>
+  <tpe x="1854" y="1712" tpage="default_0.bz2">spr_recipe_Frostbyte_895fcf0e-4486-485f-9d09-bc48307967ac.tpe</tpe>
+  <tpe x="1973" y="1987" tpage="default_0.bz2">spr_human_Frostbyte_7188c8a9-1891-4c2d-9fcb-df27cb701258.tpe</tpe>
+  <tpe x="1953" y="2007" tpage="default_0.bz2">spr_human1_Frostbyte_06a068b5-536b-4463-9064-3558ad391024.tpe</tpe>
+  <tpe x="2028" y="1769" tpage="default_0.bz2">spr_human2_Frostbyte_e2672450-68bb-4280-8986-fc1d2c63bf37.tpe</tpe>
+  <tpe x="2008" y="1788" tpage="default_0.bz2">spr_CPU_Frostbyte_875c6c69-a71f-449c-ae75-b08cc0f8f5ae.tpe</tpe>
+  <tpe x="1122" y="2022" tpage="default_0.bz2">spr_GPU_Frostbyte_e1fd4d70-9129-4f50-be61-eeef8d7ffc71.tpe</tpe>
+  <tpe x="1965" y="1623" tpage="default_0.bz2">spr_RAM_Frostbyte_dd67f288-757d-4de9-840a-7b049aa2aa1f.tpe</tpe>
+  <tpe x="1902" y="2021" tpage="default_0.bz2">scribble_fallback_bulletpoint_Frostbyte_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
+  <tpe x="1882" y="2041" tpage="default_0.bz2">spr_pixel_Frostbyte_c6297ff6-6c93-44e7-bce1-c01ad1373730.tpe</tpe>
 </TextureGroup>

@@ -10,6 +10,7 @@ if (x < 0 || x > room_width || y < 0 || y > room_height) {
 image_angle = direction;
 
 
+if (!ds_exists(hitObjectList, ds_type_list)) {return;} 
 ds_list_clear(hitObjectList);
 var hitCount = instance_place_list(x, y, targets, hitObjectList, false);
 
@@ -19,7 +20,7 @@ if (hitCount > 0) {
         var hitObject = hitObjectList[| i];
         if (hitObject != shooter) 
         {
-            hitObject.TakeDamage(damage, damageType);
+            hitObject.entityHealth.TakeDamage(damage, damageType);
             bulletItem.Use(new Vector2(x, y))
             if (!hitMultiple) 
             {

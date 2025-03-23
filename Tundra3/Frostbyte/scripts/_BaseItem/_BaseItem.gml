@@ -9,6 +9,7 @@ function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equip
     weight = _weight;
     staminaCost = _staminaCost;
     sprite = _sprite;
+    equipped = false;
 
     // override this function in child classes
     function Use() {}

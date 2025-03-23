@@ -20,18 +20,7 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
         }
 
         var weapon = inventory.GetEquippedWeapon();
-        var damage = weapon.GetDamage();
-        switch (weapon.GetWeaponType())
-        {
-            case WeaponType.Melee:
-                damage += stats.GetMeleeDamage();
-                show_debug_message($"Spawn a melee attack object with damage: {damage} at point {_attackPoint}");
-                break;
-            case WeaponType.Ranged:
-                damage += stats.GetRangedDamage();
-                show_debug_message($"Spawn a ranged attack object with damage: {damage} at {_attackPoint} and aim it towards {self.attackDirection}");
-                break;
-        }
+        weapon.Use();
     }
 
     function Step(_attackPoint, _attackDirection)
@@ -40,15 +29,7 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
         var weapon = inventory.GetEquippedWeapon();
         if (weapon != undefined)
         {
-            switch (weapon.GetWeaponType())
-            {
-                case WeaponType.Melee:
-                    attackCooldown = game_get_speed(gamespeed_fps) / (stats.GetMeleeAttackSpeed() + (weapon.GetItemRotationAffector() * 2));
-                    break;
-                case WeaponType.Ranged:
-                    attackCooldown = game_get_speed(gamespeed_fps) / (stats.GetRangedAttackSpeed() + (weapon.GetItemRotationAffector() * 2));
-                    break;
-            }
+            attackCooldown = inventory.GetWeaponAttackSpeed() * 60;
         }
         
         self.attackDirection = _attackDirection;
