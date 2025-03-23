@@ -2,7 +2,7 @@ isUndead = false;
 canAttack = false;
 canMove = true;
 
-collisionObjects = [obj_Wall, obj_Collector];
+collisionObjects = [obj_Wall, obj_Collector, obj_PCManager];
 doOnce = false;
 
 target = new Target(id);

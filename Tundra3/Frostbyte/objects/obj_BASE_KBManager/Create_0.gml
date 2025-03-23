@@ -1,5 +1,8 @@
 buttons = [];
 selectIndex = 0;
+playerIndex = 0;
+leftRight = false;
+maxNumOfButtons = 10;
 
 function AddButtonToList(kbBTNID)
 {
@@ -13,9 +16,13 @@ function UpdateButton()
 {
     for (var i = 0; i < array_length(buttons); i++)
     {
-        if (i == selectIndex) buttons[i].fsm.change("hovered");
+        if (i == selectIndex) {
+            buttons[i].fsm.change("hovered");
+        }
         else buttons[i].fsm.change("idle");
     }
+    
+
 }
 
 function OnButtonClick()
@@ -34,3 +41,5 @@ function OnButtonClickEnd()
         buttons[selectIndex].OnClickEnd();
     }
 }
+
+alarm[0] = 5;
