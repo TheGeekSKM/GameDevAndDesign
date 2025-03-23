@@ -8,7 +8,6 @@ temperature.Step();
 entityData.Step();
 
 if (entityHealth.IsDead()) instance_destroy();
-echo($"Player ${PlayerIndex} Paused: {paused}")
 if (paused) return;
 
 var menu = global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Menu);

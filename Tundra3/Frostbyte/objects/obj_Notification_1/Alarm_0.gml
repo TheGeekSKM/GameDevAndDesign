@@ -1,0 +1,1 @@
+Raise("NotificationClose", index);

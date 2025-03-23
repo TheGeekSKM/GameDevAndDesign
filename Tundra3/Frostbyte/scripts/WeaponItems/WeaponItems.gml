@@ -94,19 +94,21 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
 
     function Use()
     {
+        var bullet = owner.inventory.GetEquippedBullet();
+        if (bullet == undefined) 
+        {
+            var str = "No Ammo is equipped!";
+            echo(owner.PlayerIndex);
+            Raise("NotificationOpen", [str, owner.PlayerIndex]);
+            return;
+        }
+        
         if (owner.stamina.GetStamina() <= staminaCost) {
             return;
         }
         else
         {
             owner.stamina.UseStamina(staminaCost);
-        }
-
-        var bullet = owner.inventory.GetEquippedBullet();
-        if (bullet == undefined) 
-        {
-            show_message("No bullets equipped. Tell the player to equip some bullets.");
-            return;
         }
 
         var bulletObject = instance_create_layer(owner.x, owner.y, "Bullets", obj_Bullet);

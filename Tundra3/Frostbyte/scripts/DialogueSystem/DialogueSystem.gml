@@ -44,5 +44,4 @@ function DialogueLine(_speaker, _line) constructor {
 
 function StartDialogueScene(_dialogueScene, _playerIndex)
 {
-	show_message("start the scene in the appropriate dialogue text object")
 }

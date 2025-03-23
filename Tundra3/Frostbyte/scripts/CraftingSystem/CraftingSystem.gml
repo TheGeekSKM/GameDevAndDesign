@@ -65,12 +65,14 @@ function Recipe(_name, _requiredItems, _outputItems) constructor {
         for (var i = 0; i < array_length(requiredItems); i++) {
             var index = _owner.inventory.ContainsItem(requiredItems[i].item);
             if (index == -1) {
-                show_message($"You don't have {requiredItems[i].item.name} in your inventory");
+                var str = $"You don't have {requiredItems[i].item.name} in your inventory"
+                Raise("NotificationOpen", [str, _owner.PlayerIndex]);
                 return;
             }
 
             if (_owner.inventory.allItems[index].quantity < requiredItems[i].count) {
-                show_message($"You don't have enough {requiredItems[i].item.name}");
+                var str = $"You don't have enough {requiredItems[i].item.name} in your inventory"
+                Raise("NotificationOpen", [str, _owner.PlayerIndex]);
                 return;
             }
         }
@@ -85,7 +87,8 @@ function Recipe(_name, _requiredItems, _outputItems) constructor {
             _owner.inventory.AddItem(outputItems[i].item, outputItems[i].count);
         }
 
-        show_message($"Crafting Successful!\nYou recieved {outputItems[0].count}x {outputItems[0].item.name}");
+        var str = $"You crafted {outputItems[0].item.name} x{outputItems[0].count}";
+        Raise("NotificationOpen", [str, _owner.PlayerIndex]);
     }
 
     function ToString()

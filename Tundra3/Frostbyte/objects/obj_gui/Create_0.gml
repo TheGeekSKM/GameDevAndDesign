@@ -2,6 +2,35 @@ p1State = UIMenuState.noUI;
 p2State = UIMenuState.noUI;
 
 
+Subscribe("NotificationOpen", function(_data) {
+    if (_data[1] == 0) 
+    {
+        with(obj_Notification_0) {SetData(_data);}
+        layer_sequence_headdir(p1_notification, seqdir_right);
+        layer_sequence_play(p1_notification);
+    }
+    else if (_data[1] == 1) 
+    {
+        with(obj_Notification_1) {SetData(_data);}
+        layer_sequence_headdir(p2_notification, seqdir_right);
+        layer_sequence_play(p2_notification);
+    }
+});
+
+Subscribe("NotificationClose", function(_id) {
+    if (_id == 0) 
+    {
+        layer_sequence_headdir(p1_notification, seqdir_left);
+        layer_sequence_play(p1_notification);
+    }
+    else if (_id == 1) 
+    {
+        layer_sequence_headdir(p2_notification, seqdir_left);
+        layer_sequence_play(p2_notification);
+    }
+});
+
+
 Subscribe("PauseOpen", function(_id) {
     if (_id == 0) ShowMenuStateLeft(UIMenuState.pause);
     else if (_id == 1) ShowMenuStateRight(UIMenuState.pause);
@@ -91,6 +120,13 @@ if (!layer_exists(layerName)) {
     layer_create(-999, layerName);
 }
 
+layerNotificationName = "Notification";
+if (!layer_exists(layerNotificationName)) {
+    layer_create(-9999, layerNotificationName);
+}
+
+p1_notification = layer_sequence_create(layerNotificationName, 0, 0, SEQ_Notification_0);
+layer_sequence_pause(p1_notification);
 p1_crafting = layer_sequence_create(layerName, 0, 0, SEQ_Crafting_0);
 layer_sequence_pause(p1_crafting);
 p1_dialogue = layer_sequence_create(layerName, 0, 0, SEQ_Dialogue_0);
@@ -106,6 +142,8 @@ layer_sequence_pause(p1_quest);
 p1_playerStats = layer_sequence_create(layerName, 0, 0, SEQ_Stats_0);
 layer_sequence_pause(p1_playerStats);
 
+p2_notification = layer_sequence_create(layerNotificationName, 400, 0, SEQ_Notification_1);
+layer_sequence_pause(p2_notification);
 p2_crafting = layer_sequence_create(layerName, 400, 0, SEQ_Crafting_1)
 layer_sequence_pause(p2_crafting);
 p2_dialogue = layer_sequence_create(layerName, 400, 0, SEQ_Dialogue_1);
@@ -324,3 +362,7 @@ function RightOnEnter()
             break;    
     }
 } 
+
+
+echo($"notification sequence pos: {layer_sequence_get_x(p1_notification)}, {layer_sequence_get_y(p1_notification)}");
+echo($"notification sequence pos: {layer_sequence_get_x(p2_notification)}, {layer_sequence_get_y(p2_notification)}");

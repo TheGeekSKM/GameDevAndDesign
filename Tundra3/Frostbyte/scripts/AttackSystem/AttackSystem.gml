@@ -15,7 +15,7 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
     function Attack(_attackPoint) {
         if (inventory.GetEquippedWeapon() == undefined) 
         {
-            show_debug_message("No weapon equipped");
+            Raise("NotificationOpen", ["You have no weapon equipped in your inventory.", owner.PlayerIndex]);
             return;
         }
 

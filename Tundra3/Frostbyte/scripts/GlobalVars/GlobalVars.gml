@@ -32,7 +32,7 @@ function Vars() constructor {
 	RAM = new ConsumableItem("RAM", 1, 2, [new StatusEffects(StatType.Dexterity, 2, 10)], spr_RAM);
 
 	// Sword = new MeleeWeaponItem("Sword", c_red, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_CPU);
-	// Bow = new RangedWeaponItem("Bow", 150, 10, 10, 5, [], spr_CPU);
+	Bow = new RangedWeaponItem("Bow", 150, 10, 10, 5, [], spr_CPU);
 	// Arrow = new BulletItem("Arrow", false, 10, 2, DamageType.PHYSICAL, 0, [], spr_CPU);
 
 	DiscoveredRecipes = [];
