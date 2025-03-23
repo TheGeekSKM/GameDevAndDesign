@@ -58,7 +58,7 @@ if (canAttack)
 
     var target = attackerDist < preyDist ? attacker : preyTarget;
     var dir = point_direction(x, y, target.x, target.y);
-    var pointInFront = new Vector2(x + lengthdir_x(5, image_angle), y + lengthdir_y(5, image_angle));
+    var pointInFront = new Vector2(x + lengthdir_x(10, image_angle), y + lengthdir_y(10, image_angle));
     
     if (point_distance(x, y, target.x, target.y) <= attackRange)
     {

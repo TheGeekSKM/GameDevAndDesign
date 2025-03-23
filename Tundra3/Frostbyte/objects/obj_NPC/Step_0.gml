@@ -2,14 +2,6 @@ event_inherited();
 
 if (entityHealth.IsDead()) 
 {
-    delete stats;
-    delete inventory;
-    delete entityHealth;
-    delete stamina;
-    delete hunger;
-    delete temperature;
-    delete attack;
-    delete entityData;
     instance_destroy();
 }
 

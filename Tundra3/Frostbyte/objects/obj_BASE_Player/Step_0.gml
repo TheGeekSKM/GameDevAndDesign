@@ -10,14 +10,6 @@ entityData.Step();
 if (entityHealth.IsDead()) 
 {
     Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
-    delete stats;
-    delete inventory;
-    delete entityHealth;
-    delete stamina;
-    delete hunger;
-    delete temperature;
-    delete attack;
-    delete entityData;
     instance_destroy();
 }
 if (paused) return;
