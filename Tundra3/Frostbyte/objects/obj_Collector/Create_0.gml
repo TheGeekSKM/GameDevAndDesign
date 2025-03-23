@@ -32,7 +32,17 @@ function OnInteract()
     if (index != -1)
     {
         inventory.RemoveItem(index, 1);
-        show_message("TODO: Make Computer Take Part pls!!!")
+        switch (currentType)
+        {
+            case CollectorType.CPU: obj_PCManager.AddItem("CPU"); break;
+            case CollectorType.GPU: obj_PCManager.AddItem("GPU"); break;
+            case CollectorType.RAM: obj_PCManager.AddItem("RAM"); break;
+        }
+    }
+    else
+    {
+        str = $"You don't have any {CollectorTypeToString()} to give.";
+        Raise("NotificationOpen", [str, playerInRange.PlayerIndex]);
     }
 }
 

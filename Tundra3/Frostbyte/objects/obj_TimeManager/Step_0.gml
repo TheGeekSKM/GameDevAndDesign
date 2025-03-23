@@ -1,4 +1,18 @@
 if (state == "DAY_HOLD") {
+
+    if (doOncePerDay == false) {
+        // Do something once per day
+        daysSurvived += 1;
+        Raise("DayDisplayOpen", id);
+        
+        if (daysSurvived >= 3)
+        {
+            Transition(rmWin, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+        }
+
+        doOncePerDay = true;
+    }
+
     holdTimer += 1;
     if (holdTimer >= holdTime) {
         holdTimer = 0;
@@ -14,6 +28,12 @@ else if (state == "DAY_TO_NIGHT") {
     }
 }
 else if (state == "NIGHT_HOLD") {
+
+    if (doOncePerDay == true) {
+        // Do something once per night
+        doOncePerDay = false;
+    }
+
     holdTimer += 1;
     if (holdTimer >= holdTime) {
         holdTimer = 0;

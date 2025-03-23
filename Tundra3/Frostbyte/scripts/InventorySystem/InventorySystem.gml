@@ -53,7 +53,10 @@ function Inventory(_stats, _owner) constructor {
         for (var i = 0; i < _count; i += 1) {
             item.PickUp(self.owner);
         }
-        
+
+        var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+        popUp.Init($"Picked Up {_item.name} x{_count}");
+                
         return _item;
     }
 
@@ -111,7 +114,38 @@ function Inventory(_stats, _owner) constructor {
             slot.item.Drop();
         }
 
+        var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+        popUp.Init($"Dropped {_item.name} x{_count}");     
+        
+        if (_item.equipped) Unequip(_item);
         RemoveItem(index, _count);
+
+        var itemCol = instance_create_layer(owner.x, owner.y, "Interactables", obj_BASE_Collectible);
+        itemCol.Initialize(_item, _count);
+
+        return true;
+    }
+
+    function DropItemByIndex(_index, _count)
+    {
+        if (_index < 0 or _index >= array_length(allItems)) return false;
+        var slot = allItems[_index];
+        if (slot.quantity < _count) return false;
+        
+        for (var i = 0; i < _count; i += 1) {
+            slot.item.Drop();
+        }
+
+        var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+        popUp.Init($"Dropped {slot.item.name} x{_count}");     
+        
+        if (slot.item.equipped) Unequip(slot.item);
+        RemoveItem(_index, _count);
+
+        var itemCol = instance_create_layer(owner.x, owner.y, "Interactables", obj_BASE_Collectible);
+        itemCol.Initialize(slot.item, _count);
+
+
         return true;
     }
 
@@ -130,6 +164,8 @@ function Inventory(_stats, _owner) constructor {
         if (slot.item.Equals(equippedWeapon)) equippedWeapon = undefined;
         else if (slot.item.Equals(equippedArmor)) equippedArmor = undefined;
         else if (slot.item.Equals(equippedBullet)) equippedBullet = undefined;
+
+        if (slot.quantity == 0) array_delete(allItems, _itemIndex, 1);
 
         return false;
     }

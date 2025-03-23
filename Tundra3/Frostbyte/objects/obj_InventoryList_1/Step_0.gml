@@ -39,8 +39,9 @@ if (select)
     obj_Player2.inventory.UseItemByIndex(selectedIndex, 1, PlayerIndex);
 }
 
-var menu = global.vars.InputManager.IsPressed(1, ActionType.Menu);
-if (menu)
+
+var drop = global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Action2);
+if (drop)
 {
-    Raise("InventoryClose", PlayerIndex);
+    obj_Player1.inventory.DropItemByIndex(selectedIndex, 1);
 }

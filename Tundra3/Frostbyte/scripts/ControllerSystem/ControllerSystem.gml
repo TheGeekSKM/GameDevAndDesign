@@ -4,6 +4,7 @@ function BaseController(_owner) constructor {
 
     function AddState(_stateStruct)
     {
+        if (!instance_exists(owner)) return;
         stateMachine.add(_stateStruct.name, {
             enter: _stateStruct.enter,
             step: _stateStruct.step,
@@ -15,17 +16,20 @@ function BaseController(_owner) constructor {
 
     function Step()
     {
+        if (!instance_exists(owner)) return;
         stateMachine.step();
     }
 
     function Draw()
     {
+        if (!instance_exists(owner)) return;
         stateMachine.draw();
         
     }
 
     function DrawGUI()
     {
+        if (!instance_exists(owner)) return;
         stateMachine.drawGUI();
     }
 }

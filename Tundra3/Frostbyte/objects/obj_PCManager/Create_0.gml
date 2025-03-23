@@ -13,6 +13,7 @@ resources = ["CPU", "GPU", "RAM"];
 
 function OnInteract()
 {
+    Raise("PCViewOpen", playerInRange.PlayerIndex);
 }
 
 function ToString()
@@ -22,4 +23,14 @@ function ToString()
     str += $"GPU: {gpu_stock}\n";
     str += $"RAM: {ram_stock}\n";
     return str;
+}
+
+function AddItem(_item)
+{
+    switch (_item)
+    {
+        case "CPU": cpu_stock += 1; break;
+        case "GPU": gpu_stock += 1; break;
+        case "RAM": ram_stock += 1; break;
+    }
 }

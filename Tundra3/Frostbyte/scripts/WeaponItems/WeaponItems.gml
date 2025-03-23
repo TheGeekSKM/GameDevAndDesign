@@ -97,9 +97,8 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
         var bullet = owner.inventory.GetEquippedBullet();
         if (bullet == undefined) 
         {
-            var str = "No Ammo is equipped!";
-            echo(owner.PlayerIndex);
-            Raise("NotificationOpen", [str, owner.PlayerIndex]);
+            if (variable_instance_exists(owner, "PlayerIndex"))
+                Raise("NotificationOpen", ["You have no ammo equipped in your inventory.", owner.PlayerIndex]);
             return;
         }
         

@@ -114,6 +114,16 @@ Subscribe("StatsClose", function(_id) {
     else if (_id == 1) ShowMenuStateRight(UIMenuState.noUI);
 });
 
+Subscribe("DayDisplayOpen", function(_id) {
+    layer_sequence_headdir(daySequence, seqdir_right);
+    layer_sequence_play(daySequence);    
+});
+
+Subscribe("DayDisplayClose", function(_id) {
+    layer_sequence_headdir(daySequence, seqdir_left);
+    layer_sequence_play(daySequence);    
+});
+
 
 layerName = "GUI";
 if (!layer_exists(layerName)) {
@@ -124,6 +134,9 @@ layerNotificationName = "Notification";
 if (!layer_exists(layerNotificationName)) {
     layer_create(-9999, layerNotificationName);
 }
+
+daySequence = layer_sequence_create(layerNotificationName, 0, 0, SEQ_DayNotice);
+layer_sequence_pause(daySequence);
 
 p1_notification = layer_sequence_create(layerNotificationName, 0, 0, SEQ_Notification_0);
 layer_sequence_pause(p1_notification);

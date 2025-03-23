@@ -36,3 +36,6 @@ scene = new DialogueScene()
 function OnInteract() {
     StartDialogue(scene, playerInRange.PlayerIndex);
 }
+
+inventory.Equip(inventory.AddItem(global.vars.Bow));
+inventory.Equip(inventory.AddItem(global.vars.Arrow));

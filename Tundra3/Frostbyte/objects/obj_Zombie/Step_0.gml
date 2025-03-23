@@ -5,7 +5,18 @@ stamina.Step();
 entityData.Step();
 hunger.Step();
 
-if (entityHealth.IsDead()) instance_destroy();
+if (entityHealth.IsDead()) 
+{
+    delete stats;
+    delete inventory;
+    delete entityHealth;
+    delete stamina;
+    delete hunger;
+    delete temperature;
+    delete attack;
+    delete entityData;
+    instance_destroy();
+}
 
 controller.Step();
 

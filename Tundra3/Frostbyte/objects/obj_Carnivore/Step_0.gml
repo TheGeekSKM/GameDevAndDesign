@@ -30,6 +30,7 @@ if (canMove)
     }
     else if (chaseTarget)
     {
+        if (!instance_exists(preyTarget)) { return;}
         image_angle = point_direction(x, y, preyTarget.x, preyTarget.y);
         xMove = lengthdir_x(stats.GetMoveSpeed(), image_angle);
         yMove = lengthdir_y(stats.GetMoveSpeed(), image_angle);

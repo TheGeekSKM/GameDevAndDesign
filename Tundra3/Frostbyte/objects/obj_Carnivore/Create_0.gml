@@ -31,6 +31,19 @@ temperature = new TemperatureSystem(stats, entityHealth, id);
 attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 
+if (entityHealth.IsDead()) 
+{
+    delete stats;
+    delete inventory;
+    delete entityHealth;
+    delete stamina;
+    delete hunger;
+    delete temperature;
+    delete attack;
+    delete entityData;
+    instance_destroy();
+}
+
 xMove = ChooseFromArray([-1, 1]) * 3;
 yMove = ChooseFromArray([-1, 1]) * 3;
 
@@ -44,3 +57,5 @@ function StopCheckingForPrey() {
 }
 
 controller = new CarnivoreAIController(id);
+
+inventory.Equip(inventory.AddItem(new MeleeWeaponItem("Claws", c_white, 100, 10, DamageType.PHYSICAL, 10, 2, [], spr_meleeSlash)));

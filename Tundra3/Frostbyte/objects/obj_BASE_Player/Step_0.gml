@@ -7,7 +7,19 @@ hunger.Step();
 temperature.Step();
 entityData.Step();
 
-if (entityHealth.IsDead()) instance_destroy();
+if (entityHealth.IsDead()) 
+{
+    Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    delete stats;
+    delete inventory;
+    delete entityHealth;
+    delete stamina;
+    delete hunger;
+    delete temperature;
+    delete attack;
+    delete entityData;
+    instance_destroy();
+}
 if (paused) return;
 
 var menu = global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Menu);

@@ -41,3 +41,9 @@ if (select)
     obj_Player1.inventory.UseItemByIndex(selectedIndex, 1, PlayerIndex);
 }
 
+var drop = global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Action2);
+if (drop)
+{
+    obj_Player1.inventory.DropItemByIndex(selectedIndex, 1);
+}
+

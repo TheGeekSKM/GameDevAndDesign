@@ -15,7 +15,7 @@ canCheckForPrey = false;
 prey = noone;
 nearbyPrey = ds_list_create();
 
-stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8));
+stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(1, 2));
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);
@@ -42,3 +42,6 @@ function StopCheckingForPrey()
 controller = new UndeadAIController(id);
 
 targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Carnivore];
+
+inventory.Equip(inventory.AddItem(global.vars.Arrow));
+inventory.Equip(inventory.AddItem(global.vars.Bow));

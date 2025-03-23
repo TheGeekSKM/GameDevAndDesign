@@ -15,7 +15,8 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
     function Attack(_attackPoint) {
         if (inventory.GetEquippedWeapon() == undefined) 
         {
-            Raise("NotificationOpen", ["You have no weapon equipped in your inventory.", owner.PlayerIndex]);
+            if (variable_instance_exists(owner, "PlayerIndex"))
+                Raise("NotificationOpen", ["You have no weapon equipped in your inventory.", owner.PlayerIndex]);
             return;
         }
 
@@ -30,6 +31,7 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
         if (weapon != undefined)
         {
             attackCooldown = inventory.GetWeaponAttackSpeed() * 60;
+            echo($"{owner}'s AttackSpeed: {inventory.GetWeaponAttackSpeed()}s")
         }
         
         self.attackDirection = _attackDirection;
