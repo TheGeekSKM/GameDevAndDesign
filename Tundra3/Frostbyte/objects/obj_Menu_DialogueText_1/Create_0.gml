@@ -11,7 +11,6 @@ function StartDialogue(_dialogueScene)
     if (_dialogueScene.finished) return;
     currentDialogueScene = _dialogueScene;
     text = currentDialogueScene.GetNextDialogue();
-    global.vars.Players[playerIndex].controller.OpenMenu();
     Raise($"Player{playerIndex}Dialogue", text);
 }
 
@@ -37,11 +36,12 @@ function Step()
         }
         
         text = currentDialogueScene.GetNextDialogue();
-        Raise($"Player{playerIndex}Dialogue", text);
-        
-        if (!currentDialogueScene.CanContinue())
+        if (text == undefined)
         {
-           Raise("DialogueClose", playerIndex);
+            Raise("DialogueClose", playerIndex);
+            return;
         }
+
+        Raise($"Player{playerIndex}Dialogue", text);
     }    
 }

@@ -31,7 +31,6 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) construc
         if (weapon != undefined)
         {
             attackCooldown = inventory.GetWeaponAttackSpeed() * 60;
-            echo($"{owner}'s AttackSpeed: {inventory.GetWeaponAttackSpeed()}s")
         }
         
         self.attackDirection = _attackDirection;

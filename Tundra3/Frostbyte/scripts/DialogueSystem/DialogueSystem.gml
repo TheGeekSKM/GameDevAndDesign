@@ -1,14 +1,14 @@
 function DialogueScene() constructor {
 	dialogues = [];
-	currentLine = 0;
+	currentLine = -1;
     finished = false;
 
 	function GetNextDialogue()
 	{
-		if (currentLine < array_length(dialogues))
+		if (currentLine + 1 < array_length(dialogues))
 		{
+            currentLine += 1;
 			var line = dialogues[currentLine];
-			currentLine += 1;
 			return line;
 		}
 		else
@@ -30,7 +30,6 @@ function DialogueScene() constructor {
 		var canContinue = currentLine < array_length(dialogues);
 		if (!canContinue)
 		{
-			currentLine = 0;
 			finished = true;
 		}
 		return currentLine < array_length(dialogues);
