@@ -41,6 +41,8 @@ function SetQuest(_quest) {
 }
 
 
+function QuestLogic() { }
+
 function OnInteract() {
     var currentDialogue = dialogueSceneIndex < array_length(dialogueScenes) ? dialogueScenes[dialogueSceneIndex] : undefined;
     if (currentDialogue != undefined) {
@@ -51,19 +53,7 @@ function OnInteract() {
         if (GetQuest(quest.name) == undefined) {
             AddQuest(quest);
         }
-
-        var q = GetQuest(quest.name);
-        switch (q.state) {
-            case QuestState.Inactive:
-                q.state = QuestState.Active;
-                break;
-            case QuestState.Active:
-                q.state = QuestState.Completed;
-                break;
-            case QuestState.Completed:
-                break;
-        }
-        
+        QuestLogic();
     }
     
     if (dialogueSceneIndex + 1 < array_length(dialogueScenes)) {
