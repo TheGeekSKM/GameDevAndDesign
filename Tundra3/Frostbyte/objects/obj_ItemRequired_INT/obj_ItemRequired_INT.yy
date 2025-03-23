@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_BASE_Collectible",
+  "%Name":"obj_ItemRequired_INT",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_BASE_Collectible",
+  "name":"obj_ItemRequired_INT",
   "overriddenProperties":[],
   "parent":{
     "name":"Base",
@@ -29,9 +28,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"destroyOnPickUp","filters":[],"listItems":[],"multiselect":false,"name":"destroyOnPickUp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

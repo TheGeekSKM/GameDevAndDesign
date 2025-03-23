@@ -8,6 +8,8 @@ collisionObjects = [obj_Wall];
 
 attackRange = 64;
 
+image_blend = make_color_hsv(irandom(255), 150, 100);
+
 stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8));
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
@@ -26,15 +28,47 @@ targets = [obj_Herbivore, obj_Carnivore, obj_BASE_Player, obj_Zombie];
 playerInRange = noone;
 textToDisplay = $"{Name}\n{InteractText}";
 
-scene = new DialogueScene()
-    .AddDialogue(spr_carnivore_1, "Hello there!")
-    .AddDialogue(spr_carnivore_1, "I am a carnivore!")
-    .AddDialogue(spr_carnivore_1, "I like to eat meat!");
+dialogueSceneIndex = 0;
+dialogueScenes = [];
 
+function AddDialogueToList(dialogue) {
+    array_push(dialogueScenes, dialogue);
+}
+
+quest = undefined;
+function SetQuest(_quest) {
+    quest = _quest;
+}
 
 
 function OnInteract() {
-    Raise("DialogueOpen", [playerInRange.PlayerIndex, scene]); 
+    var currentDialogue = dialogueSceneIndex < array_length(dialogueScenes) ? dialogueScenes[dialogueSceneIndex] : undefined;
+    if (currentDialogue != undefined) {
+        Raise("DialogueOpen", [playerInRange.PlayerIndex, currentDialogue]); 
+    }
+
+    if (quest != undefined) {
+        if (GetQuest(quest.name) == undefined) {
+            AddQuest(quest);
+        }
+
+        var q = GetQuest(quest.name);
+        switch (q.state) {
+            case QuestState.Inactive:
+                q.state = QuestState.Active;
+                break;
+            case QuestState.Active:
+                q.state = QuestState.Completed;
+                break;
+            case QuestState.Completed:
+                break;
+        }
+        
+    }
+    
+    if (dialogueSceneIndex + 1 < array_length(dialogueScenes)) {
+        dialogueSceneIndex++;
+    }
 }
 
 inventory.Equip(inventory.AddItem(global.vars.Bow));

@@ -33,18 +33,16 @@ function GetQuest(_name)
 }
 
 /// @description Add quest to the quest list
-/// @param {string} _name
-/// @param {string} _description
-/// @param {id} _giver
-function AddQuest(_name, _description, _giver)
+/// @param {Struct} _quest
+function AddQuest(_quest)
 {
-	if (variable_struct_exists(global.vars.QuestList, _name))
+	if (variable_struct_exists(global.vars.QuestList, _quest.name))
 	{
-		show_debug_message("Quest with name " + _name + " already exists!");
+		show_debug_message("Quest with name " + _quest.name + " already exists!");
 		return;
 	}
 
-	global.vars.QuestList[$ _name] = new Quest(_name, _description, _giver);
+	global.vars.QuestList[$ _quest.name] = _quest;
 }
 
 function GetNumberOfQuests()

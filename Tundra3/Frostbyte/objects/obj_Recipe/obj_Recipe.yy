@@ -9,8 +9,8 @@
   "name":"obj_Recipe",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactables",
-    "path":"folders/Objects/_Base/Interactables.yy",
+    "name":"Base",
+    "path":"folders/Objects/_Base/Interactables/Base.yy",
   },
   "parentObjectId":{
     "name":"obj_BASE_Interactable",

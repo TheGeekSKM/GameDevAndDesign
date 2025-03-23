@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_BASE_Collectible",
+  "%Name":"obj_NPC_Duplicate",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_BASE_Collectible",
+  "name":"obj_NPC_Duplicate",
   "overriddenProperties":[],
   "parent":{
-    "name":"Base",
-    "path":"folders/Objects/_Base/Interactables/Base.yy",
+    "name":"NPCs",
+    "path":"folders/Objects/Entities/NPCs.yy",
   },
   "parentObjectId":{
-    "name":"obj_BASE_Interactable",
-    "path":"objects/obj_BASE_Interactable/obj_BASE_Interactable.yy",
+    "name":"obj_NPC",
+    "path":"objects/obj_NPC/obj_NPC.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -29,13 +28,14 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"destroyOnPickUp","filters":[],"listItems":[],"multiselect":false,"name":"destroyOnPickUp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_human",
+    "path":"sprites/spr_human/spr_human.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
