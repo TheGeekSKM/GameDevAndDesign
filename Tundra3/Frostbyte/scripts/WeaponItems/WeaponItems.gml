@@ -70,7 +70,8 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
 
         durability -= 1;
         if (durability <= 0) {
-            owner.inventory.DeleteItem(self, 1);;
+            var slotIndex = owner.inventory.ContainsItem(self);
+            if (slotIndex != -1) owner.inventory.RemoveItem(slotIndex, 1);
         }
     }
 
@@ -83,6 +84,13 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
     function GetDamage()
     {
         return damage;
+    }
+
+    function GetDescription() {
+        var desc = $"Item: {name}\n";
+        desc = string_concat(desc, $"Weapon Damage: {damage}\n");
+        desc = string_concat(desc, $"Damage Type: {damageType}\n");
+        return desc;
     }
 }
 
@@ -115,7 +123,8 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
         
         durability -= 1;
         if (durability <= 0) {
-            owner.inventory.DeleteItem(self, 1);
+            var slotIndex = owner.inventory.ContainsItem(self);
+            if (slotIndex != -1) owner.inventory.RemoveItem(slotIndex, 1);
         }
     }
 
@@ -123,6 +132,12 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
     {
         var copy = new RangedWeaponItem(name, durability, speed, staminaCost, weight, effects, sprite);
         return copy;
+    }
+
+    function GetDescription() {
+        var desc = $"Item: {name}\n";
+        desc = string_concat(desc, $"Projectile Speed: {speed}\n");
+        return desc;
     }
 
 }

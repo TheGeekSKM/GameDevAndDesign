@@ -1,6 +1,6 @@
 topLeft = new Vector2(x - (sprite_width / 2), y - (sprite_height / 2));
 ready = false;
-stats = new StatSystem(1, 1, 1);
+stats = new StatSystem(1, 1, 1, id);
 playerIndex = 1;
 image_blend = global.vars.PlayerColors[playerIndex];
 selectIndex = 0;

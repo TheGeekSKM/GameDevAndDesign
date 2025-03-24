@@ -14,7 +14,7 @@ function OnInteract()
         var slotIndex = inventory.ContainsItem(itemRequired);
         if (slotIndex != -1)
         {
-            inventory.RemoveItem(slotIndex, 1);
+            inventory.UseItemByIndex(slotIndex, 1);
             PermittedInteract();
         }
         else

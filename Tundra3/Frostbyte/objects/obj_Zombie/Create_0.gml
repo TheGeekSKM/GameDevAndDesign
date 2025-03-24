@@ -15,7 +15,7 @@ canCheckForPrey = false;
 prey = noone;
 nearbyPrey = ds_list_create();
 
-stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(1, 2));
+stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(1, 2), id);
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);

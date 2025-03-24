@@ -27,7 +27,7 @@ fleePosition = new Vector2(0, 0);
 nearbyPredators = ds_list_create();
 nearbyFoodSources = ds_list_create();
 
-stats = new StatSystem(irandom_range(2, 5), irandom_range(2, 3), irandom_range(1, 2));
+stats = new StatSystem(irandom_range(2, 5), irandom_range(2, 3), irandom_range(1, 2), id);
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);

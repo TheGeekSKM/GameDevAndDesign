@@ -15,7 +15,14 @@ image_index = currentPlantState;
 function OnInteract() 
 {
     echo($"CurrentPlantState: {currentPlantState}")
-    playerInRange.inventory.AddItem(cherryItem, irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]));    
+    var cherryCount = irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]);
+    var stickCount = plantRanges[currentPlantState][1] - cherryCount;
+
+    playerInRange.inventory.AddItem(global.vars.Cherry, cherryCount);
+    if (stickCount > 0)
+    {
+        playerInRange.inventory.AddItem(global.vars.Sticks, stickCount);
+    }    
     DecreaseFood();
 }
 

@@ -10,7 +10,13 @@ doOnce = false;
 target = new Target(id);
 targetSprite = spr_target;
 
-stats = global.vars.PlayerStats[PlayerIndex] == undefined ? new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8)) : global.vars.PlayerStats[PlayerIndex];
+stats = global.vars.PlayerStats[PlayerIndex] == undefined ? 
+    new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8), id) : 
+    new StatSystem(
+        global.vars.PlayerStats[PlayerIndex].strength, 
+        global.vars.PlayerStats[PlayerIndex].dexterity, 
+        global.vars.PlayerStats[PlayerIndex].constitution, id
+    );
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);

@@ -17,7 +17,7 @@ function StartDialogue(_dialogueScene)
 function DrawGUI()
 {
     if (text == undefined) return;
-    scribble($"{text.speaker}: {text.line}")
+    scribble($"{text.speaker.interactableName}: {text.line}")
         .align(fa_center, fa_middle)
         .starting_format("Font", c_white)
         .transform(0.75, 0.75, image_angle)

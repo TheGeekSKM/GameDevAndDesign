@@ -40,8 +40,11 @@ function Vars() constructor {
 	CopperPiece = new Item("Copper Piece", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
 	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
 	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_CPU, 5); 
+	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_CPU, 1); 
+	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_CPU, 5, 10, 1, 5); 
 
 	AxeRecipe = new Recipe("Axe", [new RecipeItem(CopperPiece, 3), new RecipeItem(Sticks, 2)], [new RecipeItem(Axe, 1)]);
+	CookedMeatRecipe = new Recipe("CookedMeat", [new RecipeItem(RawMeat, 1), new RecipeItem(Sticks, 3)], [new RecipeItem(CookedMeat, 1)]);
 
 	DiscoveredRecipes = [];
 }

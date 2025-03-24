@@ -204,6 +204,7 @@
     {"id":{"name":"obj_CameraManager_DEPRECATED","path":"objects/obj_CameraManager_DEPRECATED/obj_CameraManager_DEPRECATED.yy",},},
     {"id":{"name":"obj_CameraManager","path":"objects/obj_CameraManager/obj_CameraManager.yy",},},
     {"id":{"name":"obj_Carnivore","path":"objects/obj_Carnivore/obj_Carnivore.yy",},},
+    {"id":{"name":"obj_Coll_Copper","path":"objects/obj_Coll_Copper/obj_Coll_Copper.yy",},},
     {"id":{"name":"obj_Coll_CPU","path":"objects/obj_Coll_CPU/obj_Coll_CPU.yy",},},
     {"id":{"name":"obj_Coll_GPU","path":"objects/obj_Coll_GPU/obj_Coll_GPU.yy",},},
     {"id":{"name":"obj_Coll_RAM","path":"objects/obj_Coll_RAM/obj_Coll_RAM.yy",},},

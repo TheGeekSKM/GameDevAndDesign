@@ -83,7 +83,7 @@ function Inventory(_stats, _owner) constructor {
         return true;
     }
 
-    function UseItemByIndex(_index, _count, _PlayerIndex)
+    function UseItemByIndex(_index, _count, _PlayerIndex = 0)
     {
         if (_index < 0 or _index >= array_length(allItems)) return false;
         var slot = allItems[_index];
@@ -91,7 +91,6 @@ function Inventory(_stats, _owner) constructor {
         
         for (var i = 0; i < _count; i += 1) {
             slot.item.InventoryUse();
-            echo($"{owner.PlayerIndex}'s Item used by {_PlayerIndex}");
         }
 
         if (slot.quantity == 0) array_delete(allItems, _index, 1);

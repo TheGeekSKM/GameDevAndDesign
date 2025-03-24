@@ -1,7 +1,7 @@
 isUndead = false;
 canAttack = false;
 
-stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8));
+stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8), id);
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);
 stamina = new StaminaSystem(stats, id);

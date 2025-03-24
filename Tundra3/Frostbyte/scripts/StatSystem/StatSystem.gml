@@ -10,10 +10,11 @@ enum StatType
 /// @param {real} _dex - Dexterity
 /// @param {real} _con - Constitution
 /// @description Create a new StatSystem object with the given stats.
-function StatSystem(_str, _dex, _con) constructor {
+function StatSystem(_str, _dex, _con, _owner) constructor {
     strength = _str;
     dexterity = _dex;
     constitution = _con;
+    owner = _owner;
 
     timedStats = [];
     
@@ -77,7 +78,11 @@ function StatSystem(_str, _dex, _con) constructor {
     
     // Survival
     function GetMaxTemperature() { return 100 + (self.constitution * 5) + (self.strength * 2); }
-    function GetTemperatureRate() { return (max(0.5, 0.2 + (self.constitution * 0.1) - (self.strength * 0.05))) / game_get_speed(gamespeed_fps); }
+    function GetTemperatureRate() { 
+        var equippedArmor = owner.inventory.GetEquippedArmor();
+        var armorEffect = equippedArmor != undefined ? equippedArmor.armorValue * 0.05 : 0; // Armor reduces the rate by 5% per armor point
+        return (max(0.5, 0.2 + (self.constitution * 0.1) - (self.strength * 0.05) - armorEffect)) / game_get_speed(gamespeed_fps); 
+    }
 
     function GetHungerRate() { return 2 * (max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05))) / game_get_speed(gamespeed_fps); } 
     function GetMaxHunger() { return 100 + (self.constitution * 5) + (self.strength * 2); }

@@ -40,4 +40,12 @@ function BulletItem(_name, _hitMultiple, _lifeTime, _damage, _damageType, _weigh
         }
     }
 
+    function GetDescription() {
+        var desc = $"Item: {name}\n";
+        desc = string_concat(desc, $"Bullet Damage: {damage}\n");
+        desc = string_concat(desc, $"Damage Type: {damageType}\n");
+        desc = string_concat(desc, $"Life Time: {lifeTime}\n");
+        return desc;
+    }
+
 }

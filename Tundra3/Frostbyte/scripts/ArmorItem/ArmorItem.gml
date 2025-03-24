@@ -51,4 +51,18 @@ function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defe
             owner.inventory.Equip(self);
         }
     }
+
+    function GetDescription() {
+        var desc = $"Item: {name}\n";
+        for (var i = 0; i < array_length(effects); i++) {
+            desc = string_concat(desc, $"Effect #{i + 1}: {effects[i].value} {effects[i].statType}\n");
+        }
+        
+        var armor = "";
+        armor = string_concat(armor, $"Armor Value: {armorValue}\n");
+        
+        desc = string_concat(desc, armor);
+
+        return desc;
+    }
 }
