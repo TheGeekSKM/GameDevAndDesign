@@ -45,5 +45,6 @@ function Pause(_value)
 // inventory.AddItem(global.vars.Sword);
 inventory.Equip(inventory.AddItem(global.vars.Bow));
 inventory.Equip(inventory.AddItem(global.vars.Arrow2));
+inventory.Equip(inventory.AddItem(global.vars.LeatherArmor));
 
 

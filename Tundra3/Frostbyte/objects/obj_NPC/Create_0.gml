@@ -70,3 +70,5 @@ function OnInteract() {
 
 inventory.Equip(inventory.AddItem(global.vars.Bow));
 inventory.Equip(inventory.AddItem(global.vars.Arrow));
+
+alarm[0] = 10;

@@ -4,18 +4,18 @@ event_inherited();
 requiredNum = irandom_range(5, 10);
 
 var dialogueScene = new DialogueScene()
-    .AddDialogue(spr_CPU, "Heya pal. Tim sent ya over right?")
-    .AddDialogue(spr_CPU, "I've been having trouble finding game in the forest lately.")
-    .AddDialogue(spr_CPU, "One of the wolves bit my leg, so I can't hunt as well as I used to.")
-    .AddDialogue(spr_CPU, "If you can bring me some meat, I can help you out with some hunting tips.")
-    .AddDialogue(spr_CPU, "Tip #1: You can usually find some animals in the edges near the fog.")
-    .AddDialogue(spr_CPU, "For some reason, the animals are attracted to the fog, but they never go in.")
-    .AddDialogue(spr_CPU, "They just stare at it...")
-    .AddDialogue(spr_CPU, "$I'll need at least {requiredNum} pieces of meat to get started.");
+    .AddDialogue(sprite_index, "Heya pal. Tim sent ya over right?")
+    .AddDialogue(sprite_index, "I've been having trouble finding game in the forest lately.")
+    .AddDialogue(sprite_index, "One of the wolves bit my leg, so I can't hunt as well as I used to.")
+    .AddDialogue(sprite_index, "If you can bring me some meat, I can help you out with some hunting tips.")
+    .AddDialogue(sprite_index, "Tip #1: You can usually find some animals in the edges near the fog.")
+    .AddDialogue(sprite_index, "For some reason, the animals are attracted to the fog, but they never go in.")
+    .AddDialogue(sprite_index, "They just stare at it...")
+    .AddDialogue(sprite_index, "$I'll need at least {requiredNum} pieces of meat to get started.");
 
 dialogueQuestCompleted = new DialogueScene()
-    .AddDialogue(spr_CPU, "Thanks for the meat, pal. I'll be able to help you out now.")
-    .AddDialogue(spr_CPU, "Here's a bundle of sticks. Take it over to Steve and he can make you some Cooked Meat.")
+    .AddDialogue(sprite_index, "Thanks for the meat, pal. I'll be able to help you out now.")
+    .AddDialogue(sprite_index, "Here's a bundle of sticks. Take it over to Steve and he can make you some Cooked Meat.")
 
 
 Subscribe("QuestCompleted", function(data) {
@@ -71,13 +71,13 @@ function QuestLogic()
             }
             else if (slot != undefined and slot.quantity < requiredNum) 
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(spr_CPU, $"You need {requiredNum - slot.quantity} more Raw Meat. But I'll take what you have for now.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, $"You need {requiredNum - slot.quantity} more Raw Meat. But I'll take what you have for now.")]);
                 playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
                 requiredNum -= slot.quantity;
             }
             else
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(spr_CPU, "You don't have any Raw Meat on ya.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, "You don't have any Raw Meat on ya.")]);
             }
             break;
         case QuestState.Completed:

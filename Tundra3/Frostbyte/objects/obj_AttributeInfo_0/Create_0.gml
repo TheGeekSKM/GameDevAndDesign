@@ -22,8 +22,7 @@ Subscribe("SelectPlayer0", function(_index) {
                 "- [c_black]Movement Speed:[/c] Increases base movement speed.\n" +
                 "- [c_black]Melee Combat:[/c] Boosts melee attack speed and slightly increases melee damage.\n" +
                 "- [c_black]Ranged Combat:[/c] Increases ranged damage and attack speed.\n" +
-                "- [c_black]Critical Hits:[/c] Increases critical hit chance.\n" +
-                "- [c_black]Evasion & Reflexes:[/c] Helps with dodging, agility-based actions, and quick reactions.\n";
+                "- [c_black]Critical Hits:[/c] Increases critical hit chance.\n"
         break;
         case 2:
             txt = 

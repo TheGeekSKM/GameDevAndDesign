@@ -43,6 +43,7 @@ function Vars() constructor {
 	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 5); 
 	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_rawMeat, 1); 
 	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_cookedMeat, 5, 10, 1, 5); 
+	LeatherArmor = new ArmorItem("LeatherArmor", 7, 150, 7, 10, [], spr_armor);
 
 	AxeRecipe = new Recipe("Axe", [new RecipeItem(CopperPiece, 3), new RecipeItem(Sticks, 2)], [new RecipeItem(Axe, 1)]);
 	SwordRecipe = new Recipe("Sword", [new RecipeItem(CopperPiece, 2), new RecipeItem(Sticks, 1)], [new RecipeItem(Sword, 1)]);

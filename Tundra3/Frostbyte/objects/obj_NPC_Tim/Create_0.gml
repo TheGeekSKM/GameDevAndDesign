@@ -4,17 +4,18 @@ event_inherited();
 requiredNum = irandom_range(30, 55);
 
 var dialogueScene = new DialogueScene()
-    .AddDialogue(spr_CPU, "Hey there, pardner. Listen, I need your help.")
-    .AddDialogue(spr_CPU, "Because of the upcoming winter storm, we need cherries.")
-    .AddDialogue(spr_CPU, "You can find cherry bushes and trees in the forest, if you're careful, but you'll need an axe to cut down the trees.")
-    .AddDialogue(spr_CPU, $"Get me {requiredNum} cherries to help feed the camp.")
-    .AddDialogue(spr_CPU, "I found this blueprint for an axe. Talk to Steve and see if he'll craft it for you.")
-    .AddDialogue(spr_CPU, "Good luck, and be careful out there.");
+    .AddDialogue(sprite_index, "Hey there, pardner. Listen, I need your help.")
+    .AddDialogue(sprite_index, "Because of the upcoming winter storm, we need cherries.")
+    .AddDialogue(sprite_index, "You can find cherry bushes and trees in the forest, if you're careful, but you'll need an axe to cut down the trees.")
+    .AddDialogue(sprite_index, $"Get me {requiredNum} cherries to help feed the camp.")
+    .AddDialogue(sprite_index, "I found this blueprint for an axe. Talk to Steve and see if he'll craft it for you.")
+    .AddDialogue(sprite_index, "Good luck, and be careful out there.");
 
 dialogueQuestCompleted = new DialogueScene()
-    .AddDialogue(spr_CPU, "Thank you for the cherries. You've saved the camp from starvation for now.")
-    .AddDialogue(spr_CPU, "We still absolutely need to figure out a more permanent solution, though.")
-    .AddDialogue(spr_CPU, "See if you can talk to Jeffrey up north. He might have some ideas about our hunting situation.");
+    .AddDialogue(sprite_index, "Thank you for the cherries. You've saved the camp from starvation for now.")
+    .AddDialogue(sprite_index, "And I was able to make a new tent for people who need it.")
+    .AddDialogue(sprite_index, "We still absolutely need to figure out a more permanent solution, though.")
+    .AddDialogue(sprite_index, "See if you can talk to Jeffrey up north. He might have some ideas about our hunting situation.");
 
 AddDialogueToList(dialogueScene);
 
@@ -45,6 +46,11 @@ function QuestLogic()
 
                 var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Cherry Picking");
+
+                layer_sequence_create("SetDressing", 3139, 1883, SEQ_Tent);
+
+                var popUp2 = instance_create_layer(3139, 1883, "GUI", obj_PopUpText);
+                popUp2.Init($"New Tent!");
 
                 Raise("QuestCompleted", {
                     questName: "Cherry Picking",
