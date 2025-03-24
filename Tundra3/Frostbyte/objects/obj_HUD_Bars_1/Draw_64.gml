@@ -10,3 +10,10 @@ global.vars.Players[playerIndex].hunger.Draw(113, 15, x + 6, y + 68, c_red, c_dk
 
 draw_sprite(spr_HUD_Top, 0, x, y);
 
+scribble($"{obj_Player2.x}, {obj_Player2.y}")
+    .align(fa_left, fa_middle)
+    .starting_format("Font", global.vars.PlayerColors[playerIndex])
+    .sdf_outline(c_black, 2)
+    .transform(1, 1, 0)
+    .draw(x + 200, y + 13);
+

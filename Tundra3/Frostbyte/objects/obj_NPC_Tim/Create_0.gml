@@ -59,13 +59,13 @@ function QuestLogic()
             }
             else if (slot != undefined and slot.quantity < requiredNum) 
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(spr_CPU, $"You need {requiredNum - slot.quantity} more cherries. But I'll take what you have for now.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, $"You need {requiredNum - slot.quantity} more cherries. But I'll take what you have for now.")]);
                 playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
                 requiredNum -= slot.quantity;
             }
             else
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(spr_CPU, "You don't have any cherries on ya.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, "You don't have any cherries on ya.")]);
             }
             break;
         case QuestState.Completed:
