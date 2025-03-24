@@ -138,6 +138,7 @@ if (!layer_exists(layerNotificationName)) {
 daySequence = layer_sequence_create(layerNotificationName, 0, 0, SEQ_DayNotice);
 layer_sequence_pause(daySequence);
 
+p1_game = layer_sequence_create(layerName, 0, 0, SEQ_Game_0);
 p1_notification = layer_sequence_create(layerNotificationName, 0, 0, SEQ_Notification_0);
 layer_sequence_pause(p1_notification);
 p1_crafting = layer_sequence_create(layerName, 0, 0, SEQ_Crafting_0);
@@ -155,6 +156,7 @@ layer_sequence_pause(p1_quest);
 p1_playerStats = layer_sequence_create(layerName, 0, 0, SEQ_Stats_0);
 layer_sequence_pause(p1_playerStats);
 
+p2_game = layer_sequence_create(layerName, 400, 0, SEQ_Game_1);
 p2_notification = layer_sequence_create(layerNotificationName, 400, 0, SEQ_Notification_1);
 layer_sequence_pause(p2_notification);
 p2_crafting = layer_sequence_create(layerName, 400, 0, SEQ_Crafting_1)
@@ -190,6 +192,8 @@ function LeftOnExit()
     {
         case UIMenuState.noUI:
             obj_Player1.Pause(true);
+            layer_sequence_headdir(p1_game, seqdir_left);
+            layer_sequence_play(p1_game);
             break;
         case UIMenuState.crafting:
             layer_sequence_headdir(p1_crafting, seqdir_left);
@@ -238,6 +242,8 @@ function LeftOnEnter()
     {
         case UIMenuState.noUI:
             alarm[0] = 10;
+            layer_sequence_headdir(p1_game, seqdir_right);
+            layer_sequence_play(p1_game);
             break;
         case UIMenuState.crafting:
             layer_sequence_headdir(p1_crafting, seqdir_right);
@@ -285,7 +291,9 @@ function RightOnExit()
     switch (p2State)
     {
         case UIMenuState.noUI:
-            obj_Player2.Pause(true);            
+            obj_Player2.Pause(true);  
+            layer_sequence_headdir(p2_game, seqdir_left);
+            layer_sequence_play(p2_game);          
             break;
         case UIMenuState.crafting:
             layer_sequence_headdir(p2_crafting, seqdir_left);
@@ -334,6 +342,8 @@ function RightOnEnter()
     {
         case UIMenuState.noUI:
             alarm[1] = 10;
+            layer_sequence_headdir(p2_game, seqdir_right);
+            layer_sequence_play(p2_game);
             break;
         case UIMenuState.crafting:
             layer_sequence_headdir(p2_crafting, seqdir_right);

@@ -1,22 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_TextBox_Game_0",
+  "%Name":"obj_BASE_Spawner",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_TextBox_Game_0",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextBox","path":"objects/obj_TextBox/obj_TextBox.yy",},"propertyId":{"name":"textToDisplay","path":"objects/obj_TextBox/obj_TextBox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"WASD (Move) | E (Interact) | Q (Attack Mode) | R (Menus)",},
-  ],
+  "name":"obj_BASE_Spawner",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Game",
-    "path":"folders/Objects/UI/Game.yy",
+    "name":"Base",
+    "path":"folders/Objects/__Managers/Base.yy",
   },
-  "parentObjectId":{
-    "name":"obj_TextBox",
-    "path":"objects/obj_TextBox/obj_TextBox.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_textBox",
-    "path":"sprites/spr_textBox/spr_textBox.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

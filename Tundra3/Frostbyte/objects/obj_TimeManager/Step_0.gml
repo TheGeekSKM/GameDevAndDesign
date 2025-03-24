@@ -4,7 +4,7 @@ if (state == "DAY_HOLD") {
         // Do something once per day
         daysSurvived += 1;
         Raise("DayDisplayOpen", id);
-        
+        Raise("Day", id);
         if (daysSurvived >= 3)
         {
             Transition(rmWin, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
@@ -31,6 +31,7 @@ else if (state == "NIGHT_HOLD") {
 
     if (doOncePerDay == true) {
         // Do something once per night
+        Raise("Night", id);
         doOncePerDay = false;
     }
 

@@ -6,7 +6,8 @@ enum DamageType {
     HOLY = 4,
     DARK = 5,
     HEALING = 6, // Special case: can damage undead
-    HUNGER
+    HUNGER = 7,
+    TEMP = 8
 }
 
 /// @desc This is the struct that holds the stats for the HealthSystem
@@ -22,7 +23,7 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
     currentHealth = maxHealth;
     followHealth = 0;
     isUndead = _isUndead;
-    multipliers = [1, 1.2, 0.8, 1, 1, 1, -1, 1];
+    multipliers = [1, 1.2, 0.8, 1, 1, 1, -1, 1, 1];
 
     recentAttacker = noone;
     
@@ -65,16 +66,19 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
         var multiplier = self.GetDamageMultipler(damageType);
         self.currentHealth = max(0, self.currentHealth - (amount * multiplier));
 
-        if (amount > 0)
+        if (damageType != DamageType.HUNGER and damageType != DamageType.TEMP)
         {
-            var textPopUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
-            if (crit)
+            if (amount > 0)
             {
-                textPopUp.Init(amount, c_red);
-            }
-            else
-            {
-                textPopUp.Init(amount, c_white);
+                var textPopUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+                if (crit)
+                {
+                    textPopUp.Init(amount, c_red);
+                }
+                else
+                {
+                    textPopUp.Init(amount, c_white);
+                }
             }
         }
         
@@ -107,6 +111,8 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
     
     function Die()
     {
+        inventory.DropAllItems();
+        instance_destroy(owner);
     }
 
     function Step()

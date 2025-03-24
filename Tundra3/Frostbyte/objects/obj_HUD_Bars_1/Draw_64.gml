@@ -1,6 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
+if (!instance_exists(obj_Player2)) return;
+
 global.vars.Players[playerIndex].entityHealth.Draw(180, 19, x + 9, y + 4, c_green, c_dkgray);
 global.vars.Players[playerIndex].stamina.Draw(113, 15, x + 6, y + 28, c_yellow, c_dkgray);
 global.vars.Players[playerIndex].temperature.Draw(113, 15, x + 6, y + 48, c_blue, c_dkgray);

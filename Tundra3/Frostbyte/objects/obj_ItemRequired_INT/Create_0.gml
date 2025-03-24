@@ -18,7 +18,7 @@ function OnInteract()
         }
         else
         {
-            var str = $"You need a {itemRequired.name} to interact with this object.";
+            var str = $"You need the {itemRequired.name} for this.";
             Raise("NotificationOpen", [str, playerInRange.PlayerIndex]);
         }
     }

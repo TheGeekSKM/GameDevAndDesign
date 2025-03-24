@@ -267,6 +267,14 @@ function Inventory(_stats, _owner) constructor {
 
         slot.item.Unequip();
     }
+
+    function DropAllItems()
+    {
+        for (var i = array_length(allItems) - 1; i >= 0; i -= 1) 
+        {
+            DropItemByIndex(i, allItems[i].quantity);
+        }
+    }
 }
 
 function InventorySlot(_item, _quantity) constructor {
