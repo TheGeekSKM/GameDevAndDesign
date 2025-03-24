@@ -21,7 +21,8 @@ function Inventory(_stats, _owner) constructor {
     {
         for (var i = 0; i < array_length(allItems); i += 1) 
         {
-            if (allItems[i].item.Equals(_item)) return i;
+            echo($"{allItems[i].item[$ "name"]} == {_item[$ "name"]} : {allItems[i].item[$ "name"] == _item[$ "name"]}")
+            if (allItems[i].item[$ "name"] == _item[$ "name"]) return i;
         }
         return -1;
     }
@@ -168,14 +169,6 @@ function Inventory(_stats, _owner) constructor {
         if (slot.quantity == 0) array_delete(allItems, _itemIndex, 1);
 
         return false;
-    }
-
-    function DeleteItem(_item, _count)
-    {
-        var index = ContainsItem(_item);
-        if (index == -1) return false;
-        RemoveItem(index, _count);
-        return true;
     }
     
     function GetCurrentWeight()

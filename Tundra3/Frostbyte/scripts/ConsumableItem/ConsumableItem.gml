@@ -21,7 +21,8 @@ function ConsumableItem(_name, _durability, _weight, _consumeEffects, _sprite, _
 
         durability--;
         if (durability <= 0) {
-            owner.inventory.DeleteItem(self, 1);
+            var slotIndex = owner.inventory.ContainsItem(self);
+            if (slotIndex != -1) owner.inventory.RemoveItem(slotIndex, 1);
         }
     }
 

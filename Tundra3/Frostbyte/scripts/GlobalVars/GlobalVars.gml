@@ -37,6 +37,12 @@ function Vars() constructor {
 	Arrow2 = new BulletItem("Arrow", false, 10, 20, DamageType.PHYSICAL, 0, [], spr_CPU);
 	Axe = new MeleeWeaponItem("Axe", c_white, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_CPU);
 
+	CopperPiece = new Item("Copper Piece", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
+	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
+	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_CPU, 5); 
+
+	AxeRecipe = new Recipe("Axe", [new RecipeItem(CopperPiece, 3), new RecipeItem(Sticks, 2)], [new RecipeItem(Axe, 1)]);
+
 	DiscoveredRecipes = [];
 }
 

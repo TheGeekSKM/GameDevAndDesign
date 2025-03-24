@@ -69,6 +69,7 @@
   <tpe x="2028" y="1763" tpage="default_0.bz2">spr_CPU_Frostbyte_875c6c69-a71f-449c-ae75-b08cc0f8f5ae.tpe</tpe>
   <tpe x="2008" y="1783" tpage="default_0.bz2">spr_GPU_Frostbyte_e1fd4d70-9129-4f50-be61-eeef8d7ffc71.tpe</tpe>
   <tpe x="1916" y="1744" tpage="default_0.bz2">spr_RAM_Frostbyte_dd67f288-757d-4de9-840a-7b049aa2aa1f.tpe</tpe>
-  <tpe x="1936" y="1711" tpage="default_0.bz2">scribble_fallback_bulletpoint_Frostbyte_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
+  <tpe x="1936" y="1711" tpage="default_0.bz2">spr_Exclamation_Frostbyte_74e5abeb-3a9a-4422-9c7a-151c099d42f5.tpe</tpe>
+  <tpe x="1122" y="2022" tpage="default_0.bz2">scribble_fallback_bulletpoint_Frostbyte_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
   <tpe x="2043" y="1697" tpage="default_0.bz2">spr_pixel_Frostbyte_c6297ff6-6c93-44e7-bce1-c01ad1373730.tpe</tpe>
 </TextureGroup>

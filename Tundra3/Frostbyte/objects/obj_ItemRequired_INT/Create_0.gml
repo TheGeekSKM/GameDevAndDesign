@@ -11,9 +11,10 @@ function OnInteract()
     if (itemRequired != undefined)
     {
         var inventory = playerInRange.inventory;
-        if (inventory.ContainsItem(itemRequired))
+        var slotIndex = inventory.ContainsItem(itemRequired);
+        if (slotIndex != -1)
         {
-            inventory.DeleteItem(itemRequired, 1);
+            inventory.RemoveItem(slotIndex, 1);
             PermittedInteract();
         }
         else

@@ -3,7 +3,8 @@ enum ItemType
     Consumable,
     Weapon,
     Bullet,
-    Armor
+    Armor,
+    Default
 }
 
 enum WeaponType

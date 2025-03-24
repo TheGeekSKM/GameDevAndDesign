@@ -49,7 +49,7 @@ function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equip
     function Equals(_item)
     {
         if (_item == undefined) return false;
-        return (self.name == _item.name) and (self.type == _item.type) and (array_length(self.effects) == array_length(_item.effects));
+        return (self[$ "name"] == _item[$ "name"]);
     }
 
     function GetCopy()

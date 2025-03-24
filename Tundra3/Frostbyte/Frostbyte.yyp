@@ -244,6 +244,7 @@
     {"id":{"name":"obj_Notification_1","path":"objects/obj_Notification_1/obj_Notification_1.yy",},},
     {"id":{"name":"obj_NPC_Crafting","path":"objects/obj_NPC_Crafting/obj_NPC_Crafting.yy",},},
     {"id":{"name":"obj_NPC_Duplicate","path":"objects/obj_NPC_Duplicate/obj_NPC_Duplicate.yy",},},
+    {"id":{"name":"obj_NPC_Tim","path":"objects/obj_NPC_Tim/obj_NPC_Tim.yy",},},
     {"id":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},},
     {"id":{"name":"obj_PCManager","path":"objects/obj_PCManager/obj_PCManager.yy",},},
     {"id":{"name":"obj_PCView","path":"objects/obj_PCView/obj_PCView.yy",},},

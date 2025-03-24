@@ -12,8 +12,7 @@ if (instance_exists(playerInRange))
         .draw(guiPos.x, guiPos.y);
     
     if (quest == undefined) return;
-    var _quest = GetQuest(quest.name);
-    if (_quest.state == QuestState.Inactive)
+    if (quest.state == QuestState.Inactive)
     {
         draw_sprite_ext(spr_Exclamation, 0, x, y - (sprite_height / 2), 1, 1, 0, global.vars.PlayerColors[playerInRange.PlayerIndex], 1);
     }
