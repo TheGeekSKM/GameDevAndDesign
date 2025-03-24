@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-requiredNum = irandom_range(30, 55);
+requiredNum = irandom_range(30, 40);
 
 var dialogueScene = new DialogueScene()
     .AddDialogue(sprite_index, "Hey there, pardner. Listen, I need your help.")
