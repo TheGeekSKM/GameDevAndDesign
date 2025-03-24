@@ -20,6 +20,7 @@ function DrawGUI()
 
 function Step()
 {
+    if (instance_exists(global.vars.Players[playerIndex]))
     if (!vis) return;
     var menu = global.vars.InputManager.IsPressed(playerIndex, ActionType.Menu);
     if (menu)
