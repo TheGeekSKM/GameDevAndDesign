@@ -46,6 +46,7 @@ scribble(itemInfo)
     .align(fa_left, fa_top)
     .starting_format("Font", c_white)
     .transform(0.75, 0.75, image_angle)
+    .wrap(95 / 0.75)
     .draw(topLeft.x + 245, topLeft.y + 28);
 
 

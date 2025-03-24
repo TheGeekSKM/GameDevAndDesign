@@ -27,7 +27,6 @@ if (down)
 }
 
 var menu = global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Menu);
-echo("visible")
 if (menu)
 {
     Raise("InventoryClose", PlayerIndex);

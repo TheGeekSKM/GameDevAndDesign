@@ -8,6 +8,9 @@ var dialogueScene = new DialogueScene()
     .AddDialogue(spr_CPU, "I've been having trouble finding game in the forest lately.")
     .AddDialogue(spr_CPU, "One of the wolves bit my leg, so I can't hunt as well as I used to.")
     .AddDialogue(spr_CPU, "If you can bring me some meat, I can help you out with some hunting tips.")
+    .AddDialogue(spr_CPU, "Tip #1: You can usually find some animals in the edges near the fog.")
+    .AddDialogue(spr_CPU, "For some reason, the animals are attracted to the fog, but they never go in.")
+    .AddDialogue(spr_CPU, "They just stare at it...")
     .AddDialogue(spr_CPU, "$I'll need at least {requiredNum} pieces of meat to get started.");
 
 dialogueQuestCompleted = new DialogueScene()

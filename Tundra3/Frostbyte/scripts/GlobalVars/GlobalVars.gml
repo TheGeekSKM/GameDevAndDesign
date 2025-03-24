@@ -31,20 +31,21 @@ function Vars() constructor {
 	GPU = new ConsumableItem("GPU", 1, 2, [new StatusEffects(StatType.Strength, 2, 10)], spr_GPU);
 	RAM = new ConsumableItem("RAM", 1, 2, [new StatusEffects(StatType.Dexterity, 2, 10)], spr_RAM);
 
-	// Sword = new MeleeWeaponItem("Sword", c_red, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_CPU);
-	Bow = new RangedWeaponItem("Bow", 150, 10, 10, 5, [], spr_CPU);
-	Arrow = new BulletItem("Arrow", false, 10, 2, DamageType.PHYSICAL, 0, [], spr_CPU);
-	Arrow2 = new BulletItem("Arrow", false, 10, 20, DamageType.PHYSICAL, 0, [], spr_CPU);
-	Axe = new MeleeWeaponItem("Axe", c_white, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_CPU);
+	Sword = new MeleeWeaponItem("Sword", c_red, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_Sword);
+	Bow = new RangedWeaponItem("Bow", 150, 10, 10, 5, [], spr_Bow);
+	Arrow = new BulletItem("Arrow", false, 10, 2, DamageType.PHYSICAL, 0, [], spr_Arrow_BAD);
+	Arrow2 = new BulletItem("Arrow", false, 10, 20, DamageType.PHYSICAL, 0, [], spr_Arrow_GOOD);
+	Axe = new MeleeWeaponItem("Axe", c_white, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_Axe);
 
-	CopperPiece = new Item("Copper Piece", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
-	Silicone = new Item("Silicone", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
-	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
-	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_CPU, 5); 
-	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_CPU, 1); 
-	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_CPU, 5, 10, 1, 5); 
+	CopperPiece = new Item("Copper Piece", 1, 0, 1, ItemType.Default, [], false, spr_copper);
+	Silicone = new Item("Silicone", 1, 0, 1, ItemType.Default, [], false, spr_silicon);
+	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_sticks);
+	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 5); 
+	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_rawMeat, 1); 
+	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_cookedMeat, 5, 10, 1, 5); 
 
 	AxeRecipe = new Recipe("Axe", [new RecipeItem(CopperPiece, 3), new RecipeItem(Sticks, 2)], [new RecipeItem(Axe, 1)]);
+	SwordRecipe = new Recipe("Sword", [new RecipeItem(CopperPiece, 2), new RecipeItem(Sticks, 1)], [new RecipeItem(Sword, 1)]);
 	CookedMeatRecipe = new Recipe("CookedMeat", [new RecipeItem(RawMeat, 1), new RecipeItem(Sticks, 3)], [new RecipeItem(CookedMeat, 1)]);
 	CPURecipe = new Recipe("CPU", [new RecipeItem(CopperPiece, irandom_range(1, 3)), new RecipeItem(Silicone, irandom_range(1, 3))], [new RecipeItem(CPU, 1)]);
 	GPURecipe = new Recipe("GPU", [new RecipeItem(CopperPiece, irandom_range(1, 3)), new RecipeItem(Silicone, irandom_range(1, 3))], [new RecipeItem(GPU, 1)]);
