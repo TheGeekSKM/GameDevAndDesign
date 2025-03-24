@@ -15,14 +15,16 @@ image_index = currentPlantState;
 function OnInteract() 
 {
     echo($"CurrentPlantState: {currentPlantState}")
-    var cherryCount = irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]);
-    var stickCount = plantRanges[currentPlantState][1] - cherryCount;
-
-    playerInRange.inventory.AddItem(global.vars.Cherry, cherryCount);
-    if (stickCount > 0)
+    if (irandom(100) >= 50) 
     {
+        var cherryCount = irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]);
+        playerInRange.inventory.AddItem(global.vars.Cherry, cherryCount);
+    } 
+    else 
+    {
+        var stickCount = irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]);
         playerInRange.inventory.AddItem(global.vars.Sticks, stickCount);
-    }    
+    } 
     DecreaseFood();
 }
 

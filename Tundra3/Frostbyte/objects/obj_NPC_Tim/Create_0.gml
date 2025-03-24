@@ -12,7 +12,9 @@ var dialogueScene = new DialogueScene()
     .AddDialogue(spr_CPU, "Good luck, and be careful out there.");
 
 dialogueQuestCompleted = new DialogueScene()
-    .AddDialogue(spr_CPU, "Thank you for the cherries. You've saved the camp from starvation!")
+    .AddDialogue(spr_CPU, "Thank you for the cherries. You've saved the camp from starvation for now.")
+    .AddDialogue(spr_CPU, "We still absolutely need to figure out a more permanent solution, though.")
+    .AddDialogue(spr_CPU, "See if you can talk to Jeffrey up north. He might have some ideas about our hunting situation.");
 
 AddDialogueToList(dialogueScene);
 
@@ -43,6 +45,11 @@ function QuestLogic()
 
                 var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Cherry Picking");
+
+                Raise("QuestCompleted", {
+                    questName: "Cherry Picking",
+                    giver: "Tim"
+                });
             }
             else if (slot != undefined and slot.quantity < requiredNum) 
             {

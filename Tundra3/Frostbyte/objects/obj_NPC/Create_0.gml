@@ -44,6 +44,8 @@ function SetQuest(_quest) {
 
 function QuestLogic() { }
 
+function NoQuest() {}
+
 function OnInteract() {
     var currentDialogue = dialogueSceneIndex < array_length(dialogueScenes) ? dialogueScenes[dialogueSceneIndex] : undefined;
     if (currentDialogue != undefined) {
@@ -55,6 +57,10 @@ function OnInteract() {
             AddQuest(quest);
         }
         QuestLogic();
+    }
+    else
+    {
+        NoQuest();
     }
     
     if (dialogueSceneIndex + 1 < array_length(dialogueScenes)) {

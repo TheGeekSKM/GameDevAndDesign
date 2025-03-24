@@ -38,6 +38,7 @@ function Vars() constructor {
 	Axe = new MeleeWeaponItem("Axe", c_white, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_CPU);
 
 	CopperPiece = new Item("Copper Piece", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
+	Silicone = new Item("Silicone", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
 	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_CPU);
 	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_CPU, 5); 
 	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_CPU, 1); 
@@ -45,6 +46,9 @@ function Vars() constructor {
 
 	AxeRecipe = new Recipe("Axe", [new RecipeItem(CopperPiece, 3), new RecipeItem(Sticks, 2)], [new RecipeItem(Axe, 1)]);
 	CookedMeatRecipe = new Recipe("CookedMeat", [new RecipeItem(RawMeat, 1), new RecipeItem(Sticks, 3)], [new RecipeItem(CookedMeat, 1)]);
+	CPURecipe = new Recipe("CPU", [new RecipeItem(CopperPiece, irandom_range(1, 3)), new RecipeItem(Silicone, irandom_range(1, 3))], [new RecipeItem(CPU, 1)]);
+	GPURecipe = new Recipe("GPU", [new RecipeItem(CopperPiece, irandom_range(1, 3)), new RecipeItem(Silicone, irandom_range(1, 3))], [new RecipeItem(GPU, 1)]);
+	RAMRecipe = new Recipe("RAM", [new RecipeItem(CopperPiece, irandom_range(1, 3)), new RecipeItem(Silicone, irandom_range(1, 3))], [new RecipeItem(RAM, 1)]);
 
 	DiscoveredRecipes = [];
 }
