@@ -42,9 +42,9 @@ function Vars() constructor {
 	CopperPiece = new Item("Copper Piece", 1, 0, 1, ItemType.Default, [], false, spr_copper);
 	Silicone = new Item("Silicone", 1, 0, 1, ItemType.Default, [], false, spr_silicon);
 	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_sticks);
-	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 5); 
-	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_rawMeat, 1); 
-	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_cookedMeat, 5, 10, 1, 5); 
+	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 15, 3); 
+	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_rawMeat, 5); 
+	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_cookedMeat, 35, 10, 1, 5); 
 	LeatherArmor = new ArmorItem("LeatherArmor", 7, 150, 7, 10, [], spr_armor);
 
 	AxeRecipe = new Recipe("Copper Axe", [new RecipeItem(CopperPiece, 3), new RecipeItem(Sticks, 2)], [new RecipeItem(Axe, 1)]);

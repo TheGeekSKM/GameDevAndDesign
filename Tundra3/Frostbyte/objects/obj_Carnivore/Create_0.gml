@@ -5,7 +5,7 @@ attackRange = 32;
 attacker = noone;
 
 collisionObjects = [obj_Wall]
-targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Zombie];
+targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Zombie, obj_Door];
 
 canMove = true;
 wanderRandomly = true;

@@ -29,7 +29,11 @@ function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defe
         }
 
         if (durability <= 0) {
-            owner.inventory.DeleteItem(self, 1);
+            var index = owner.inventory.ContainsItem(self);
+            if (index != -1)
+            {
+                owner.inventory.RemoveItem(index, 1);
+            }
             return 0;
         }
 

@@ -16,7 +16,13 @@ function StaminaSystem(_stats, _owner) constructor {
     function UseStamina(amount) {
         if (currentStamina < amount) return false;
 
-        currentStamina = max(0, currentStamina - amount);
+        currentStamina -= amount;
+        if (currentStamina <= 0)
+        {
+            _owner.entityHealth.TakeDamage(75 / 60, DamageType.PHYSICAL, _owner);
+            currentStamina = 0;
+        }
+        
         return true;
     }
 

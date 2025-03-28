@@ -4,7 +4,7 @@ canMove = true;
 
 paused = false;
 
-collisionObjects = [obj_Wall, obj_Collector, obj_PCManager];
+collisionObjects = [obj_Wall, obj_Collector, obj_PCManager, obj_Door];
 doOnce = false;
 
 target = new Target(id);

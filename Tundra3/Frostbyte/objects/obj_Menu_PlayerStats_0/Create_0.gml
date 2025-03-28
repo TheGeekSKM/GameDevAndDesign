@@ -4,6 +4,7 @@ SetPlayerIndex(0);
 
 function DrawGUI()
 {
+    if (!instance_exits(global.vars.Players[playerIndex])) return;
     // start writing stats at 14, 25 and wrap 330 * (1 / textScale)
     var textScale = 0.5;
 

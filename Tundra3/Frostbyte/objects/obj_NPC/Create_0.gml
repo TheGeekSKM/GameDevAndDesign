@@ -4,7 +4,7 @@ canMove = false;
 fleeing = false;
 walkToStartingPos = false;
 
-collisionObjects = [obj_Wall];
+collisionObjects = [obj_Wall, obj_Door];
 
 attackRange = 64;
 
