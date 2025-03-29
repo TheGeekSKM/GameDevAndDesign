@@ -8,8 +8,6 @@ collisionObjects = [obj_Wall, obj_Door];
 
 attackRange = 64;
 
-image_blend = make_color_hsv(irandom(255), 150, 100);
-
 stats = new StatSystem(irandom_range(3, 8), irandom_range(3, 8), irandom_range(3, 8), id);
 inventory = new Inventory(stats, id);
 entityHealth = new HealthSystem(stats, inventory, isUndead, id);

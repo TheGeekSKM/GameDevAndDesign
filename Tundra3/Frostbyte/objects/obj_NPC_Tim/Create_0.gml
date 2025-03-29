@@ -3,19 +3,25 @@ event_inherited();
 
 requiredNum = irandom_range(30, 40);
 
+color = make_color_hsv(irandom(255), 150, 150);
+image_blend = color;
+
+requiredNum = irandom_range(5, 10);
+speakerData = new SpeakerData("Tim", color);
+
 var dialogueScene = new DialogueScene()
-    .AddDialogue(sprite_index, "Hey there, pardner. Listen, I need your help.")
-    .AddDialogue(sprite_index, "Because of the upcoming winter storm, we need cherries.")
-    .AddDialogue(sprite_index, "You can find cherry bushes and trees in the forest, if you're careful, but you'll need an axe to cut down the trees.")
-    .AddDialogue(sprite_index, $"Get me {requiredNum} cherries to help feed the camp.")
-    .AddDialogue(sprite_index, "I found this blueprint for an axe. Talk to Steve and see if he'll craft it for you.")
-    .AddDialogue(sprite_index, "Good luck, and be careful out there.");
+    .AddDialogue(speakerData, "Hey there, pardner. Listen, I need your help.")
+    .AddDialogue(speakerData, "Because of the upcoming winter storm, we need cherries.")
+    .AddDialogue(speakerData, "You can find cherry bushes and trees in the forest, if you're careful, but you'll need an axe to cut down the trees.")
+    .AddDialogue(speakerData, $"Get me {requiredNum} cherries to help feed the camp.")
+    .AddDialogue(speakerData, "I found this blueprint for an axe. Talk to Steve and see if he'll craft it for you.")
+    .AddDialogue(speakerData, "Good luck, and be careful out there.");
 
 dialogueQuestCompleted = new DialogueScene()
-    .AddDialogue(sprite_index, "Thank you for the cherries. You've saved the camp from starvation for now.")
-    .AddDialogue(sprite_index, "And I was able to make a new tent for people who need it.")
-    .AddDialogue(sprite_index, "We still absolutely need to figure out a more permanent solution, though.")
-    .AddDialogue(sprite_index, "See if you can talk to Jeffrey up north. He might have some ideas about our hunting situation.");
+    .AddDialogue(speakerData, "Thank you for the cherries. You've saved the camp from starvation for now.")
+    .AddDialogue(speakerData, "And I was able to make a new tent for people who need it.")
+    .AddDialogue(speakerData, "We still absolutely need to figure out a more permanent solution, though.")
+    .AddDialogue(speakerData, "See if you can talk to Jeffrey up north. He might have some ideas about our hunting situation.");
 
 AddDialogueToList(dialogueScene);
 
@@ -59,13 +65,13 @@ function QuestLogic()
             }
             else if (slot != undefined and slot.quantity < requiredNum) 
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, $"You need {requiredNum - slot.quantity} more cherries. But I'll take what you have for now.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(speakerData, $"You need {requiredNum - slot.quantity} more cherries. But I'll take what you have for now.")]);
                 playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
                 requiredNum -= slot.quantity;
             }
             else
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, "You don't have any cherries on ya.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(speakerData, "You don't have any cherries on ya.")]);
             }
             break;
         case QuestState.Completed:

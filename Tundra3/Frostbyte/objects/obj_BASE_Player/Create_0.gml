@@ -41,10 +41,11 @@ function Pause(_value)
     controller.stateMachine.change("idle");
 }
 
+isPlayer = true;
 
 // inventory.AddItem(global.vars.Sword);
-inventory.Equip(inventory.AddItem(global.vars.Bow));
-inventory.Equip(inventory.AddItem(global.vars.Arrow2));
-inventory.Equip(inventory.AddItem(global.vars.LeatherArmor));
+inventory.Equip(inventory.AddItem(global.vars.Bow, 1, false));
+inventory.Equip(inventory.AddItem(global.vars.Arrow2, 1, false));
+inventory.Equip(inventory.AddItem(global.vars.LeatherArmor, 1, false));
 
 

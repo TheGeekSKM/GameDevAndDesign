@@ -1,21 +1,25 @@
 // Inherit the parent event
 event_inherited();
 
+color = make_color_hsv(irandom(255), 150, 150);
+image_blend = color;
+
 requiredNum = irandom_range(5, 10);
+speakerData = new SpeakerData("Jeffrey", color);
 
 var dialogueScene = new DialogueScene()
-    .AddDialogue(sprite_index, "Heya pal. Tim sent ya over right?")
-    .AddDialogue(sprite_index, "I've been having trouble finding game in the forest lately.")
-    .AddDialogue(sprite_index, "One of the wolves bit my leg, so I can't hunt as well as I used to.")
-    .AddDialogue(sprite_index, "If you can bring me some meat, I can help you out with some hunting tips.")
-    .AddDialogue(sprite_index, "Tip #1: You can usually find some animals in the edges near the fog.")
-    .AddDialogue(sprite_index, "For some reason, the animals are attracted to the fog, but they never go in.")
-    .AddDialogue(sprite_index, "They just stare at it...")
-    .AddDialogue(sprite_index, "$I'll need at least {requiredNum} pieces of meat to get started.");
+    .AddDialogue(speakerData, "Heya pal. Tim sent ya over right?")
+    .AddDialogue(speakerData, "I've been having trouble finding game in the forest lately.")
+    .AddDialogue(speakerData, "One of the wolves bit my leg, so I can't hunt as well as I used to.")
+    .AddDialogue(speakerData, "If you can bring me some meat, I can help you out with some hunting tips.")
+    .AddDialogue(speakerData, "Tip #1: You can usually find some animals in the edges near the fog.")
+    .AddDialogue(speakerData, "For some reason, the animals are attracted to the fog, but they never go in.")
+    .AddDialogue(speakerData, "They just stare at it...")
+    .AddDialogue(speakerData, "$I'll need at least {requiredNum} pieces of meat to get started.");
 
 dialogueQuestCompleted = new DialogueScene()
-    .AddDialogue(sprite_index, "Thanks for the meat, pal. I'll be able to help you out now.")
-    .AddDialogue(sprite_index, "Here's a bundle of sticks. Take it over to Steve and he can make you some Cooked Meat.")
+    .AddDialogue(speakerData, "Thanks for the meat, pal. I'll be able to help you out now.")
+    .AddDialogue(speakerData, "Here's a bundle of sticks. Take it over to Steve and he can make you some Cooked Meat.")
 
 
 Subscribe("QuestCompleted", function(data) {
@@ -71,13 +75,13 @@ function QuestLogic()
             }
             else if (slot != undefined and slot.quantity < requiredNum) 
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, $"You need {requiredNum - slot.quantity} more Raw Meat. But I'll take what you have for now.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(speakerData, $"You need {requiredNum - slot.quantity} more Raw Meat. But I'll take what you have for now.")]);
                 playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
                 requiredNum -= slot.quantity;
             }
             else
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(sprite_index, "You don't have any Raw Meat on ya.")]);
+                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(speakerData, "You don't have any Raw Meat on ya.")]);
             }
             break;
         case QuestState.Completed:

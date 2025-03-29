@@ -6,7 +6,7 @@ maxDisplay = 5;
 scrollOffset = 0;
 selectedIndex = 0;
 
-alarm[0] = 1;
+alarm[0] = 10;
 
 function Step()
 {

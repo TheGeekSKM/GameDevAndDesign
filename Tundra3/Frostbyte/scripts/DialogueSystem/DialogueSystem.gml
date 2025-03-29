@@ -18,9 +18,12 @@ function DialogueScene() constructor {
 		}
 	}
 
-    function AddDialogue(_speaker, _line)
+	/// @desc Returns the current line of dialogue
+	/// @param {SpeakerData} _speakerData the data of the speaker
+	/// @param {string} _line the line of dialogue
+    function AddDialogue(_speakerData, _line)
     {
-        var line = new DialogueLine(_speaker, _line);
+        var line = new DialogueLine(_speakerData, _line);
         array_push(dialogues, line);
         return self;
     }
@@ -36,11 +39,12 @@ function DialogueScene() constructor {
 	}
 }
 
-function DialogueLine(_speaker, _line) constructor {
-	speaker = _speaker;
+function DialogueLine(_speakerData, _line) constructor {
+	speakerData = _speakerData;
 	line = _line;
 }
 
-function StartDialogueScene(_dialogueScene, _playerIndex)
-{
+function SpeakerData(_speakerName, _speakerColor) constructor {
+	speakerName = _speakerName;
+	speakerColor = _speakerColor;
 }

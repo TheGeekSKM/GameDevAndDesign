@@ -3,13 +3,15 @@ event_inherited();
 SetPlayerIndex(0);
 
 currentDialogueLine = undefined;
+currentIndex = 0;
 
 Subscribe($"Player{playerIndex}Dialogue", function(dialogueLine) {
     currentDialogueLine = dialogueLine;
+    currentIndex = irandom_range(0, 2);
 });
 
 function DrawGUI()
 {
     if (currentDialogueLine == undefined) return;
-    draw_sprite_ext(currentDialogueLine.speaker, 0, x, y, 1, 1, image_angle, c_white, 1);
+    draw_sprite_ext(spr_NPCSpeaker, currentIndex, topLeft.x + 14, topLeft.y + 16, 1, 1, image_angle, currentDialogueLine.speakerData.speakerColor, 1);
 }

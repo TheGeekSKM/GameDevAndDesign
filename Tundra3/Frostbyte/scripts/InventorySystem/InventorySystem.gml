@@ -14,6 +14,7 @@ function Inventory(_stats, _owner) constructor {
 
     owner = _owner;
 
+
     ///@desc Checks to see if item already exists in inventory
     ///@param {Struct} _item - The item to check for
     ///@return real - The index of the item in the inventory, or -1 if it doesn't exist
@@ -21,7 +22,6 @@ function Inventory(_stats, _owner) constructor {
     {
         for (var i = 0; i < array_length(allItems); i += 1) 
         {
-            echo($"{allItems[i].item[$ "name"]} == {_item[$ "name"]} : {allItems[i].item[$ "name"] == _item[$ "name"]}")
             if (allItems[i].item[$ "name"] == _item[$ "name"]) return i;
         }
         return -1;
@@ -31,7 +31,7 @@ function Inventory(_stats, _owner) constructor {
     ///@param {Struct} _item - The item to add
     ///@param {real} _count - The quantity of the item to add
     ///@return {Struct} - the item if the item was added, undefined if it couldn't be added
-    function AddItem(_item, _count = 1)
+    function AddItem(_item, _count = 1, _showPopUp = true)
     {
         var item = _item.GetCopy();
         if (_count == 0) 
@@ -55,8 +55,11 @@ function Inventory(_stats, _owner) constructor {
             item.PickUp(self.owner);
         }
 
-        var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
-        popUp.Init($"Picked Up {_item.name} x{_count}");
+        if (variable_instance_exists(owner, "isPlayer") and _showPopUp)
+        {
+            var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+            popUp.Init($"Picked Up {_item.name} x{_count}");
+        }
                 
         return _item;
     }
@@ -113,9 +116,12 @@ function Inventory(_stats, _owner) constructor {
         for (var i = 0; i < _count; i += 1) {
             slot.item.Drop();
         }
-
-        var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
-        popUp.Init($"Dropped {_item.name} x{_count}");     
+        
+        if (variable_instance_exists(owner, "isPlayer"))
+        {
+            var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+            popUp.Init($"Dropped {_item.name} x{_count}");
+        }   
         
         if (_item.equipped) Unequip(_item);
         RemoveItem(index, _count);
@@ -136,8 +142,11 @@ function Inventory(_stats, _owner) constructor {
             slot.item.Drop();
         }
 
-        var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
-        popUp.Init($"Dropped {slot.item.name} x{_count}");     
+        if (variable_instance_exists(owner, "isPlayer"))
+        {
+            var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+            popUp.Init($"Dropped {slot.item.name} x{_count}");
+        }    
         
         if (slot.item.equipped) Unequip(slot.item);
         RemoveItem(_index, _count);

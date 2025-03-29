@@ -73,11 +73,11 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
                 var textPopUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
                 if (crit)
                 {
-                    textPopUp.Init(amount, c_red);
+                    textPopUp.Init($"-{amount}", c_red);
                 }
                 else
                 {
-                    textPopUp.Init(amount, c_white);
+                    textPopUp.Init($"-{amount}", c_white);
                 }
             }
         }
@@ -89,6 +89,9 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
     {
         if (self.isUndead) self.TakeDamage(amount, DamageType.HEALING);
         else self.currentHealth = min(self.maxHealth, self.currentHealth + amount);
+
+        var textPopUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+        textPopUp.Init($"+{amount}", c_green);
     }
     
     function GetDamageMultipler(damageType)
