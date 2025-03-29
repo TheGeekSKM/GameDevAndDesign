@@ -50,7 +50,7 @@ function QuestLogic()
                 
                 Raise("DialogueOpen", [playerInRange.PlayerIndex, dialogueQuestCompleted]);
 
-                var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+                var popUp = instance_create_layer(x, y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Cherry Picking");
 
                 layer_sequence_create("SetDressing", 3139, 1883, SEQ_Tent);

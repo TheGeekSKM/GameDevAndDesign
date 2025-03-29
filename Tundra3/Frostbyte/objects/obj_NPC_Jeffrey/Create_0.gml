@@ -61,7 +61,7 @@ function QuestLogic()
                 
                 Raise("DialogueOpen", [playerInRange.PlayerIndex, dialogueQuestCompleted]);
 
-                var popUp = instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText);
+                var popUp = instance_create_layer(x, y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Meat for Jeffrey");
 
                 playerInRange.inventory.AddItem(global.vars.Sticks, 10);
