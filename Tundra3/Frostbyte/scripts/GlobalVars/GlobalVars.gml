@@ -82,7 +82,7 @@ function Items() constructor {
 	Silicone = new Item("Silicone Shards", 1, 0, 1, ItemType.Default, [], false, spr_silicon);
 
 	SandClumps = new ConsumableItem("Sand Clumps", 1, 0, [new StatusEffects(StatType.Constitution, -1, 10)], spr_sandClumps, 5);
-	ScrapGold = new ConsumableItem("Scrap Gold", 1, 0, [new StatusEffects(StatType.Constitution, -2, 10)], spr_scrapCopper, 5, 0, 5, 0);
+	ScrapGold = new ConsumableItem("Scrap Gold", 1, 0, [new StatusEffects(StatType.Constitution, -2, 10)], spr_scrapGold, 5, 0, 5, 0);
 	BauxiteOre = new ConsumableItem("Bauxite Ore", 1, 0, [new StatusEffects(StatType.Constitution, -2, 10)], spr_bauxiteOre, 5, 0, 0, 5);
 	SteelDebris = new ConsumableItem("Steel Debris", 1, 0, [new StatusEffects(StatType.Constitution, -2, 10), new StatusEffects(StatType.Strength, 1, 10)], spr_steelDebris, 0, -5, 0, 5);
 	PlasticChunks = new ConsumableItem("Plastic Chunks", 1, 0, [new StatusEffects(StatType.Constitution, -2, 10)], spr_plasticChunks, 5, 0, 0, 7);
