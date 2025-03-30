@@ -19,9 +19,9 @@ function GetItem()
 {
     switch (currentType)
     {
-        case CollectorType.CPU: return global.vars.CPU; break;
-        case CollectorType.GPU: return global.vars.GPU; break;
-        case CollectorType.RAM: return global.vars.RAM; break;
+        case CollectorType.CPU: return global.vars.Items.CPU; break;
+        case CollectorType.GPU: return global.vars.Items.GPU; break;
+        case CollectorType.RAM: return global.vars.Items.RAM; break;
     }
 }
 

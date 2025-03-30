@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-SetItemRequired(global.vars.Pickaxe);
+SetItemRequired(global.vars.Items.Pickaxe);
 
 function PermittedInteract()
 {
@@ -18,7 +18,7 @@ function PermittedInteract()
     else
     {
         var count = irandom_range(1, 3);
-        playerInRange.inventory.AddItem(global.vars.CopperPiece, count);
+        playerInRange.inventory.AddItem(global.vars.Items.CopperPiece, count);
     }
 }
 

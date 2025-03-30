@@ -51,4 +51,4 @@ function StopCheckingForPrey() {
 controller = new CarnivoreAIController(id);
 
 inventory.Equip(inventory.AddItem(new MeleeWeaponItem("Claws", c_white, 100, 10, DamageType.PHYSICAL, 10, 2, [], spr_claws)));
-inventory.AddItem(global.vars.RawMeat, irandom_range(1, 3));
+inventory.AddItem(global.vars.Items.RawMeat, irandom_range(1, 3));

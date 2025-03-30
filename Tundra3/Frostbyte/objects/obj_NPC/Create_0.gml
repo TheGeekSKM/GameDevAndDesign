@@ -66,7 +66,7 @@ function OnInteract() {
     }
 }
 
-inventory.Equip(inventory.AddItem(global.vars.Bow));
-inventory.Equip(inventory.AddItem(global.vars.Arrow));
+inventory.Equip(inventory.AddItem(global.vars.Items.Bow));
+inventory.Equip(inventory.AddItem(global.vars.Items.Arrow));
 
 alarm[0] = 10;

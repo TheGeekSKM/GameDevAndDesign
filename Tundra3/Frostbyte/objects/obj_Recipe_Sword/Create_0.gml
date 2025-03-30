@@ -1,2 +1,2 @@
 event_inherited();
-SetRecipe(global.vars.SwordRecipe);
+SetRecipe(global.vars.Items.SwordRecipe);

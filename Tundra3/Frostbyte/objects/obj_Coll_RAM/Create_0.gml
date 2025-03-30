@@ -1,4 +1,4 @@
 // Inherit the parent event
 event_inherited();
 
-Initialize(global.vars.RAM, irandom_range(1, 3));
+Initialize(global.vars.Items.RAM, irandom_range(1, 3));

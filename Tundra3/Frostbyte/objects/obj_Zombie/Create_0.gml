@@ -43,5 +43,5 @@ controller = new UndeadAIController(id);
 
 targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Carnivore];
 
-inventory.Equip(inventory.AddItem(global.vars.Arrow));
-inventory.Equip(inventory.AddItem(global.vars.Bow));
+inventory.Equip(inventory.AddItem(global.vars.Items.Arrow));
+inventory.Equip(inventory.AddItem(global.vars.Items.Bow));

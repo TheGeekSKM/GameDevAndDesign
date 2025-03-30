@@ -1,2 +1,2 @@
 event_inherited();
-SetRecipe(global.vars.PickaxeRecipe);
+SetRecipe(global.vars.Items.PickaxeRecipe);

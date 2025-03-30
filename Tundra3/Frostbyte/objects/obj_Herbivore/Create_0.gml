@@ -74,5 +74,5 @@ function StopEating()
 
 controller = new HerbivoreAIController(id);
 
-inventory.AddItem(global.vars.RawMeat, irandom_range(1, 3));
+inventory.AddItem(global.vars.Items.RawMeat, irandom_range(1, 3));
 

@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-SetItemRequired(global.vars.Axe);
+SetItemRequired(global.vars.Items.Axe);
 
 plantRanges = [
     [3, 5],
@@ -22,12 +22,12 @@ function PermittedInteract()
     if (irandom(100) >= 50) 
     {
         var cherryCount = irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]);
-        playerInRange.inventory.AddItem(global.vars.Cherry, cherryCount);
+        playerInRange.inventory.AddItem(global.vars.Items.Cherry, cherryCount);
     } 
     else 
     {
         var stickCount = irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]);
-        playerInRange.inventory.AddItem(global.vars.Sticks, stickCount);
+        playerInRange.inventory.AddItem(global.vars.Items.Sticks, stickCount);
     }
     DecreaseFood();
     
