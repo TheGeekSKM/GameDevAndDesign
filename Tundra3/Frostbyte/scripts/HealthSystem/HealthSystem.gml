@@ -115,6 +115,12 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
     function Die()
     {
         inventory.DropAllItems();
+        
+        if (variable_instance_exists(owner, "isPlayer"))
+        {
+            Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);    
+        }
+        
         instance_destroy(owner);
     }
 

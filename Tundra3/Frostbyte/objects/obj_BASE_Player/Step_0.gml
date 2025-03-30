@@ -9,6 +9,7 @@ entityData.Step();
 
 if (entityHealth.IsDead()) 
 {
+    echo("huh?")
     Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
     instance_destroy();
 }

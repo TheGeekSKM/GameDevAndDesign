@@ -53,7 +53,7 @@ if (canAttack)
     }
 }
 
-if (playerInRange != noone)
+if (playerInRange != noone and instance_exists(playerInRange))
 {
     var key = global.vars.InputManager.GetKey(playerInRange.PlayerIndex, ActionType.Action1);
     InteractText = $"\"{KeybindToString(key)}\" to talk";

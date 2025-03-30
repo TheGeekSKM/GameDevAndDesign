@@ -1,3 +1,4 @@
+if (!instance_exists(global.vars.Players[0])) return;
 // Inherit the parent event
 event_inherited();
 if (!vis) return;
