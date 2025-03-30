@@ -11,7 +11,8 @@ controller.Step();
 
 attacker = entityHealth.recentAttacker;
 
-
+if (instance_place(x, y, obj_ItemReq_SiliconDeposit)) entityData.slowed = true;
+else entityData.slowed = false;
 
 if (canMove)
 {

@@ -39,8 +39,8 @@ function Vars() constructor {
 	Pickaxe = new MeleeWeaponItem("Copper Pickaxe", c_dkgray, 150, 5, DamageType.PHYSICAL, 10, 5, [], spr_pickaxe);
 	Shovel = new MeleeWeaponItem("Copper Shovel", c_dkgray, 150, 5, DamageType.PHYSICAL, 10, 5, [], spr_shovel);
 
-	CopperPiece = new Item("Copper Piece", 1, 0, 1, ItemType.Default, [], false, spr_copper);
-	Silicone = new Item("Silicone", 1, 0, 1, ItemType.Default, [], false, spr_silicon);
+	CopperPiece = new Item("Scrap Copper", 1, 0, 1, ItemType.Default, [], false, spr_copper);
+	Silicone = new Item("Silicone Shards", 1, 0, 1, ItemType.Default, [], false, spr_silicon);
 	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_sticks);
 	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 15, 3); 
 	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_rawMeat, 5); 

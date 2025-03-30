@@ -4,7 +4,7 @@ canAttack = false;
 attackRange = 32;
 attacker = noone;
 
-collisionObjects = [obj_Wall]
+collisionObjects = [obj_Wall, obj_ItemReq_CopperDeposit]
 targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Zombie, obj_Door];
 
 canMove = true;

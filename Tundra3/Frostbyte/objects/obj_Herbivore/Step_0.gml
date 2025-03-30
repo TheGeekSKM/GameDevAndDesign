@@ -10,6 +10,9 @@ if (entityHealth.IsDead())
     instance_destroy();
 }
 
+if (instance_place(x, y, obj_ItemReq_SiliconDeposit)) entityData.slowed = true;
+else entityData.slowed = false;
+
 controller.Step();
 
 if (canMove)

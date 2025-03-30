@@ -37,7 +37,7 @@ function StatSystem(_str, _dex, _con, _owner) constructor {
     // Movement
     function GetMoveSpeed(currentWeight) 
     { 
-        var base_speed = 2 + (self.dexterity * 0.15) - (self.strength * 0.05);
+        var base_speed = 1 + (self.dexterity * 0.15) - (self.strength * 0.05);
         var decimalSpeed = max(1, base_speed - self.GetEncumberancePenalty(currentWeight));
         return ceil(decimalSpeed / 2);
         // Speed is reduced if over carry limit

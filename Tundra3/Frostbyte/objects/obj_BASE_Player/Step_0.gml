@@ -15,6 +15,9 @@ if (entityHealth.IsDead())
 }
 if (paused) return;
 
+if (instance_place(x, y, obj_ItemReq_SiliconDeposit)) entityData.slowed = true;
+else entityData.slowed = false;
+
 var menu = global.vars.InputManager.IsPressed(PlayerIndex, ActionType.Menu);
 if (menu)
 {
