@@ -130,7 +130,7 @@ function Items() constructor {
 	AluminumPlatingRecipe = new Recipe("Aluminum Plating", [new RecipeItem(AlluminumAlloy, 4), new RecipeItem(SteelScraps, 2)], [new RecipeItem(AluminumPlating, 1)]);
 	GrapheneWeaveSuitRecipe = new Recipe("Graphene Weave Suit", [new RecipeItem(GrapheneStrips, 4), new RecipeItem(PlasticResin, 3)], [new RecipeItem(GrapheneWeaveSuit, 1)]);
 	
-	Sticks = new Item("Sticks", 1, 0, 1, ItemType.Default, [], false, spr_sticks);
+	Sticks = new Item("Sticks", 1, 0, 0, ItemType.Default, [], false, spr_sticks);
 	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 15, 3); 
 	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_rawMeat, 5); 
 	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_cookedMeat, 35, 10, 1, 5); 

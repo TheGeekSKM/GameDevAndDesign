@@ -9,7 +9,7 @@ image_blend = color;
 requiredNum = irandom_range(5, 10);
 speakerData = new SpeakerData("Tim", color);
 
-var dialogueScene = new DialogueScene()
+dialogueScene = new DialogueScene()
     .AddDialogue(speakerData, "Hey there, pardner. Listen, I need your help.")
     .AddDialogue(speakerData, "Because of the upcoming winter storm, we need cherries.")
     .AddDialogue(speakerData, "You can find cherry bushes and trees in the forest, if you're careful, but you'll need an axe to cut down the trees.")

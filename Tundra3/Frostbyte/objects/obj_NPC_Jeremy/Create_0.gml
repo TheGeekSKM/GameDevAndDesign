@@ -9,7 +9,7 @@ image_blend = color;
 requiredNum = irandom_range(5, 10);
 speakerData = new SpeakerData("Jeremy", color);
 
-var dialogueScene = new DialogueScene()
+dialogueScene = new DialogueScene()
     .AddDialogue(speakerData, "Howdy, friend. I'm just takin' care of the PC that's powering the camp.")
     .AddDialogue(speakerData, "I'm running low on CPUs, GPUs, and RAM, though. If you can drop some in the containers, I'll get them piped to the PC.")
     .AddDialogue(speakerData, "It's a continuous process, so I'll need you to keep an eye on it.")

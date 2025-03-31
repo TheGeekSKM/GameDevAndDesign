@@ -7,7 +7,7 @@ image_blend = color;
 requiredNum = irandom_range(5, 10);
 speakerData = new SpeakerData("Jeffrey", color);
 
-var dialogueScene = new DialogueScene()
+dialogueScene = new DialogueScene()
     .AddDialogue(speakerData, "Heya pal. Tim sent ya over right?")
     .AddDialogue(speakerData, "I've been having trouble finding game in the forest lately.")
     .AddDialogue(speakerData, "One of the wolves bit my leg, so I can't hunt as well as I used to.")
@@ -15,7 +15,7 @@ var dialogueScene = new DialogueScene()
     .AddDialogue(speakerData, "Tip #1: You can usually find some animals in the edges near the fog.")
     .AddDialogue(speakerData, "For some reason, the animals are attracted to the fog, but they never go in.")
     .AddDialogue(speakerData, "They just stare at it...")
-    .AddDialogue(speakerData, "$I'll need at least {requiredNum} pieces of meat to get started.");
+    .AddDialogue(speakerData, $"I'll need at least {requiredNum} pieces of meat to get started.");
 
 dialogueQuestCompleted = new DialogueScene()
     .AddDialogue(speakerData, "Thanks for the meat, pal. I'll be able to help you out now.")

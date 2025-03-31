@@ -31,7 +31,7 @@ global.vars.Players[PlayerIndex] = id;
 
 tempInteractableList = ds_list_create();
 interactableArray = [];
-interactionRange = 30;
+interactionRange = 40;
 
 targets = [obj_BASE_Entity];
 

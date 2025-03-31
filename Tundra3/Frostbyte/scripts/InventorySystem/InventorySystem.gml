@@ -174,7 +174,10 @@ function Inventory(_stats, _owner) constructor {
         else if (slot.item.Equals(equippedArmor)) equippedArmor = undefined;
         else if (slot.item.Equals(equippedBullet)) equippedBullet = undefined;
 
-        if (slot.quantity == 0) array_delete(allItems, _itemIndex, 1);
+        if (slot.quantity == 0) {
+            echo($"Removing {slot.item.name}'s slot from inventory");
+            array_delete(allItems, _itemIndex, 1);
+        }
 
         return false;
     }
