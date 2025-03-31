@@ -8,8 +8,8 @@
   "name":"obj_Recipe_RAM",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactables",
-    "path":"folders/Objects/_Base/Interactables.yy",
+    "name":"Resources",
+    "path":"folders/Objects/Recipes/Resources.yy",
   },
   "parentObjectId":{
     "name":"obj_Recipe",

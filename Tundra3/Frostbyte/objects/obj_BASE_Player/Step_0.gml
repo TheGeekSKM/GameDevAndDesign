@@ -41,8 +41,8 @@ if (canMove)
     var left = global.vars.InputManager.IsDown(PlayerIndex, ActionType.Left);
     var right = global.vars.InputManager.IsDown(PlayerIndex, ActionType.Right);
 
-    var moveX = (right - left) * entityData.moveSpeed * 1.5;
-    var moveY = (down - up) * entityData.moveSpeed * 1.5;
+    var moveX = round((right - left) * entityData.moveSpeed * 1.5);
+    var moveY = round((down - up) * entityData.moveSpeed * 1.5);
 
     if (moveX != 0) moveY = 0;
     if (moveY != 0) moveX = 0;
@@ -53,7 +53,7 @@ if (canMove)
     if (moveY<0) image_angle = 90;
         
     if (moveX != 0 or moveY != 0) {
-        image_speed = entityData.moveSpeed / 3;
+        image_speed = round(entityData.moveSpeed / 3);
     } 
     else 
     {
@@ -62,7 +62,7 @@ if (canMove)
         image_speed = 0;
     }
         
-    move_and_collide(moveX, moveY, collisionObjects, 4, 0, 0, entityData.moveSpeed * 1.5, -1);
+    move_and_collide(moveX, moveY, collisionObjects, 4, 0, 0, round(entityData.moveSpeed * 1.5), -1);
 }
 
 if (!ds_exists(tempInteractableList, ds_type_list)) 

@@ -7,6 +7,6 @@ function EntityData(_stats, _inventory) constructor {
 
 
     function Step() {
-        moveSpeed = stats.GetMoveSpeed(inventory.GetCurrentWeight()) * (slowed ? 0.5 : 1);
+        moveSpeed = round(stats.GetMoveSpeed(inventory.GetCurrentWeight()));
     }
 }

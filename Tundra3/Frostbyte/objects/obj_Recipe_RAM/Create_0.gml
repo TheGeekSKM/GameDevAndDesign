@@ -1,2 +1,2 @@
 event_inherited();
-SetRecipe(global.vars.RAMRecipe);
+SetRecipe(global.vars.Items.RAMRecipe);

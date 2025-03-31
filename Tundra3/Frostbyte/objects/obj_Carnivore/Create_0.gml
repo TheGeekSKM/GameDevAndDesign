@@ -4,7 +4,7 @@ canAttack = false;
 attackRange = 32;
 attacker = noone;
 
-collisionObjects = [obj_Wall, obj_ItemReq_CopperDeposit]
+collisionObjects = [obj_Wall, obj_ItemRequired_INT]
 targets = [obj_Herbivore, obj_NPC, obj_BASE_Player, obj_Zombie, obj_Door];
 
 canMove = true;
@@ -51,4 +51,4 @@ function StopCheckingForPrey() {
 controller = new CarnivoreAIController(id);
 
 inventory.Equip(inventory.AddItem(new MeleeWeaponItem("Claws", c_white, 100, 10, DamageType.PHYSICAL, 10, 2, [], spr_claws)));
-inventory.AddItem(global.vars.RawMeat, irandom_range(1, 3));
+inventory.AddItem(global.vars.Items.RawMeat, irandom_range(1, 3));

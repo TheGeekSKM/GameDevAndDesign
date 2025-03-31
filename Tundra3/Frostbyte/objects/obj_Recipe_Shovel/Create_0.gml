@@ -1,2 +1,2 @@
 event_inherited();
-SetRecipe(global.vars.ShovelRecipe);
+SetRecipe(global.vars.Items.ShovelRecipe);

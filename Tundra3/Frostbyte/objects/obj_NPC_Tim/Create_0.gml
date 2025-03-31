@@ -36,11 +36,11 @@ function QuestLogic()
     switch (_quest.state) {
         case QuestState.Inactive:
             _quest.state = QuestState.Active;
-            DiscoverRecipe(global.vars.AxeRecipe);
+            DiscoverRecipe(global.vars.Items.AxeRecipe);
             break;
         case QuestState.Active:
             var slot = undefined;
-            var slotIndex = playerInRange.inventory.ContainsItem(global.vars.Cherry);
+            var slotIndex = playerInRange.inventory.ContainsItem(global.vars.Items.Cherry);
             if (slotIndex != -1) slot = playerInRange.inventory.allItems[slotIndex];
         
             if (slot != undefined and slot.quantity >= requiredNum) 

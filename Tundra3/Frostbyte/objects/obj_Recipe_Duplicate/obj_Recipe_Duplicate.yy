@@ -8,8 +8,8 @@
   "name":"obj_Recipe_Duplicate",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactables",
-    "path":"folders/Objects/_Base/Interactables.yy",
+    "name":"Recipes",
+    "path":"folders/Objects/Recipes.yy",
   },
   "parentObjectId":{
     "name":"obj_Recipe",

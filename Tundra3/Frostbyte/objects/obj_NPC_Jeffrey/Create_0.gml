@@ -47,11 +47,11 @@ function QuestLogic()
     switch (_quest.state) {
         case QuestState.Inactive:
             _quest.state = QuestState.Active;
-            DiscoverRecipe(global.vars.AxeRecipe);
+            DiscoverRecipe(global.vars.Items.AxeRecipe);
             break;
         case QuestState.Active:
             var slot = undefined;
-            var slotIndex = playerInRange.inventory.ContainsItem(global.vars.RawMeat);
+            var slotIndex = playerInRange.inventory.ContainsItem(global.vars.Items.RawMeat);
             if (slotIndex != -1) slot = playerInRange.inventory.allItems[slotIndex];
         
             if (slot != undefined and slot.quantity >= requiredNum) 
@@ -64,9 +64,9 @@ function QuestLogic()
                 var popUp = instance_create_layer(x, y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Meat for Jeffrey");
 
-                playerInRange.inventory.AddItem(global.vars.Sticks, 10);
+                playerInRange.inventory.AddItem(global.vars.Items.Sticks, 10);
 
-                DiscoverRecipe(global.vars.CookedMeatRecipe);
+                DiscoverRecipe(global.vars.Items.CookedMeatRecipe);
 
                 Raise("QuestCompleted", {
                     questName: "Meat for Jeffrey",

@@ -36,8 +36,8 @@ function QuestLogic()
     switch (_quest.state) {
         case QuestState.Inactive:
             _quest.state = QuestState.Active;
-            DiscoverRecipe(global.vars.CPURecipe);
-            DiscoverRecipe(global.vars.GPURecipe);
+            DiscoverRecipe(global.vars.Items.CPURecipe);
+            DiscoverRecipe(global.vars.Items.GPURecipe);
             break;
         case QuestState.Active:
             break;
