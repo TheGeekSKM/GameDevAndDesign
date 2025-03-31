@@ -19,14 +19,24 @@ function StatSystem(_str, _dex, _con, _owner) constructor {
     timedStats = [];
     
     // Health and Stamina
-    function GetMaxHealth() { return 50 + (self.constitution * 5) + (self.strength * 2); }
-    function GetMaxStamina() { return 100 + (self.constitution * 5) + (self.dexterity * 2); }
+    function GetMaxHealth() { 
+        if (!instance_exists(owner)) return 0; 
+        return 50 + (self.constitution * 5) + (self.strength * 2); }
+    function GetMaxStamina() { 
+        if (!instance_exists(owner)) return 0; 
+        return 100 + (self.constitution * 5) + (self.dexterity * 2); }
 
-    function GetStaminaRegenRate() { return (1 + (self.constitution * 0.1) + (self.dexterity * 0.05)) / 60; }
+    function GetStaminaRegenRate() { 
+        if (!instance_exists(owner)) return 0; 
+        return (1 + (self.constitution * 0.1) + (self.dexterity * 0.05)) / 60; }
     
     // Encumberance System
-    function GetMaxCarryWeight() { return 20 + (self.strength * 5) + (self.constitution * 2); }
+    function GetMaxCarryWeight() { 
+        if (!instance_exists(owner)) return 0; 
+        return 20 + (self.strength * 5) + (self.constitution * 2); }
+    
     function GetEncumberancePenalty(currentWeight) { 
+        if (!instance_exists(owner)) return 0; 
         var maxWeight = self.GetMaxCarryWeight();
         
         // Each extra unit over max weight slows speed by 10%
@@ -37,6 +47,7 @@ function StatSystem(_str, _dex, _con, _owner) constructor {
     // Movement
     function GetMoveSpeed(currentWeight) 
     { 
+        if (!instance_exists(owner)) return 0; 
         var base_speed = 1 + (self.dexterity * 0.15) - (self.strength * 0.05);
         var decimalSpeed = max(1, base_speed - self.GetEncumberancePenalty(currentWeight));
         return round(decimalSpeed / 2);
@@ -44,22 +55,34 @@ function StatSystem(_str, _dex, _con, _owner) constructor {
     }
     
     // Melee Combat
-    function GetMeleeAttackSpeed() { return 1 + (self.dexterity * 0.1) + (self.strength * 0.05); }
-    function GetMeleeDamage() { return 5 + (self.strength * 1.8) + (self.dexterity * 0.5); }
-    function GetMeleeKnockback() { return (self.strength * 1.2) - (self.dexterity * 0.3); }
+    function GetMeleeAttackSpeed() { 
+        if (!instance_exists(owner)) return 0; 
+        return 1 + (self.dexterity * 0.1) + (self.strength * 0.05); }
+    function GetMeleeDamage() { 
+        if (!instance_exists(owner)) return 0; 
+        return 5 + (self.strength * 1.8) + (self.dexterity * 0.5); }
+    function GetMeleeKnockback() { 
+        if (!instance_exists(owner)) return 0; 
+        return (self.strength * 1.2) - (self.dexterity * 0.3); }
     
     // Ranged Combat
-    function GetRangedDamage() {  return 4 + (self.dexterity * 1.5) + (self.strength * 0.3); }
-    function GetRangedAttackSpeed() { return 1 + (self.dexterity * 0.15) - (self.strength * 0.05); }
+    function GetRangedDamage() {  
+        if (!instance_exists(owner)) return 0; 
+        return 4 + (self.dexterity * 1.5) + (self.strength * 0.3); }
+    function GetRangedAttackSpeed() { 
+        if (!instance_exists(owner)) return 0; 
+        return 1 + (self.dexterity * 0.15) - (self.strength * 0.05); }
     
     // Armor Resistances
     function GetNaturalResistance() 
     { 
+        if (!instance_exists(owner)) return 0; 
         return (self.constitution * 0.25) + (self.strength * 0.15);
         // CON is the main factor, STR adds some physical resistance 
     }
     function GetDamageReduction(armorValue) 
     { 
+        if (!instance_exists(owner)) return 0; 
         return armorValue + (self.GetNaturalResistance() / 100);
         // Armor absorbs more damage based on CON and STR 
     }
@@ -67,24 +90,31 @@ function StatSystem(_str, _dex, _con, _owner) constructor {
     // Crit Hits
     function GetCritChance() 
     { 
+        if (!instance_exists(owner)) return 0; 
         return min(50, 5 + (self.dexterity * 2));
         // DEX gives crit chance, capped at 50% 
     }
     function GetCritDamageMultiplier() 
     { 
+        if (!instance_exists(owner)) return 0; 
         return 1.5 + (self.strength * 0.1);
         // STR increases the crit multiplier (default 1.5x)
     }
     
     // Survival
-    function GetMaxTemperature() { return 100 + (self.constitution * 5) + (self.strength * 2); }
-    function GetTemperatureRate() { 
+    function GetMaxTemperature()  { 
+        if (!instance_exists(owner)) return 0; 
+        return 100 + (self.constitution * 5) + (self.strength * 2); }
+    function GetTemperatureRate() {
+        if (!instance_exists(owner)) return 0; 
         var equippedArmor = owner.inventory.GetEquippedArmor();
         var armorEffect = equippedArmor != undefined ? equippedArmor.armorValue * 0.05 : 0; // Armor reduces the rate by 5% per armor point
         return (max(0.5, 0.2 + (self.constitution * 0.1) - (self.strength * 0.05) - armorEffect)) / game_get_speed(gamespeed_fps); 
     }
 
-    function GetHungerRate() { return 2 * (max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05))) / game_get_speed(gamespeed_fps); } 
+    function GetHungerRate() { 
+        if (!instance_exists(owner)) return 0; 
+        return 2 * (max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05))) / game_get_speed(gamespeed_fps); } 
     function GetMaxHunger() { return 100 + (self.constitution * 5) + (self.strength * 2); }
 
     function AddStat(_statusEffect)
@@ -115,6 +145,7 @@ function StatSystem(_str, _dex, _con, _owner) constructor {
 
     function Step()
     {
+        if (!instance_exists(owner)) return; 
         //loop backwards to allow for removal
         for (var i = array_length(timedStats) - 1; i >= 0; i--)
         {

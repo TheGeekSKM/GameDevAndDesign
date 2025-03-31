@@ -25,7 +25,7 @@ dialogueQuestCompleted = new DialogueScene()
 
 AddDialogueToList(dialogueScene);
 
-var _quest = new Quest("Cherry Picking", "Tim needs your help to gather cherries for the camp.", id);
+var _quest = new Quest("Cherry Picking", $"Tim needs your help to gather {requiredNum} cherries for the camp.", id);
 SetQuest(_quest);
 
 function QuestLogic() 
@@ -66,8 +66,9 @@ function QuestLogic()
             else if (slot != undefined and slot.quantity < requiredNum) 
             {
                 Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(speakerData, $"You need {requiredNum - slot.quantity} more cherries. But I'll take what you have for now.")]);
-                playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
                 requiredNum -= slot.quantity;
+                playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
+                
             }
             else
             {
