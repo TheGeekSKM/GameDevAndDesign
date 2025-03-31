@@ -8,8 +8,8 @@
   "name":"obj_Coll_Copper",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactables",
-    "path":"folders/Objects/_Base/Interactables.yy",
+    "name":"Items",
+    "path":"folders/Objects/Items.yy",
   },
   "parentObjectId":{
     "name":"obj_BASE_Collectible",

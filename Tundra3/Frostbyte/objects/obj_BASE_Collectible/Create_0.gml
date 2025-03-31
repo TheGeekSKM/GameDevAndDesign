@@ -13,6 +13,8 @@ function Initialize(_item, _itemCount)
     for (var i = 0; i < _itemCount; i += 1) {
         array_push(spr, [x + irandom_range(-8, 8), y + irandom_range(-8, 8), irandom_range(0, 360)]);
     }
+
+    image_angle = irandom_range(0, 360);
 }
 
 spr = [];

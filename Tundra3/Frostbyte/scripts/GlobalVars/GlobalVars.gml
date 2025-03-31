@@ -118,7 +118,7 @@ function Items() constructor {
 	CircuitBladeRecipe = new Recipe("Circuit Blade", [new RecipeItem(CopperWire, 3), new RecipeItem(Silicone, 2)], [new RecipeItem(CircuitBlade, 1)]);
 	GoldPlatedKnucklesRecipe = new Recipe("Gold Plated Knuckles", [new RecipeItem(GoldFlakes, 4), new RecipeItem(SteelScraps, 2)], [new RecipeItem(GoldPlatedKnucles, 1)]);
 	AluminumPipeRecipe = new Recipe("Aluminum Pipe", [new RecipeItem(AlluminumAlloy, 3), new RecipeItem(SteelScraps, 1)], [new RecipeItem(AluminumPipe, 1)]);
-	SolderingIronRecipe = new Recipe("Soldering Iron", [new RecipeItem(CopperWire, 2), new RecipeItem(ThermalPaste, 1)], [new RecipeItem(SolderingIron, 1)]);
+	RAMStickThrowerRecipe = new Recipe("Soldering Iron", [new RecipeItem(CopperWire, 2), new RecipeItem(ThermalPaste, 1)], [new RecipeItem(SolderingIron, 1)]);
 	GrapheneWhipRecipe = new Recipe("Graphene Whip", [new RecipeItem(GrapheneStrips, 3), new RecipeItem(PlasticResin, 2)], [new RecipeItem(GrapheneWhip, 1)]);
 
 	CRTCannonRecipe = new Recipe("CRT Cannon", [new RecipeItem(GlassPanel, 2), new RecipeItem(CopperWire, 3)], [new RecipeItem(CRTCannon, 1)]);

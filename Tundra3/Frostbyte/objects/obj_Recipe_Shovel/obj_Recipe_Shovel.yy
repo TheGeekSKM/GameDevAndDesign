@@ -8,8 +8,8 @@
   "name":"obj_Recipe_Shovel",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactables",
-    "path":"folders/Objects/_Base/Interactables.yy",
+    "name":"Weapons",
+    "path":"folders/Objects/Recipes/Weapons.yy",
   },
   "parentObjectId":{
     "name":"obj_Recipe",
