@@ -1,12 +1,12 @@
+// Handle time progression
 if (state == "DAY_HOLD") {
 
-    if (doOncePerDay == false) {
+    if (!doOncePerDay) {
         // Do something once per day
         daysSurvived += 1;
         Raise("DayDisplayOpen", id);
         Raise("Day", id);
-        if (daysSurvived >= 3)
-        {
+        if (daysSurvived >= 3) {
             Transition(rmWin, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
         }
 
@@ -29,8 +29,7 @@ else if (state == "DAY_TO_NIGHT") {
 }
 else if (state == "NIGHT_HOLD") {
 
-    if (doOncePerDay == true) {
-        // Do something once per night
+    if (doOncePerDay) {
         Raise("Night", id);
         doOncePerDay = false;
     }

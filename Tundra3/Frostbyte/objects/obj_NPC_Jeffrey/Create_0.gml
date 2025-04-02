@@ -12,20 +12,21 @@ dialogueScene = new DialogueScene()
     .AddDialogue(speakerData, "I've been having trouble finding game in the forest lately.")
     .AddDialogue(speakerData, "One of the wolves bit my leg, so I can't hunt as well as I used to.")
     .AddDialogue(speakerData, "If you can bring me some meat, I can help you out with some hunting tips.")
-    .AddDialogue(speakerData, "Tip #1: You can usually find some animals in the edges near the fog.")
+    .AddDialogue(speakerData, "[wave]Tip #1:[/wave] You can usually find some animals in the edges near the fog.")
     .AddDialogue(speakerData, "For some reason, the animals are attracted to the fog, but they never go in.")
     .AddDialogue(speakerData, "They just stare at it...")
-    .AddDialogue(speakerData, $"I'll need at least {requiredNum} pieces of meat to get started.");
+    .AddDialogue(speakerData, "[wave]Tip #2:[/wave] When you start attacking, you won't be able to move, so be careful!")
+    .AddDialogue(speakerData, $"I'll need at least [wave]{requiredNum}[/wave] pieces of meat to get started.");
 
 dialogueQuestCompleted = new DialogueScene()
     .AddDialogue(speakerData, "Thanks for the meat, pal. I'll be able to help you out now.")
-    .AddDialogue(speakerData, "Here's a bundle of sticks. Take it over to Steve and he can make you some Cooked Meat.")
+    .AddDialogue(speakerData, "Here's a [wave]bundle of sticks[/wave]. Take it over to Steve and he can make you some Cooked Meat.")
 
 
 Subscribe("QuestCompleted", function(data) {
     if (data.questName == "Cherry Picking") {
         AddDialogueToList(dialogueScene);
-        var _quest = new Quest("Meat for Jeffrey", "Jeffrey needs your help to gather meat for the camp.", id);
+        var _quest = new Quest("Meat for Jeffrey", $"Jeffrey needs your help to gather {requiredNum} meat for the camp.", id);
         SetQuest(_quest);
     }
 });

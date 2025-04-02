@@ -19,7 +19,7 @@ function PermittedInteract()
 {
     echo($"CurrentPlantState: {currentPlantState}")
 
-    if (irandom(100) >= 50) 
+    if (irandom(100) >= 30) 
     {
         var cherryCount = irandom_range(plantRanges[currentPlantState][0], plantRanges[currentPlantState][1]);
         playerInRange.inventory.AddItem(global.vars.Items.Cherry, cherryCount);

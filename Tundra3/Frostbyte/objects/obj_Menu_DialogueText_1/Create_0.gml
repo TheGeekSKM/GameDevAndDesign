@@ -19,7 +19,7 @@ function DrawGUI()
     if (text == undefined) return;
     scribble($"{text.speakerData.speakerName}: {text.line}")
         .align(fa_center, fa_middle)
-        .starting_format("Font", c_white)
+        .starting_format("Font", c_black)
         .transform(0.75, 0.75, image_angle)
         .wrap(346)
         .draw(x, y);

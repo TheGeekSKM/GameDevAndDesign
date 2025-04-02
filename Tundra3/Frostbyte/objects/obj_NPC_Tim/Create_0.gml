@@ -1,20 +1,19 @@
 // Inherit the parent event
 event_inherited();
 
-requiredNum = irandom_range(30, 40);
+requiredNum = irandom_range(15, 40);
 
 color = make_color_hsv(irandom(255), 150, 150);
 image_blend = color;
 
-requiredNum = irandom_range(5, 10);
 speakerData = new SpeakerData("Tim", color);
 
 dialogueScene = new DialogueScene()
     .AddDialogue(speakerData, "Hey there, pardner. Listen, I need your help.")
     .AddDialogue(speakerData, "Because of the upcoming winter storm, we need cherries.")
-    .AddDialogue(speakerData, "You can find cherry bushes and trees in the forest, if you're careful, but you'll need an axe to cut down the trees.")
-    .AddDialogue(speakerData, $"Get me {requiredNum} cherries to help feed the camp.")
-    .AddDialogue(speakerData, "I found this blueprint for an axe. Talk to Steve and see if he'll craft it for you.")
+    .AddDialogue(speakerData, "You can find [wave]cherry bushes[/wave] and [wave]cherry trees[/wave] in the forest, if you're careful, but you'll need an [wave]axe[/wave] to cut down the trees.")
+    .AddDialogue(speakerData, $"Get me [wave]{requiredNum} cherries[/wave] to help feed the camp.")
+    .AddDialogue(speakerData, "I found this blueprint for an axe. Talk to [wave]Steve[/wave] and see if he'll craft it for you.")
     .AddDialogue(speakerData, "Good luck, and be careful out there.");
 
 dialogueQuestCompleted = new DialogueScene()

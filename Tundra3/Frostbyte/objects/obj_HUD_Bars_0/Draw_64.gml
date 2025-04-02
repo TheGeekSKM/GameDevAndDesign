@@ -18,3 +18,4 @@ scribble($"{obj_Player1.x}, {obj_Player1.y}")
     .transform(1, 1, 0)
     .draw(x + 200, y + 13);
 
+
