@@ -5,7 +5,8 @@ y = device_mouse_y_to_gui(0);
 
 if (currentInteractable != oldInteractable and currentInteractable != noone)
 {
-    currentMouseState = currentInteractable.OnMouseEnter();
+    currentInteractable.OnMouseEnter();
+    currentMouseState = currentInteractable.Type;
 }
 
 oldInteractable = currentInteractable;
@@ -52,3 +53,5 @@ if (currentInteractable != noone)
     //str = string_concat(str, interactableList[| i], ", ")
 //}
 //echo($"List of Interactables: {str} and CurrentInteractable: {currentInteractable}");
+
+image_index = currentMouseState;
