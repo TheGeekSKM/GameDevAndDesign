@@ -15,8 +15,8 @@
   "name":"display_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"_core",
-    "path":"folders/ImportedAssets/GUI and Display/_core.yy",
+    "name":"GUI and Display",
+    "path":"folders/ImportedAssets/GUI and Display.yy",
   },
   "parentObjectId":null,
   "persistent":true,

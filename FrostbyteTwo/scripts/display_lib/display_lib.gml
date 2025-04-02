@@ -3,10 +3,7 @@
 // Display library
 // Author: Nathan Hunter, badwronggames@gmail.com
 
-#macro DISPLAY_DEFAULT_FULLSCREEN true
-#macro DISPLAY_DEFAULT_TEXTURE_FILTERING true
-#macro DISPLAY_DEFAULT_WINDOWED_WIDTH 800
-#macro DISPLAY_DEFAULT_WINDOWED_HEIGHT 448
+
 
 // These functions are mostly just used by the display_manager object
 

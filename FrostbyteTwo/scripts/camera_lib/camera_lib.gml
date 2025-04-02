@@ -3,15 +3,6 @@
 // Camera library
 // Author: Nathan Hunter, badwronggames@gmail.com
 
-#macro VIEW_ZOOM_MIN	   0.1
-#macro VIEW_ZOOM_MAX	   2
-#macro VIEW_ZOOM_SPEED	   0.1
-#macro VIEW_DEFAULT_WIDTH  800
-#macro VIEW_DEFAULT_HEIGHT 448
-#macro VIEW_MINIMUM_WIDTH  400 // Zoom will never allow for a smaller width
-#macro VIEW_MINIMUM_HEIGHT 224 // Zoom will never allow for a smaller height
-#macro VIEW_DEFAULT_FOLLOW_OBJECT obj_BASE_Button
-
 function game_camera_create(
 	_viewport_index, 
 	_view_width, 

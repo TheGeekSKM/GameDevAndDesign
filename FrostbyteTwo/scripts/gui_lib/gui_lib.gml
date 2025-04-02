@@ -3,8 +3,7 @@
 // GUI library
 // Author: Nathan Hunter, badwronggames@gmail.com
 
-#macro GUI_DEFAULT_WIDTH  1600
-#macro GUI_DEFAULT_HEIGHT 896
+
 
 function gui_mouse_x()
 {
