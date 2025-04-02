@@ -19,4 +19,4 @@ switch (currentState)
     break;
 }
 
-if (obj_mouse.currentInteractable != id) currentState = ButtonState.Idle;
+if (obj_Mouse.currentInteractable != id) currentState = ButtonState.Idle;

@@ -10,6 +10,9 @@ function Vars() constructor {
 		Raise("Resume", _id);
 		pause = false;
 	}
+    
+    mainColorLight = c_lime;
+    mainColor = c_green;
 }
 
 global.vars = new Vars();

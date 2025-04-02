@@ -72,6 +72,7 @@
   "resources":[
     {"id":{"name":"font_console","path":"fonts/font_console/font_console.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
+    {"id":{"name":"VCR_OSD_Mono","path":"fonts/VCR_OSD_Mono/VCR_OSD_Mono.yy",},},
     {"id":{"name":"_OBJ_RESET_VALUES","path":"objects/_OBJ_RESET_VALUES/_OBJ_RESET_VALUES.yy",},},
     {"id":{"name":"obj_BASE_Button","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},},
     {"id":{"name":"obj_BASE_FloatingText","path":"objects/obj_BASE_FloatingText/obj_BASE_FloatingText.yy",},},
