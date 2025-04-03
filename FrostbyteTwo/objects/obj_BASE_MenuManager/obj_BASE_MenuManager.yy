@@ -9,8 +9,8 @@
   "name":"obj_BASE_MenuManager",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/_Base/UI.yy",
+    "name":"Panels",
+    "path":"folders/Objects/_Base/UI/Panels.yy",
   },
   "parentObjectId":null,
   "persistent":false,

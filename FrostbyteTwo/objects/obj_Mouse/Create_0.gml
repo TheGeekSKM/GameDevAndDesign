@@ -1,3 +1,6 @@
+#macro guiMouseX device_mouse_x_to_gui(0)
+#macro guiMouseY device_mouse_y_to_gui(0)
+
 currentInteractable = noone;
 oldInteractable = currentInteractable;
 interactableList = ds_list_create();

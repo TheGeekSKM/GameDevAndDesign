@@ -1,9 +1,3 @@
-enum MenuState
-{
-    Opened,
-    Closed
-}
-
 if (!layer_exists("Sequences")) layer_create(-100, "Sequences");
 
 seq = layer_sequence_create("Sequences", 400, 224, Sequence);
@@ -14,8 +8,8 @@ mouseOffsetX = 0;
 mouseOffsetY = 0;
 
 function StartDragging() {
-    var mx = device_mouse_x_to_gui(0);
-    var my = device_mouse_y_to_gui(0);
+    var mx = guiMouseX;
+    var my = guiMouseY;
     dragging = true;
     mouseOffsetX = layer_sequence_get_x(seq) - mx;
     mouseOffsetY = layer_sequence_get_y(seq) - my;

@@ -14,3 +14,9 @@ enum ButtonState
     Hover,
     Click
 }
+
+enum MenuState
+{
+    Opened,
+    Closed
+}

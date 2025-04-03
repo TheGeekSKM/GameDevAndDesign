@@ -8,8 +8,8 @@
   "name":"obj_Button_Duplicate",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/_Base/UI.yy",
+    "name":"Buttons",
+    "path":"folders/Objects/_Base/UI/Buttons.yy",
   },
   "parentObjectId":{
     "name":"obj_BASE_Button",
