@@ -982,6 +982,7 @@
     {"id":{"name":"spr_sticks","path":"sprites/spr_sticks/spr_sticks.yy",},},
     {"id":{"name":"spr_Sword","path":"sprites/spr_Sword/spr_Sword.yy",},},
     {"id":{"name":"spr_target","path":"sprites/spr_target/spr_target.yy",},},
+    {"id":{"name":"spr_target120","path":"sprites/spr_target120/spr_target120.yy",},},
     {"id":{"name":"spr_tent","path":"sprites/spr_tent/spr_tent.yy",},},
     {"id":{"name":"spr_textBox_0","path":"sprites/spr_textBox_0/spr_textBox_0.yy",},},
     {"id":{"name":"spr_textBox_1","path":"sprites/spr_textBox_1/spr_textBox_1.yy",},},

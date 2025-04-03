@@ -22,3 +22,5 @@ controller = new PlayerController(id);
 
 PlayerIndex = 0;
 get_game_camera(0).set_view_size(400, 224)
+
+rightClickHold = false;
