@@ -10,12 +10,12 @@ switch (currentState)
     
     case ButtonState.Hover: 
         image_index = 1;
-        image_blend = merge_color(image_blend, global.vars.mainColorLight, 0.1);
+        image_blend = merge_color(image_blend, HoverColor, 0.1);
     break;
     
     case ButtonState.Click: 
         image_index = 1;        
-        image_blend = global.vars.mainColor;   
+        image_blend = ClickColor;   
     break;
 }
 

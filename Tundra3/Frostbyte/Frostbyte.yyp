@@ -223,7 +223,7 @@
     {"id":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},},
     {"id":{"name":"obj_Fire","path":"objects/obj_Fire/obj_Fire.yy",},},
     {"id":{"name":"obj_FloatingText_MainMenu","path":"objects/obj_FloatingText_MainMenu/obj_FloatingText_MainMenu.yy",},},
-    {"id":{"name":"obj_FloatingText","path":"objects/obj_FloatingText/obj_FloatingText.yy",},},
+    {"id":{"name":"obj_FloatingUI","path":"objects/obj_FloatingUI/obj_FloatingUI.yy",},},
     {"id":{"name":"obj_gui","path":"objects/obj_gui/obj_gui.yy",},},
     {"id":{"name":"obj_Herbivore","path":"objects/obj_Herbivore/obj_Herbivore.yy",},},
     {"id":{"name":"obj_HUD_Bars_0","path":"objects/obj_HUD_Bars_0/obj_HUD_Bars_0.yy",},},

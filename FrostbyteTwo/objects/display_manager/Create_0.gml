@@ -7,9 +7,9 @@ game_cameras      = get_game_camera_array();
 room_start_ran    = false;
 window_width      = -1;
 window_height     = -1;
-windowed_width    = 100 //DISPLAY_DEFAULT_WINDOWED_WIDTH;
-windowed_height   = 100 //DISPLAY_DEFAULT_WINDOWED_HEIGHT;
-window_fullscreen = false; //DISPLAY_DEFAULT_FULLSCREEN;
+windowed_width    = DISPLAY_DEFAULT_WINDOWED_WIDTH;
+windowed_height   = DISPLAY_DEFAULT_WINDOWED_HEIGHT;
+window_fullscreen = DISPLAY_DEFAULT_FULLSCREEN;
 
 window_resize(false);
 gpu_set_tex_filter(DISPLAY_DEFAULT_TEXTURE_FILTERING);

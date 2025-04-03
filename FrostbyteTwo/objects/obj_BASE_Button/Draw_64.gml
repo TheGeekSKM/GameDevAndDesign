@@ -14,8 +14,8 @@ switch (currentState)
     case ButtonState.Hover: 
         scribble(Text)
             .align(fa_center, fa_middle)
-            .starting_format("VCR_OSD_Mono", global.vars.mainColor)
-            .blend(global.vars.mainColor, 1)
+            .starting_format("VCR_OSD_Mono", ClickColor)
+            .blend(ClickColor, 1)
             .sdf_outline(c_black, 1)    
             .draw(x, y + 4);    
     break;
@@ -23,8 +23,8 @@ switch (currentState)
     case ButtonState.Click: 
         scribble(Text)
             .align(fa_center, fa_middle)
-            .starting_format("VCR_OSD_Mono", global.vars.mainColor)
-            .blend(global.vars.mainColor, 1)
+            .starting_format("VCR_OSD_Mono", ClickColor)
+            .blend(ClickColor, 1)
             .sdf_outline(c_black, 3)
             .draw(x, y + 4);    
     break;

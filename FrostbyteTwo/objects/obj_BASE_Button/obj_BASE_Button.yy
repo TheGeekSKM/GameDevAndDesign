@@ -35,6 +35,8 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"Text","filters":[],"listItems":[],"multiselect":false,"name":"Text","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"HoverColor","filters":[],"listItems":[],"multiselect":false,"name":"HoverColor","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FFCCFFD3","varType":7,},
+    {"$GMObjectProperty":"v1","%Name":"ClickColor","filters":[],"listItems":[],"multiselect":false,"name":"ClickColor","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FF7FFF91","varType":7,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

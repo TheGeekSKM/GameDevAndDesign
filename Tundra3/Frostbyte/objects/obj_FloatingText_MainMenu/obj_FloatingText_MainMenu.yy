@@ -5,15 +5,15 @@
   "managed":true,
   "name":"obj_FloatingText_MainMenu",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_FloatingText","path":"objects/obj_FloatingText/obj_FloatingText.yy",},"propertyId":{"name":"Amplitude","path":"objects/obj_FloatingText/obj_FloatingText.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_FloatingUI","path":"objects/obj_FloatingUI/obj_FloatingUI.yy",},"propertyId":{"name":"Amplitude","path":"objects/obj_FloatingUI/obj_FloatingUI.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"MainMenu",
     "path":"folders/Objects/UI/MainMenu.yy",
   },
   "parentObjectId":{
-    "name":"obj_FloatingText",
-    "path":"objects/obj_FloatingText/obj_FloatingText.yy",
+    "name":"obj_FloatingUI",
+    "path":"objects/obj_FloatingUI/obj_FloatingUI.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
