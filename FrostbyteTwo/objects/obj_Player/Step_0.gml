@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-get_game_camera(0).set_position(x, y);
+
 
 stats.Step();
 entityHealth.Step();
@@ -10,11 +10,7 @@ stamina.Step();
 entityData.Step();
 hunger.Step();
 
-controller.Step();
-
 var moveSpeed = entityData.moveSpeed;
-
-var leftClick = mouse_check_button_pressed(mb_right) and obj_Mouse.currentInteractable == noone;
     
 var pd = point_direction(x, y, obj_Target.x, obj_Target.y);
 var dd = angle_difference(image_angle, pd);
@@ -54,10 +50,12 @@ else
     image_speed = speed / 3;
 }
 
-rightClickHold = mouse_check_button(mb_right) and obj_Mouse.currentInteractable == noone;
+rightClickHold = mouse_check_button(mb_right) and !instance_exists(obj_Mouse.currentInteractable);
 if (rightClickHold)
 {
-    echo("ree?")
     image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
 
+if (currentState == ButtonState.Hover) 
+{
+}

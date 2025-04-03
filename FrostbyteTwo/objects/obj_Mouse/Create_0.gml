@@ -28,10 +28,8 @@ function FindLowestDepthElement()
     return elem;
 }
 
-function ResetCurrentInteractable() {
+function ResetCurrentInteractable() { 
     currentInteractable.OnMouseExit();
     currentInteractable = noone;
     currentMouseState = InteractableType.Normal;
 }
-
-alarm[0] = irandom_range(1, 2);

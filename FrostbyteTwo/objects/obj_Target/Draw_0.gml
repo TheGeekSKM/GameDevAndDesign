@@ -1,4 +1,4 @@
-if (distance_to_object(obj_Player)>=drawDist) || (mouse_check_button(mb_left) != 0)
+if (canDraw) 
 {
-    draw_self();
+    draw_sprite(sprite_index, image_index, x, y);
 }

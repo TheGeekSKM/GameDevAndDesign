@@ -17,10 +17,13 @@ temperature = new TemperatureSystem(stats, entityHealth, id, true);
 attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 
-controller = new PlayerController(id);
-
 
 PlayerIndex = 0;
 get_game_camera(0).set_view_size(400, 224)
 
 rightClickHold = false;
+
+get_game_camera(0).set_follow(obj_Player);
+
+attackIndex = 0;
+alarm[0] = 30;

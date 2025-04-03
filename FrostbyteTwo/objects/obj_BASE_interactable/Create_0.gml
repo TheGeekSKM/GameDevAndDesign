@@ -22,6 +22,8 @@ function OnMouseEnter() {
             callback();
         }
     }
+    
+    echo($"{Name}")
     return Type;
 }
 function OnMouseExit() {
