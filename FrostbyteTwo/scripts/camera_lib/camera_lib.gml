@@ -59,7 +59,7 @@ function game_camera_create(
 		static set_follow = function(_object)
 		{
 			// Sets the follow object, or use the actual instance id if needed
-		
+            echo($"following {_object}")
 			follow_object = _object; 
 			follow = instance_nearest(x, y, _object);
 		

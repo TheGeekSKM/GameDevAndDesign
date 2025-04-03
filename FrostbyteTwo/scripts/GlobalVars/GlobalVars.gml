@@ -13,8 +13,17 @@ function Vars() constructor {
     
     mainColorLight = c_lime;
     mainColor = c_green;
+    highlightColors = [
+            c_white,
+            c_white,
+            c_red,
+            c_yellow,
+            c_aqua,
+            c_black,
+        ];
 
 	PlayerStats = undefined;
+    InputManager = new InputSystem();
 }
 
 global.vars = new Vars();

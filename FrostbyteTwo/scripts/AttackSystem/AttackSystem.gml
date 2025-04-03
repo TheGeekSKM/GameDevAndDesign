@@ -1,4 +1,4 @@
-function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) constructor {
+function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) : Component("attack") constructor {
     inventory = _inventory;
     stats = _stats;
     owner = _owner;

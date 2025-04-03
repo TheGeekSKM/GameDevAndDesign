@@ -10,7 +10,7 @@ enum StatType
 /// @param {real} _dex - Dexterity
 /// @param {real} _con - Constitution
 /// @description Create a new StatSystem object with the given stats.
-function StatSystem(_str, _dex, _con, _owner) constructor {
+function StatSystem(_str, _dex, _con, _owner)  : Component("stats")  constructor {
     strength = _str;
     dexterity = _dex;
     constitution = _con;

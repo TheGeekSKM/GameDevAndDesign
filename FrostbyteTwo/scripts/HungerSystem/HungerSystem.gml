@@ -1,4 +1,4 @@
-function HungerSystem(_stats, _owner, _enabled = true) constructor {
+function HungerSystem(_stats, _owner, _enabled = true)  : Component("hunger")  constructor {
     owner = _owner;
     stats = _stats;
     maxHunger = _stats.GetMaxHunger();

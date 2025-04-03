@@ -36,7 +36,7 @@ conScoreDecreaseButton.AddCallback(function() {
     IncrementStatValue(StatType.Constitution, -1);
 });
 readyButton.AddCallback(function() {
-    if (totalPoints <= 0)
+    if (totalPoints <= 0 or true)
     {
         ready = true;
         alarm[1] = 30;

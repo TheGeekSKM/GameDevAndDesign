@@ -1,4 +1,4 @@
-function TemperatureSystem(_stats, _health, _owner, _enabled = true) constructor {
+function TemperatureSystem(_stats, _health, _owner, _enabled = true)  : Component("temperature")  constructor {
     owner = _owner;
     stats = _stats;
     health = _health;

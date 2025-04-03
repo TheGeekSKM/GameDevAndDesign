@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"AttackSystem",
+  "%Name":"_Component",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"AttackSystem",
+  "name":"_Component",
   "parent":{
     "name":"Components",
     "path":"folders/Scripts/Systems/Components.yy",

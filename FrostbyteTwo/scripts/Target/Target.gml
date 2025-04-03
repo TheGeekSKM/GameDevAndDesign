@@ -1,4 +1,4 @@
-function Target(_owner) constructor {
+function Target(_owner)  : Component("target")  constructor  {
     owner = _owner;
     x = owner.x;
     y = owner.y;

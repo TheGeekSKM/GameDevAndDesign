@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"HungerSystem",
   "parent":{
-    "name":"Systems",
-    "path":"folders/Scripts/Systems.yy",
+    "name":"Components",
+    "path":"folders/Scripts/Systems/Components.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -15,7 +15,7 @@ enum DamageType {
 /// @param {Inventory} _inventory the inventory for the entity
 /// @param {Bool} _isUndead whether the entity is undead or not
 /// @param {Id} _owner the id of the entity
-function HealthSystem(_stats, _inventory, _isUndead, _owner) constructor {
+function HealthSystem(_stats, _inventory, _isUndead, _owner)  : Component("entityHealth")  constructor {
     owner = _owner;
     stats = _stats;
     inventory = _inventory;

@@ -1,7 +1,7 @@
 /// @desc This is the struct that holds the stats for the StaminaSystem
 /// @param {Struct} _stats the stats for the entity
 /// @param {Id} _owner the id of the entity
-function StaminaSystem(_stats, _owner) constructor {
+function StaminaSystem(_stats, _owner) : Component("stamina")  constructor {
     owner = _owner;
     stats = _stats;
     maxStamina = _stats.GetMaxStamina();
