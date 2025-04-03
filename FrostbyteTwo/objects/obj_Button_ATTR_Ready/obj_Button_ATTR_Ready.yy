@@ -10,6 +10,7 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Button","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"propertyId":{"name":"Text","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Ready",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Button","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"propertyId":{"name":"HoverColor","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFC9FEFF",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Button","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"propertyId":{"name":"ClickColor","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF65FCFF",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_GUI_interactable","path":"objects/obj_GUI_interactable/obj_GUI_interactable.yy",},"propertyId":{"name":"Depth","path":"objects/obj_GUI_interactable/obj_GUI_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
   ],
   "parent":{
     "name":"AttributeMenu",

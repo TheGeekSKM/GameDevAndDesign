@@ -1,6 +1,6 @@
 if (!layer_exists("Sequences")) layer_create(-100, "Sequences");
 
-seq = layer_sequence_create("Sequences", 400, 224, Sequence);
+seq = layer_sequence_create("Sequences", SeqCreateX, SeqCreateY, Sequence);
 layer_sequence_pause(seq);
 
 dragging = false;

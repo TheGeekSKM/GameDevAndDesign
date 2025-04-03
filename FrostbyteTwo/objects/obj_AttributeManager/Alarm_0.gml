@@ -36,8 +36,15 @@ conScoreDecreaseButton.AddCallback(function() {
     IncrementStatValue(StatType.Constitution, -1);
 });
 readyButton.AddCallback(function() {
-    ready = true;
-    alarm[1] = 30;
+    if (totalPoints <= 0)
+    {
+        ready = true;
+        alarm[1] = 30;
+    }
+    else 
+    {
+        Raise("NotificationOpen", "Not all [wave]Points[/wave] have been spent!")
+    }
 });
 
 obj_ASM_Constitution.AddMouseEnterCallback(function () {

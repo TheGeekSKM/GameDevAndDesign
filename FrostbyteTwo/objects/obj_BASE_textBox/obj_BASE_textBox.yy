@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_textBox13",
-    "path":"sprites/spr_textBox13/spr_textBox13.yy",
+    "name":"spr_TextBox140",
+    "path":"sprites/spr_TextBox140/spr_TextBox140.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -30,6 +30,8 @@
     {"$GMObjectProperty":"v1","%Name":"Sequence","filters":[
         "GMSequence",
       ],"listItems":[],"multiselect":false,"name":"Sequence","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"SeqCreateX","filters":[],"listItems":[],"multiselect":false,"name":"SeqCreateX","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"400","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"SeqCreateY","filters":[],"listItems":[],"multiselect":false,"name":"SeqCreateY","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"224","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
