@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AIController",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AIController",
+  "parent":{
+    "name":"Controllers",
+    "path":"folders/Scripts/Systems/ControllerSystem/Controllers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

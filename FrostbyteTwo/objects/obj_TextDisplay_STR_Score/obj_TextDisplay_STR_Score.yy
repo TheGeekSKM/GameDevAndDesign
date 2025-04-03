@@ -7,6 +7,9 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"propertyId":{"name":"Depth","path":"objects/obj_ui_parent/obj_ui_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-3",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"Text","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"TextFont","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_OutlineFont",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"TextSize","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"TextColor","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFFFFFFF",},
   ],
   "parent":{
     "name":"Strength",

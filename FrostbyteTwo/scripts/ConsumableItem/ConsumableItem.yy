@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ConsumableItem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ConsumableItem",
+  "parent":{
+    "name":"ItemStructs",
+    "path":"folders/Scripts/Systems/ItemSystem/ItemStructs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

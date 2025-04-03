@@ -7,8 +7,21 @@ enum IntVisType
 event_inherited();
 currentState = ButtonState.Idle;
 
+mouseEnterCallbacks = [];
+
+function AddMouseEnterCallback(callback) 
+{
+    array_push(mouseEnterCallbacks, callback);
+}
+
 function OnMouseEnter() {
     currentState = ButtonState.Hover;
+    for (var i = 0; i < array_length(mouseEnterCallbacks); i++) {
+        var callback = mouseEnterCallbacks[i];
+        if (callback != undefined) {
+            callback();
+        }
+    }
     return Type;
 }
 function OnMouseExit() {

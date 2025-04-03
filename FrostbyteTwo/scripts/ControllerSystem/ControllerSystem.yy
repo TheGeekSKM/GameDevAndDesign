@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ControllerSystem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ControllerSystem",
+  "parent":{
+    "name":"Structs",
+    "path":"folders/Scripts/Systems/ControllerSystem/Structs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

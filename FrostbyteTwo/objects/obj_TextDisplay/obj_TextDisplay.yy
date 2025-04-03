@@ -32,6 +32,9 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"Text","filters":[],"listItems":[],"multiselect":false,"name":"Text","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"TextSize","filters":[],"listItems":[],"multiselect":false,"name":"TextSize","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.75","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"TextFont","filters":[],"listItems":[],"multiselect":false,"name":"TextFont","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_NormalFont","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"TextColor","filters":[],"listItems":[],"multiselect":false,"name":"TextColor","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FF452B0D","varType":7,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

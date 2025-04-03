@@ -3,6 +3,13 @@ event_inherited();
 
 currentState = ButtonState.Idle;
 
+callbacks = [];
+
+function AddCallback(callback) 
+{
+    array_push(callbacks, callback);
+}
+
 function OnMouseEnter() 
 {
     currentState = ButtonState.Hover;
@@ -19,6 +26,10 @@ function OnMouseLeftClick()
 function OnMouseLeftClickRelease() 
 {
     currentState = ButtonState.Hover;
+    for (var i = 0; i < array_length(callbacks); i += 1) 
+    {
+        callbacks[i]();
+    }
     Interact();
 }
 

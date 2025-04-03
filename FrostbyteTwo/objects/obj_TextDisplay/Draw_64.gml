@@ -1,5 +1,5 @@
-draw_set_font(global.OutlineFont);
-draw_set_color(c_white);
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_text(x, y, Text)
+scribble(Text)
+    .align(fa_center, fa_middle)
+    .starting_format(TextFont, TextColor)
+    .transform(TextSize, TextSize, image_angle)
+    .draw(x, y);

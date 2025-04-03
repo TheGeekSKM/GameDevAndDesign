@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ArmorItem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ArmorItem",
+  "parent":{
+    "name":"ItemStructs",
+    "path":"folders/Scripts/Systems/ItemSystem/ItemStructs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

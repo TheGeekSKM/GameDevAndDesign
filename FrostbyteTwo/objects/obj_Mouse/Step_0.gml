@@ -22,9 +22,9 @@ if (mouse_check_button(mb_left) and instance_exists(currentInteractable))
     currentInteractable.OnMouseLeftHeld();
 }
 
-if (mouse_check_button_released(mb_left) and instance_exists(currentInteractable))
+if (mouse_check_button_released(mb_left))
 {
-    currentInteractable.OnMouseLeftClickRelease();
+     if (instance_exists(currentInteractable)) currentInteractable.OnMouseLeftClickRelease();
 }
 
 if (mouse_check_button_pressed(mb_right) and instance_exists(currentInteractable))
@@ -37,9 +37,9 @@ if (mouse_check_button(mb_right) and instance_exists(currentInteractable))
     currentInteractable.OnMouseRightHeld();
 }
 
-if (mouse_check_button_released(mb_right) and instance_exists(currentInteractable))
+if (mouse_check_button_released(mb_right))
 {
-    currentInteractable.OnMouseRightClickRelease();
+    if (instance_exists(currentInteractable)) currentInteractable.OnMouseRightClickRelease();
 }
 
 if (instance_exists(currentInteractable))

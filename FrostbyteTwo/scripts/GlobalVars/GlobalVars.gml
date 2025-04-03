@@ -13,6 +13,8 @@ function Vars() constructor {
     
     mainColorLight = c_lime;
     mainColor = c_green;
+
+	PlayerStats = undefined;
 }
 
 global.vars = new Vars();
