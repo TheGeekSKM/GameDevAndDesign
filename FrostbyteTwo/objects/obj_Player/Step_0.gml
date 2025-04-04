@@ -13,7 +13,7 @@ stamina.Step();
 entityData.Step();
 hunger.Step();
 
-var moveSpeed = entityData.moveSpeed;
+var moveSpeed = entityData.moveSpeed * 1.5;
     
 var pd = point_direction(x, y, obj_Target.x, obj_Target.y);
 var dd = angle_difference(image_angle, pd);
@@ -23,7 +23,7 @@ if (distance_to_point(obj_Target.x,obj_Target.y) > 64)
 {
     move_towards_point(obj_Target.x,obj_Target.y,moveSpeed);	
 }
-else if (distance_to_point(obj_Target.x,obj_Target.y) > 20)
+else if (distance_to_point(obj_Target.x,obj_Target.y) > 10)
 {
     move_towards_point(obj_Target.x,obj_Target.y,moveSpeed / 2);
 }

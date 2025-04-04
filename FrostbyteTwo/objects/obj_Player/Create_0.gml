@@ -27,3 +27,5 @@ get_game_camera(0).set_follow(obj_Player);
 
 attackIndex = 0;
 alarm[0] = 30;
+
+global.Player = id;

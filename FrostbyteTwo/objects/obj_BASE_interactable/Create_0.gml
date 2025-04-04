@@ -36,3 +36,15 @@ function OnMouseRightClick() {}
 function OnMouseRightHeld() {}
 function OnMouseRightClickRelease() {}
 
+/// @pure
+function PlayerIsWithinRange()
+{
+    if (instance_exists(global.Player))
+    {
+        if (point_distance(global.Player.x, global.Player.y, x, y) < InteractionRange)
+        {
+            return true;
+        }
+    }
+    return false;
+}

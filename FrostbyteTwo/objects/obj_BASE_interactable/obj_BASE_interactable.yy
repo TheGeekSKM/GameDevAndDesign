@@ -43,6 +43,7 @@
         "IntVisType.Room",
         "IntVisType.GUI",
       ],"multiselect":false,"name":"IntType","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"IntVisType.Room","varType":6,},
+    {"$GMObjectProperty":"v1","%Name":"InteractionRange","filters":[],"listItems":[],"multiselect":false,"name":"InteractionRange","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"20","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -24,6 +24,7 @@ function Vars() constructor {
 
 	PlayerStats = undefined;
     InputManager = new InputSystem();
+    ItemLibrary = new AllItems();
 }
 
 global.vars = new Vars();
