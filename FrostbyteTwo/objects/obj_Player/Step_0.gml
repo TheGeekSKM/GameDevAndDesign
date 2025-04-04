@@ -1,6 +1,12 @@
 // Inherit the parent event
 event_inherited();
-
+if (global.vars.pause) 
+{
+    speed = 0;
+    image_index = 1;
+    image_speed = 0;
+    return;
+}
 
 
 stats.Step();
@@ -13,7 +19,7 @@ stamina.Step();
 entityData.Step();
 hunger.Step();
 
-var moveSpeed = entityData.moveSpeed * 1.5;
+var moveSpeed = entityData.moveSpeed * 2;
     
 var pd = point_direction(x, y, obj_Target.x, obj_Target.y);
 var dd = angle_difference(image_angle, pd);

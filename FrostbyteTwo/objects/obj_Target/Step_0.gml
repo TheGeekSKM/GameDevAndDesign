@@ -1,3 +1,9 @@
+if (global.vars.pause) 
+{
+    image_alpha = 0;
+    return;
+}
+
 if (mouse_check_button(mb_left))
 {
     if (instance_exists(obj_Mouse.currentInteractable)) return;

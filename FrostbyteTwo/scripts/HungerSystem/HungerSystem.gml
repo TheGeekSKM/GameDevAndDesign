@@ -11,7 +11,7 @@ function HungerSystem(_stats, _owner, _enabled = true)  : Component("hunger")  c
         if (!enabled) return;
         maxHunger = stats.GetMaxHunger();
 
-        if (currentHunger > 0 && owner.canMove)
+        if (currentHunger > 0 && (owner.canMove or owner.speed != 0))
         {
             currentHunger -= stats.GetHungerRate();
         }

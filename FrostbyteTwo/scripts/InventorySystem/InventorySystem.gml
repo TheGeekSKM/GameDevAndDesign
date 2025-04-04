@@ -1,9 +1,10 @@
 /// @desc This is the struct that holds the stats for the Inventory
 /// @param {Struct} _stats these are the stats for the entity
 /// @param {Id} _owner this is the id of the entity
-function Inventory(_stats, _owner) constructor {
+function Inventory(_stats, _owner, _maxSlots) constructor {
     allItems = [];
     stats = _stats;
+    
     
     equippedWeapon = undefined;
     equippedArmor = undefined;
@@ -25,6 +26,33 @@ function Inventory(_stats, _owner) constructor {
             if (allItems[i].item[$ "name"] == _item[$ "name"]) return i;
         }
         return -1;
+    }
+
+    ///@desc Returns the Slot at the given index
+    ///@param {real} _index - The index of the item to return
+    ///@return {Struct} - The Slot at the given index, or undefined if the index is out of bounds
+    function GetSlot(_index)
+    {
+        if (_index < 0 or _index >= array_length(allItems)) return undefined;
+        return allItems[_index];
+    }
+
+    function SetSlot(_index, _item, _quantity)
+    {
+        if (_index < 0 or _index >= array_length(allItems)) return false;
+        var slot = allItems[_index];
+        
+        slot.item = _item;
+        slot.quantity = _quantity;
+
+        if (slot.quantity == 0) {
+            currentWeight -= slot.item.weight * slot.quantity;
+            array_delete(allItems, _index, 1);
+        }
+        else if (slot.quantity > 0) {
+            currentWeight += slot.item.weight * slot.quantity;
+        }
+        return true;
     }
 
     ///@desc Adds an item to the inventory

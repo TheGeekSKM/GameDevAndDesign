@@ -22,9 +22,9 @@ function Initialize(_item, _itemCount)
 function OnMouseLeftClick() {
     if (currentItem == undefined) return;
         
-    if (instance_exists(global.Player) and PlayerIsWithinRange())
+    if (instance_exists(global.vars.Player) and PlayerIsWithinRange())
     {
-        global.Player.inventory.AddItem(currentItem, itemCount);
+        global.vars.Player.inventory.AddItem(currentItem, itemCount);
         instance_destroy();
     }
 }

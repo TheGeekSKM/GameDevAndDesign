@@ -1,4 +1,4 @@
-function ConsumableItem(_name, _durability, _weight, _consumeEffects, _sprite, _hungerRemoved = 0, _healthAdded = 0, _staminaAdded = 0, _warmthAdded = 0) : Item(_name, _durability, 0, _weight, ItemType.Consumable, _consumeEffects, false, _sprite) constructor {
+function ConsumableItem(_name, _durability, _weight, _consumeEffects, _sprite, _hungerRemoved = 0, _healthAdded = 0, _staminaAdded = 0, _warmthAdded = 0) : Item(_name, 64, _durability, 0, _weight, ItemType.Consumable, _consumeEffects, false, _sprite) constructor {
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system

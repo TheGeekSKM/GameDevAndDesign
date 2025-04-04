@@ -15,7 +15,7 @@ switch (currentState)
         draw_set_halign(fa_center);
         draw_set_valign(fa_middle);
         draw_set_color(ClickColor);
-        draw_text(x, y + 4, Text);
+        draw_text(x, y + 2, Text);
         draw_set_color(c_black);
     break;
     
@@ -24,7 +24,7 @@ switch (currentState)
         draw_set_halign(fa_center);
         draw_set_valign(fa_middle);
         draw_set_color(ClickColor);
-        draw_text(x, y + 4, Text);
+        draw_text(x, y + 2, Text);
         draw_set_color(c_black);
     break;
 }

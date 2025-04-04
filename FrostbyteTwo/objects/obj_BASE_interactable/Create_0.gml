@@ -39,9 +39,9 @@ function OnMouseRightClickRelease() {}
 /// @pure
 function PlayerIsWithinRange()
 {
-    if (instance_exists(global.Player))
+    if (instance_exists(global.vars.Player))
     {
-        if (point_distance(global.Player.x, global.Player.y, x, y) < InteractionRange)
+        if (point_distance(global.vars.Player.x, global.vars.Player.y, x, y) < InteractionRange)
         {
             return true;
         }

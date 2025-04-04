@@ -8,13 +8,13 @@ function OnMouseLeftClick()
 {
     if Draggable and obj_Mouse.currentInteractable == id
     {
-        MenuManager.StartDragging();
+        if (instance_exists(MenuManager)) MenuManager.StartDragging();
     }
 }
 
 function OnMouseLeftClickRelease()
 {
-    MenuManager.StopDragging();
+    if (instance_exists(MenuManager)) MenuManager.StopDragging();
 }
 
 

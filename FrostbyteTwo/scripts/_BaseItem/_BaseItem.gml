@@ -1,4 +1,4 @@
-function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equippable, _sprite) constructor 
+function Item(_name, _stackSize, _durability, _staminaCost, _weight, _type, _effects, _equippable, _sprite) constructor 
 {
     name = _name;
     type = _type;
@@ -10,6 +10,8 @@ function Item(_name, _durability, _staminaCost, _weight, _type, _effects, _equip
     staminaCost = _staminaCost;
     sprite = _sprite;
     equipped = false;
+    stackSize = _stackSize;
+    if (stackSize == undefined) stackSize = 1;
 
     // override this function in child classes
     function Use() {}
