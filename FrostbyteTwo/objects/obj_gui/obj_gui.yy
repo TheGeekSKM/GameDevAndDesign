@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_GUI_Panel_Duplicate",
-  "eventList":[],
+  "%Name":"obj_gui",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_GUI_Panel_Duplicate",
+  "name":"obj_gui",
   "overriddenProperties":[],
   "parent":{
-    "name":"Panels",
-    "path":"folders/Objects/_Base/UI/Panels.yy",
+    "name":"UI",
+    "path":"folders/Objects/UI.yy",
   },
-  "parentObjectId":{
-    "name":"obj_GUI_Panel",
-    "path":"objects/obj_GUI_Panel/obj_GUI_Panel.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

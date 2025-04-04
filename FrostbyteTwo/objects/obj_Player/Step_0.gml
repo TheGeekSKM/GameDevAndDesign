@@ -5,6 +5,9 @@ event_inherited();
 
 stats.Step();
 entityHealth.Step();
+
+if (entityHealth.IsDead()) Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide)
+
 inventory.Step();
 stamina.Step();
 entityData.Step();
@@ -56,6 +59,3 @@ if (rightClickHold)
     image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
 
-if (currentState == ButtonState.Hover) 
-{
-}

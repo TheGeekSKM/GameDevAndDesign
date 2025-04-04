@@ -7,6 +7,8 @@ dragging = false;
 mouseOffsetX = 0;
 mouseOffsetY = 0;
 
+open = false;
+
 function StartDragging() {
     var mx = guiMouseX;
     var my = guiMouseY;
@@ -22,11 +24,13 @@ function StopDragging() {
 function OpenMenu()
 {
     layer_sequence_headdir(seq, seqdir_right);
-    layer_sequence_play(seq);    
+    layer_sequence_play(seq);  
+    open = true;  
 }
 
 function CloseMenu()
 {
     layer_sequence_headdir(seq, seqdir_left);
     layer_sequence_play(seq);
+    open = false;
 }
