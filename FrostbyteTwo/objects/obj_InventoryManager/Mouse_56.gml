@@ -42,10 +42,10 @@ else
     {
         // if not, create an obj_BASE_Collectible and Initialize() to spawn that object
         var collectible = instance_create_layer(mouse_x, mouse_y, "Collectibles", obj_BASE_Collectible);
-        collectible.Initialize(draggedItem, draggedQuantity);
+        collectible.Initialize(draggedItem, 1);
         //sourceInventory.SetSlot(sourceIndex, undefined, 0);
         
-        sourceInventory.DropItemByIndex(sourceIndex, draggedQuantity)
+        sourceInventory.DropItemByIndex(sourceIndex, 1);
          
         StopDrag();
         return false;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ButtonContainer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ButtonContainer",
+  "parent":{
+    "name":"Components",
+    "path":"folders/Scripts/Systems/Components.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -12,7 +12,7 @@ function ItemReciever(_itemSlots) constructor
             {
                 if (_count > desiredItems[i].quantity)
                 {
-                    Success();
+                    Success(_item, _count);
                     return true;
                 }
                 else 
@@ -26,10 +26,10 @@ function ItemReciever(_itemSlots) constructor
         return false;
     }
 
-    function Success()
+    function Success(_item, _count)
     {
         for (var i = 0; i < array_length(successCallbacks); i++) {
-            successCallbacks[i]();
+            successCallbacks[i](_item, _count);
         }
     }
 

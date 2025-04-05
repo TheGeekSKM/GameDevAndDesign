@@ -86,7 +86,7 @@ function game_camera_create(
 		{
 			view_width  = _view_width;
 			view_height = _view_height;
-			update_aspect_and_zoom();
+			//update_aspect_and_zoom();
 		}
 		
 		static set_viewport = function(_viewport_xpos, _viewport_ypos, _viewport_xscale, _viewport_yscale)
@@ -257,13 +257,13 @@ function game_camera_create(
 			if (_aspect_view > _aspect_cam)
 			{
 				var _excess = view_height * (_aspect_view/_aspect_cam - 1);  
-				height = view_height + _excess;
+				height = view_height// + _excess;
 				width = view_width;
 			}
 			else
 			{
 				var _excess = view_width * (_aspect_cam/_aspect_view - 1);  
-				width = view_width + _excess;
+				width = view_width// + _excess;
 				height = view_height;
 			}
 			

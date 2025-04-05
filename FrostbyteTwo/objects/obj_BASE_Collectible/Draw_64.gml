@@ -7,7 +7,8 @@ if (currentState == ButtonState.Hover and PlayerIsWithinRange())
     
     scribble($"{Name}\n{InteractText}")
         .align(fa_center, fa_middle)
-        .starting_format("spr_OutlineFont", c_white)
-        .transform(1, 1, 0)
+        .starting_format("VCR_OSD_Mono", c_white)
+        .sdf_outline(c_black, 2)
+        .transform(0.5, 0.5, 0)
         .draw(guiPos.x, guiPos.y);
 }

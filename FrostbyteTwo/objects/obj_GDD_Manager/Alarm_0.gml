@@ -5,3 +5,7 @@ obj_GDD_Button_Inventory.AddCallback(function() {
         global.vars.PauseGame(global.vars.Player.id);
     }
 });
+
+obj_GDD_Button_Pause.AddCallback(function () {
+    Raise("PauseOpen", id);    
+})

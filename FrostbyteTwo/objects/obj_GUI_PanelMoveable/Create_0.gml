@@ -17,14 +17,24 @@ function OnMouseLeftClickRelease()
     dragging = false;
 }
 
+function OpenMenu()
+{
+    stateMachine.change("movingToOnScreen");
+}
+
+function HideMenu()
+{
+    stateMachine.change("hidden");
+}
+
 stateMachine = new SnowState("hidden");
 
 hiddenPos = new Vector2(-5000, 5000);
 stateMachine.add("hidden", {
     enter: function() {
         // randomly generate a new hidden pos that is off screen
-        hiddenPos.x = irandom_range(-10000, -5000);
-        hiddenPos.y = irandom_range(-10000, -5000);
+        hiddenPos.x = irandom_range(-sprite_width, -(sprite_width * 3));
+        hiddenPos.y = irandom_range(-sprite_height, -(sprite_height * 3));
     },
     step: function() {
         x = lerp(x, hiddenPos.x, 0.1);
@@ -36,8 +46,8 @@ targetPos = new Vector2(0, 0);
 stateMachine.add("movingToOnScreen", {
     enter: function() {
         // set the target position to the center of the screen
-        targetPos.x = (GUI_DEFAULT_WIDTH / 2) - (sprite_width / 2);
-        targetPos.y = (GUI_DEFAULT_HEIGHT / 2) - (sprite_height / 2);
+        targetPos.x = (GUI_DEFAULT_WIDTH / 2);
+        targetPos.y = (GUI_DEFAULT_HEIGHT / 2);
     },
     step: function() {
         x = lerp(x, targetPos.x, 0.1);
@@ -61,6 +71,7 @@ stateMachine.add("onScreen", {
     }
 });
 
+closeButtonCallback = function() {}
 closeButton = instance_create_depth(topLeft.x + sprite_width, topLeft.y, depth, obj_BASE_Button);
 closeButton.depth = depth - 1;
 closeButton
@@ -68,5 +79,6 @@ closeButton
     .SetColors(make_color_rgb(255, 200, 200), c_red)
     .AddCallback(function() {
         stateMachine.change("hidden");
+        closeButtonCallback();
     });
 

@@ -19,6 +19,26 @@ function SetColors(_hoverColor, _clickColor)
     return id; 
 }
 
+function SetSize(_width, _height) 
+{ 
+    image_xscale = _width / sprite_get_width(sprite_index);
+    image_yscale = _height / sprite_get_height(sprite_index);
+    return id; 
+}
+
+function SetPosition(_x, _y) 
+{ 
+    x = _x; 
+    y = _y; 
+    return id; 
+}
+
+function SetDepth(_depth) 
+{ 
+    depth = _depth; 
+    return id; 
+}
+
 function OnMouseEnter() 
 {
     currentState = ButtonState.Hover;

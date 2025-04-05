@@ -9,22 +9,24 @@ if (count != 0) {
 else {
     currentInteractable = noone;
 }
-    
+
+
 ds_list_clear(interactableList);
 // now check room elements
 if (currentInteractable == noone) {
-    
-    var count2 = instance_position_list(mouse_x, mouse_y, obj_ROOM_interactable, interactableList, false);
-    if (count2 > 0) {
-       var inst = FindLowestDepthElement();
-       if (instance_exists(inst)) {
-           currentInteractable = inst;
-       }
-    }
-    else {
-        currentInteractable = noone;
+
+var count2 = instance_position_list(mouse_x, mouse_y, obj_ROOM_interactable, interactableList, false);
+if (count2 > 0) {
+    var inst = FindLowestDepthElement();
+    if (instance_exists(inst)) {
+        currentInteractable = inst;
     }
 }
+else {
+    currentInteractable = noone;
+}
+}
+
 
 
 
