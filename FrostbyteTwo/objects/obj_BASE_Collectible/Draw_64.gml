@@ -1,4 +1,4 @@
-if (PlayerIsWithinRange())
+if (currentState == ButtonState.Hover and PlayerIsWithinRange())
 {
     
     var guiPos = new Vector2(x, y);

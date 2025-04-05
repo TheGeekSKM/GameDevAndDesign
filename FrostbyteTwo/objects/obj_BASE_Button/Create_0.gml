@@ -8,6 +8,15 @@ callbacks = [];
 function AddCallback(callback) 
 {
     array_push(callbacks, callback);
+    return id;
+}
+
+function SetText(_text) { Text = _text; return id; }
+function SetColors(_hoverColor, _clickColor) 
+{ 
+    ClickColor = _clickColor; 
+    HoverColor = _hoverColor; 
+    return id; 
 }
 
 function OnMouseEnter() 

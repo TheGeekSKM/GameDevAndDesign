@@ -6,27 +6,42 @@ var count = instance_position_list(device_mouse_x_to_gui(0), device_mouse_y_to_g
 if (count != 0) { 
     currentInteractable = FindLowestDepthElement();
 }
+else {
+    currentInteractable = noone;
+}
     
 ds_list_clear(interactableList);
 // now check room elements
 if (currentInteractable == noone) {
     
-    instance_position_list(mouse_x, mouse_y, obj_ROOM_interactable, interactableList, false);
-    var inst = FindLowestDepthElement();
-    if (instance_exists(inst)) {
-        currentInteractable = inst;
+    var count2 = instance_position_list(mouse_x, mouse_y, obj_ROOM_interactable, interactableList, false);
+    if (count2 > 0) {
+       var inst = FindLowestDepthElement();
+       if (instance_exists(inst)) {
+           currentInteractable = inst;
+       }
+    }
+    else {
+        currentInteractable = noone;
     }
 }
 
 
-alarm[0] = irandom_range(1, 2);
 
-
-
-if (currentInteractable != oldInteractable and instance_exists(currentInteractable))
+if (currentInteractable != oldInteractable)
 {
-    currentInteractable.OnMouseEnter();
+    if (instance_exists(oldInteractable)) oldInteractable.OnMouseExit();
+    if (instance_exists(currentInteractable)) currentInteractable.OnMouseEnter();
+}
+
+// Always update currentMouseState
+if (instance_exists(currentInteractable)) 
+{
     currentMouseState = currentInteractable.Type;
+}
+else
+{
+    currentMouseState = InteractableType.Normal;
 }
 
 oldInteractable = currentInteractable;
@@ -75,7 +90,7 @@ if (instance_exists(currentInteractable))
 //for (var i = 0; i < ds_list_size(interactableList); i++) {
     //str = string_concat(str, interactableList[| i], ", ")
 //}
-//echo($"List of Interactables: {str} and CurrentInteractable: {currentInteractable}");
+//($"List of Interactables: {str} and CurrentInteractable: {currentInteractable}");
 
 if (!instance_exists(currentInteractable)) currentMouseState = InteractableType.Normal;
 

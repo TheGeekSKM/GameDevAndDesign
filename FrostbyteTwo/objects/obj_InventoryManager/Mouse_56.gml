@@ -6,8 +6,50 @@ if (instance_exists(targetSlotInstance)) {
     AttemptDrop(targetSlotInstance.inventorySystemRef, targetSlotInstance.slotIndex);    
 } 
 else 
-{
-    StopDrag(); // Stop dragging if no valid target slot is found
+{ 
+    var sourceInventory = global.dragData.sourceInventory;
+    var sourceIndex = global.dragData.sourceSlotIndex;
+    var draggedItem = global.dragData.item;
+    var draggedQuantity = global.dragData.quantity;
+    // check to see if the mouse is currently hovering over an interactable
+    if (instance_exists(obj_Mouse.currentInteractable))
+    {
+        
+        if (variable_instance_exists(obj_Mouse.currentInteractable, "itemReciever") && is_struct(obj_Mouse.currentInteractable.itemReciever))
+        {
+            var itemReciever = obj_Mouse.currentInteractable.itemReciever;
+            var acceptsItem = itemReciever[$ "DropItem"](draggedItem, draggedQuantity);
+    
+            if (acceptsItem)
+            {
+                sourceInventory.SetSlot(sourceIndex, undefined, 0); // Remove item from source slot
+            }
+            else
+            {
+                // Call the StopDrag function to reset the drag state
+                StopDrag();
+                return false; // No drop action performed
+            }
+        }
+        else
+        {
+            // Call the StopDrag function to reset the drag state
+            StopDrag();
+            return false; // No drop action performed
+        }
+    }
+    else
+    {
+        // if not, create an obj_BASE_Collectible and Initialize() to spawn that object
+        var collectible = instance_create_layer(mouse_x, mouse_y, "Collectibles", obj_BASE_Collectible);
+        collectible.Initialize(draggedItem, draggedQuantity);
+        //sourceInventory.SetSlot(sourceIndex, undefined, 0);
+        
+        sourceInventory.DropItemByIndex(sourceIndex, draggedQuantity)
+         
+        StopDrag();
+        return false;
+    }
 }
 
 if (global.dragData.isDragging) {

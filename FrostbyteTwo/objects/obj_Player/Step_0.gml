@@ -65,3 +65,13 @@ if (rightClickHold)
     image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
 
+
+if (instance_exists(currentCollectible) || currentCollectible != noone)
+{
+    var dist = point_distance(x, y, currentCollectible.x, currentCollectible.y);
+    if (dist < 15)
+    {
+        currentCollectible.Collect(id);
+        currentCollectible = noone;
+    }
+}

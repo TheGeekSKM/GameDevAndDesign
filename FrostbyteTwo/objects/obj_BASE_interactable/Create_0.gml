@@ -23,7 +23,6 @@ function OnMouseEnter() {
         }
     }
     
-    echo($"{Name}")
     return Type;
 }
 function OnMouseExit() {
@@ -39,12 +38,13 @@ function OnMouseRightClickRelease() {}
 /// @pure
 function PlayerIsWithinRange()
 {
-    if (instance_exists(global.vars.Player))
-    {
-        if (point_distance(global.vars.Player.x, global.vars.Player.y, x, y) < InteractionRange)
-        {
-            return true;
-        }
-    }
-    return false;
+    return true;
+    //if (instance_exists(global.vars.Player))
+    //{
+        //if (point_distance(global.vars.Player.x, global.vars.Player.y, x, y) < InteractionRange)
+        //{
+            //return true;
+        //}
+    //}
+    //return false;
 }

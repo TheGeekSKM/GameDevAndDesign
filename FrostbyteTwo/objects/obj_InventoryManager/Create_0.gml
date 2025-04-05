@@ -51,7 +51,7 @@ function AttemptDrop(_targetInventory, _targetSlotIndex)
 
     if (_targetInventory == sourceInventory && _targetSlotIndex == sourceIndex) 
     {
-        StopDrag();
+        StopDrag(); // Stop dragging if dropped on the same slot
         return false; // No drop action performed
     }
 
@@ -92,14 +92,14 @@ function AttemptDrop(_targetInventory, _targetSlotIndex)
     }
 
     // Case 3: Target slot has a different item
-    else 
+    else
     {
-        var tempTargetItem = targetSlot.item;
-        var tempTargetQuantity = targetSlot.quantity;
+        // Swap items between source and target slots
+        var tempSourceItem = sourceInventory.GetSlot(sourceIndex).item;
+        var tempSourceQuantity = sourceInventory.GetSlot(sourceIndex).quantity;
         _targetInventory.SetSlot(_targetSlotIndex, draggedItem, draggedQuantity);
-        sourceInventory.SetSlot(sourceIndex, tempTargetItem, tempTargetQuantity); // Update source slot quantity
-        show_debug_message($"Swapped {draggedQuantity}x{draggedItem.name} with {tempTargetQuantity}x{tempTargetItem.name} in slot {_targetSlotIndex}");
-    }
+        sourceInventory.SetSlot(sourceIndex, tempSourceItem, tempSourceQuantity); // Update source slot quantity
+    }  
 
     StopDrag(); // Stop dragging after drop action
     return true; // Drop action performed

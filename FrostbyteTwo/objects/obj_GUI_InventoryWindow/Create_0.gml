@@ -70,9 +70,9 @@ function RebuildSlotDisplays()
 
     width = max(width, 200); // Ensure a minimum width
     height = max(height, 150); // Ensure a minimum height
-
-    image_xscale = width / sprite_width;
-    image_yscale = height / sprite_height;
+    
+    image_xscale = width / sprite_get_width(sprite_index);
+    image_yscale = height / sprite_get_height(sprite_index);
     
     // 6. Create Close Button
     closeButton = instance_create_depth(topLeft.x + sprite_width, topLeft.y, id.depth - 10, obj_Button_InventoryWindowClose);

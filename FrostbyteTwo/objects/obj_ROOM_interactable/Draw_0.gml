@@ -1,2 +1,2 @@
-if (obj_Mouse.currentInteractable == id) draw_sprite_ext(sprite_index, 0, x, y, 1.2, 1.2, 0, global.vars.highlightColors[Type], 1);
+if (obj_Mouse.currentInteractable == id) Highlight(sprite_index, image_index, x, y, 1.2, 1.2, image_angle, global.vars.highlightColors[Type]);
 draw_self();

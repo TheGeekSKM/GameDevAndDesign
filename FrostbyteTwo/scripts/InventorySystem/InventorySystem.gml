@@ -42,16 +42,25 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         if (_index < 0 or _index >= array_length(allItems)) return false;
         var slot = allItems[_index];
         
-        slot.item = _item;
-        slot.quantity = _quantity;
+        show_debug_message($"item weight: {slot.item.weight}");
 
-        if (slot.quantity == 0) {
+        if (_quantity == 0) {
             currentWeight -= slot.item.weight * slot.quantity;
             array_delete(allItems, _index, 1);
+            return;
         }
-        else if (slot.quantity > 0) {
+        
+        if ((slot.quantity - _quantity) == 0) { 
+            // do nothing
+        }
+        else if ((slot.quantity - _quantity) < 0) { // if slot.quantity is less than _quantity, that means we are adding items to the slot
             currentWeight += slot.item.weight * slot.quantity;
         }
+        else if ((slot.quantity - _quantity) > 0) { // if slot.quantity is greater than _quantity, that means we are removing items from the slot
+            currentWeight -= slot.item.weight * _quantity;
+        }
+        slot.item = _item;
+        slot.quantity = _quantity; 
         return true;
     }
 
@@ -64,7 +73,6 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         var item = _item.GetCopy();
         if (_count == 0) 
         {
-            echo($"{item.name} has not count...")
             return undefined;
         }
         var index = ContainsItem(item);
@@ -154,7 +162,7 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         if (_item.equipped) Unequip(_item);
         RemoveItem(index, _count);
 
-        var itemCol = instance_create_layer(owner.x, owner.y, "Interactables", obj_BASE_Collectible);
+        var itemCol = instance_create_layer(owner.x, owner.y, "Collectibles", obj_BASE_Collectible);
         itemCol.Initialize(_item, _count);
 
         return true;
@@ -179,9 +187,6 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         if (slot.item.equipped) Unequip(slot.item);
         RemoveItem(_index, _count);
 
-        var itemCol = instance_create_layer(owner.x, owner.y, "Interactables", obj_BASE_Collectible);
-        itemCol.Initialize(slot.item, _count);
-
 
         return true;
     }
@@ -203,7 +208,6 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         else if (slot.item.Equals(equippedBullet)) equippedBullet = undefined;
 
         if (slot.quantity == 0) {
-            echo($"Removing {slot.item.name}'s slot from inventory");
             array_delete(allItems, _itemIndex, 1);
         }
 

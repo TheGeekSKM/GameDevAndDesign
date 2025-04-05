@@ -29,3 +29,7 @@ attackIndex = 0;
 alarm[0] = 30;
 
 global.vars.Player = id;
+currentCollectible = noone;
+Subscribe("PickUp", function(_id) {
+    currentCollectible = _id;
+});

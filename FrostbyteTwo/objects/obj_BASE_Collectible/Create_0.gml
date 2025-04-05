@@ -9,7 +9,7 @@ function Initialize(_item, _itemCount)
 {
     currentItem = _item;
     itemCount = _itemCount;
-    interactableName = currentItem.name;
+    Name = $"{currentItem.name} x{itemCount}";
     sprite_index = currentItem.sprite;
 
     for (var i = 0; i < _itemCount; i += 1) {
@@ -21,10 +21,15 @@ function Initialize(_item, _itemCount)
 
 function OnMouseLeftClick() {
     if (currentItem == undefined) return;
+    Raise("PickUp", id);   
+    //if (instance_exists(global.vars.Player) and PlayerIsWithinRange())
+    //{
         
-    if (instance_exists(global.vars.Player) and PlayerIsWithinRange())
-    {
-        global.vars.Player.inventory.AddItem(currentItem, itemCount);
-        instance_destroy();
-    }
+    //}
+}
+
+function Collect(_playerID)
+{
+    _playerID.inventory.AddItem(currentItem, itemCount);
+    instance_destroy();
 }
