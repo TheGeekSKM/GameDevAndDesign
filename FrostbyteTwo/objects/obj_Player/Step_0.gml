@@ -29,13 +29,9 @@ if (distance_to_point(obj_Target.x,obj_Target.y) > 64)
 {
     move_towards_point(obj_Target.x,obj_Target.y,moveSpeed);	
 }
-else if (distance_to_point(obj_Target.x,obj_Target.y) > 10)
+else if (distance_to_point(obj_Target.x,obj_Target.y) > 3)
 {
     move_towards_point(obj_Target.x,obj_Target.y,moveSpeed / 2);
-}
-else if (distance_to_point(obj_Target.x,obj_Target.y) >= 5)
-{
-    move_towards_point(obj_Target.x,obj_Target.y,moveSpeed / 4);
 }
 else 
 {

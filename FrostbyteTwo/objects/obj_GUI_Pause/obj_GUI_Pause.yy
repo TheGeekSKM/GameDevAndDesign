@@ -9,8 +9,8 @@
   "name":"obj_GUI_Pause",
   "overriddenProperties":[],
   "parent":{
-    "name":"Panels",
-    "path":"folders/Objects/_Base/UI/Panels.yy",
+    "name":"PauseMenu",
+    "path":"folders/Objects/UI/PauseMenu.yy",
   },
   "parentObjectId":{
     "name":"obj_GUI_PanelMoveable",

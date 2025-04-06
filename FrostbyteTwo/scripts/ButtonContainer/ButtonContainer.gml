@@ -3,6 +3,8 @@ function ButtonContainer(_owner, _isVertical = true) constructor {
     isVertical = _isVertical;
     padding = 0;
     spacing = 0;
+    PossibleHeight = 0;
+    PossibleWidth = 0;
     function SetPadding(p) { padding = p; return self; }
     function SetSpacing(s) { spacing = s; return self; }
     function SetVertical(v) { isVertical = v; return self; }
@@ -20,10 +22,12 @@ function ButtonContainer(_owner, _isVertical = true) constructor {
     function Create()
     {
         var buttonCount = array_length(buttonDatas);
-        var possibleWidth = owner.sprite_width - (padding * 2);
-        var possibleHeight = owner.sprite_height - (padding * 2) - 18;
+        PossibleWidth = owner.sprite_width - (padding * 2);
+        PossibleHeight = owner.sprite_height - (padding * 2) - 18;
         var topLeft = new Vector2(-1 * (owner.sprite_width / 2) + padding, -1 * (owner.sprite_height / 2) + padding + 18);
 
+        
+        
         for (var i = 0; i < buttonCount; i += 1)
         {
             
@@ -35,14 +39,14 @@ function ButtonContainer(_owner, _isVertical = true) constructor {
             var buttonSpacing = 0;
             if (isVertical)
             {
-                buttonSpacing = possibleHeight / buttonCount;
-                buttonWidth = possibleWidth;
+                buttonSpacing = PossibleHeight / buttonCount;
+                buttonWidth = PossibleWidth;
                 buttonHeight = round(buttonSpacing - spacing);
             }
             else
             {
-                buttonSpacing = possibleWidth / buttonCount;
-                buttonHeight = possibleHeight;
+                buttonSpacing = PossibleWidth / buttonCount;
+                buttonHeight = PossibleHeight;
                 buttonWidth = round(buttonSpacing - spacing);
             }
 
