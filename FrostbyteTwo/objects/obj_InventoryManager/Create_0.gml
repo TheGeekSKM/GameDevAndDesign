@@ -97,8 +97,12 @@ function AttemptDrop(_targetInventory, _targetSlotIndex)
         // Swap items between source and target slots
         var tempSourceItem = sourceInventory.GetSlot(sourceIndex).item;
         var tempSourceQuantity = sourceInventory.GetSlot(sourceIndex).quantity;
+
+        var tempTargetItem = targetSlot.item;
+        var tempTargetQuantity = targetSlot.quantity;
+
         _targetInventory.SetSlot(_targetSlotIndex, draggedItem, draggedQuantity);
-        sourceInventory.SetSlot(sourceIndex, tempSourceItem, tempSourceQuantity); // Update source slot quantity
+        sourceInventory.SetSlot(sourceIndex, tempTargetItem, tempTargetQuantity); // Update source slot quantity
     }  
 
     StopDrag(); // Stop dragging after drop action

@@ -17,6 +17,9 @@ temperature = new TemperatureSystem(stats, entityHealth, id, true);
 attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 
+show_message("ESTABLISH TARGETS FOR THE PLAYER")
+targets = [];
+
 
 PlayerIndex = 0;
 get_game_camera(0).set_view_size(400, 224)
@@ -34,7 +37,8 @@ Subscribe("PickUp", function(_id) {
     currentCollectible = _id;
 });
 
-inventory.Equip(inventory.AddItem(global.vars.ItemLibrary.Bow, 1, false));
+inventory.AddItem(global.vars.ItemLibrary.Bow, 1, false)
+inventory.Equip(inventory.AddItem(global.vars.ItemLibrary.Sword, 1, false));
 inventory.Equip(inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false));
 inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
 inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);

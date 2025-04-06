@@ -60,13 +60,16 @@ rightClickHold = mouse_check_button(mb_right) and !instance_exists(obj_Mouse.cur
 if (rightClickHold)
 {
     image_angle = point_direction(x, y, mouse_x, mouse_y);
+    var pointInFront = new Vector2(x + lengthdir_x(5, image_angle), y + lengthdir_y(5, image_angle));
+    attack.Step(pointInFront, image_angle);
+    
 }
 
 
 if (instance_exists(currentCollectible) || currentCollectible != noone)
 {
     var dist = point_distance(x, y, currentCollectible.x, currentCollectible.y);
-    if (dist < 15)
+    if (dist < currentCollectible.InteractionRange)
     {
         currentCollectible.Collect(id);
         currentCollectible = noone;
