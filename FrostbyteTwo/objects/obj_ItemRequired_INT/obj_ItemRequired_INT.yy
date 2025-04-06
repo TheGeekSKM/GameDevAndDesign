@@ -1,15 +1,24 @@
 {
   "$GMObject":"",
   "%Name":"obj_ItemRequired_INT",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_ItemRequired_INT",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"propertyId":{"name":"Type","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"InteractableType.Mine",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Collectible","path":"objects/obj_BASE_Collectible/obj_BASE_Collectible.yy",},"propertyId":{"name":"DestroyOnPickUp","path":"objects/obj_BASE_Collectible/obj_BASE_Collectible.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+  ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Interactable",
+    "path":"folders/Objects/_Base/Interactable.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_BASE_Collectible",
+    "path":"objects/obj_BASE_Collectible/obj_BASE_Collectible.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -9,6 +9,6 @@ if (currentState == ButtonState.Hover and PlayerIsWithinRange())
         .align(fa_center, fa_middle)
         .starting_format("VCR_OSD_Mono", c_white)
         .sdf_outline(c_black, 2)
-        .transform(0.5, 0.5, 0)
+        .transform(0.75, 0.75, 0)
         .draw(guiPos.x, guiPos.y);
 }

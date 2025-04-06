@@ -14,7 +14,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Mouse",
-    "path":"folders/Objects/Mouse.yy",
+    "path":"folders/Objects/Entities/Mouse.yy",
   },
   "parentObjectId":null,
   "persistent":true,

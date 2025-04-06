@@ -31,5 +31,5 @@ function OnMouseLeftClick() {
 function Collect(_playerID)
 {
     _playerID.inventory.AddItem(currentItem, itemCount);
-    instance_destroy();
+    if (DestroyOnPickUp) instance_destroy();
 }

@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"_TESTOBJECT",
+  "%Name":"obj_ItemReq_SiliconDeposit",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"_TESTOBJECT",
+  "name":"obj_ItemReq_SiliconDeposit",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Interactables",
+    "path":"folders/Objects/Interactables.yy",
   },
   "parentObjectId":{
-    "name":"obj_ROOM_interactable",
-    "path":"objects/obj_ROOM_interactable/obj_ROOM_interactable.yy",
+    "name":"obj_ItemRequired_INT",
+    "path":"objects/obj_ItemRequired_INT/obj_ItemRequired_INT.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_collector",
-    "path":"sprites/spr_collector/spr_collector.yy",
+    "name":"spr_siliconeDeposit",
+    "path":"sprites/spr_siliconeDeposit/spr_siliconeDeposit.yy",
   },
   "spriteMaskId":null,
   "visible":true,

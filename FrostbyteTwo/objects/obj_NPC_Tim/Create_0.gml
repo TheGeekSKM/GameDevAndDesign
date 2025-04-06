@@ -39,7 +39,7 @@ function QuestLogic()
             var player = global.vars.Player;    
         
             var slot = undefined;
-            var slotIndex = player.inventory.ContainsItem(global.vars.Items.Cherry);
+            var slotIndex = player.inventory.ContainsItem(global.vars.ItemLibrary.Cherry);
             if (slotIndex != -1) slot = player.inventory.allItems[slotIndex];
         
             if (slot != undefined and slot.quantity >= requiredNum) 

@@ -17,7 +17,6 @@ function TemperatureSystem(_stats, _health, _owner, _enabled = true)  : Componen
     {
         if (!enabled) return;   
         maxTemperature = stats.GetMaxTemperature();
-
         currentTemperature -= stats.GetTemperatureRate();
 
         if (currentTemperature < 0) 

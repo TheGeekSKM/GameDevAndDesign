@@ -18,6 +18,7 @@ if (entityHealth.IsDead()) Transition(rmLose, seqTrans_In_CornerSlide, seqTrans_
 inventory.Step();
 stamina.Step();
 entityData.Step();
+temperature.Step();
 hunger.Step();
 
 var moveSpeed = entityData.moveSpeed * 2;

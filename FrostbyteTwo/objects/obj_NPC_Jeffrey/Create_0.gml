@@ -52,7 +52,7 @@ function QuestLogic()
             var player = global.vars.Player;    
         
             var slot = undefined;
-            var slotIndex = player.inventory.ContainsItem(global.vars.Items.RawMeat);
+            var slotIndex = player.inventory.ContainsItem(global.vars.ItemLibrary.RawMeat);
             if (slotIndex != -1) slot = player.inventory.allItems[slotIndex];
         
             if (slot != undefined and slot.quantity >= requiredNum) 
@@ -65,9 +65,9 @@ function QuestLogic()
                 var popUp = instance_create_layer(x, y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Meat for Jeffrey");
 
-                player.inventory.AddItem(global.vars.Items.Sticks, 10);
+                player.inventory.AddItem(global.vars.ItemLibrary.Sticks, 10);
 
-                DiscoverRecipe(global.vars.Items.CookedMeatRecipe);
+                DiscoverRecipe(global.vars.ItemLibrary.CookedMeatRecipe);
 
                 Raise("QuestCompleted", {
                     questName: "Meat for Jeffrey",

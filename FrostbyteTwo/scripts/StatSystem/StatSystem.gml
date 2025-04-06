@@ -114,7 +114,7 @@ function StatSystem(_str, _dex, _con, _owner)  : Component("stats")  constructor
 
     function GetHungerRate() { 
         if (!instance_exists(owner)) return 0; 
-        return 2 * (max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05))) / game_get_speed(gamespeed_fps); } 
+        return (max(0.5, 1 - (self.constitution * 0.1) + (self.strength * 0.05))) / game_get_speed(gamespeed_fps); } 
     function GetMaxHunger() { return 100 + (self.constitution * 5) + (self.strength * 2); }
 
     function AddStat(_statusEffect)
