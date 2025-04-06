@@ -23,11 +23,11 @@ collisionObjects = [obj_Wall, obj_BASE_Entity, obj_Door];
 
 
 PlayerIndex = 0;
-get_game_camera(0).set_view_size(400, 224)
+//get_game_camera(0).set_view_size(400, 224)
 
 rightClickHold = false;
 
-get_game_camera(0).set_follow(obj_Player);
+//get_game_camera(0).set_follow(obj_Player);
 
 attackIndex = 0;
 alarm[0] = 30;

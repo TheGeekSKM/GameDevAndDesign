@@ -50,7 +50,7 @@ function StatSystem(_str, _dex, _con, _owner)  : Component("stats")  constructor
         if (!instance_exists(owner)) return 0; 
         var base_speed = 1 + (self.dexterity * 0.15) - (self.strength * 0.05);
         var decimalSpeed = max(1, base_speed - self.GetEncumberancePenalty(currentWeight));
-        return round(decimalSpeed / 2);
+        return max(1, round(decimalSpeed / 2));
         // Speed is reduced if over carry limit
     }
     
