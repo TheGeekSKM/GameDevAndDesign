@@ -8,6 +8,7 @@ function DialogueScene() constructor {
 		if (currentLine + 1 < array_length(dialogues))
 		{
             currentLine += 1;
+            echo(currentLine);
 			var line = dialogues[currentLine];
 			return line;
 		}

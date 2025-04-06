@@ -8,8 +8,8 @@ if (questDisplay1Index > -1) {
     draw_sprite(spr_questDisplayBottom, 0, questDisplayTopLeft.x, questDisplayTopLeft.y);
     var quest = GetQuestByIndex(questDisplay1Index);
     
-    var imageScale = 56 / sprite_get_width(spr_Speaker);
-    draw_sprite_ext(spr_Speaker, 0, questDisplayTopLeft.x + 4, questDisplayTopLeft.y + 4, imageScale, imageScale, image_angle, c_white, 1);
+    var imageScale = 56 / sprite_get_width(spr_NPCSpeaker);
+    draw_sprite_ext(spr_NPCSpeaker, irandom_range(0, 2), questDisplayTopLeft.x + 4, questDisplayTopLeft.y + 4, imageScale, imageScale, image_angle, c_white, 1);
 
     scribble($"{quest.name}")
         .align(fa_left, fa_center)
@@ -40,8 +40,8 @@ if (questDisplay2Index > -1) {
     draw_sprite(spr_questDisplayBottom, 0, questDisplay2TopLeft.x, questDisplay2TopLeft.y);
     var quest2 = GetQuestByIndex(questDisplay2Index);
     
-    var image2Scale = 56 / sprite_get_width(spr_Speaker);
-    draw_sprite_ext(spr_Speaker, 0, questDisplay2TopLeft.x + 4, questDisplay2TopLeft.y + 4, image2Scale, image2Scale, image_angle, c_white, 1);
+    var image2Scale = 56 / sprite_get_width(spr_NPCSpeaker);
+    draw_sprite_ext(spr_NPCSpeaker, irandom_range(0, 2), questDisplay2TopLeft.x + 4, questDisplay2TopLeft.y + 4, image2Scale, image2Scale, image_angle, c_white, 1);
 
     scribble($"{quest2.name}")
         .align(fa_left, fa_center)
@@ -72,8 +72,8 @@ if (questDisplay3Index > -1) {
     draw_sprite(spr_questDisplayBottom, 0, questDisplay3TopLeft.x, questDisplay3TopLeft.y);
     var quest3 = GetQuestByIndex(questDisplay3Index);
     
-    var image3Scale = 56 / sprite_get_width(spr_Speaker);
-    draw_sprite_ext(spr_Speaker, 0, questDisplay3TopLeft.x + 4, questDisplay3TopLeft.y + 4, image3Scale, image3Scale, image_angle, c_white, 1);
+    var image3Scale = 56 / sprite_get_width(spr_NPCSpeaker);
+    draw_sprite_ext(spr_NPCSpeaker, irandom_range(0, 2), questDisplay3TopLeft.x + 4, questDisplay3TopLeft.y + 4, image3Scale, image3Scale, image_angle, c_white, 1);
 
     scribble($"{quest3.name}")
         .align(fa_left, fa_center)

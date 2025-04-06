@@ -3,5 +3,5 @@ event_inherited();
 
 
 function Interact() {
-    
+    Raise("StatsOpen", id);
 }

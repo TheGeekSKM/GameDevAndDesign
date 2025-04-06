@@ -32,8 +32,8 @@ stateMachine = new SnowState("hidden");
 hiddenPos = new Vector2(x, y);
 stateMachine.add("hidden", {
     step: function() {
-        x = lerp(x, hiddenPos.x, 0.1);
-        y = lerp(y, hiddenPos.y, 0.1);
+        x = lerp(x, hiddenPos.x, 0.25);
+        y = lerp(y, hiddenPos.y, 0.25);
     }
 });
 
@@ -45,8 +45,8 @@ stateMachine.add("movingToOnScreen", {
         targetPos.y = (GUI_DEFAULT_HEIGHT / 2);
     },
     step: function() {
-        x = lerp(x, targetPos.x, 0.1);
-        y = lerp(y, targetPos.y, 0.1);
+        x = lerp(x, targetPos.x, 0.25);
+        y = lerp(y, targetPos.y, 0.25);
 
         if (abs(x - targetPos.x) < 10 && abs(y - targetPos.y) < 10) {
             stateMachine.change("onScreen");

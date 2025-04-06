@@ -9,6 +9,7 @@ if (global.vars.pause)
 }
 
 
+
 stats.Step();
 entityHealth.Step();
 
