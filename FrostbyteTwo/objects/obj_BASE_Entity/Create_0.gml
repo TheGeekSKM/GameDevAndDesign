@@ -14,7 +14,7 @@ attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 
 targets = [];
-collisionObjects = [];
+collisionObjects = [obj_Wall, obj_Door];
 
 
 

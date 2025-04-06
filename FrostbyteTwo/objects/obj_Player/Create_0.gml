@@ -19,6 +19,7 @@ entityData = new EntityData(stats, inventory);
 
 show_message("ESTABLISH TARGETS FOR THE PLAYER")
 targets = [];
+collisionObjects = [obj_Wall, obj_BASE_Entity, obj_Door];
 
 
 PlayerIndex = 0;

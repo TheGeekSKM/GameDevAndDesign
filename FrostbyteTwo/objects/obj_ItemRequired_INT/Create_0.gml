@@ -7,6 +7,14 @@ function SetItemRequired(_item)
     itemRequired = _item;
 }
 
+function OnMouseLeftClick() {
+    Raise("PickUp", id);   
+    //if (instance_exists(global.vars.Player) and PlayerIsWithinRange())
+    //{
+        
+    //}
+}
+
 function Collect(_id)
 {
     if (itemRequired != undefined)

@@ -1,7 +1,7 @@
 if (canCheckForPredators)
 {
     ds_list_clear(nearbyPredators);
-    collision_circle_list(x, y, predatorCheckRange, [obj_BASE_Player, obj_Carnivore, obj_Zombie], false, true, nearbyPredators, true);
+    collision_circle_list(x, y, predatorCheckRange, [obj_Plant, obj_Carnivore, obj_Zombie], false, true, nearbyPredators, true);
     if (ds_list_size(nearbyPredators) > 0) 
     { 
         predatorsFound = true;

@@ -13,8 +13,8 @@ function AllItems() constructor
     Axe = new MeleeWeaponItem("Copper Axe", c_white, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_Axe);
     Pickaxe = new MeleeWeaponItem("Copper Pickaxe", c_dkgray, 150, 5, DamageType.PHYSICAL, 10, 5, [], spr_pickaxe);
     Shovel = new MeleeWeaponItem("Copper Shovel", c_dkgray, 150, 5, DamageType.PHYSICAL, 10, 5, [], spr_shovel);
-    CopperPiece = new Item("Scrap Copper", 1, 0, 1, ItemType.Default, [], false, spr_copper);
-    Silicone = new Item("Silicone Shards", 1, 0, 1, ItemType.Default, [], false, spr_silicon);
+    CopperPiece = new Item("Scrap Copper", 1, 1, 0, 1, ItemType.Default, [], false, spr_copper);
+    Silicone = new Item("Silicone Shards", 1, 1, 0, 1, ItemType.Default, [], false, spr_silicon);
     
     // ----- Base Resources -----
     SandClumps = new ConsumableItem("Sand Clumps", 1, 0, [new StatusEffects(StatType.Constitution, -1, 10)], spr_sandClumps, 5);
@@ -71,7 +71,7 @@ function AllItems() constructor
 	AluminumPlatingRecipe = new Recipe("Aluminum Plating", [new RecipeItem(AlluminumAlloy, 4), new RecipeItem(SteelScraps, 2)], [new RecipeItem(AluminumPlating, 1)]);
 	GrapheneWeaveSuitRecipe = new Recipe("Graphene Weave Suit", [new RecipeItem(GrapheneStrips, 4), new RecipeItem(PlasticResin, 3)], [new RecipeItem(GrapheneWeaveSuit, 1)]);
 	
-	Sticks = new Item("Sticks", 1, 0, 0, ItemType.Default, [], false, spr_sticks);
+	Sticks = new Item("Sticks", 1, 1, 0, 0, ItemType.Default, [], false, spr_sticks);
 	Cherry = new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 15, 3); 
 	RawMeat = new ConsumableItem("Raw Meat", 1, 0, [], spr_rawMeat, 5); 
 	CookedMeat = new ConsumableItem("Cooked Meat", 1, 0, [], spr_cookedMeat, 35, 10, 1, 5); 

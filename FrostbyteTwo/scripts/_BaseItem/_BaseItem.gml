@@ -56,7 +56,7 @@ function Item(_name, _stackSize, _durability, _staminaCost, _weight, _type, _eff
 
     function GetCopy()
     {
-        var copy = new Item(name, durability, staminaCost, weight, type, effects, equippable, sprite);
+        var copy = new Item(name, stackSize, durability, staminaCost, weight, type, effects, equippable, sprite);
         return copy;
     }
 }
