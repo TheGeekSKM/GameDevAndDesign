@@ -4,24 +4,54 @@ function ItemReciever(_itemSlots) constructor
     successCallbacks = [];
     unsatisfiedCallbacks = [];
     unsuccessCallbacks = [];
+    currentlyRecievedItems = [];
     
     function DropItem(_item, _count)
     {
-        for (var i = 0; i < array_length(desiredItems); i++) {
+        for (var i = 0; i < array_length(desiredItems); i++) 
+        {
             if (desiredItems[i].item[$ "name"] == _item[$ "name"])
             {
                 if (_count > desiredItems[i].quantity)
                 {
-                    Success(_item, _count);
-                    return true;
+                    // Overflow, just fully satisfy this slot
+                    currentlyRecievedItems[i] = new InventorySlot(_item, desiredItems[i].quantity);
+                    _count -= desiredItems[i].quantity;
+                    desiredItems[i].quantity = 0;
                 }
                 else 
                 {
-                    Unsatisfied(_item, _count);
-                    return true;
+                    // Partial or exact fill
+                    currentlyRecievedItems[i] = new InventorySlot(_item, _count);
+                    desiredItems[i].quantity -= _count;
+                    _count = 0;
                 }
+
+                // Check if ALL slots are fulfilled
+                var allFulfilled = true;
+                for (var j = 0; j < array_length(desiredItems); j++) 
+                {
+                    if (desiredItems[j].quantity > 0) 
+                    {
+                        allFulfilled = false;
+                        break;
+                    }
+                }
+
+                if (allFulfilled)
+                {
+                    Success(_item, _count);
+                }
+                else
+                {
+                    // If the slot is now fulfilled or partially filled
+                    Unsatisfied(_item, _count);
+                }
+
+                return true;
             }
         }
+
         Unsuccess(_item);
         return false;
     }

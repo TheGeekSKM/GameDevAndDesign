@@ -19,6 +19,7 @@
     {"name":"inst_61C113D0","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_5CB727B9","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_59F4E14C","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_4A247B6A","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -26,6 +27,7 @@
         {"$GMRInstance":"v1","%Name":"inst_443E7964","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_443E7964","objectId":{"name":"obj_GDD_Manager","path":"objects/obj_GDD_Manager/obj_GDD_Manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_39F8DD81","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_39F8DD81","objectId":{"name":"obj_InventoryManager","path":"objects/obj_InventoryManager/obj_InventoryManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_59F4E14C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_59F4E14C","objectId":{"name":"obj_DialogueManager","path":"objects/obj_DialogueManager/obj_DialogueManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":-96.0,},
+        {"$GMRInstance":"v1","%Name":"inst_4A247B6A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4A247B6A","objectId":{"name":"obj_InventorySlotDisplay","path":"objects/obj_InventorySlotDisplay/obj_InventorySlotDisplay.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":192.0,},
       ],"layers":[],"name":"UIManagers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"GUI","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_74DAFB89","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74DAFB89","objectId":{"name":"obj_GUI_Pause","path":"objects/obj_GUI_Pause/obj_GUI_Pause.yy",},"properties":[
