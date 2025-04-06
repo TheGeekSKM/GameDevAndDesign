@@ -83,7 +83,16 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         }
         else 
         {
-            allItems[index].quantity += _count;
+            var slot = allItems[index];
+            if (slot.item.stackSize <= slot.quantity)
+            {
+                var newSlot = new InventorySlot(item, _count);
+                array_push(allItems, newSlot);
+            }
+            else 
+            {
+                slot.quantity += _count;
+            }
         }
         currentWeight += item.weight * _count;
 
@@ -97,7 +106,7 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
             popUp.Init($"Picked Up {_item.name} x{_count}");
         }
                 
-        return _item;
+        return item;
     }
 
     ///@desc Uses an item from the inventory

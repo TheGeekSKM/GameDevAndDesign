@@ -34,6 +34,8 @@ function RebuildSlotDisplays()
         }
     }
     
+    slotDisplayInstances = [];
+    
     if (instance_exists(closeButton)) instance_destroy(closeButton);
 
     // 2. Get the current state from the inventory system

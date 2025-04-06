@@ -1,4 +1,4 @@
-function WeaponItem(_name, _weaponType, _durability, _staminaCost, _weight, _equipEffects, _sprite) : Item(_name, _durability, _staminaCost, _weight, ItemType.Weapon, _equipEffects, true, _sprite) constructor {
+function WeaponItem(_name, _weaponType, _durability, _staminaCost, _weight, _equipEffects, _sprite) : Item(_name, 1, _durability, _staminaCost, _weight, ItemType.Weapon, _equipEffects, true, _sprite) constructor {
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system on equip

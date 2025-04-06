@@ -1,4 +1,4 @@
-function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defenseEffects, _sprite) : Item(_name, _durability, _staminaCost, _weight, ItemType.Armor, _defenseEffects, true, _sprite) constructor {
+function ArmorItem(_name, _armorValue, _durability, _staminaCost, _weight, _defenseEffects, _sprite) : Item(_name, 1, _durability, _staminaCost, _weight, ItemType.Armor, _defenseEffects, true, _sprite) constructor {
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system on equip

@@ -1,4 +1,4 @@
-function BulletItem(_name, _hitMultiple, _lifeTime, _damage, _damageType, _weight, _hitFunctions, _sprite) : Item(_name, -1, 0, _weight, ItemType.Bullet, [], true, _sprite) constructor {
+function BulletItem(_name, _hitMultiple, _lifeTime, _damage, _damageType, _weight, _hitFunctions, _sprite) : Item(_name,1, -1, 0, _weight, ItemType.Bullet, [], true, _sprite) constructor {
     // get ref to owner
     // get ref to stat system
     // apply effects to stat system

@@ -33,3 +33,12 @@ currentCollectible = noone;
 Subscribe("PickUp", function(_id) {
     currentCollectible = _id;
 });
+
+inventory.Equip(inventory.AddItem(global.vars.ItemLibrary.Bow, 1, false));
+inventory.Equip(inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false));
+inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
+inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
+inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
+inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
+var item = inventory.AddItem(global.vars.ItemLibrary.LeatherArmor, 1, false)
+inventory.Equip(item);

@@ -5,6 +5,8 @@ inventorySystemRef = undefined;
 slotIndex = -1;
 parentWindow = noone;
 slotSize = 32;
+equippedItem = false;
+
 
 isHovered = false;
 

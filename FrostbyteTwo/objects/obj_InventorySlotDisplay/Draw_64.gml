@@ -35,4 +35,9 @@ if (!isDragSource && slotData != undefined && slotData.item != undefined && slot
             .transform(0.5, 0.5, 0)
             .draw(textX, textY);
     }
+
+    if (equippedItem)
+    {
+        draw_sprite(spr_equippedIndicator, 0, x + (sprite_width / 2), y + sprite_height - 7);
+    }
 }
