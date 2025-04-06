@@ -29,13 +29,8 @@ function HideMenu()
 
 stateMachine = new SnowState("hidden");
 
-hiddenPos = new Vector2(-5000, 5000);
+hiddenPos = new Vector2(x, y);
 stateMachine.add("hidden", {
-    enter: function() {
-        // randomly generate a new hidden pos that is off screen
-        hiddenPos.x = irandom_range(-sprite_width, -(sprite_width * 3));
-        hiddenPos.y = irandom_range(-sprite_height, -(sprite_height * 3));
-    },
     step: function() {
         x = lerp(x, hiddenPos.x, 0.1);
         y = lerp(y, hiddenPos.y, 0.1);

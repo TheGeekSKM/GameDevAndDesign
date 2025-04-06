@@ -15,6 +15,8 @@
     {"name":"inst_74DAFB89","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_7F585D4B","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_362BF6A1","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_5F3EABD5","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_61C113D0","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -26,6 +28,8 @@
         {"$GMRInstance":"v1","%Name":"inst_74DAFB89","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74DAFB89","objectId":{"name":"obj_GUI_Pause","path":"objects/obj_GUI_Pause/obj_GUI_Pause.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"propertyId":{"name":"Name","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Pause",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.9999998,"scaleY":3.5,"x":-160.0,"y":192.0,},
+        {"$GMRInstance":"v1","%Name":"inst_5F3EABD5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F3EABD5","objectId":{"name":"obj_QuestMenu2","path":"objects/obj_QuestMenu2/obj_QuestMenu2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":640.0,},
+        {"$GMRInstance":"v1","%Name":"inst_61C113D0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_61C113D0","objectId":{"name":"obj_QuestDetails","path":"objects/obj_QuestDetails/obj_QuestDetails.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":640.0,},
       ],"layers":[],"name":"GUI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Players","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_7B824AA2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7B824AA2","objectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":96.0,},

@@ -17,12 +17,12 @@ function ItemReciever(_itemSlots) constructor
                 }
                 else 
                 {
-                    Unsatisfied();
+                    Unsatisfied(_item, _count);
                     return true;
                 }
             }
         }
-        Unsuccess();
+        Unsuccess(_item);
         return false;
     }
 
@@ -33,17 +33,17 @@ function ItemReciever(_itemSlots) constructor
         }
     }
 
-    function Unsatisfied()
+    function Unsatisfied(_item, _count)
     {
         for (var i = 0; i < array_length(unsatisfiedCallbacks); i++) {
-            unsatisfiedCallbacks[i]();
+            unsatisfiedCallbacks[i](_item, _count);
         }
     }
 
-    function Unsuccess()
+    function Unsuccess(_item)
     {
         for (var i = 0; i < array_length(unsuccessCallbacks); i++) {
-            unsuccessCallbacks[i]();
+            unsuccessCallbacks[i](_item);
         }
     }
     function AddSuccessCallback(_callback)

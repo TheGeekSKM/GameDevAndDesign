@@ -15,6 +15,7 @@ function Quest(_name, _description, _giver) constructor
 	description = _description;
 	giver = _giver;
 	state = QuestState.Inactive;
+	index = -1; // index in the quest list
 }
 
 /// @description Get quest by name
@@ -43,7 +44,9 @@ function AddQuest(_quest)
 	}
 
 	global.vars.QuestList[$ _quest.name] = _quest;
+	_quest.index = GetNumberOfQuests() - 1; // Set the index of the quest in the list
 }
+
 
 function GetNumberOfQuests()
 {
@@ -54,5 +57,27 @@ function GetNumberOfQuests()
 function GetQuestByIndex(_index)
 {
 	var keys = variable_struct_get_names(global.vars.QuestList);
-	return global.vars.QuestList[$ keys[_index]];
+	for (var i = 0; i < array_length(keys); i += 1)
+	{
+		var quest = global.vars.QuestList[$ keys[i]];
+		if (quest.index == _index)
+		{
+			return quest;
+		}
+	}
+}
+
+function QuestStateToString(_state)
+{
+	switch (_state)
+	{
+		case QuestState.Inactive:
+			return "Inactive";
+		case QuestState.Active:
+			return "Active";
+		case QuestState.Completed:
+			return "Completed";
+		default:
+			return "Unknown";
+	}
 }

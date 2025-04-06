@@ -26,6 +26,9 @@ function Vars() constructor {
     InputManager = new InputSystem();
     ItemLibrary = new AllItems();
 
+    QuestList = {};
+    
+
     Player = noone;
 }
 
