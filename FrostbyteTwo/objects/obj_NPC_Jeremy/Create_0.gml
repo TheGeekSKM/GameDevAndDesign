@@ -1,9 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-color = make_color_hsv(irandom(255), 150, 150);
-image_blend = color;
-
 requiredNum = irandom_range(5, 10);
 speakerData = new SpeakerData("Jeremy", color);
 
@@ -34,8 +31,8 @@ function QuestLogic()
     switch (_quest.state) {
         case QuestState.Inactive:
             _quest.state = QuestState.Active;
-            DiscoverRecipe(global.vars.Items.CPURecipe);
-            DiscoverRecipe(global.vars.Items.GPURecipe);
+            DiscoverRecipe(global.vars.ItemLibrary.CPURecipe);
+            DiscoverRecipe(global.vars.ItemLibrary.GPURecipe);
             break;
         case QuestState.Active:
             break;

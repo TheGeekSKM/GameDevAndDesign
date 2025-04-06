@@ -11,4 +11,3 @@ stamina.Step();
 entityData.Step();
 hunger.Step();
 
-if (canAttack) attack.Step();

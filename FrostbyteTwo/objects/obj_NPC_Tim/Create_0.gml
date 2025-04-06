@@ -1,11 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-
-
-color = make_color_hsv(irandom(255), 150, 150);
-image_blend = color;
-
 requiredNum = irandom_range(5, 15);
 
 speakerData = new SpeakerData("Tim", color);
@@ -37,19 +32,22 @@ function QuestLogic()
     switch (_quest.state) {
         case QuestState.Inactive:
             _quest.state = QuestState.Active;
-            DiscoverRecipe(global.vars.Items.AxeRecipe);
+            DiscoverRecipe(global.vars.ItemLibrary.AxeRecipe);
             break;
         case QuestState.Active:
+            if (!instance_exists(global.vars.Player)) return;
+            var player = global.vars.Player;    
+        
             var slot = undefined;
-            var slotIndex = playerInRange.inventory.ContainsItem(global.vars.Items.Cherry);
-            if (slotIndex != -1) slot = playerInRange.inventory.allItems[slotIndex];
+            var slotIndex = player.inventory.ContainsItem(global.vars.Items.Cherry);
+            if (slotIndex != -1) slot = player.inventory.allItems[slotIndex];
         
             if (slot != undefined and slot.quantity >= requiredNum) 
             {
                 _quest.state = QuestState.Completed;
-                playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
+                player.inventory.RemoveItem(slotIndex, slot.quantity);
                 
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, dialogueQuestCompleted]);
+                Raise("DialogueOpen", dialogueQuestCompleted);
 
                 var popUp = instance_create_layer(x, y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Cherry Picking");
@@ -66,14 +64,14 @@ function QuestLogic()
             }
             else if (slot != undefined and slot.quantity < requiredNum) 
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(speakerData, $"You need {requiredNum - slot.quantity} more cherries. But I'll take what you have for now.")]);
+                Raise("DialogueOpen", new DialogueScene().AddDialogue(speakerData, $"You need {requiredNum - slot.quantity} more cherries. But I'll take what you have for now."));
                 requiredNum -= slot.quantity;
-                playerInRange.inventory.RemoveItem(slotIndex, slot.quantity);
+                player.inventory.RemoveItem(slotIndex, slot.quantity);
                 
             }
             else
             {
-                Raise("DialogueOpen", [playerInRange.PlayerIndex, new DialogueScene().AddDialogue(speakerData, "You don't have any cherries on ya.")]);
+                Raise("DialogueOpen", new DialogueScene().AddDialogue(speakerData, "You don't have any cherries on ya."));
             }
             break;
         case QuestState.Completed:

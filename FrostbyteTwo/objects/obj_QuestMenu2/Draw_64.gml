@@ -9,8 +9,10 @@ if (questDisplay1Index > -1) {
     var quest = GetQuestByIndex(questDisplay1Index);
     
     var imageScale = 56 / sprite_get_width(spr_NPCSpeaker);
-    draw_sprite_ext(spr_NPCSpeaker, irandom_range(0, 2), questDisplayTopLeft.x + 4, questDisplayTopLeft.y + 4, imageScale, imageScale, image_angle, c_white, 1);
+    draw_sprite_ext(spr_NPCSpeaker, questSpeaker1, questDisplayTopLeft.x + 32, questDisplayTopLeft.y + 32, imageScale, imageScale, image_angle, quest.giver.color, 1);
 
+    draw_sprite(spr_questDisplayOverlay, 0, questDisplayTopLeft.x, questDisplayTopLeft.y);
+    
     scribble($"{quest.name}")
         .align(fa_left, fa_center)
         .starting_format("VCR_OSD_Mono", make_color_rgb(255, 170, 94))
@@ -41,8 +43,10 @@ if (questDisplay2Index > -1) {
     var quest2 = GetQuestByIndex(questDisplay2Index);
     
     var image2Scale = 56 / sprite_get_width(spr_NPCSpeaker);
-    draw_sprite_ext(spr_NPCSpeaker, irandom_range(0, 2), questDisplay2TopLeft.x + 4, questDisplay2TopLeft.y + 4, image2Scale, image2Scale, image_angle, c_white, 1);
+    draw_sprite_ext(spr_NPCSpeaker, questSpeaker2, questDisplay2TopLeft.x + 32, questDisplay2TopLeft.y + 32, image2Scale, image2Scale, image_angle, quest2.giver.color, 1);
 
+    draw_sprite(spr_questDisplayOverlay, 0, questDisplay2TopLeft.x, questDisplay2TopLeft.y);
+    
     scribble($"{quest2.name}")
         .align(fa_left, fa_center)
         .starting_format("VCR_OSD_Mono", make_color_rgb(255, 170, 94))
@@ -73,8 +77,10 @@ if (questDisplay3Index > -1) {
     var quest3 = GetQuestByIndex(questDisplay3Index);
     
     var image3Scale = 56 / sprite_get_width(spr_NPCSpeaker);
-    draw_sprite_ext(spr_NPCSpeaker, irandom_range(0, 2), questDisplay3TopLeft.x + 4, questDisplay3TopLeft.y + 4, image3Scale, image3Scale, image_angle, c_white, 1);
+    draw_sprite_ext(spr_NPCSpeaker, questSpeaker3, questDisplay3TopLeft.x + 32, questDisplay3TopLeft.y + 32, image3Scale, image3Scale, image_angle, quest3.giver.color, 1);
 
+    draw_sprite(spr_questDisplayOverlay, 0, questDisplay3TopLeft.x, questDisplay3TopLeft.y);
+    
     scribble($"{quest3.name}")
         .align(fa_left, fa_center)
         .starting_format("VCR_OSD_Mono", make_color_rgb(255, 170, 94))

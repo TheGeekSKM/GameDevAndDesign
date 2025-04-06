@@ -28,6 +28,7 @@ function Vars() constructor {
 
     QuestList = {};
     
+    DiscoveredRecipes = [];
 
     Player = noone;
 }

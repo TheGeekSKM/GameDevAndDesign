@@ -5,6 +5,7 @@ if (quest != undefined) {
         .align(fa_left, fa_top)
         .starting_format("VCR_OSD_Mono", make_color_rgb(255, 170, 94))
         .transform(0.75, 0.75, image_angle)
+        .wrap(158 * 1.3333)
         .draw(topLeft.x + 21, topLeft.y + 35);
 }
 

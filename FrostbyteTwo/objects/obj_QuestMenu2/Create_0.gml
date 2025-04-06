@@ -13,7 +13,9 @@ previousButtonClickColor = make_color_rgb(149, 255, 119);
 nextButtonHoverColor = make_color_rgb(206, 245, 255);
 nextButtonClickColor = make_color_rgb(119, 227, 255);
 
-
+questSpeaker1 = 0;
+questSpeaker2 = 0;
+questSpeaker3 = 0;
 
 
 // create previouspage button
@@ -64,6 +66,10 @@ function DecrementPageIndex() {
 
 function UpdateQuestButtons()
 {
+    questSpeaker1 = irandom_range(0, 2);
+    questSpeaker2 = irandom_range(0, 2);
+    questSpeaker3 = irandom_range(0, 2);
+    
     numberOfPages = ceil(GetNumberOfQuests() / 3) - 1; // 3 quests per page
     questDisplay1Index = pageIndex * 3;
     echo(questDisplay1Index)

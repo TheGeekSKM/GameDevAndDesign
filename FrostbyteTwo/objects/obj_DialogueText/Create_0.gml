@@ -20,7 +20,8 @@ function CalculateScribble()
      currentScribble = scribble($"{currentDialogueLine.speakerData.speakerName}: {currentDialogueLine.line}")
         .align(fa_center, fa_middle)
         .starting_format("VCR_OSD_Mono", c_black)
-        .transform(0.75, 0.75, image_angle);
+        .transform(0.75, 0.75, image_angle)
+        .wrap(sprite_width - 36);
 }
 
 
