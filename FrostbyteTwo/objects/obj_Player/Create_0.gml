@@ -45,6 +45,7 @@ inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
 inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
 inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
 inventory.AddItem(global.vars.ItemLibrary.Arrow2, 1, false);
+inventory.AddItem(global.vars.ItemLibrary.Pickaxe, 1, false);
 var item = inventory.AddItem(global.vars.ItemLibrary.LeatherArmor, 1, false)
 inventory.Equip(item);
 
