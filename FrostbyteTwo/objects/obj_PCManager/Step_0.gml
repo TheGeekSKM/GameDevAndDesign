@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+if (global.vars.pause) return;
 
 // Countdown Timer
 consume_timer += 1;

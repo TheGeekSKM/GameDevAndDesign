@@ -1,6 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
+if (global.vars.pause) return;
 stats.Step();
 entityHealth.Step();
 
