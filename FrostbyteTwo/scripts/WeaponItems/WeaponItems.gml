@@ -53,7 +53,7 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
     function Use()
     {
         if (owner.stamina.GetStamina() <= staminaCost) {
-            return;
+            return false;
         }
         else
         {
@@ -73,6 +73,8 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
             var slotIndex = owner.inventory.ContainsItem(self);
             if (slotIndex != -1) owner.inventory.RemoveItem(slotIndex, 1);
         }
+
+        return true;
     }
 
     function GetCopy()
@@ -89,7 +91,8 @@ function MeleeWeaponItem(_name, _color, _durability, _damage, _damageType, _stam
     function GetDescription() {
         var desc = $"Item: {name}\n";
         desc = string_concat(desc, $"Weapon Damage: {damage}\n");
-        desc = string_concat(desc, $"Damage Type: {damageType}\n");
+        var _damageType = DamageTypeToString(damageType);
+        desc = string_concat(desc, $"Damage Type: {_damageType}\n");
         return desc;
     }
 }
@@ -106,12 +109,12 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
         if (bullet == undefined) 
         {
             if (variable_instance_exists(owner, "PlayerIndex"))
-                Raise("NotificationOpen", ["You have no ammo equipped in your inventory.", owner.PlayerIndex]);
-            return;
+                instance_create_layer(owner.x, owner.y, "GUI", obj_PopUpText).Init("You have no ammo equipped in your inventory.", c_red);
+            return false;
         }
         
         if (owner.stamina.GetStamina() <= staminaCost) {
-            return;
+            return false;
         }
         else
         {
@@ -126,6 +129,8 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
             var slotIndex = owner.inventory.ContainsItem(self);
             if (slotIndex != -1) owner.inventory.RemoveItem(slotIndex, 1);
         }
+
+        return true;
     }
 
     function GetCopy()
@@ -141,4 +146,6 @@ function RangedWeaponItem(_name, _durability, _speed, _staminaCost, _weight,  _e
     }
 
 }
+
+
 

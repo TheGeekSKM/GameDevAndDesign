@@ -97,7 +97,39 @@ function AllItems() constructor
 	PlasticResinRecipe = new Recipe("Plastic Resin", [new RecipeItem(PlasticChunks, irandom_range(1, 3)), new RecipeItem(ThermalGoo, irandom_range(1, 3))], [new RecipeItem(PlasticResin, 1)]);
 	ThermalPasteRecipe = new Recipe("Thermal Paste", [new RecipeItem(ThermalGoo, irandom_range(1, 3)), new RecipeItem(GraphiteDust, irandom_range(1, 3))], [new RecipeItem(ThermalPaste, 1)]);
 	LeadPlatesRecipe = new Recipe("Lead Plates", [new RecipeItem(LeadBits, irandom_range(1, 3)), new RecipeItem(CopperPiece, irandom_range(1, 3))], [new RecipeItem(LeadPlates, 1)]);
+
+    function GetRandomItems(_count)
+    {
+        var items = [CPU, GPU, RAM, Sword, Bow, Arrow, Axe, Pickaxe, Shovel, CopperPiece, Silicone,
+            SandClumps, ScrapGold, BauxiteOre, SteelDebris, PlasticChunks, ThermalGoo,
+            GraphiteDust, LeadBits, GlassPanel, CopperWire, GoldFlakes,
+            AlluminumAlloy, SteelScraps, PlasticResin, ThermalPaste,
+            GrapheneStrips, LeadPlates,
+            CircuitBlade, GoldPlatedKnucles, AluminumPipe,
+            SolderingIron, GrapheneWhip,
+            CRTCannon, RAMStickThrower,
+            CapacitorSlingshot,
+            AntiStaticJumpsuit,
+            GoldLinedCircuitVest,
+            AluminumPlating,
+            GrapheneWeaveSuit];
+        
+        var returningArray = [];
+        var itemCount = array_length(items);
+        
+        repeat(_count) {
+            var randomIndex = irandom(itemCount - 1);
+            var item = items[randomIndex];
+            array_push(returningArray, item);
+        }
+        
+        return returningArray;
+    }
 }
+
+
+
+
 
 
 

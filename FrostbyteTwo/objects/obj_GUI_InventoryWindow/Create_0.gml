@@ -23,10 +23,12 @@ topLeft = new Vector2(x - width / 2, y - height / 2);
 closeButton = noone;
 rightClicked = false;
 
-function RebuildSlotDisplays()
+function RebuildSlotDisplays(_depth = -4)
 {
     if (inventorySystemRef == undefined) return;
+    depth = _depth;
 
+    
     // 1. Clear the old slot displays
     for (var i = 0; i < array_length(slotDisplayInstances); i += 1) {
         var instID = slotDisplayInstances[i];
@@ -56,11 +58,12 @@ function RebuildSlotDisplays()
         var slotX = displayStartX + (col * (slotSize + slotPadding));
         var slotY = displayStartY + (row * (slotSize + slotPadding));
 
-        var slotInst = instance_create_layer(slotX, slotY, "GUI", obj_InventorySlotDisplay);
+        var slotInst = instance_create_depth(slotX, slotY, depth - 1, obj_InventorySlotDisplay);
         slotInst.inventorySystemRef = inventorySystemRef;
         slotInst.slotIndex = i;
         slotInst.parentWindow = id;
         slotInst.slotSize = slotSize;
+        slotInst.depth = depth - 1;
 
         array_push(slotDisplayInstances, slotInst);
     }
@@ -79,7 +82,7 @@ function RebuildSlotDisplays()
     
     // 6. Create Close Button
     closeButton = instance_create_depth(topLeft.x + sprite_width, topLeft.y, id.depth - 10, obj_Button_InventoryWindowClose);
-    closeButton.depth = id.depth - 10;
+    closeButton.depth = id.depth - 2;
     closeButton.Text = "X";
     closeButton.AddCallback(function () {
         array_delete(global.activeInventories, displayIndex, 1);

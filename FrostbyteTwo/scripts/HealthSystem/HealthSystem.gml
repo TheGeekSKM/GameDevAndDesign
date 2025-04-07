@@ -10,6 +10,24 @@ enum DamageType {
     TEMP = 8
 }
 
+function DamageTypeToString(_damageType)
+{
+    switch (_damageType)
+    {
+        case DamageType.PHYSICAL: return "Physical";
+        case DamageType.FIRE: return "Fire";
+        case DamageType.COLD: return "Cold";
+        case DamageType.POISON: return "Poison";
+        case DamageType.HOLY: return "Holy";
+        case DamageType.DARK: return "Dark";
+        case DamageType.HEALING: return "Healing";
+        case DamageType.HUNGER: return "Hunger";
+        case DamageType.TEMP: return "Temporary";
+    }
+    return "Unknown";
+    
+}
+
 /// @desc This is the struct that holds the stats for the HealthSystem
 /// @param {StatSystem} _stats the stats for the entity
 /// @param {Inventory} _inventory the inventory for the entity
@@ -74,10 +92,12 @@ function HealthSystem(_stats, _inventory, _isUndead, _owner)  : Component("entit
                 if (crit)
                 {
                     textPopUp.Init($"-{amount}", c_red);
+                    with(obj_camera) {AddCameraShake(7);}
                 }
                 else
                 {
                     textPopUp.Init($"-{amount}", c_white);
+                    with(obj_camera) {AddCameraShake(3);}
                 }
             }
         }

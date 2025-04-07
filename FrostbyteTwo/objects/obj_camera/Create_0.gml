@@ -25,3 +25,15 @@ function SetCameraMode(_state, _following = noone, _targetPos = new Vector2(-1, 
 }
 
 view_camera[CameraIndex] = camera_create_view(0, 0, CamWidth, CamHeight);
+
+shakeOffest = new Vector2(0, 0);
+shakeStrength = 0;
+shakeDecay = 0.8;
+
+function AddCameraShake(_strength, _decay = 0.8)
+{
+    shakeStrength = _strength;
+    shakeDecay = _decay;
+}
+
+debug = false;

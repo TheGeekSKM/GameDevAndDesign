@@ -8,7 +8,10 @@ if (global.vars.pause)
     return;
 }
 
-
+if (keyboard_check_pressed(vk_backspace))
+{
+    obj_camera.AddCameraShake(10);
+}
 
 stats.Step();
 entityHealth.Step();

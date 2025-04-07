@@ -5,6 +5,16 @@ enum StatType
     Constitution
 }
 
+function StatTypeToString(_statType)
+{
+    switch (_statType)
+    {
+        case StatType.Strength: return "Strength";
+        case StatType.Dexterity: return "Dexterity";
+        case StatType.Constitution: return "Constitution";
+    }
+}
+
 /// @function StatSystem(_str, _dex, _con)
 /// @param {real} _str - Strength
 /// @param {real} _dex - Dexterity

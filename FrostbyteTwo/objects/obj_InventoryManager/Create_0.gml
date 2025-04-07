@@ -109,7 +109,7 @@ function AttemptDrop(_targetInventory, _targetSlotIndex)
     return true; // Drop action performed
 }
 
-function SpawnInventoryWindow(_inventory, _x, _y, _title = "Inventory")
+function SpawnInventoryWindow(_inventory, _x, _y, _title = "Inventory", _depth = -4)
 {
     var win = FindWindowForInventory(_inventory);
     if (!instance_exists(obj_GUI_InventoryWindow) || win == noone)
@@ -119,6 +119,7 @@ function SpawnInventoryWindow(_inventory, _x, _y, _title = "Inventory")
         newWin.x = _x;
         newWin.y = _y;
         newWin.PanelTitle = _title;
+        newWin.RebuildSlotDisplays(_depth);
     }
     else
     {
@@ -127,7 +128,7 @@ function SpawnInventoryWindow(_inventory, _x, _y, _title = "Inventory")
         win.visible = true;
         win.PanelTitle = _title;
         win.inventorySystemRef = _inventory;
-        win.RebuildSlotDisplays(); // Rebuild the slot displays to reflect the current inventory state
+        win.RebuildSlotDisplays(_depth); // Rebuild the slot displays to reflect the current inventory state
     }
 }
 

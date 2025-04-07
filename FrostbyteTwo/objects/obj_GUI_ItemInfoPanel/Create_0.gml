@@ -6,8 +6,9 @@ currentScribble = undefined;
 // menu opens when "ItemInfoClicked" event is triggered
 Subscribe("ItemInfoClicked", function(_slotObject)
 {
+    depth = _slotObject.depth - 5;
     currentSlotObject = _slotObject;
-    endingPos = new Vector2(guiMouseX - (sprite_width / 2) - 10, guiMouseY - (sprite_height / 2) - 10);
+    endingPos = new Vector2(guiMouseX + (sprite_width / 2) + 10, guiMouseY + (sprite_height / 2) + 10);
     OpenMenu();
 
     var inventory = currentSlotObject.inventorySystemRef;

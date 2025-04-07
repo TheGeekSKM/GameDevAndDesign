@@ -8,19 +8,21 @@ dropButton = noone;
 // menu opens when "ItemClicked" event is triggered
 Subscribe("ItemClicked", function(_slotObject)
 {
+    depth = _slotObject.depth - 2;
     if (instance_exists(useButton)) instance_destroy(useButton);
     if (instance_exists(infoButton)) instance_destroy(infoButton);
     if (instance_exists(dropButton)) instance_destroy(dropButton);
 
 
     currentSlotObject = _slotObject;
-    endingPos = new Vector2(guiMouseX - (sprite_width / 2) - 10, guiMouseY - (sprite_height / 2) - 10);
+    endingPos = new Vector2(guiMouseX + (sprite_width / 2) + 10, guiMouseY + (sprite_height / 2) + 10);
 
     if (_slotObject.inventorySystemRef[$ "owner"] == global.vars.Player) 
     {
         var inventory = _slotObject.inventorySystemRef;
         var item = inventory.GetSlot(_slotObject.slotIndex).item;
         useButton = instance_create_depth(x, topLeft.y + 48, depth - 1, obj_BASE_Button);
+        useButton.SetDepth(depth - 1);
         
         switch(item.type)
         {
@@ -94,6 +96,16 @@ Subscribe("ItemClicked", function(_slotObject)
     }
     else 
     {
+        useButton = instance_create_depth(x, topLeft.y + 48, depth - 1, obj_BASE_Button);
+            useButton.SetText("Take");
+            useButton.SetColors(make_color_rgb(149, 181, 144), make_color_rgb(86, 181, 72));
+            useButton.SetSize(140, 42);
+            useButton.SetPosition(x, topLeft.y + 48);
+            useButton.SetDepth(depth - 1);
+            useButton.AddCallback(function() {
+                AddItemToInventory();
+            });
+        
         infoButton = instance_create_depth(x, topLeft.y + 92, depth - 1, obj_BASE_Button);
         infoButton.SetText("Info");
         infoButton.SetColors(make_color_rgb(149, 181, 144), make_color_rgb(86, 181, 72));
@@ -111,6 +123,17 @@ Subscribe("ItemClicked", function(_slotObject)
 // use option, info option, and drop option
 
 // use button needs to change name based on the item that is clicked...
+
+function AddItemToInventory()
+{
+    var slot = currentSlotObject.inventorySystemRef.GetSlot(currentSlotObject.slotIndex);
+    var item = slot.item;
+    var count = slot.quantity;
+    
+    currentSlotObject.inventorySystemRef.DropItemByIndex(currentSlotObject.slotIndex, count);
+    global.vars.Player.inventory.AddItem(item, count);
+    HideMenu();
+}
 
 function UseItem()
 {

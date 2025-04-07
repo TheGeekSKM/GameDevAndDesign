@@ -34,7 +34,7 @@ function ConsumableItem(_name, _durability, _weight, _consumeEffects, _sprite, _
     function GetDescription() {
         var desc = $"Item: {name}\n";
         for (var i = 0; i < array_length(effects); i++) {
-            desc = string_concat(desc, $"Effect #{i + 1}: {effects[i].value} {effects[i].statType}\n");
+            desc = string_concat(desc, $"Effect #{i + 1}: {StatTypeToString(effects[i].statType)} ({effects[i].value})\n");
         }
        
         var hunger = "";

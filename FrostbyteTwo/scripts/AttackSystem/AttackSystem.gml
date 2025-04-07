@@ -21,7 +21,17 @@ function AttackSystem(_stats, _inventory, _owner, _enemyObject = noone) : Compon
         }
 
         var weapon = inventory.GetEquippedWeapon();
-        weapon.Use();
+        var didAttack = weapon.Use();
+        
+        if (variable_instance_exists(owner, "PlayerIndex") && didAttack)
+        {
+            var damage = inventory.GetTotalDamage();
+            
+            var camShakeAmount = round(1 + (damage / 40) * 9);
+            with (obj_camera) {
+                AddCameraShake(camShakeAmount * 0.75);
+            }
+        }
     }
 
     function Step(_attackPoint, _attackDirection)

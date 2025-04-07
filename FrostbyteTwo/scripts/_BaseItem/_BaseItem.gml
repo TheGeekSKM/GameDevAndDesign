@@ -31,7 +31,7 @@ function Item(_name, _stackSize, _durability, _staminaCost, _weight, _type, _eff
     function GetDescription() {
         var desc = $"Item: {name}\n";
         for (var i = 0; i < array_length(effects); i++) {
-            desc = string_concat(desc, $"Effect #{i + 1}: {effects[i].value} {effects[i].statType}\n");
+            desc = string_concat(desc, $"Effect #{i + 1}: {StatTypeToString(effects[i].statType)} ({effects[i].value})\n");
         }
         return desc;
     }

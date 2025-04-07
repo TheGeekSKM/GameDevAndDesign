@@ -1,0 +1,1 @@
+InteractText = "Click to Open";
