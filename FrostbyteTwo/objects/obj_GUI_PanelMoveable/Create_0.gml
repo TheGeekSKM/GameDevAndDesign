@@ -4,6 +4,7 @@ dragRect = new Rectangle(x - (sprite_width / 2), y - (sprite_height / 2), x + (s
 dragging = false;
 windowMouseOffset = new Vector2(0, 0);
 topLeft = new Vector2(x - (sprite_width / 2), y - (sprite_height / 2));
+endingPos = undefined;
 
 function OnMouseLeftClick()
 {
@@ -19,12 +20,12 @@ function OnMouseLeftClickRelease()
 
 function OpenMenu()
 {
-    stateMachine.change("movingToOnScreen");
+    if (stateMachine.get_current_state() == "hidden") stateMachine.change("movingToOnScreen");
 }
 
 function HideMenu()
 {
-    stateMachine.change("hidden");
+    if (stateMachine.get_current_state() != "hidden") stateMachine.change("hidden");
 }
 
 stateMachine = new SnowState("hidden");
@@ -41,8 +42,8 @@ targetPos = new Vector2(0, 0);
 stateMachine.add("movingToOnScreen", {
     enter: function() {
         // set the target position to the center of the screen
-        targetPos.x = (GUI_DEFAULT_WIDTH / 2);
-        targetPos.y = (GUI_DEFAULT_HEIGHT / 2);
+        targetPos.x = endingPos == undefined ? (GUI_DEFAULT_WIDTH / 2) : endingPos.x;
+        targetPos.y = endingPos == undefined ? (GUI_DEFAULT_HEIGHT / 2) : endingPos.y;
     },
     step: function() {
         x = lerp(x, targetPos.x, 0.25);

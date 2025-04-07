@@ -177,7 +177,7 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         return true;
     }
 
-    function DropItemByIndex(_index, _count)
+    function DropItemByIndex(_index, _count, createItem = false)
     {
         if (_index < 0 or _index >= array_length(allItems)) return false;
         var slot = allItems[_index];
@@ -194,6 +194,12 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
         }    
         
         if (slot.item.equipped) Unequip(slot.item);
+
+        if (createItem) {
+            var itemCol = instance_create_layer(owner.x, owner.y, "Collectibles", obj_BASE_Collectible);
+            itemCol.Initialize(slot.item, _count);
+        }
+
         RemoveItem(_index, _count);
 
 

@@ -3,10 +3,13 @@
   "%Name":"obj_GUI_ItemInfoPanel",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_GUI_ItemInfoPanel",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_GUI_interactable","path":"objects/obj_GUI_interactable/obj_GUI_interactable.yy",},"propertyId":{"name":"Depth","path":"objects/obj_GUI_interactable/obj_GUI_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-6",},
+  ],
   "parent":{
     "name":"Inventory",
     "path":"folders/Objects/UI/Inventory.yy",

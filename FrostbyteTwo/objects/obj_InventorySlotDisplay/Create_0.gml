@@ -28,3 +28,9 @@ function OnMouseLeftClick()
         }
     }
 }
+
+function OnMouseRightClick()
+{
+    if (slotIndex == -1) return;
+    Raise("ItemClicked", id);
+}
