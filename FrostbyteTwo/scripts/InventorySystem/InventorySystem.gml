@@ -323,7 +323,7 @@ function Inventory(_stats, _owner, _maxSlots) constructor {
     {
         for (var i = array_length(allItems) - 1; i >= 0; i -= 1) 
         {
-            DropItemByIndex(i, allItems[i].quantity);
+            DropItemByIndex(i, allItems[i].quantity, true);
         }
     }
 }
