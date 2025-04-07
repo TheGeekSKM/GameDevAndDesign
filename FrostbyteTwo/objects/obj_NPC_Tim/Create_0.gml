@@ -47,14 +47,14 @@ function QuestLogic()
                 _quest.state = QuestState.Completed;
                 player.inventory.RemoveItem(slotIndex, slot.quantity);
                 
-                Raise("DialogueOpen", dialogueQuestCompleted);
+                Raise("DialogueOpen", dialogueQuestCompleted); 
 
                 var popUp = instance_create_layer(x, y, "GUI", obj_PopUpText);
                 popUp.Init($"Quest Completed: Cherry Picking");
 
-                layer_sequence_create("SetDressing", 3139, 1883, SEQ_Tent);
+                layer_sequence_create("SetDressing", 3200, 1944, SEQ_Tent);
 
-                var popUp2 = instance_create_layer(3139, 1883, "GUI", obj_PopUpText);
+                var popUp2 = instance_create_layer(3200, 1944, "GUI", obj_PopUpText);
                 popUp2.Init($"New Tent!");
 
                 Raise("QuestCompleted", {

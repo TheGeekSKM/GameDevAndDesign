@@ -40,6 +40,7 @@ switch (currentState)
     break;
     
     case CameraMode.MoveToTarget: 
+        echo(target)
         cX = lerp(cX, target.x - (CamWidth / 2), 0.1);
         cY = lerp(cY, target.y - (CamHeight / 2), 0.1);
     break;

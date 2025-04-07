@@ -10,7 +10,7 @@ if (global.vars.pause)
 
 if (keyboard_check_pressed(vk_backspace))
 {
-    obj_camera.AddCameraShake(10);
+    inventory.AddItem(new ConsumableItem("Cherry", 1, 0, [], spr_Cherry, 15, 3), 10, true);
 }
 
 stats.Step();

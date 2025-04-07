@@ -5,7 +5,7 @@ if (global.vars.pause) return;
     
 if (obj_TimeManager.alphaValue == 0)
 {
-    entityHealth.TakeDamage(10 / game_get_speed(gamespeed_fps), DamageType.PHYSICAL, id);
+    entityHealth.TakeDamage(500, DamageType.PHYSICAL, id);
 }
 stats.Step();
 entityHealth.Step();

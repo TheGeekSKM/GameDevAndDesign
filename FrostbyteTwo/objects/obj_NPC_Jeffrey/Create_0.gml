@@ -76,9 +76,10 @@ function QuestLogic()
             }
             else if (slot != undefined and slot.quantity < requiredNum) 
             {
+                echo($"{slot.quantity} and {requiredNum}")
                 Raise("DialogueOpen", new DialogueScene().AddDialogue(speakerData, $"You need {requiredNum - slot.quantity} more Raw Meat. But I'll take what you have for now."));
-                player.inventory.RemoveItem(slotIndex, slot.quantity);
                 requiredNum -= slot.quantity;
+                player.inventory.RemoveItem(slotIndex, slot.quantity);
             }
             else
             {

@@ -13,8 +13,8 @@ function AllItems() constructor
     Axe = new MeleeWeaponItem("Copper Axe", c_white, 150, 10, DamageType.PHYSICAL, 10, 5, [], spr_Axe);
     Pickaxe = new MeleeWeaponItem("Copper Pickaxe", c_dkgray, 150, 5, DamageType.PHYSICAL, 10, 5, [], spr_pickaxe);
     Shovel = new MeleeWeaponItem("Copper Shovel", c_dkgray, 150, 5, DamageType.PHYSICAL, 10, 5, [], spr_shovel);
-    CopperPiece = new Item("Scrap Copper", 1, 1, 0, 1, ItemType.Default, [], false, spr_copper);
-    Silicone = new Item("Silicone Shards", 1, 1, 0, 1, ItemType.Default, [], false, spr_silicon);
+    CopperPiece = new Item("Scrap Copper", 64, 1, 0, 1, ItemType.Default, [], false, spr_copper);
+    Silicone = new Item("Silicone Shards", 64, 1, 0, 1, ItemType.Default, [], false, spr_silicon);
     
     // ----- Base Resources -----
     SandClumps = new ConsumableItem("Sand Clumps", 1, 0, [new StatusEffects(StatType.Constitution, -1, 10)], spr_sandClumps, 5);
