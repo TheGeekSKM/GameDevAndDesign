@@ -66,13 +66,15 @@ function Recipe(_name, _requiredItems, _outputItems) constructor {
             var index = _owner.inventory.ContainsItem(requiredItems[i].item);
             if (index == -1) {
                 var str = $"You don't have {requiredItems[i].item.name} in your inventory"
-                Raise("NotificationOpen", [str, _owner.PlayerIndex]);
+                instance_create_layer(obj_NPC_Crafting.x, obj_NPC_Crafting.y, "GUI", obj_PopUpText)
+                    .Init(str, c_maroon);
                 return;
             }
 
             if (_owner.inventory.allItems[index].quantity < requiredItems[i].count) {
                 var str = $"You don't have enough {requiredItems[i].item.name} in your inventory"
-                Raise("NotificationOpen", [str, _owner.PlayerIndex]);
+                instance_create_layer(obj_NPC_Crafting.x, obj_NPC_Crafting.y, "GUI", obj_PopUpText)
+                    .Init(str, c_maroon);
                 return;
             }
         }
@@ -88,7 +90,8 @@ function Recipe(_name, _requiredItems, _outputItems) constructor {
         }
 
         var str = $"You crafted {outputItems[0].item.name} x{outputItems[0].count}";
-        Raise("NotificationOpen", [str, _owner.PlayerIndex]);
+        instance_create_layer(obj_NPC_Crafting.x, obj_NPC_Crafting.y, "GUI", obj_PopUpText)
+            .Init(str, c_green);
     }
 
     function ToString()

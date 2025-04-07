@@ -1,7 +1,4 @@
 // Inherit the parent event
 event_inherited();
 
-
-function Interact() {
-    
-}
+InteractText = "Click to Craft"

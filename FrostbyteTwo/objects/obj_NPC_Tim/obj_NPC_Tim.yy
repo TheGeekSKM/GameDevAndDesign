@@ -9,6 +9,7 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"propertyId":{"name":"Type","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"InteractableType.Talk",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ROOM_interactable","path":"objects/obj_ROOM_interactable/obj_ROOM_interactable.yy",},"propertyId":{"name":"InteractText","path":"objects/obj_ROOM_interactable/obj_ROOM_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Right Click to Talk",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"propertyId":{"name":"Name","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Tim",},
   ],
   "parent":{
     "name":"NPCs",

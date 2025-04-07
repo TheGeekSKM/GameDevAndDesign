@@ -7,7 +7,9 @@
   ],
   "managed":true,
   "name":"obj_ItemReq_GraphiteDesposit",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"propertyId":{"name":"Name","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Graphite Deposit",},
+  ],
   "parent":{
     "name":"Interactables",
     "path":"folders/Objects/Interactables.yy",

@@ -57,3 +57,5 @@ if (canAttack)
         attack.Step(pointInFront, image_angle);
     }
 }
+
+InteractText = "Click to Talk"

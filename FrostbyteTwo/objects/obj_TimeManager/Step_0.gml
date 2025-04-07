@@ -1,3 +1,5 @@
+if (global.vars.pause) return;
+
 // Handle time progression
 if (state == "DAY_HOLD") {
 

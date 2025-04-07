@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Button_Credits",
+  "%Name":"obj_Button_CrazyPlay",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Button_Credits",
+  "name":"obj_Button_CrazyPlay",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Button","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"propertyId":{"name":"Text","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Credits",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_Button","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"propertyId":{"name":"Text","path":"objects/obj_BASE_Button/obj_BASE_Button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Extreme",},
   ],
   "parent":{
     "name":"MainMenu",

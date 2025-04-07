@@ -28,7 +28,7 @@ function IncrementStatValue(_statType, _value)
     switch (_statType)
     {
         case StatType.Strength:
-            if (str + _value <= 10 && totalPoints - _value >= 0 && str + _value >= 2)
+            if (totalPoints - _value >= 0)
             {
                 str += _value;
                 totalPoints -= _value;
@@ -37,7 +37,7 @@ function IncrementStatValue(_statType, _value)
             strengthScoreRef.Text = $"{str}";
             break;
         case StatType.Dexterity:
-            if (dex + _value <= 10 && totalPoints - _value >= 0 && dex + _value >= 2)
+            if (totalPoints - _value >= 0)
             {
                 dex += _value;
                 totalPoints -= _value;
@@ -46,7 +46,7 @@ function IncrementStatValue(_statType, _value)
             dexterityScoreRef.Text = $"{dex}";
             break;
         case StatType.Constitution:
-            if (con + _value <= 10 && totalPoints - _value >= 0 && con + _value >= 2)
+            if (totalPoints - _value >= 0)
             {
                 con += _value;
                 totalPoints -= _value;

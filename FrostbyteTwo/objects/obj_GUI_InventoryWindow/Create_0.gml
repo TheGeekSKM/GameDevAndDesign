@@ -21,6 +21,7 @@ lastKnownSlotCount = -1;
 topLeft = new Vector2(x - width / 2, y - height / 2);
 
 closeButton = noone;
+rightClicked = false;
 
 function RebuildSlotDisplays()
 {
@@ -102,6 +103,11 @@ function OnMouseLeftClick()
 function OnMouseLeftClickRelease()
 {
     dragging = false;
+}
+
+function OnMouseRightClick()
+{
+    rightClicked = true;
 }
 
 displayIndex = array_length(global.activeInventories);

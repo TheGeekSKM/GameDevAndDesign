@@ -6,7 +6,7 @@ speakerData = new SpeakerData("Jeremy", color);
 
 dialogueScene = new DialogueScene()
     .AddDialogue(speakerData, "Howdy, friend. I'm just takin' care of the PC that's powering the camp.")
-    .AddDialogue(speakerData, "I'm running low on [wave]CPUs, GPUs, and RAM[/wave], though. If you can drop some in the containers, I'll get them piped to the PC.")
+    .AddDialogue(speakerData, "I'm running low on [wave]CPUs, GPUs, and RAM[/wave], though. If you can [wave]drag and drop[/wave] some in the containers, I'll get them piped to the PC.")
     .AddDialogue(speakerData, "It's a continuous process, so I'll need you to keep an eye on it.")
     .AddDialogue(speakerData, "Head over to the computer and check out how many CPUs, GPUs, and RAM are left.")
     .AddDialogue(speakerData, "I'll give you the [wave]blueprints for a CPU, GPU[/wave], but the RAM blueprints is missing. You'll have to find that one yourself.")

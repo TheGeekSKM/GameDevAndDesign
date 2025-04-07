@@ -21,7 +21,7 @@ function StatSystem(_str, _dex, _con, _owner)  : Component("stats")  constructor
     // Health and Stamina
     function GetMaxHealth() { 
         if (!instance_exists(owner)) return 0; 
-        return 50 + (self.constitution * 5) + (self.strength * 2); }
+        return max(15, 25 + (self.constitution * 5) + (self.strength * 2)) }
     function GetMaxStamina() { 
         if (!instance_exists(owner)) return 0; 
         return 100 + (self.constitution * 5) + (self.dexterity * 2); }
@@ -50,7 +50,7 @@ function StatSystem(_str, _dex, _con, _owner)  : Component("stats")  constructor
         if (!instance_exists(owner)) return 0; 
         var base_speed = 1 + (self.dexterity * 0.15) - (self.strength * 0.05);
         var decimalSpeed = max(1, base_speed - self.GetEncumberancePenalty(currentWeight));
-        return max(1, round(decimalSpeed / 2));
+        return decimalSpeed;
         // Speed is reduced if over carry limit
     }
     
