@@ -18,8 +18,51 @@ Subscribe("ItemClicked", function(_slotObject)
 
     if (_slotObject.inventorySystemRef[$ "owner"] == global.vars.Player) 
     {
+        var inventory = _slotObject.inventorySystemRef;
+        var item = inventory.GetSlot(_slotObject.slotIndex).item;
         useButton = instance_create_depth(x, topLeft.y + 48, depth - 1, obj_BASE_Button);
-        useButton.SetText("Use");
+        
+        switch(item.type)
+        {
+            case ItemType.Armor:
+                if (item.equipped) 
+                {
+                    useButton.SetText("Unequip");
+                } 
+                else 
+                {
+                    useButton.SetText("Equip");
+                }
+                break;
+            case ItemType.Weapon:
+                if (item.equipped) 
+                {
+                    useButton.SetText("Unequip");
+                } 
+                else 
+                {
+                    useButton.SetText("Equip");
+                }
+                break;
+            case ItemType.Consumable:
+                useButton.SetText("Consume");
+                break;
+            case ItemType.Bullet:
+                if (item.equipped) 
+                {
+                    useButton.SetText("Unequip");
+                } 
+                else 
+                {
+                    useButton.SetText("Equip");
+                }
+                break;
+            default:
+                useButton.SetText("Use");
+                break;
+        }
+
+
         useButton.SetColors(make_color_rgb(149, 181, 144), make_color_rgb(86, 181, 72));
         useButton.SetSize(140, 42);
         useButton.SetPosition(x, topLeft.y + 48);

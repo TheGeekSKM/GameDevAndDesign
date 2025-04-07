@@ -18,7 +18,7 @@ attack = new AttackSystem(stats, inventory, id);
 entityData = new EntityData(stats, inventory);
 
 show_message("ESTABLISH TARGETS FOR THE PLAYER")
-targets = [];
+targets = [obj_BASE_Entity];
 collisionObjects = [obj_Wall, obj_BASE_Entity, obj_Door];
 
 
