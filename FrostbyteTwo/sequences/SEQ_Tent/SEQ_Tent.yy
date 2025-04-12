@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"",
+  "$GMSequence":"v1",
   "%Name":"SEQ_Tent",
   "autoRecord":true,
   "backdropHeight":64,
@@ -34,6 +34,8 @@
   "playbackSpeedType":0,
   "resourceType":"GMSequence",
   "resourceVersion":"2.0",
+  "seqHeight":64.0,
+  "seqWidth":128.0,
   "showBackdrop":true,
   "showBackdropImage":false,
   "spriteId":null,

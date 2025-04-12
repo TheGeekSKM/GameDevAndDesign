@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"FrostbyteTwo",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -16,6 +16,7 @@
     {"$GMFolder":"","%Name":"ImportedAssets","folderPath":"folders/ImportedAssets.yy","name":"ImportedAssets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gooey","folderPath":"folders/ImportedAssets/gooey.yy","name":"gooey","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Internal","folderPath":"folders/ImportedAssets/gooey/Internal.yy","name":"Internal","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"MouseInteraction","folderPath":"folders/ImportedAssets/MouseInteraction.yy","name":"MouseInteraction","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GUI and Display","folderPath":"folders/ImportedAssets/GUI and Display.yy","name":"GUI and Display","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"_core","folderPath":"folders/ImportedAssets/GUI and Display/_core.yy","name":"_core","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Assets","folderPath":"folders/ImportedAssets/GUI and Display/_core/Assets.yy","name":"Assets","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -142,11 +143,12 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.13.0.190",
   },
   "name":"FrostbyteTwo",
   "resources":[
