@@ -13,7 +13,7 @@
   ],
   "parent":{
     "name":"UI",
-    "path":"folders/Objects/_Base/UI.yy",
+    "path":"folders/Objects/Base/UI.yy",
   },
   "parentObjectId":{
     "name":"obj_GUI_interactable",

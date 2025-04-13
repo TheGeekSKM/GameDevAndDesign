@@ -7,6 +7,6 @@ AddButtonClickCallback(function() {
     }
     else
     {
-        Transition(rmGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);   
+        Transition(rmMainMenu, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);   
     }
 });

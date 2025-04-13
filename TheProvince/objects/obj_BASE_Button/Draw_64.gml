@@ -1,4 +1,5 @@
 draw_self();
+
 var text = Name;
 
 if (currentState != ButtonState.Idle)

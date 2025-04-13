@@ -1,3 +1,7 @@
+enum LoseReason {
+    DESERTED
+}
+
 function Vars() constructor {
 	pause = false;
 	
@@ -20,6 +24,11 @@ function Vars() constructor {
         c_yellowPallete: make_color_rgb(255, 170, 94),
         c_parchment: make_color_rgb(255, 212, 163),
         c_lightParchment: make_color_rgb(255, 236, 214),
+    }
+
+    loseReason = undefined;
+    function SetLoseReason(_reason) {
+        loseReason = _reason;
     }
 }
 

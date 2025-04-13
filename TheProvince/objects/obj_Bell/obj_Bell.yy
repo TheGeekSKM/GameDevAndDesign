@@ -3,6 +3,7 @@
   "%Name":"obj_Bell",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_Bell",
@@ -36,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bell35",
-    "path":"sprites/spr_bell35/spr_bell35.yy",
+    "name":"spr_Bell36",
+    "path":"sprites/spr_Bell36/spr_Bell36.yy",
   },
   "spriteMaskId":null,
   "visible":true,

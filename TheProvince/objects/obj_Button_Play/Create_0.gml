@@ -2,5 +2,5 @@
 event_inherited();
 
 AddButtonClickCallback(function() {
-    Transition(rmIntroText, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    Transition(rmGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 });

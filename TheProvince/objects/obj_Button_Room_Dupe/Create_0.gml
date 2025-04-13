@@ -1,3 +1,2 @@
-// Inherit the parent event
-event_inherited();
-AddButtonClickCallback(undefined);
+event_inherited()
+AddButtonClickCallback(function() {})
