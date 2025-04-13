@@ -56,6 +56,27 @@ switch (currentState)
         }
     
     break;
+
+    case CameraMode.SnapToTarget:
+        _doOnce = false;
+        currentState = CameraMode.SnapToTargetActual;
+    break;
+
+    case CameraMode.SnapToTargetActual:
+        cX = target.x - (CamWidth / 2);
+        cY = target.y - (CamHeight / 2);
+    break;
+
+    case CameraMode.SnapToFollow:
+        _doOnce = false;
+        currentState = CameraMode.SnapToFollowActual;
+    break;
+
+    case CameraMode.SnapToFollowActual:
+        if (!instance_exists(FollowingObject)) break; 
+        cX = FollowingObject.x - (CamWidth / 2);
+        cY = FollowingObject.y - (CamHeight / 2);
+    break;
 }
 
 if (shakeStrength > 0.1) 
@@ -74,3 +95,9 @@ cX = clamp(cX, 0, room_width - CamWidth);
 cY = clamp(cY, 0, room_height - CamHeight);
 
 camera_set_view_pos(view_camera[CameraIndex], cX + shakeOffset.x, cY + shakeOffset.y);
+
+
+if (keyboard_check_pressed(vk_space))
+{
+    SetCameraMode(CameraMode.SnapToTarget, noone, new Vector2(400, 675));
+}

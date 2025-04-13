@@ -4,7 +4,11 @@ enum CameraMode {
     FollowMouseBorder,
     FollowMousePeek,
     MoveToTarget,
-    MoveToFollowTarget
+    MoveToFollowTarget,
+    SnapToTarget,
+    SnapToTargetActual,
+    SnapToFollow,
+    SnapToFollowActual,
 }
 
 currentState = StartingState;
@@ -20,7 +24,8 @@ function SetCameraMode(_state, _following = noone, _targetPos = new Vector2(-1, 
 {
     currentState = _state;
     FollowingObject = _following;
-    target = new Vector2(_targetPos.x, _targetPos.y); 
+    target = new Vector2(_targetPos.x, _targetPos.y);
+    echo($"target: {target.x}, {target.y}"); 
 }
 
 view_camera[CameraIndex] = camera_create_view(0, 0, CamWidth, CamHeight);
@@ -35,6 +40,10 @@ function AddCameraShake(_strength, _decay = 0.8)
     shakeDecay = _decay;
 }
 
+
+
 debug = false;
 
-echo(CameraIndex)
+
+
+_doOnce = false;

@@ -34,6 +34,7 @@ function Transition(_roomTarget, _typeOut, _typeIn)
     else return false;
 }
 
+
 function TransitionChangeRoom()
 {
     room_goto(global.roomTarget);

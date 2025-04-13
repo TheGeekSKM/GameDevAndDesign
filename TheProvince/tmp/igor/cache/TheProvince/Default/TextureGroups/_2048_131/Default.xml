@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureGroup>
+  <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="2048">default_0.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="1024" texheight="1024">default_1.bz2</texture>
+  <tpe x="2" y="2" tpage="default_0.bz2">spr_gui_guide_TheProvince_0d5fc8f6-80d5-4031-afcc-8393be832f5a.tpe</tpe>
+  <tpe x="2" y="1086" tpage="default_0.bz2">spr_backgroundGame_TheProvince_d2715f7e-2d3b-43c3-9647-d9e82b374edf.tpe</tpe>
+  <tpe x="2" y="1540" tpage="default_0.bz2">spr_backgroundGame25_TheProvince_bf9725d4-cfec-4ab6-b3cc-8cc7643a3106.tpe</tpe>
+  <tpe x="806" y="1086" tpage="default_0.bz2">spr_backgroundMainMenu_TheProvince_a0e4052a-b971-43e7-93aa-437d1cff35d7.tpe</tpe>
+  <tpe x="806" y="1540" tpage="default_0.bz2">spr_backgroundMainMenu19_TheProvince_5bef3d76-6bdd-4d8f-beba-072b1c89ab64.tpe</tpe>
+  <tpe x="2" y="2" tpage="default_1.bz2">spr_backgroundMainMenu20_TheProvince_db3c5af1-63ce-4f46-996f-3b631e3b3604.tpe</tpe>
+  <tpe x="2" y="456" tpage="default_1.bz2">VCR_OSD_Mono_TheProvince_VCR_OSD_Mono.tpe</tpe>
+  <tpe x="1610" y="1086" tpage="default_0.bz2">spr_Message_TheProvince_88b2c821-e937-4915-806a-6ca5092d1d18.tpe</tpe>
+  <tpe x="1610" y="1399" tpage="default_0.bz2">fnt_gui_normal_TheProvince_fnt_gui_normal.tpe</tpe>
+  <tpe x="1610" y="1659" tpage="default_0.bz2">font_console_TheProvince_font_console.tpe</tpe>
+  <tpe x="1610" y="1791" tpage="default_0.bz2">scribble_fallback_font_TheProvince_scribble_fallback_font.tpe</tpe>
+  <tpe x="1870" y="1086" tpage="default_0.bz2">spr_gear_TheProvince_4df48ca1-34b6-4bbb-a4e1-414eaa479d57.tpe</tpe>
+  <tpe x="1610" y="1923" tpage="default_0.bz2">spr_widget_slider_box_TheProvince_9df415b5-822e-4f05-9d42-5b1f78aebfad.tpe</tpe>
+  <tpe x="1870" y="1218" tpage="default_0.bz2">spr_seq_cam_TheProvince_ae44e8ac-6f38-4a08-829b-ebcc74c21b59.tpe</tpe>
+  <tpe x="1970" y="1218" tpage="default_0.bz2">spr_display_TheProvince_0bae76ff-2fc8-4cc0-8fb1-4951c329d67e.tpe</tpe>
+  <tpe x="1870" y="1294" tpage="default_0.bz2">spr_button_TheProvince_153cfde5-d345-404d-9bc4-a51a58ee9c46.tpe</tpe>
+  <tpe x="1870" y="1294" tpage="default_0.bz2">spr_button2_TheProvince_4b65daed-e7f7-4cfe-b05d-a5df045e9438.tpe</tpe>
+  <tpe x="1938" y="1302" tpage="default_0.bz2">spr_panel_TheProvince_f3e2ef21-f2da-4f75-a8c8-d9ee1213e3d9.tpe</tpe>
+  <tpe x="1870" y="1362" tpage="default_0.bz2">border_TheProvince_0740131b-cb64-4b62-8e1f-d74d00d4474e.tpe</tpe>
+  <tpe x="1610" y="1991" tpage="default_0.bz2">spr_widget_button_TheProvince_88f9bc66-971f-445f-b8df-6eb2cd9e9ca3.tpe</tpe>
+  <tpe x="1936" y="1370" tpage="default_0.bz2">spr_widget_button_TheProvince_9a530893-70df-400f-8473-18fe09d7c854.tpe</tpe>
+  <tpe x="2006" y="1302" tpage="default_0.bz2">spr_mouse5_TheProvince_3e5aa1fb-47a1-4ee6-a353-771cb0f36039.tpe</tpe>
+  <tpe x="1870" y="1428" tpage="default_0.bz2">spr_mouse5_TheProvince_d980c2f3-fa3f-4985-8fa0-8aa8eabc340e.tpe</tpe>
+  <tpe x="2" y="1994" tpage="default_0.bz2">spr_mouse_TheProvince_08b91d3d-b490-432b-809e-da74d618bbf7.tpe</tpe>
+  <tpe x="2" y="1994" tpage="default_0.bz2">spr_mouse_TheProvince_5208083c-9086-47e2-adef-e3a01af103b0.tpe</tpe>
+  <tpe x="2" y="1994" tpage="default_0.bz2">spr_mouse_TheProvince_762f0458-44a1-4957-a86b-132074b273fc.tpe</tpe>
+  <tpe x="1662" y="1991" tpage="default_0.bz2">spr_mouse_TheProvince_7bec42fd-4124-4cd7-9a0e-b9470cce398c.tpe</tpe>
+  <tpe x="1988" y="1370" tpage="default_0.bz2">spr_mouse_TheProvince_bb1f02f8-a288-4edc-9d37-4f7c0efe6628.tpe</tpe>
+  <tpe x="1988" y="1370" tpage="default_0.bz2">spr_mouse27_TheProvince_7105deb3-7548-43e6-bfce-fada4f82204c.tpe</tpe>
+  <tpe x="1870" y="1464" tpage="default_0.bz2">spr_mouse27_TheProvince_7a473c44-1242-44c1-b345-8c41a5865d4e.tpe</tpe>
+  <tpe x="1870" y="1464" tpage="default_0.bz2">spr_mouse27_TheProvince_9b3b0642-af69-4635-b28a-df8b71807d5f.tpe</tpe>
+  <tpe x="1936" y="1418" tpage="default_0.bz2">spr_mouse27_TheProvince_aeae8a09-ff08-499d-ba7c-90462621ea7d.tpe</tpe>
+  <tpe x="1870" y="1464" tpage="default_0.bz2">spr_mouse27_TheProvince_b62fad7a-3288-4c64-affb-4bd1cfcea822.tpe</tpe>
+  <tpe x="38" y="1994" tpage="default_0.bz2">spr_mouse5_TheProvince_cde2471f-96c4-42ec-a967-c4c6c4be74bc.tpe</tpe>
+  <tpe x="1698" y="1991" tpage="default_0.bz2">spr_mouse5_TheProvince_b42720b5-2cab-4b4b-b2ab-f7a01e7d00b9.tpe</tpe>
+  <tpe x="1988" y="1404" tpage="default_0.bz2">spr_mouse5_TheProvince_00880db3-6861-4511-9898-1167b0c2c62f.tpe</tpe>
+  <tpe x="2006" y="1338" tpage="default_0.bz2">spr_mouse5_TheProvince_90600d27-89d2-49c7-9947-b5de143cdeb1.tpe</tpe>
+  <tpe x="1906" y="1452" tpage="default_0.bz2">gooey_TheProvince_c0f54926-adf2-4be7-bd61-12d28b85d061.tpe</tpe>
+  <tpe x="1870" y="1498" tpage="default_0.bz2">spr_cursor_arrow_TheProvince_6b94a3d6-728e-4987-b364-45f6e4928b69.tpe</tpe>
+  <tpe x="2" y="2028" tpage="default_0.bz2">spr_widget_slider_position_TheProvince_c2aeec40-b486-4534-8154-ceb787a03b51.tpe</tpe>
+  <tpe x="1662" y="2025" tpage="default_0.bz2">spr_widget_slider_position_TheProvince_ce7c853e-b568-4b76-b001-cd5539e9c611.tpe</tpe>
+  <tpe x="72" y="1994" tpage="default_0.bz2">spr_ssave_demo_player_down_TheProvince_571693f0-f06a-41e9-82a7-b11574b14ddb.tpe</tpe>
+  <tpe x="38" y="2027" tpage="default_0.bz2">spr_ssave_demo_player_down_TheProvince_be2f0286-51c9-4731-941d-c5d6c2eb123e.tpe</tpe>
+  <tpe x="1731" y="1991" tpage="default_0.bz2">spr_ssave_demo_player_down_TheProvince_caf02a5a-7345-4d5b-8693-3dbd6c19bab5.tpe</tpe>
+  <tpe x="1698" y="2024" tpage="default_0.bz2">spr_ssave_demo_player_up_TheProvince_1c152c03-9cf8-44f3-953e-57e735467958.tpe</tpe>
+  <tpe x="2019" y="1404" tpage="default_0.bz2">spr_ssave_demo_player_up_TheProvince_7567b1b7-10fd-47c2-83aa-528439421bf6.tpe</tpe>
+  <tpe x="1972" y="1435" tpage="default_0.bz2">spr_ssave_demo_player_up_TheProvince_d38993d2-14fa-4a7b-ab3f-bf8f01e7f553.tpe</tpe>
+  <tpe x="1906" y="1428" tpage="default_0.bz2">spr_ssave_demo_player_left_TheProvince_57d69775-1e3d-4cb3-a2f4-5156948bb94e.tpe</tpe>
+  <tpe x="1906" y="1480" tpage="default_0.bz2">spr_ssave_demo_player_left_TheProvince_cd1f1dba-56e3-40a1-a36a-685dc1c6dce5.tpe</tpe>
+  <tpe x="1870" y="1526" tpage="default_0.bz2">spr_ssave_demo_player_left_TheProvince_f0423ca4-33c7-4108-9353-9fd5275cb252.tpe</tpe>
+  <tpe x="90" y="1994" tpage="default_0.bz2">spr_ssave_demo_player_right_TheProvince_4fd9b8fb-7a6f-4c7f-94a6-87753390c47c.tpe</tpe>
+  <tpe x="72" y="2014" tpage="default_0.bz2">spr_ssave_demo_player_right_TheProvince_652f3793-360f-4229-932f-af53e41cc1bc.tpe</tpe>
+  <tpe x="22" y="2028" tpage="default_0.bz2">spr_ssave_demo_player_right_TheProvince_d07483c7-1647-469e-8b88-01f556356829.tpe</tpe>
+  <tpe x="1749" y="1991" tpage="default_0.bz2">scribble_fallback_bulletpoint_TheProvince_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
+  <tpe x="1861" y="1086" tpage="default_0.bz2">spr_button_TheProvince_4952297a-bd5d-4cb4-aa06-4ae8b8076883.tpe</tpe>
+  <tpe x="1861" y="1086" tpage="default_0.bz2">spr_button2_TheProvince_ea3d7b7f-a6fd-48eb-89f0-5b32a0e97425.tpe</tpe>
+  <tpe x="1938" y="1294" tpage="default_0.bz2">spr_pixel_TheProvince_c6297ff6-6c93-44e7-bce1-c01ad1373730.tpe</tpe>
+</TextureGroup>
