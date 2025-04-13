@@ -47,16 +47,4 @@ function OnMouseRightClick() {}
 function OnMouseRightHeld() {}
 function OnMouseRightClickRelease() {}
 
-/// @pure
-function PlayerIsWithinRange()
-{
-    return currentState == ButtonState.Hover;
-    //if (instance_exists(global.vars.Player))
-    //{
-        //if (point_distance(global.vars.Player.x, global.vars.Player.y, x, y) < InteractionRange)
-        //{
-            //return true;
-        //}
-    //}
-    //return false;
-}
+

@@ -36,3 +36,5 @@ function AddCameraShake(_strength, _decay = 0.8)
 }
 
 debug = false;
+
+echo(CameraIndex)

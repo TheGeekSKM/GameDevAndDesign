@@ -74,12 +74,3 @@ cX = clamp(cX, 0, room_width - CamWidth);
 cY = clamp(cY, 0, room_height - CamHeight);
 
 camera_set_view_pos(view_camera[CameraIndex], cX + shakeOffset.x, cY + shakeOffset.y);
-
-if (keyboard_check_pressed(vk_control))
-{
-    debug = !debug;
-    
-    var inst = instance_find(obj_BASE_Entity, irandom(instance_number(obj_BASE_Entity) - 1));
-    if (debug) SetCameraMode(CameraMode.MoveToFollowTarget, inst);
-    else SetCameraMode(CameraMode.MoveToFollowTarget, obj_Player);
-}
