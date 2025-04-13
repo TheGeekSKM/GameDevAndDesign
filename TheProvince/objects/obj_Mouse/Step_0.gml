@@ -97,3 +97,9 @@ if (instance_exists(currentInteractable))
 if (!instance_exists(currentInteractable)) currentMouseState = InteractableType.Normal;
 
 image_index = currentMouseState;
+
+if (instance_exists(currentInteractable) and currentInteractable.currentState == ButtonState.Idle)
+{
+    currentInteractable.OnMouseEnter();
+} 
+
