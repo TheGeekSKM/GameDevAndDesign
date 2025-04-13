@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"v1",
+  "$GMSequence":"",
   "%Name":"SEQ_DayNotice",
   "autoRecord":true,
   "backdropHeight":448,

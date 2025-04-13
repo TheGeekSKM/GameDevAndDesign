@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"v1",
+  "$GMSequence":"",
   "%Name":"seq_DropDown_Prefab",
   "autoRecord":true,
   "backdropHeight":97,

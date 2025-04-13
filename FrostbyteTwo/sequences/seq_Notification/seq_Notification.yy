@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"v1",
+  "$GMSequence":"",
   "%Name":"seq_Notification",
   "autoRecord":true,
   "backdropHeight":448,

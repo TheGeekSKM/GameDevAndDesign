@@ -1,5 +1,5 @@
 {
-  "$GMSequence":"v1",
+  "$GMSequence":"",
   "%Name":"seq_Atr_Dexterity",
   "autoRecord":true,
   "backdropHeight":48,
