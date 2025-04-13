@@ -1,7 +1,7 @@
 {
   "$GMFont":"",
   "%Name":"VCR_OSD_Mono",
-  "AntiAlias":1,
+  "AntiAlias":0,
   "applyKerning":0,
   "ascender":16,
   "ascenderOffset":0,
