@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Button_Dupe",
+  "%Name":"obj_TextController",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Button_Dupe",
+  "name":"obj_TextController",
   "overriddenProperties":[],
   "parent":{
-    "name":"Buttons",
-    "path":"folders/Objects/GUI/Buttons.yy",
+    "name":"IntroText",
+    "path":"folders/Objects/IntroText.yy",
   },
-  "parentObjectId":{
-    "name":"obj_BASE_Button",
-    "path":"objects/obj_BASE_Button/obj_BASE_Button.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_button2",
-    "path":"sprites/spr_button2/spr_button2.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

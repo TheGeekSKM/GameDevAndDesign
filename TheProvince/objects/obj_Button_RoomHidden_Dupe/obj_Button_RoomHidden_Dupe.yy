@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_HiddenButton_Dupe",
+  "%Name":"obj_Button_RoomHidden_Dupe",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_HiddenButton_Dupe",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"propertyId":{"name":"Name","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"HiddenButton",},
-  ],
+  "name":"obj_Button_RoomHidden_Dupe",
+  "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
     "path":"folders/Objects/GUI/Buttons.yy",
   },
   "parentObjectId":{
-    "name":"obj_BASE_Button_Hidden",
-    "path":"objects/obj_BASE_Button_Hidden/obj_BASE_Button_Hidden.yy",
+    "name":"obj_BASE_Button_RoomHidden",
+    "path":"objects/obj_BASE_Button_RoomHidden/obj_BASE_Button_RoomHidden.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
