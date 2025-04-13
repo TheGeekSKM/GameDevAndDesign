@@ -35,8 +35,8 @@ switch (currentState)
     
     case CameraMode.FollowMousePeek:
         if (!instance_exists(FollowingObject)) break;  
-        cX = lerp(FollowingObject.x, mouse_x, 0.15) - (CamWidth / 2);
-        cY = lerp(FollowingObject.y, mouse_y, 0.15) - (CamHeight / 2);
+        cX = lerp(FollowingObject.x, mouse_x, 0.1) - (CamWidth / 2);
+        cY = lerp(FollowingObject.y, mouse_y, 0.1) - (CamHeight / 2);
     break;
     
     case CameraMode.MoveToTarget: 
