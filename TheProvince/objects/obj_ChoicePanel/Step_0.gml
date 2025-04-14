@@ -27,6 +27,8 @@ if (dragging)
     y = guiMouseY + mouseOffsetY;
 }
 
+if (disableChoices) return;
+
 if (currentState != ButtonState.Hover) return;
 
 //accept button

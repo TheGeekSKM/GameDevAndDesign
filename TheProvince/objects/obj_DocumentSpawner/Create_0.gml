@@ -8,9 +8,6 @@ Subscribe("NewTurn", function(_turn)
 {
     var arrayOfChoices = _turn.Choices;
     for (var i = 0; i < array_length(arrayOfChoices); i += 1) {
-        if (!arrayOfChoices[i].CanSpawnChoice()) {
-            continue;
-        }        
         var panel = instance_create_layer(irandom_range(300, 500), -900, "Documents", obj_ChoicePanel);
         panel.choiceData = arrayOfChoices[i];
         array_push(spawnedDocuments, panel);

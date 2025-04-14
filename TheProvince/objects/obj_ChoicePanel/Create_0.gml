@@ -16,8 +16,17 @@ mouseOffsetY = 0;
 
 spawned = true;
 
+disableChoices = false;
+
 function OnMouseLeftClick()
 {
+    if (disableChoices) {
+        dragging = true;
+        Raise("DraggingDocument", id);
+        mouseOffsetX = x - guiMouseX;
+        mouseOffsetY = y - guiMouseY;
+        return;
+    }
     if (mouseInAccept)
     {
         chosen = true;

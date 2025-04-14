@@ -4,11 +4,19 @@ enum WeatherState {
     DROUGHT
 }
 
+enum WorldMood {
+    PEACEFUL,
+    ANXIOUS,
+    NATIONALIST,
+    REBELLIOUS,
+}
+
 function WorldState() constructor {
     NobleAffinity = 5 // 0-10 scale 0 means they love you, 10 means they hate you
     FarmerAffinity = 5 // 0-10 scale 0 means they love you, 10 means they hate you
     CorruptionLevel = 2; // 0-10 scale 0 means no corruption, 10 means full corruption
     CurrentWeatherState = WeatherState.CLEAR;
+    CurrentWorldMood = WorldMood.PEACEFUL; 
     
     IsAtWar = false;
     IsEnemyPlanningAttack = false;
@@ -56,6 +64,10 @@ function WorldState() constructor {
         return Timeline;
     }
 
+    function Step()
+    {
+        
+    }
 }
 
 
@@ -69,4 +81,16 @@ function TimelineData(_num, _eventName, _accepted) constructor
     num = _num;
     eventName = _eventName;
     accepted = _accepted;
+}
+
+function SetFlag(_flagName, _value = true)
+{
+    if (global.GameManager.GetWorldState()[$ _flagName] != undefined) 
+    {
+        global.GameManager.GetWorldState()[$ _flagName] = _value;
+    } 
+    else 
+    {
+        global.GameManager.GetWorldState()[$ _flagName] = _value;
+    }
 }

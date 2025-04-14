@@ -1,43 +1,7 @@
 function TurnData() constructor {
-    Id = "";
-    Title = "";
-    Description = "";
-
-    IsPriority = false;
-    RequiredFlags = []; // Array of flags that are required to spawn this turn
-    PreventRepeat = true;
-
     Choices = [];
-    ConditionFuncs = [];
-
-    Weight = 0; // Weight of the turn, used for random selection
-    function AddWeight(_weight) {
-        Weight += _weight;
-        return self;
-    }
-
-    function SetID(_id) {
-        Id = _id;
-        return self;
-    }
-
-    function SetTitle(_title) {
-        Title = _title;
-        return self;
-    }
-
-    function SetDescription(_description) {
-        Description = _description;
-        return self;
-    }
-
     function AddChoice(_choice) {
         array_push(Choices, _choice);
-        return self;
-    }
-
-    function AddConditionFunc(_func) {
-        array_push(ConditionFuncs, _func);
         return self;
     }
 }
@@ -46,9 +10,18 @@ function ChoiceData(_text = "", _effectsArray = [], _acceptCallback = undefined)
     Title = _text;
     Description = "";
     Effects = _effectsArray; // Array of ChoiceModifer objects
+    
     AcceptCallbacks = [_acceptCallback];
     RejectCallbacks = []; // Array of functions to call when the choice is rejected
-    RequiredFlags = []; 
+    RequiredFlags = [];
+    ConditionFuncs = [];
+    AllowedMoods = [];
+
+    ReappearDelay = 2;
+    LastSeenTurn = -999;
+    
+    Weight = 0; 
+    IsPriority = false;  
 
     function Accept()
     {
@@ -68,8 +41,36 @@ function ChoiceData(_text = "", _effectsArray = [], _acceptCallback = undefined)
         }
     }
 
+    function SetReappearDelay(_delay) {
+        ReappearDelay = _delay;
+        return self;
+    }
+
+    function Selected()
+    {
+        LastSeenTurn = global.GameManager.TurnCount;
+    }
+
     function CanSpawnChoice()
     {
+        if (global.GameManager.TurnCount - LastSeenTurn < ReappearDelay) {
+            echo($"Choice {Title} cannot spawn yet! {global.GameManager.TurnCount - LastSeenTurn} < {ReappearDelay}");
+            return false;
+        }
+        else
+        {
+            echo($"Choice {Title} can spawn! {global.GameManager.TurnCount - LastSeenTurn} >= {ReappearDelay}");
+        }
+
+        if (array_length(AllowedMoods) > 0)
+        {
+            if (!array_contains(AllowedMoods, 
+                global.GameManager.GetWorldState().CurrentWorldMood))
+            {
+                return false;
+            }
+        }
+
         var result = true;
         flags = variable_struct_get_names(global.GameManager.GetWorldState());
 
@@ -79,6 +80,14 @@ function ChoiceData(_text = "", _effectsArray = [], _acceptCallback = undefined)
                 break;
             }
         }
+
+        for (var i = 0; i < array_length(ConditionFuncs); i++) {
+            if (!ConditionFuncs[i]()) {
+                result = false;
+                break;
+            }
+        }
+
         return result;
     }
 
@@ -98,7 +107,7 @@ function ChoiceData(_text = "", _effectsArray = [], _acceptCallback = undefined)
     }
 
     function SetTitle(_text) {
-        Text = _text;
+        Title = _text;
         return self;
     }
 
@@ -111,11 +120,17 @@ function ChoiceData(_text = "", _effectsArray = [], _acceptCallback = undefined)
         array_push(RequiredFlags, _flag);
         return self;
     }
+
+    function AddConditionFunc(_func) {
+        array_push(ConditionFuncs, _func);
+        return self;
+    }
 }
 
-function ChoiceModifer(_statType = StatType.GOLD, _value = 0) constructor {
+function ChoiceModifer(_statType = StatType.GOLD, _value = 0, _delay = 0) constructor {
     statType = _statType;
     value = _value; // The value to add to the stat
+    delay = _delay
 
     function SetStatType(_statType) {
         statType = _statType;
@@ -124,6 +139,11 @@ function ChoiceModifer(_statType = StatType.GOLD, _value = 0) constructor {
 
     function SetValue(_value) {
         value = _value;
+        return self;
+    }
+
+    function SetDelay(_delay) {
+        delay = _delay;
         return self;
     }
 }

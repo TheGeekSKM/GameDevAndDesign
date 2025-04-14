@@ -2,10 +2,10 @@
   "$GMSequence":"",
   "%Name":"seq_BASE",
   "autoRecord":true,
-  "backdropHeight":768,
+  "backdropHeight":450,
   "backdropImageOpacity":0.5,
   "backdropImagePath":"",
-  "backdropWidth":1366,
+  "backdropWidth":800,
   "backdropXOffset":0.0,
   "backdropYOffset":0.0,
   "events":{

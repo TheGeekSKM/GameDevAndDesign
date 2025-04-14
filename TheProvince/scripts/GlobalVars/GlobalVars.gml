@@ -1,5 +1,11 @@
 enum LoseReason {
-    DESERTED
+    DESERTED,
+    NOBLE_REBELLION,
+    FARMER_REBELLION,
+    NOBLE_SURRENDER,
+    FARMER_SURRENDER,
+    KILLED,
+    BANKRUPT,
 }
 
 function Vars() constructor {

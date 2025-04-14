@@ -8,7 +8,7 @@ scribble($"{choiceData.Title}")
     .starting_format("VCR_OSD_Mono", c_white)
     .transform(1, 1, 0)
     .sdf_outline(c_black, 2)
-    .draw((x - (sprite_width / 2)) + 123, (y - (sprite_height / 2)) + 22);
+    .draw(x, (y - (sprite_height / 2)) + 22);
 
 
 // description
@@ -19,6 +19,8 @@ scribble($"{choiceData.Description}")
     .transform(0.5, 0.5, 0)
     .draw((x - (sprite_width / 2)) + 26, (y - (sprite_height / 2)) + 39);
 
+
+if (disableChoices) return;
 
 if (choseAccept) 
     draw_sprite(spr_acceptButton42, 2, topLeftX + 31, topLeftY + 254);
