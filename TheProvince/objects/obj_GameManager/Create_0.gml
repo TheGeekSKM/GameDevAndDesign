@@ -70,7 +70,7 @@ stateMachine.add("worldTurn", {
         Raise("UpdateTimePassed", TurnCount);
         layer_sequence_headdir(timePassedSequence, seqdir_right)
         layer_sequence_play(timePassedSequence);
-        alarm[0] = 300
+        alarm[0] = 120
         worldState.Step();
         stats.Step();
     },
