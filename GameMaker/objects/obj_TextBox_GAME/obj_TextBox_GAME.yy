@@ -1,21 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_InputField_DUPE",
+  "%Name":"obj_TextBox_GAME",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_InputField_DUPE",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_TextInputField","path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",},"propertyId":{"name":"TextCharLimit","path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"61",},
-  ],
+  "name":"obj_TextBox_GAME",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Components",
-    "path":"folders/Objects/UI/Components.yy",
+    "name":"Game",
+    "path":"folders/Objects/UI/Game.yy",
   },
   "parentObjectId":{
-    "name":"obj_BASE_TextInputField",
-    "path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",
+    "name":"obj_TextBox",
+    "path":"objects/obj_TextBox/obj_TextBox.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_box",
+    "path":"sprites/spr_box/spr_box.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
