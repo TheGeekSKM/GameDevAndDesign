@@ -46,12 +46,17 @@ function CommandLibrary() constructor
         }
         else if (command[0] == InvalidCommandError.DOES_NOT_EXIST) 
         {
-            show_message($"Command {_commandKeyword} does not exist in the library.");
+            var str = $"Command [slant]\"{_commandKeyword}\"[/] does not exist in the library.";
+            var notif = instance_create_depth(400, 224, -1000, obj_BadCode);
+            notif.SetDescription(str);
+
             return false;
         }
         else if (command[0] == InvalidCommandError.INVALID_PARAM_COUNT) 
         {
-            show_message($"Command {_commandKeyword} has an invalid number of parameters. Expected {command[1]} parameters, got {array_length(_commandParamArray)} parameters instead!");
+            var str = $"Command [slant]\"{_commandKeyword}\"[/] has an invalid number of parameters. Expected {command[1]} params, but got {array_length(_commandParamArray)}, instead.";
+            var notif = instance_create_depth(400, 224, -1000, obj_BadCode);
+            notif.SetDescription(str);
             return false;
         }
     }
