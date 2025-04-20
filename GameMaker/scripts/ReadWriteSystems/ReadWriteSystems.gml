@@ -11,11 +11,10 @@ function SafeWriteJson(filePath, jsonString)
         file_text_write_string(file, jsonString);
         file_text_close(file);
 
-        // Rename the temp file to the original file name
         if (file_exists(tempPath))
         {
-            file_delete(filePath); // Delete the original file if it exists
-            file_rename(tempPath, filePath); // Rename temp to original
+            file_delete(filePath); 
+            file_rename(tempPath, filePath); 
         }
     }
     else
@@ -29,19 +28,19 @@ function SafeWriteJson(filePath, jsonString)
 /// @returns {object} - The parsed JSON object or undefined if the file doesn't exist or parsing fails.
 function SafeReadJson(filePath)
 {
-    var waitTime = 1000; // Time to wait in milliseconds
-    var startTime = current_time;
-    while (!file_exists(filePath) && current_time - startTime < waitTime)
-    {
-        // Wait for the file to exist
+    if (!file_exists(filePath)) 
+    { 
+        return undefined; 
     }
-    if (!file_exists(filePath)) return undefined;
     
     var file = file_text_open_read(filePath);
     if (file != -1)
     {
         var jsonString = file_text_read_string(file);
         file_text_close(file);
+
+        if (jsonString == "") return undefined;
+
         var parsedData = json_parse(jsonString);
         if (parsedData != undefined) return parsedData;
         else 

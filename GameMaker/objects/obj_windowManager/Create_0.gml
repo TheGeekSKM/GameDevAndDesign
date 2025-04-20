@@ -19,11 +19,12 @@ if (global.GAME_INSTANCE_ID == 0)
     // previous run file cleanup
     var dname = global.saveLocation + "proc/";
     
-    if directory_exists(dname) 
-    {
-        directory_destroy(dname);
-    }
+    if directory_exists(dname) directory_destroy(dname);
     directory_create(dname);
+    
+    if (file_exists(working_directory + "chatMessages.json")){
+        file_delete(working_directory + "chatMessages.json")
+    }
     
     room_goto(rmMainMenu);
     
