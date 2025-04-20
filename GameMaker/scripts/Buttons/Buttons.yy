@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"UISystem",
+  "%Name":"Buttons",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"UISystem",
+  "name":"Buttons",
   "parent":{
     "name":"UISystems",
     "path":"folders/Scripts/Systems/UISystems.yy",

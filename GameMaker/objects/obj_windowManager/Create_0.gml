@@ -35,3 +35,8 @@ else if (global.GAME_INSTANCE_ID == 1)
     room_goto(rmCredits);
     window_set_position((display_get_width() / 2), (display_get_height() / 2) - window_get_height());
 }
+
+else if (global.GAME_INSTANCE_ID == 2)
+{
+    room_goto(rmChat);
+}

@@ -59,21 +59,20 @@ if (global.GAME_INSTANCE_ID == 0) { // if parent process
     }
 }
 
-//// if game instance has parent
-//if (global.GAME_INSTANCE_ID > global.GAME_INSTANCE_MIN - 1) 
-//{ 
-    //// if child process
-    //// tell parent process im dead so parent can also die (see step event)
-    //var fname = global.saveLocation + "/proc/" + string(ProcIdFromSelf()) + ".tmp";
-    //var fd = file_text_open_write(fname);
-    //if (fd != -1) 
-    //{
-        //file_text_write_string(fd, "CHILD_PROCESS_DIED");
-        //file_text_writeln(fd);
-        //file_text_close(fd);
-    //} 
-    //else 
-    //{
-        //show_error("ERROR: failed to open file for writing!\n\nERROR DETAILS: Too many file descriptors opened by the current process or insufficient priviledges to access file!", true);
-    //}
-//}
+// if game instance has parent
+else if (global.GAME_INSTANCE_ID > global.GAME_INSTANCE_MIN - 1) 
+{ 
+    // if child process
+    var fname = global.saveLocation + "/proc/" + string(ProcIdFromSelf()) + ".tmp";
+    var fd = file_text_open_write(fname);
+    if (fd != -1) 
+    {
+        file_text_write_string(fd, "CHILD_PROCESS_DIED");
+        file_text_writeln(fd);
+        file_text_close(fd);
+    } 
+    else 
+    {
+        show_error("ERROR: failed to open file for writing!\n\nERROR DETAILS: Too many file descriptors opened by the current process or insufficient priviledges to access file!", true);
+    }
+}

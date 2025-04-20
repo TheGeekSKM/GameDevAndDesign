@@ -97,3 +97,11 @@ if (instance_exists(currentInteractable))
 if (!instance_exists(currentInteractable)) currentMouseState = InteractableType.Normal;
 
 image_index = currentMouseState;
+
+if (keyboard_check_pressed(vk_numpad0))
+{
+    with(obj_ChatManager)
+    {
+        SaveMessage("Bungus", "Amongus");
+    }
+}

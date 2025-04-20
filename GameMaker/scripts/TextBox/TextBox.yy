@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"UISystem",
+  "%Name":"TextBox",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"UISystem",
+  "name":"TextBox",
   "parent":{
     "name":"UISystems",
     "path":"folders/Scripts/Systems/UISystems.yy",

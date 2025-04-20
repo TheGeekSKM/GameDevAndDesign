@@ -1,27 +1,28 @@
 function CreateNewWindow(_id)
 {
-    if (global.GAME_INSTANCE_ID != 0) return;
-    
-    if (_id == 1) 
-    { 
-    
-        if (global.CHILD_PROCESS_ID_1 != 0) return;
-        global.CHILD_PROCESS_ID_1 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf())); // define child process id for later use
-        
-    } 
-    
-    else if (_id == 2) 
-    { // if child process of game instance 0
-        // duplicate current process by executing its own command line
-        if (variable_global_exists("CHILD_PROCESS_ID_2")) return;
-        global.CHILD_PROCESS_ID_2 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf())); // define child process id for later use
-        window_set_position((display_get_width() / 2) - window_get_width(), (display_get_height() / 2));
-    } 
-    
-    else if (_id == global.GAME_INSTANCE_MAX - 1) 
-    { // if child process of game instance 2
-        if (variable_global_exists("CHILD_PROCESS_ID_3")) return;
-        global.CHILD_PROCESS_ID_3 = ProcIdFromSelf(); // define child process id for later use
-        window_set_position((display_get_width() / 2), (display_get_height() / 2));
+    if (global.GAME_INSTANCE_ID != 0) return; // Only allow parent to create
+
+    // Prevent duplicate launch
+    switch (_id) {
+        case 1:
+            if (global.CHILD_PROCESS_ID_1 != 0) return;
+            EnvironmentSetVariable("GAME_INSTANCE_ID", string(1)); // Force instance ID
+            global.CHILD_PROCESS_ID_1 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            break;
+
+        case 2:
+            if (global.CHILD_PROCESS_ID_2 != 0) return;
+            EnvironmentSetVariable("GAME_INSTANCE_ID", string(2));
+            global.CHILD_PROCESS_ID_2 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            break;
+
+        case 3:
+            if (global.CHILD_PROCESS_ID_3 != 0) return;
+            EnvironmentSetVariable("GAME_INSTANCE_ID", string(3));
+            global.CHILD_PROCESS_ID_3 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            break;
     }
+
+    // Reset the GAME_INSTANCE_ID so future spawns default to 0 + 1 logic again
+    EnvironmentSetVariable("GAME_INSTANCE_ID", string(global.GAME_INSTANCE_ID));
 }

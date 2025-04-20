@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"UISystem",
+  "%Name":"ReadWriteSystems",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"UISystem",
+  "name":"ReadWriteSystems",
   "parent":{
-    "name":"UISystems",
-    "path":"folders/Scripts/Systems/UISystems.yy",
+    "name":"Systems",
+    "path":"folders/Scripts/Systems.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
