@@ -20,9 +20,9 @@ enum InvalidCommandError
 }
 function CommandLibrary() constructor 
 {
-    function AddCommand(_keyword, _paramArray, _callbackArray) 
+    function AddCommand(_keyword, _paramCount, _callbackArray) 
     {
-        var command = new Command(_keyword, _paramArray, _callbackArray);
+        var command = new Command(_keyword, _paramCount, _callbackArray);
         if (self[$ _keyword] == undefined) self[$ _keyword] = command;
         else show_message($"Command {_keyword} already exists in the library.");
     }

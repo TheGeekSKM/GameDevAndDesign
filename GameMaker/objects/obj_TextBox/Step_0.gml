@@ -1,21 +1,19 @@
+// Calculate top-left corner
 topLeftX = x - (sprite_width / 2);
 topLeftY = y - (sprite_height / 2);
 
-if (!point_in_rectangle(
-        guiMouseX, guiMouseY, 
-        x - (sprite_width / 2), y - (sprite_width / 2),  
-        x + (sprite_width / 2), y + (sprite_width / 2)))
-{
+// Check if mouse is over the text box
+if (!point_in_rectangle(guiMouseX, guiMouseY, topLeftX, topLeftY, topLeftX + display_width, topLeftY + display_height)) {
     return;
 }
 
-    
-// Scroll with mouse wheel
+// Scroll one "line" per wheel tick
 var scroll_dir = mouse_wheel_up() - mouse_wheel_down();
-target_scroll_offset -= scroll_dir * (line_height + padding);
+var scroll_step = 32; // Can also use average line height if preferred
+target_scroll_offset -= scroll_dir * scroll_step;
 
-// Clamp to scrollable range
-var content_height = array_length(message_list) * (line_height + padding);
+// Calculate proper total content height
+var content_height = __getTotalLineHeight() + ((array_length(line_heights) - 1) * padding);
 target_scroll_offset = clamp(target_scroll_offset, 0, max(0, content_height - display_height));
 
 // Smooth scroll

@@ -8,7 +8,7 @@ var line_x = topLeftX + 5;
 for (var i = 0; i < array_length(message_list); i++) {
     var line = message_list[i];
     
-    scribble($"> {line}")
+    scribble($"{line}")
             .align(fa_left, fa_top)
             .starting_format("VCR_OSD_Mono")
             .transform(0.75, 0.75, 0)
@@ -16,5 +16,5 @@ for (var i = 0; i < array_length(message_list); i++) {
             .draw(line_x, yy);
     
     //scribble_draw(line, line_x, yy);
-    yy += line_height + padding;
+    yy += line_heights[i] + padding;
 }
