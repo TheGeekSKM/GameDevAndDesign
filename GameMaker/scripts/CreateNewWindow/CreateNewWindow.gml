@@ -27,3 +27,19 @@ function CreateNewWindow(_id)
     EnvironmentSetVariable("GAME_INSTANCE_ID", string(global.GAME_INSTANCE_ID));
     return true;
 }
+
+function OpenTextDisplay(_title, _text)
+{
+    if (global.GAME_INSTANCE_ID != 0) return false; // Only allow parent to create
+
+    var textDisplay = {
+        "title": _title,
+        "text": string_trim(_text)
+    }
+
+    var textJSON = json_stringify(textDisplay);
+
+    SafeWriteJson(working_directory + "TextDisplay.json", textJSON);
+
+    CreateNewWindow(3);
+}

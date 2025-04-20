@@ -33,7 +33,7 @@ function AddMessage(_msg) {
         .align(fa_left, fa_top)
         .starting_format("VCR_OSD_Mono")
         .transform(0.75, 0.75, 0)
-        .wrap(780 * 1.333);
+        .wrap(sprite_width * 1.333);
 
     var lineHeight = scribbleStruct.get_height();
     array_push(line_heights, lineHeight);

@@ -11,14 +11,14 @@ function GetAllOptionsInCurrentMenu()
     {
         for (var i = 0; i < array_length(CurrentMenu.options); i += 1) 
         {
-            var file = CurrentMenu.options[i];
+            var fileItem = CurrentMenu.options[i];
             var line = "";
 
-            if (file.fileType == FileType.DIRECTORY) {
-                line = string(file.name) + " (Folder)";
+            if (fileItem.fileType == FileType.DIRECTORY) {
+                line = string(fileItem.name) + " (Folder)";
             } 
-            else if (file.fileType == FileType.FILE) {
-                line = string(file.name) + " (Executable)";
+            else if (fileItem.fileType == FileType.FILE) {
+                line = string(fileItem.name) + " (Executable)";
             }
 
             // Add newline only if it's not the last item
@@ -33,31 +33,31 @@ function GetAllOptionsInCurrentMenu()
     return str;
 }
 
-function TryOpenElement(_fileName)
+function TryOpenElement(_FileItemName)
 {
-    var targetName = string_lower(_fileName);
-    var file = undefined;
+    var targetName = string_lower(_FileItemName);
+    var FileItem = undefined;
 
-    var foundFile = false;
+    var foundFileItem = false;
     for (var i = 0; i < array_length(CurrentMenu.options); i += 1) {
         if (string_lower(CurrentMenu.options[i].name) == targetName) {
-            file = CurrentMenu.options[i];
-            foundFile = true;
+            FileItem = CurrentMenu.options[i];
+            foundFileItem = true;
         }
     }
 
-    if (!foundFile) {
-        global.MainTextBox.AddMessage($"ERROR: File [slant]\"{_fileName}\"[/] not found in current directory.");
+    if (!foundFileItem) {
+        global.MainTextBox.AddMessage($"ERROR: FileItem [slant]\"{_FileItemName}\"[/] not found in current directory.");
         return;
     }
 
-    switch (file.fileType) 
+    switch (FileItem.fileType) 
     {
         case FileType.DIRECTORY:
-            __openMenu(file);
+            __openMenu(FileItem);
             break;
         case FileType.FILE:
-            __openFile(file);
+            __openFileItem(FileItem);
             break;
     }
 }
@@ -95,27 +95,65 @@ function __openMenu(_folder)
     
 }
 
-function __openFile(_file) { _file.Call(); }
+function __openFileItem(_FileItem) { _FileItem.Call(); }
 
-var desktopFolder = new Directory("C:", [
-    new Directory("Games", [
-        new Directory("GameMaker", [
-            new FileItem("GameMaker.exe", function() { global.MainTextBox.AddMessage("GameMaker Executable Opened!"); }),
-            new FileItem("GameMaker Studio 2.exe", function() { global.MainTextBox.AddMessage("GameMaker Studio 2 Executable Opened!"); })
-        ]),
-        new FileItem("Steam.exe", function() { global.MainTextBox.AddMessage("Steam Executable Opened!"); }),
-        new FileItem("EpicGamesLauncher.exe", function() { global.MainTextBox.AddMessage("Epic Games Launcher Executable Opened!"); })
-    ]),
-    new Directory("Documents", [
-        new Directory("My Games", [
-            new Directory("GameMaker Studio 2", [
-                new Directory("My Projects", [
-                    new FileItem("Project1.gml", function() { global.MainTextBox.AddMessage("Project1.gml Opened!"); }),
-                    new FileItem("Project2.gml", function() { global.MainTextBox.AddMessage("Project2.gml Opened!"); })
-                ])
-            ])
-        ])
-    ])
+var gameDevFolder = new Directory("GameDev", 
+[
+    new FileItem("Trello.exe", function() { show_message("Trello.exe"); }),
+    new FileItem("GameMaker.exe", function() { show_message("GameMaker.exe"); }),
+    new FileItem("VisualStudio.exe", function() { show_message("VisualStudio.exe"); }),
+]);
+
+JournalFolder = new Directory("Journal", 
+[
+    new FileItem("Log.txt", function() { show_message("Log.txt"); }),
+]);
+
+devLogFolder = new Directory("DevLog", 
+[
+    new FileItem("OBS.exe", function() { show_message("OBS.exe"); }),
+]);
+
+gamesFolder = new Directory("Games", 
+[
+    new FileItem("Minecraft.exe", function() { show_message("Minecraft.exe"); }),
+    new FileItem("Helldivers2.exe", function() { show_message("Helldivers2.exe"); }),
+    new FileItem("Darkwood.exe", function() { show_message("Darkwood.exe"); }),
+]);
+
+moviesFolder = new Directory("Movies", 
+[
+    new FileItem("The_King_2019.wbrip", function() { show_message("The_King_2019.wbrip"); }),
+    new FileItem("HTTYD2.wbrip", function() { show_message("HTTYD2.wbrip"); }),
+]);
+
+mailManager = new FileItem("MailManager.exe", function() { show_message("MailManager.exe"); });
+gameSteamPage = new FileItem("MySteamPage.html", function() { show_message("MySteamPage.html"); });
+toDoList = new FileItem("ToDoList.txt", function() { OpenTextDisplay("To Do List", @"How To Make A Video Game (Easy Edition)
+Step #1: Open Trello and plan for game (I think it's in the GameDev folder..?)
+
+Step #2: Open GameMaker and work on game!
+
+Step #3: Go to Journal and write!
+
+Step #4: Make Devlog with OBS
+
+Step #5: Check Emails from Publishers
+
+Step #6: Check Steam Page Reviews
+
+Step #7: NEVER EVER REST!!! DON'T DO IT!! ONLY HARDCORE WIN!!! There 100% is a win state of life and you DEFINITELY don't keep growing as a person. Rest and Recovery DEFINITELY are not priorities and if you ever rest, your professors and your friends will laugh at you, stupid!") });
+
+var desktopFolder = new Directory("V:", 
+[
+    toDoList,
+    gameDevFolder,
+    JournalFolder,
+    devLogFolder,
+    gamesFolder,
+    moviesFolder,
+    mailManager,
+    gameSteamPage
 ]);
 
 __openMenu(desktopFolder);

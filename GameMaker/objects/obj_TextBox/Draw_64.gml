@@ -12,7 +12,7 @@ for (var i = 0; i < array_length(message_list); i++) {
             .align(fa_left, fa_top)
             .starting_format("VCR_OSD_Mono")
             .transform(0.75, 0.75, 0)
-            .wrap(780 * 1.333)
+            .wrap(sprite_width * 1.333)
             .draw(line_x, yy);
     
     //scribble_draw(line, line_x, yy);

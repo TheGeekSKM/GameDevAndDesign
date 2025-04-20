@@ -41,3 +41,8 @@ else if (global.GAME_INSTANCE_ID == 2)
 {
     room_goto(rmChat);
 }
+
+else if (global.GAME_INSTANCE_ID == 3)
+{
+    room_goto(rmTextDisplay);
+}

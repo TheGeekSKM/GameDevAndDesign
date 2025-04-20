@@ -10,7 +10,7 @@ if (global.GAME_INSTANCE_ID == 0) { // if parent process
         var fd = file_text_open_write(fname);
         if (fd != -1) 
         {
-            file_text_write_string(fd, "CHILD_PROCESS_DIED");
+            file_text_write_string(fd, "GAME_PROCESS_DIED");
             file_text_writeln(fd);
             file_text_close(fd);
         } 
@@ -29,7 +29,7 @@ if (global.GAME_INSTANCE_ID == 0) { // if parent process
         var fd = file_text_open_write(fname);
         if (fd != -1) 
         {
-            file_text_write_string(fd, "CHILD_PROCESS_DIED");
+            file_text_write_string(fd, "GAME_PROCESS_DIED");
             file_text_writeln(fd);
             file_text_close(fd);
         } 
@@ -48,7 +48,7 @@ if (global.GAME_INSTANCE_ID == 0) { // if parent process
         var fd = file_text_open_write(fname);
         if (fd != -1) 
         {
-            file_text_write_string(fd, "CHILD_PROCESS_DIED");
+            file_text_write_string(fd, "GAME_PROCESS_DIED");
             file_text_writeln(fd);
             file_text_close(fd);
         } 
