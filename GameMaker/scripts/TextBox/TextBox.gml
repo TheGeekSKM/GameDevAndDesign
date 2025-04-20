@@ -7,89 +7,102 @@ function TextBox(_owner, _sprite, _x, _y, _width, _height) : UIElement(_sprite, 
         return self;
     }
 
-    self.fontUsed = VCR_OSD_Mono; // Optional: assign a font here
+    self.fontUsed = VCR_OSD_Mono;
     function SetFont(_font) {
         self.fontUsed = _font;
         return self;
     }
 
-    self.textColor = c_white; // Optional: assign a color here
+    self.textColor = c_white;
     function SetTextColor(_color) {
         self.textColor = _color;
         return self;
     }
 
+    self.mouseInRect = false;
+    self.mouseX = 0;
+    self.mouseY = 0;
+
     self.lineHeight = 20;
-    self.messageList = []; // Array to hold messages
-    self.scrollOffset = 0; // Current scroll offset
-    self.targetScrollOffset = 0; // Target scroll offset for smooth scrolling
-    self.scrollSpeed = 0.2; // Speed of scrolling
+    self.messageList = [];
+    self.scrollOffset = 0;
+    self.targetScrollOffset = 0;
+    self.scrollSpeed = 0.2;
 
     function AddMessage(_msg) {
-        array_push(self.messageList, _msg); // Add the new message to the list
+        array_push(self.messageList, _msg);
         
         var scribbleStruct = scribble($"> {_msg}")
             .align(fa_left, fa_top)
             .starting_format("VCR_OSD_Mono")
             .transform(0.75, 0.75, 0)
-            .wrap(self.width * 1.333); // Adjust wrap width as needed
+            .wrap(self.width * 1.333);
         
-        self.lineHeight = scribbleStruct.get_height(); // Get the height of the line
+        self.lineHeight = scribbleStruct.get_height();
         
-        var totalHeight = array_length(self.messageList) * (self.lineHeight + self.padding); // Calculate total height of messages
+        var totalHeight = array_length(self.messageList) * (self.lineHeight + self.padding);
         if (totalHeight > self.height) {
-            var overflow = totalHeight - self.height; // Calculate overflow
-            self.targetScrollOffset = overflow; // Set target scroll offset
+            var overflow = totalHeight - self.height;
+            self.targetScrollOffset = overflow;
         }
     }
 
     function ClearBox() {
-        self.messageList = []; // Clear the message list
-        self.scrollOffset = 0; // Reset scroll offset
-        self.targetScrollOffset = 0; // Reset target scroll offset
-        self.scrollSpeed = 0.2; // Reset scroll speed
+        self.messageList = [];
+        self.scrollOffset = 0;
+        self.targetScrollOffset = 0;
+        self.scrollSpeed = 0.2;
     }
     
     function Step() {
-        var mouseX = device_mouse_x_to_gui(0);
-        var mouseY = device_mouse_y_to_gui(0);
-
-        if (!point_in_rectangle(mouseX, mouseY, self.x, self.y, self.x + self.width, self.y + self.height)) {
-            return; // Exit if the mouse is outside the text box area
+        self.mouseX = device_mouse_x_to_gui(0);
+        self.mouseY = device_mouse_y_to_gui(0);
+        
+        self.topLeft = new Vector2(self.x - (self.width / 2), self.y - (self.height / 2));
+        
+        var scrollDir = 0;
+        
+        if (point_in_rectangle(mouseX, mouseY, self.topLeft.x, self.topLeft.y, self.x + (self.width / 2), self.y + (self.height / 2))) {
+            self.mouseInRect = true;
         }
+        else {
+            self.mouseInRect = false;
+        }
+        
+        scrollDir = mouse_wheel_up() - mouse_wheel_down();
+        //echo($"\n\n\nScroll Direction: {scrollDir}");
+        self.targetScrollOffset -= scrollDir * (self.lineHeight + self.padding);
+        //echo ($"Target Scroll Offset: {self.targetScrollOffset}");
 
-        // Scroll with mouse wheel
-        var scrollDir = mouse_wheel_up() - mouse_wheel_down();
-        self.targetScrollOffset -= scrollDir * (self.lineHeight + self.padding); // Adjust target scroll offset based on scroll direction
-
-        // Clamp to scrollable range
-        var contentHeight = array_length(self.messageList) * (self.lineHeight + self.padding); // Calculate content height
-        self.targetScrollOffset = clamp(self.targetScrollOffset, 0, max(0, contentHeight - self.height)); // Clamp target scroll offset
-
-        // Smooth scroll
-        self.scrollOffset = lerp(self.scrollOffset, self.targetScrollOffset, self.scrollSpeed); // Smoothly transition to target scroll offset
+        var contentHeight = array_length(self.messageList) * (self.lineHeight + self.padding);
+        //echo ($"Content Height: {contentHeight}");
+        
+        self.targetScrollOffset = clamp(self.targetScrollOffset, 0, max(0, contentHeight - self.height));
+        //echo ($"Clamped Target Scroll Offset: {self.targetScrollOffset}");
+        self.scrollOffset = lerp(self.scrollOffset, self.targetScrollOffset, self.scrollSpeed);
+        //self.scrollOffset = self.targetScrollOffset;
+        echo ($"Scroll Offset: {self.scrollOffset} and Target Scroll Offset: {self.targetScrollOffset}");
     }
 
     function Draw() {
-        var yy = self.y - self.scrollOffset; // Calculate Y position for drawing messages
-        var lineX = self.x + self.padding; // X position for drawing messages
+        var yy = self.topLeft.y - self.scrollOffset;
+        var lineX = self.topLeft.x + self.padding;
 
-        // Draw the background sprite or UI element
         draw_sprite_ext(self.sprite, 0, self.x, self.y, (self.width / sprite_get_width(self.sprite)), (self.height / sprite_get_height(self.sprite)), 0, c_white, 1);
-        //draw_sprite_ext(self.sprite, 0, 150, 250, 1, 2, 0, c_white, 1);
-        
-        // Go through each line in the message list
-        for (var i = 0; i < array_length(self.messageList); i++) {
-            var line = self.messageList[i]; // Get the current line
+        if (self.mouseInRect) draw_text(150, 250, $"Bungus");
+        draw_text(150, 250, $"{self.mouseX}, {self.mouseY}"); 
 
-            scribble($"> {line}")
+        for (var i = 0; i < array_length(self.messageList); i++) {
+            var line = self.messageList[i];
+
+            scribble($"{line}")
                 .align(fa_left, fa_top)
                 .starting_format("VCR_OSD_Mono")
                 .transform(0.75, 0.75, 0)
-                .wrap(self.width * 1.333) // Adjust wrap width as needed
-                .draw(lineX, yy); // Draw the line at the calculated position
+                .wrap(self.width * 1.333)
+                .draw(lineX, yy);
 
-            yy += self.lineHeight + self.padding; // Move down for the next line
+            yy += self.lineHeight + self.padding;
         }
     }
 }

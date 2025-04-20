@@ -22,6 +22,8 @@ function UIElement(_sprite, _x, _y, _width, _height) constructor {
         return self;
     }
 
+    self.topLeft = new Vector2(self.x, self.y);
+
     function Step() {}
     function Draw() {}
 }
