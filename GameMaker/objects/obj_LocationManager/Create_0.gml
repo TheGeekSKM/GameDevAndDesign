@@ -231,7 +231,63 @@ moviesFolder = new Directory("Movies",
     new FileItem("HTTYD2.wbrip", function() { RestMovies(); }),
 ]);
 
-mailManager = new FileItem("MailManager.exe", function() { CreateNewWindow(2); });
+function GetProfessorMessage(quality, interest, deadline_pct) {
+    var msg = "";
+    var rng = irandom(2); // 0, 1, or 2
+
+    // BASED ON QUALITY
+    if (quality <= 40) {
+        switch (rng) {
+            case 0: msg = "You -> Yourself: Are you even [slant]trying[/]? This is disgraceful."; break;
+            case 1: msg = "You -> Yourself: This is beneath my lowest expectations."; break;
+            case 2: msg = "You -> Yourself: I didn't think you could disappoint me this creatively."; break;
+        }
+    }
+    else if (quality <= 70) {
+        switch (rng) {
+            case 0: msg = "You -> Yourself: This is tolerable. But tolerable is failure in disguise."; break;
+            case 1: msg = "You -> Yourself: You're halfway there—and already slowing down."; break;
+            case 2: msg = "You -> Yourself: You're on a knife's edge. Blink, and you fall."; break;
+        }
+    }
+    else {
+        switch (rng) {
+            case 0: msg = "You -> Yourself: So? One good build doesn't mean you can breathe."; break;
+            case 1: msg = "You -> Yourself: This is acceptable. Which means you've stopped aiming higher."; break;
+            case 2: msg = "You -> Yourself: Don't confuse momentum with mastery."; break;
+        }
+    }
+
+    // MODIFIER: INTEREST
+    if (interest >= 80) {
+        msg = string_concat(msg, " The world is watching. Don't embarrass us both.");
+        //msg += " The world is watching. Don’t embarrass us both.";
+    }
+    else if (interest <= 30) {
+        msg = string_concat(msg, " No one cares. [slant]Make[/] them care before it's too late.");
+        //msg += " No one cares. *Make* them care before it's too late.";
+    }
+
+    // TIME PRESSURE OVERLAY
+    if (deadline_pct >= 0.8) {
+        var final_msgs = [
+            "This is the endgame. Panic is not optional.",
+            "Deadline's on your doorstep, and you're still fumbling.",
+            "No more extensions. No more excuses. Deliver or die."
+        ];
+        msg = string_concat(msg, " ", final_msgs[irandom(2)]);
+    }
+    else if (deadline_pct >= 0.5) {
+        msg += " Time's bleeding away. Are you going to [slant]do something[/], or just flail?";
+    }
+    else if (deadline_pct >= 0.2) {
+        msg += " You still think you have time. How quaint.";
+    }
+
+    return string_concat(msg, "\n");
+}
+
+mailManager = new FileItem("MailManager.exe", function() { obj_ChatManager.SaveMessage("", GetProfessorMessage(global.GameData.Quality, global.GameData.Interest, (global.GameData.CurrentDay / global.GameData.MaxNumOfDays))) CreateNewWindow(2); });
 gameSteamPage = new FileItem("MySteamPage.html", function() { show_message("BETA: MySteamPage.html"); });
 toDoList = new FileItem("ToDoList.txt", function() { OpenTextDisplay("To Do List", @"[c_yellow][scale, 2]How To Make A Video Game (Easy Edition)[/]
 

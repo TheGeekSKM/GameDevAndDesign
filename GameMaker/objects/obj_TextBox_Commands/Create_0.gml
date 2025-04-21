@@ -14,7 +14,7 @@ AddMessage(@"[c_yellow][scale, 2]list()[/]
 - No parameters are required.");
 
 AddMessage(@"[c_yellow][scale, 2]open([slant]_fileName[/slant])[/]
-- Lists out all of the directories and files in the current directory location.
+- Opens or Runs the specified directory or file.
 - Requires 1 parameter (_fileName) which needs to be the exact name of the file/directory you wish to open.");
 
 AddMessage(@"[c_yellow][scale, 2]exit()[/]
