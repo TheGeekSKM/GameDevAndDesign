@@ -130,7 +130,7 @@ var gameDevFolder = new Directory("GameDev",
         var quality = random_range(15, 35);
         global.GameData.Quality += quality;
         
-        var burnout = round(quality / 10);
+        var burnout = round(quality / 7);
         global.GameData.Burnout += burnout;
 
         global.GameData.CurrentDay++;
@@ -145,7 +145,7 @@ var gameDevFolder = new Directory("GameDev",
         var quality = random_range(10, 50);
         global.GameData.Quality += quality;
         
-        var burnout = round(quality / 10);
+        var burnout = round(quality / 7);
         global.GameData.Burnout += burnout;
 
         global.GameData.CurrentDay++;
@@ -171,7 +171,7 @@ devLogFolder = new Directory("DevLog",
         var interest = random_range(10, 50);
         global.GameData.Interest += interest;
  
-        var burnout = round(interest / 10);
+        var burnout = round(interest / 7);
         global.GameData.Burnout += burnout;
 
         global.GameData.CurrentDay++;
@@ -189,7 +189,7 @@ function RestGames()
     var interest = random_range(3, 20);
     global.GameData.Interest -= interest;
 
-    var burnout = round(interest / 10);
+    var burnout = round(interest / 7);
     global.GameData.Burnout -= burnout;
 
     global.GameData.CurrentDay++;
@@ -213,7 +213,7 @@ function RestMovies()
     var interest = random_range(3, 20);
     global.GameData.Interest -= interest;
 
-    var burnout = round(interest / 10);
+    var burnout = round(interest / 7);
     global.GameData.Burnout -= burnout;
 
     global.GameData.CurrentDay++;

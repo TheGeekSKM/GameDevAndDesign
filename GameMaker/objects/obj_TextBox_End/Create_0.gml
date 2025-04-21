@@ -35,4 +35,15 @@ gameDataText = string_concat(gameDataText, $"Personal Satisfaction Modifier: {gl
 var finalProfitText = "Final Profit: $" + string(estimated_sales * 3) + "\n\n"; // Assuming $10 per unit
 
 var finalText = string_concat(gameDataText, finalProfitText);
+
+if (global.GameData.Burnout > 5) {
+    finalText = string_concat(finalText, "I probably could've taken some time off...\n");
+} 
+else if (global.GameData.Burnout < 3) {
+    finalText = string_concat(finalText, "Thank god I took a break!\n");
+}
+else if (global.GameData.Burnout > 7) {
+    finalText = string_concat(finalText, "I don't think I can keep this up...I'm not sure I wanna code anymore...\n");
+}
+
 AddMessage(finalText);

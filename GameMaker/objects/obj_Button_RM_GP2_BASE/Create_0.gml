@@ -9,4 +9,4 @@ function OnMouseLeftClickRelease()
 }
 
 PersonalSatisfactionMod = random_range(0.5, 1.75);
-InterestStat = irandom_range(0, 4);
+InterestStat = irandom_range(0, 50);
