@@ -9,4 +9,7 @@ function OnMouseLeftClickRelease()
     
     var jsonString = json_stringify(global.GameData, true);
     SafeWriteJson(working_directory + "GameData.json", jsonString)
+    
+    game_end();
+    
 }

@@ -52,7 +52,7 @@ function LoaderGameData() : __loaderBase() constructor
         global.GameData = {
             Name : "Undefined",
             GenreName : "Dark Fantasy RPG",
-            PersonalSatisfactionModifer : 0,
+            PersonalSatisfactionModifier : 0,
             Interest : 0
         }
         
