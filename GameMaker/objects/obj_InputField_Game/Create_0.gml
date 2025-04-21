@@ -23,3 +23,11 @@ commandLibrary.AddCommand("open", 1, [function(_args) {
 commandLibrary.AddCommand("back", 0, [function() {
     var str = global.LocationManager.GoBackMenu();
 }]);
+
+commandLibrary.AddCommand("exit", 0, [function() {
+    game_end();
+}]);
+
+commandLibrary.AddCommand("help", 0, [function() {
+    CreateNewWindow(5);
+}]);

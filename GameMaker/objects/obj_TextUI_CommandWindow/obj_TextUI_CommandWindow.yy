@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ImageUI_DUPE",
+  "%Name":"obj_TextUI_CommandWindow",
   "eventList":[],
   "managed":true,
-  "name":"obj_ImageUI_DUPE",
+  "name":"obj_TextUI_CommandWindow",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Components",
-    "path":"folders/Objects/UI/_Components.yy",
+    "name":"Commands",
+    "path":"folders/Objects/UI/Commands.yy",
   },
   "parentObjectId":{
-    "name":"obj_ImageUI",
-    "path":"objects/obj_ImageUI/obj_ImageUI.yy",
+    "name":"obj_TextUI",
+    "path":"objects/obj_TextUI/obj_TextUI.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_CommandWindow_Title",
+    "path":"sprites/spr_CommandWindow_Title/spr_CommandWindow_Title.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

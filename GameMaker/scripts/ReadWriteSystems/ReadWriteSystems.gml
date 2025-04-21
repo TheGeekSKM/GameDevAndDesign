@@ -42,7 +42,6 @@ function SafeReadJson(_path)
 
     file_text_close(file);
 
-    show_message(jsonString);
 
     // Prevent parse errors by checking if it's empty or corrupted
     if (string_length(jsonString) == 0) {

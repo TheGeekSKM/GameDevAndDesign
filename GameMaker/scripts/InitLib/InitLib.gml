@@ -14,14 +14,6 @@ function LoaderSystem() : __loaderBase() constructor
         randomize();
         //instance_create_depth(0, 0, -1600, display_manager);
         
-        if (file_exists(working_directory + "GameData.json")) {
-            file_delete(working_directory + "GameData.json");
-        }
-        
-        if (file_exists(working_directory + "TextDisplay.json")) {
-            file_delete(working_directory + "TextDisplay.json");
-        }
-        
         return true;
     }    
 }

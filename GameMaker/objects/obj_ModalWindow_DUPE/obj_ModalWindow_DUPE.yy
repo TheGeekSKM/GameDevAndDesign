@@ -6,8 +6,8 @@
   "name":"obj_ModalWindow_DUPE",
   "overriddenProperties":[],
   "parent":{
-    "name":"Components",
-    "path":"folders/Objects/UI/Components.yy",
+    "name":"_Components",
+    "path":"folders/Objects/UI/_Components.yy",
   },
   "parentObjectId":{
     "name":"obj_ModalWindow",

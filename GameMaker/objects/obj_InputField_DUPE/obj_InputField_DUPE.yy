@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_TextInputField","path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",},"propertyId":{"name":"TextCharLimit","path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"61",},
   ],
   "parent":{
-    "name":"Components",
-    "path":"folders/Objects/UI/Components.yy",
+    "name":"_Components",
+    "path":"folders/Objects/UI/_Components.yy",
   },
   "parentObjectId":{
     "name":"obj_BASE_TextInputField",

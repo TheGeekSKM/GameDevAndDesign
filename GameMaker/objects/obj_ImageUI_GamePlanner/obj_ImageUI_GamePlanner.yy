@@ -8,8 +8,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ImageUI","path":"objects/obj_ImageUI/obj_ImageUI.yy",},"propertyId":{"name":"Depth","path":"objects/obj_ImageUI/obj_ImageUI.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-999",},
   ],
   "parent":{
-    "name":"Components",
-    "path":"folders/Objects/UI/Components.yy",
+    "name":"_Components",
+    "path":"folders/Objects/UI/_Components.yy",
   },
   "parentObjectId":{
     "name":"obj_ImageUI",

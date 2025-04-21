@@ -1,21 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Button_RM",
+  "%Name":"obj_TextBox_Commands",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_Button_RM",
+  "name":"obj_TextBox_Commands",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Components",
-    "path":"folders/Objects/UI/_Components.yy",
+    "name":"Commands",
+    "path":"folders/Objects/UI/Commands.yy",
   },
   "parentObjectId":{
-    "name":"obj_ROOM_interactable",
-    "path":"objects/obj_ROOM_interactable/obj_ROOM_interactable.yy",
+    "name":"obj_TextBox",
+    "path":"objects/obj_TextBox/obj_TextBox.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

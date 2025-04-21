@@ -23,9 +23,15 @@ function CreateNewWindow(_id)
             break;
         
         case 4:
-            if (global.CHILD_PROCESS_ID_3 != 0) return false;
+            if (global.CHILD_PROCESS_ID_4 != 0) return false;
             EnvironmentSetVariable("GAME_INSTANCE_ID", string(4));
-            global.CHILD_PROCESS_ID_3 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            global.CHILD_PROCESS_ID_4 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            break;
+        
+        case 5:
+            if (global.CHILD_PROCESS_ID_5 != 0) return false;
+            EnvironmentSetVariable("GAME_INSTANCE_ID", string(5));
+            global.CHILD_PROCESS_ID_5 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
             break;
     }
 
@@ -44,6 +50,12 @@ function OpenTextDisplay(_title, _text)
     }
 
     var textJSON = json_stringify(textDisplay);
+    
+    if (file_exists(working_directory + "TextDisplay.json")) {
+        file_delete(working_directory + "TextDisplay.json");
+    }
+    
+    
 
     SafeWriteJson(working_directory + "TextDisplay.json", textJSON);
 
