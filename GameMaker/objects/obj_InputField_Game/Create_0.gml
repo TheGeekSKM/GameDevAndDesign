@@ -31,3 +31,8 @@ commandLibrary.AddCommand("exit", 0, [function() {
 commandLibrary.AddCommand("help", 0, [function() {
     CreateNewWindow(5);
 }]);
+
+//commandLibrary.AddCommand("mainmenu", 0, [function() {
+    //global.WindowManager.GameEnd();
+    //Transition(rmInit2, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+//}]);

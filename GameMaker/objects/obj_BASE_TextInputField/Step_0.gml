@@ -18,7 +18,34 @@ if (keyboard_check_pressed(vk_backspace))
     keyboard_string = "";
     deleteTimer = -4;
 }
+else if (keyboard_check_pressed(vk_backspace) and keyboard_check(vk_control))
+{
+    text = ""
+    keyboard_string = "";
+    deleteTimer = -4;
+}
 
 if (deleteTimer != 2) deleteTimer++;
 
 if (keyboard_check_pressed(vk_enter)) EnterPressed();
+
+if (keyboard_check(vk_control) && keyboard_check_pressed(ord("V")))
+{
+    var paste = clipboard_get_text();
+    if (paste != "")
+    {
+        var allowed = textCharLimit - string_length(text);
+        text += string_copy(paste, 1, allowed);
+    }
+}
+
+if (keyboard_check(vk_control) && keyboard_check_pressed(ord("A")))
+{
+    text_selected = true;
+}
+
+if (text_selected && (keyboard_check_pressed(vk_backspace) || keyboard_check_pressed(vk_delete)))
+{
+    text = "";
+    text_selected = false;
+}

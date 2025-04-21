@@ -10,7 +10,7 @@ if (ds_stack_empty(loadStack))
         room_goto_next();
     }
     
-    instance_destroy(id);
+    //instance_destroy(id);
 }
 else 
 {

@@ -5,7 +5,7 @@ CurrentMenu = undefined;
 
 function GetAllOptionsInCurrentMenu()
 {
-    var str = "";
+    var str = $"Files in {CurrentMenu.name}:\n\n";
 
     if (CurrentMenu != undefined) 
     {
@@ -15,10 +15,10 @@ function GetAllOptionsInCurrentMenu()
             var line = "";
 
             if (fileItem.fileType == FileType.DIRECTORY) {
-                line = string(fileItem.name) + " (Folder)";
+                line = $"{i + 1}. {string(fileItem.name)} (Folder)";
             } 
             else if (fileItem.fileType == FileType.FILE) {
-                line = string(fileItem.name) + " (Executable)";
+                line = $"{i + 1}. {string(fileItem.name)} (File)";
             }
 
             // Add newline only if it's not the last item
@@ -28,6 +28,10 @@ function GetAllOptionsInCurrentMenu()
 
             str += line;
         }
+    }
+
+    if (array_length(CurrentMenu.options) == 0) {
+        str += "No files in this directory.";
     }
 
     return str;
@@ -64,13 +68,21 @@ function TryOpenElement(_FileItemName)
 
 function GoBackMenu()
 {
-    if (array_length(MenuStack) > 1) {
-        CurrentMenu = array_pop(MenuStack);
-        CurrentMenu = array_pop(MenuStack);
+    function GoBackMenu()
+    {
+        if (array_length(MenuStack) > 1) {
+            array_pop(MenuStack); // Pop current menu
+            CurrentMenu = MenuStack[array_length(MenuStack) - 1]; // Set to the new top of the stack
+        }
+        else {
+            // Already at root
+            CurrentMenu = MenuStack[0];
+        }
+    
+        global.MainTextBox.AddMessage($"{current_hour}:{current_minute}:{current_second} -> Move Back to Directory: {CurrentMenu.name}");
+        global.MainTextBox.AddMessage($"{GetAllOptionsInCurrentMenu()}");
     }
-    else CurrentMenu = MenuStack[0];
-        
-    global.MainTextBox.AddMessage($"{current_hour}:{current_minute}:{current_second} -> Move Back to Directory: {CurrentMenu.name}");
+    
 }
 
 function GetCurrentPath()
@@ -87,11 +99,13 @@ function GetCurrentPath()
 
 function __openMenu(_folder)
 {
+    array_push(MenuStack, _folder);
     CurrentMenu = _folder;
-    array_push(MenuStack, CurrentMenu);
     
     global.MainTextBox.AddMessage($"{current_hour}:{current_minute}:{current_second} -> Opened Directory: {_folder.name}");
     global.MainTextBox.AddMessage($"{current_hour}:{current_minute}:{current_second} -> Current Path: {GetCurrentPath()}");
+    global.MainTextBox.AddMessage($"{GetAllOptionsInCurrentMenu()}");
+    
     
 }
 
@@ -104,47 +118,128 @@ var gameDevFolder = new Directory("GameDev",
         if (data == undefined)
         {
             OpenGamePlanner();
+            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] Game Designed! Open Trello.exe again to confirm it (It's a system error, just go with it)!");
+            
         }
         else {
             global.GameData = data;
-            show_message("Show Current Game Design Doc Window");
+            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] Great! Game Data Stored! Feel free to check the Log.txt in the V: Folder to see your deadline!");
         }
     }),
-    new FileItem("GameMaker.exe", function() { show_message("GameMaker.exe"); }),
-    new FileItem("VisualStudio.exe", function() { show_message("VisualStudio.exe"); }),
+    new FileItem("GameMaker.exe", function() { 
+        var quality = random_range(15, 35);
+        global.GameData.Quality += quality;
+        
+        var burnout = round(quality / 10);
+        global.GameData.Burnout += burnout;
+
+        global.GameData.CurrentDay++;
+        if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
+        {
+            Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+        }
+        
+        global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You made a lot of progress in 8hrs, despite the tremendous lack of prebuilt systems! Check your log to see updates! Don't forget to Devlog!!");
+    }),
+    new FileItem("VisualStudio.exe", function() { 
+        var quality = random_range(10, 50);
+        global.GameData.Quality += quality;
+        
+        var burnout = round(quality / 10);
+        global.GameData.Burnout += burnout;
+
+        global.GameData.CurrentDay++;
+        if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
+        {
+            Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+        }        
+        global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You made a lot of progress in 8hrs, despite the fact that VSCode eats up so much of your RAM...and it's VSCODE! Check your log to see updates! Don't forget to Devlog!!");
+    }),
 ]);
 
-JournalFolder = new Directory("Journal", 
-[
-    new FileItem("Log.txt", function() { show_message("Log.txt"); }),
-]);
+JournalFolder = new FileItem("Log.txt", function() {
+        
+        OpenTextDisplay(
+        $"Log ({current_month}/{current_day}/{current_year}, {current_hour}:{current_minute})",
+        $"Current Statistics: \n1. Game Name: {global.GameData.Name}\n2. Number of Days in Project: {global.GameData.CurrentDay}/{global.GameData.MaxNumOfDays} days\n3. Public Interest: {global.GameData.Interest}\n4. Burnout Level: {global.GameData.Burnout}"
+        )}
+);
 
 devLogFolder = new Directory("DevLog", 
 [
-    new FileItem("OBS.exe", function() { show_message("OBS.exe"); }),
+    new FileItem("OBS.exe", function() { 
+        var interest = random_range(10, 50);
+        global.GameData.Interest += interest;
+ 
+        var burnout = round(interest / 10);
+        global.GameData.Burnout += burnout;
+
+        global.GameData.CurrentDay++;
+        if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
+        {
+            Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+        }        
+ 
+        global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You made a lot of progress in 8hrs! Your devlog got {global.GameData.Interest} views!! Check your log to see updates! Don't forget to Devlog!!");
+    }),
 ]);
+
+function RestGames()
+{
+    var interest = random_range(3, 20);
+    global.GameData.Interest -= interest;
+
+    var burnout = round(interest / 10);
+    global.GameData.Burnout -= burnout;
+
+    global.GameData.CurrentDay++;
+    if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
+    {
+        Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    }    
+
+    global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You rested and played video games for day. It was nice...hopefully...your anxiety didn't actually let you enjoy too much...Check your log to see updates! Don't forget to WORK!!");   
+}
 
 gamesFolder = new Directory("Games", 
 [
-    new FileItem("Minecraft.exe", function() { show_message("Minecraft.exe"); }),
-    new FileItem("Helldivers2.exe", function() { show_message("Helldivers2.exe"); }),
-    new FileItem("Darkwood.exe", function() { show_message("Darkwood.exe"); }),
+    new FileItem("Minecraft.exe", function() { RestGames(); }),
+    new FileItem("Helldivers2.exe", function() { RestGames(); }),
+    new FileItem("Darkwood.exe", function() { RestGames(); }),
 ]);
+
+function RestMovies()
+{
+    var interest = random_range(3, 20);
+    global.GameData.Interest -= interest;
+
+    var burnout = round(interest / 10);
+    global.GameData.Burnout -= burnout;
+
+    global.GameData.CurrentDay++;
+    if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
+    {
+        Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    }    
+
+    global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You rested and watched movies for day. It was nice...hopefully...your anxiety didn't actually let you enjoy too much...Check your log to see updates! Don't forget to WORK!!");   
+}
 
 moviesFolder = new Directory("Movies", 
 [
-    new FileItem("The_King_2019.wbrip", function() { show_message("The_King_2019.wbrip"); }),
-    new FileItem("HTTYD2.wbrip", function() { show_message("HTTYD2.wbrip"); }),
+    new FileItem("The_King_2019.wbrip", function() { RestMovies(); }),
+    new FileItem("HTTYD2.wbrip", function() { RestMovies(); }),
 ]);
 
-mailManager = new FileItem("MailManager.exe", function() { show_message("MailManager.exe"); });
-gameSteamPage = new FileItem("MySteamPage.html", function() { show_message("MySteamPage.html"); });
-toDoList = new FileItem("ToDoList.txt", function() { OpenTextDisplay("To Do List", @"How To Make A Video Game (Easy Edition)
+mailManager = new FileItem("MailManager.exe", function() { CreateNewWindow(2); });
+gameSteamPage = new FileItem("MySteamPage.html", function() { show_message("BETA: MySteamPage.html"); });
+toDoList = new FileItem("ToDoList.txt", function() { OpenTextDisplay("To Do List", @"[c_yellow][scale, 2]How To Make A Video Game (Easy Edition)[/]
+
 Step #1: Open Trello and plan for game (I think it's in the GameDev folder..?)
 
 Step #2: Open GameMaker and work on game!
 
-Step #3: Go to Journal and write!
+Step #3: Go to Log and write!
 
 Step #4: Make Devlog with OBS
 

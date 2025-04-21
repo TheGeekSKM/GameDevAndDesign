@@ -17,7 +17,7 @@ function CreateNewWindow(_id)
             break;
 
         case 3:
-            if (global.CHILD_PROCESS_ID_3 != 0) return false;
+            //if (global.CHILD_PROCESS_ID_3 != 0) return false;
             EnvironmentSetVariable("GAME_INSTANCE_ID", string(3));
             global.CHILD_PROCESS_ID_3 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
             break;

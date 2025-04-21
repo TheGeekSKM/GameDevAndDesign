@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"obj_InputField_MM",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_BASE_TextInputField","path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",},"propertyId":{"name":"GUI","path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
   "parent":{
     "name":"MainMenu",
     "path":"folders/Objects/UI/MainMenu.yy",

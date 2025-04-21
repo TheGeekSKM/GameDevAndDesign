@@ -7,13 +7,15 @@ commandLibrary = new CommandLibrary();
 currentKeyword = "";
 currentParamArray = [];
 
+text_selected = false;
+
 function EnterPressed()
 {
     if (text != "" && text != undefined)
     {
         // separate the text before the (
         text = string_lower(string_trim(text));
-        var textSplit = string_split_ext(text, [ "(", ")", ","], true);
+        var textSplit = string_split_ext(text, [ "(", ")", ",", " "], true);
         var commandName = textSplit[0];
 
         currentKeyword = commandName;
@@ -38,6 +40,3 @@ function EnterPressed()
 }
 
 function FailedToRunCommand() {}
-
-
-

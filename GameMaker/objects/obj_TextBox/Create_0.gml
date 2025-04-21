@@ -15,6 +15,10 @@ scroll_offset = 0;
 target_scroll_offset = 0;
 scroll_speed = 0.2;
 
+atBottom = false;
+atTop = false;
+
+
 function __getTotalLineHeight()
 {
     var result = 0;

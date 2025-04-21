@@ -41,13 +41,6 @@ function LoaderGameData() : __loaderBase() constructor
         // load levels
         // load objects
         
-        global.GameData = {
-            Name : "Undefined",
-            GenreName : "Dark Fantasy RPG",
-            PersonalSatisfactionModifier : 0,
-            Interest : 0
-        }
-        
         
         return true;
     }    
