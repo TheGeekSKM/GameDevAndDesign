@@ -26,32 +26,38 @@ function SafeWriteJson(filePath, jsonString)
 /// @description Read JSON data from a file safely
 /// @param {string} filePath - The path to the file.
 /// @returns {object} - The parsed JSON object or undefined if the file doesn't exist or parsing fails.
-function SafeReadJson(filePath)
+function SafeReadJson(_path)
 {
-    if (!file_exists(filePath)) 
-    { 
-        return undefined; 
-    }
-    
-    var file = file_text_open_read(filePath);
-    if (file != -1)
-    {
-        var jsonString = file_text_read_string(file);
-        file_text_close(file);
-
-        if (jsonString == "") return undefined;
-
-        var parsedData = json_parse(jsonString);
-        if (parsedData != undefined) return parsedData;
-        else 
-        {
-            show_error("Failed to parse JSON data from file: " + filePath, true);
-            return undefined;
-        }
-    }
-    else
-    {
-        show_error("Failed to open file for reading: " + filePath, true);
+    if (!file_exists(_path)) {
         return undefined;
     }
+
+    var jsonString = "";
+    var file = file_text_open_read(_path);
+
+    while (!file_text_eof(file)) {
+        jsonString += file_text_read_string(file);
+        file_text_readln(file);
+    }
+
+    file_text_close(file);
+
+    show_message(jsonString);
+
+    // Prevent parse errors by checking if it's empty or corrupted
+    if (string_length(jsonString) == 0) {
+        show_debug_message("SafeReadJson: JSON string is empty!");
+        return undefined;
+    }
+
+    var parsedData;
+
+    try {
+        parsedData = json_parse(jsonString);
+    } catch(e) {
+        show_debug_message("SafeReadJson: JSON parse error - " + e.message);
+        return undefined;
+    }
+
+    return parsedData;
 }

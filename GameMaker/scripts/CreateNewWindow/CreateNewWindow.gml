@@ -8,7 +8,7 @@ function CreateNewWindow(_id)
             if (global.CHILD_PROCESS_ID_1 != 0) return false;
             EnvironmentSetVariable("GAME_INSTANCE_ID", string(1)); // Force instance ID
             global.CHILD_PROCESS_ID_1 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
-        break;
+            break;
 
         case 2:
             if (global.CHILD_PROCESS_ID_2 != 0) return false;
@@ -19,6 +19,12 @@ function CreateNewWindow(_id)
         case 3:
             if (global.CHILD_PROCESS_ID_3 != 0) return false;
             EnvironmentSetVariable("GAME_INSTANCE_ID", string(3));
+            global.CHILD_PROCESS_ID_3 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            break;
+        
+        case 4:
+            if (global.CHILD_PROCESS_ID_3 != 0) return false;
+            EnvironmentSetVariable("GAME_INSTANCE_ID", string(4));
             global.CHILD_PROCESS_ID_3 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
             break;
     }
@@ -42,4 +48,10 @@ function OpenTextDisplay(_title, _text)
     SafeWriteJson(working_directory + "TextDisplay.json", textJSON);
 
     CreateNewWindow(3);
+}
+
+
+function OpenGamePlanner()
+{
+    CreateNewWindow(4)
 }

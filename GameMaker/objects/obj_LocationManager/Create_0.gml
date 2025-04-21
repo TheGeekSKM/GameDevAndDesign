@@ -99,7 +99,17 @@ function __openFileItem(_FileItem) { _FileItem.Call(); }
 
 var gameDevFolder = new Directory("GameDev", 
 [
-    new FileItem("Trello.exe", function() { show_message("Trello.exe"); }),
+    new FileItem("Trello.exe", function() { 
+        var data = SafeReadJson(working_directory + "GameData.json");
+        if (data == undefined)
+        {
+            OpenGamePlanner();
+        }
+        else {
+            global.GameData = data;
+            show_message("Show Current Game Design Doc Window");
+        }
+    }),
     new FileItem("GameMaker.exe", function() { show_message("GameMaker.exe"); }),
     new FileItem("VisualStudio.exe", function() { show_message("VisualStudio.exe"); }),
 ]);

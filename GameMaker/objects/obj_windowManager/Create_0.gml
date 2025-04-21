@@ -4,7 +4,7 @@ global.GAME_INSTANCE_MIN = 1;
 global.saveLocation = working_directory;
 
 // max number of game instances (one based)
-global.GAME_INSTANCE_MAX = 4;
+global.GAME_INSTANCE_MAX = 20;
 global.CHILD_PROCESS_ID_1 = 0;
 global.CHILD_PROCESS_ID_2 = 0;
 global.CHILD_PROCESS_ID_3 = 0;
@@ -45,4 +45,9 @@ else if (global.GAME_INSTANCE_ID == 2)
 else if (global.GAME_INSTANCE_ID == 3)
 {
     room_goto(rmTextDisplay);
+}
+
+else if (global.GAME_INSTANCE_ID == 4)
+{
+    room_goto(rmGamePlanner);
 }
