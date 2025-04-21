@@ -58,7 +58,7 @@ function AttemptDrop(_targetInventory, _targetSlotIndex)
     var targetSlot = _targetInventory.GetSlot(_targetSlotIndex);
 
     // Case 1: Target slot is empty
-    if (targetSlot == undefined || targetSlot.item == undefined || targetSlot.quantity <= 0) 
+    if (targetSlot.item == undefined || targetSlot.quantity <= 0) 
     {
         _targetInventory.SetSlot(_targetSlotIndex, draggedItem, draggedQuantity);
         sourceInventory.SetSlot(sourceIndex, undefined, 0); // Remove item from source slot

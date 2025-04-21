@@ -31,6 +31,13 @@ else
                 return false; // No drop action performed
             }
         }
+		else if (variable_instance_exists(obj_Mouse.currentInteractable, "inventorySystemRef"))
+		{
+			var targetInventory = obj_Mouse.currentInteractable.inventorySystemRef;
+			targetInventory.AddItem(draggedItem, draggedQuantity);
+			StopDrag();
+			return true;
+		}
         else
         {
             // Call the StopDrag function to reset the drag state
