@@ -127,7 +127,7 @@ var gameDevFolder = new Directory("GameDev",
         var quality = random_range(15, 35);
         global.GameData.Quality += quality;
         
-        var burnout = round(quality / 7);
+        var burnout = round(quality / 15);
         global.GameData.Burnout += burnout;
         Raise("BurnoutModified", global.GameData.Burnout);
 
@@ -143,7 +143,7 @@ var gameDevFolder = new Directory("GameDev",
         var quality = random_range(10, 50);
         global.GameData.Quality += quality;
         
-        var burnout = round(quality / 7);
+        var burnout = round(quality / 10);
         global.GameData.Burnout += burnout;
         Raise("BurnoutModified", global.GameData.Burnout);
 
@@ -170,7 +170,7 @@ devLogFolder = new Directory("DevLog",
         var interest = random_range(10, 50);
         global.GameData.Interest += interest;
  
-        var burnout = round(interest / 7);
+        var burnout = round(interest / 10);
         global.GameData.Burnout += burnout;
         Raise("BurnoutModified", global.GameData.Burnout);
 
