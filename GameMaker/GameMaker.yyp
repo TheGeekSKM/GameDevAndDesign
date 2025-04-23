@@ -153,6 +153,7 @@
     {"id":{"name":"obj_BadCode","path":"objects/obj_BadCode/obj_BadCode.yy",},},
     {"id":{"name":"obj_BASE_interactable","path":"objects/obj_BASE_interactable/obj_BASE_interactable.yy",},},
     {"id":{"name":"obj_BASE_TextInputField","path":"objects/obj_BASE_TextInputField/obj_BASE_TextInputField.yy",},},
+    {"id":{"name":"obj_BurnoutManager","path":"objects/obj_BurnoutManager/obj_BurnoutManager.yy",},},
     {"id":{"name":"obj_Button_RM_AcceptGenre","path":"objects/obj_Button_RM_AcceptGenre/obj_Button_RM_AcceptGenre.yy",},},
     {"id":{"name":"obj_Button_RM_AcceptName","path":"objects/obj_Button_RM_AcceptName/obj_Button_RM_AcceptName.yy",},},
     {"id":{"name":"obj_Button_RM_Back","path":"objects/obj_Button_RM_Back/obj_Button_RM_Back.yy",},},

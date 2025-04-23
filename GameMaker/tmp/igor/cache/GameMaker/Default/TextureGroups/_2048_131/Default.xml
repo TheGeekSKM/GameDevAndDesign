@@ -2,6 +2,7 @@
 <TextureGroup>
   <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="2048">default_0.bz2</texture>
   <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="1024">default_1.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="64" texheight="64">default_2.bz2</texture>
   <tpe x="2" y="2" tpage="default_0.bz2">spr_gui_guide_GameMaker_0d5fc8f6-80d5-4031-afcc-8393be832f5a.tpe</tpe>
   <tpe x="2" y="1086" tpage="default_0.bz2">spr_desktopBackground_GameMaker_2569b1cf-dd1e-498d-ac21-eb97ffe50e03.tpe</tpe>
   <tpe x="2" y="1538" tpage="default_0.bz2">spr_desktopBackground29_GameMaker_7b75c1dd-0247-4d0f-8f2a-3578d972567a.tpe</tpe>
@@ -23,6 +24,7 @@
   <tpe x="1526" y="381" tpage="default_1.bz2">spr_widget_slider_box_GameMaker_9df415b5-822e-4f05-9d42-5b1f78aebfad.tpe</tpe>
   <tpe x="1914" y="1218" tpage="default_0.bz2">spr_seq_cam_GameMaker_ae44e8ac-6f38-4a08-829b-ebcc74c21b59.tpe</tpe>
   <tpe x="1914" y="1294" tpage="default_0.bz2">spr_display_GameMaker_0bae76ff-2fc8-4cc0-8fb1-4951c329d67e.tpe</tpe>
+  <tpe x="0" y="0" tpage="default_2.bz2">_filter_heathaze_noise_sprite__filter_heathaze_fab77ece-6875-44ac-acbc-5d217a1d8340.tpe</tpe>
   <tpe x="1978" y="1294" tpage="default_0.bz2">spr_panel_GameMaker_f3e2ef21-f2da-4f75-a8c8-d9ee1213e3d9.tpe</tpe>
   <tpe x="2" y="2002" tpage="default_0.bz2">spr_desktopTitle_GameMaker_fa38fffb-aee5-449d-af7e-5d7b7d03f55c.tpe</tpe>
   <tpe x="1914" y="1378" tpage="default_0.bz2">spr_ScrollNotif_GameMaker_523f77ff-3d94-4481-b476-4ff7c4b21861.tpe</tpe>

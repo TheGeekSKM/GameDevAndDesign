@@ -129,6 +129,7 @@ var gameDevFolder = new Directory("GameDev",
         
         var burnout = round(quality / 7);
         global.GameData.Burnout += burnout;
+        Raise("BurnoutModified", global.GameData.Burnout);
 
         global.GameData.CurrentDay++;
         if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -144,6 +145,7 @@ var gameDevFolder = new Directory("GameDev",
         
         var burnout = round(quality / 7);
         global.GameData.Burnout += burnout;
+        Raise("BurnoutModified", global.GameData.Burnout);
 
         global.GameData.CurrentDay++;
         if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -170,6 +172,8 @@ devLogFolder = new Directory("DevLog",
  
         var burnout = round(interest / 7);
         global.GameData.Burnout += burnout;
+        Raise("BurnoutModified", global.GameData.Burnout);
+
 
         global.GameData.CurrentDay++;
         if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -186,8 +190,10 @@ function RestGames()
     var interest = random_range(3, 20);
     global.GameData.Interest -= interest;
 
-    var burnout = round(interest / 7);
+    var burnout = round(interest / 7) + irandom_range(0, 3);
     global.GameData.Burnout -= burnout;
+    Raise("BurnoutModified", global.GameData.Burnout);
+
 
     global.GameData.CurrentDay++;
     if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -210,8 +216,10 @@ function RestMovies()
     var interest = random_range(3, 20);
     global.GameData.Interest -= interest;
 
-    var burnout = round(interest / 7);
+    var burnout = round(interest / 7) + irandom_range(0, 3);
     global.GameData.Burnout -= burnout;
+    Raise("BurnoutModified", global.GameData.Burnout);
+
 
     global.GameData.CurrentDay++;
     if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)

@@ -38,17 +38,6 @@ if (global.GAME_INSTANCE_ID == 0)
         file_delete(working_directory + "TextDisplay.json");
     }
     
-    global.GameData = {
-        Name : "Undefined",
-        GenreName : "Dark Fantasy RPG",
-        PersonalSatisfactionModifier : 0,
-        Interest : 0,
-        MaxNumOfDays : irandom_range(10, 14),
-        CurrentDay : 0,
-        Quality : 0,
-        Burnout : 0,
-    }
-    
     room_goto(rmMainMenu);
     
 }

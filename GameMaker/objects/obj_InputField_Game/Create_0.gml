@@ -37,7 +37,7 @@ commandLibrary.AddCommand("cd", 1, [function(_args) {
     {
         global.LocationManager.GoBackMenu();
         var str = global.LocationManager.GetAllOptionsInCurrentMenu();
-        global.MainTextBox.AddMessage($"{str}", true);
+        //global.MainTextBox.AddMessage($"{str}", true);
     }
     else
     {
