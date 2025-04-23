@@ -1,4 +1,5 @@
 // Inherit the parent event
+enabled = false;
 event_inherited();
 
 function OnMouseLeftClickRelease()
@@ -13,3 +14,11 @@ function OnMouseLeftClickRelease()
     game_end();
     
 }
+
+Subscribe("Page2", function() {
+    enabled = true;    
+})
+
+Subscribe("Page1", function() {
+    enabled = false;    
+})

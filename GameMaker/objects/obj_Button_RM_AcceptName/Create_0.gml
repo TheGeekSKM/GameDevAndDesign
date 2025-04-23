@@ -1,6 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
+enabled = true;
+
 function OnMouseLeftClickRelease()
 {
     layer_set_visible("Page1", false);
@@ -10,4 +12,14 @@ function OnMouseLeftClickRelease()
     {
         EnterPressed();
     }
+    
+    Raise("Page2", id);
 }
+
+Subscribe("Page2", function() {
+    enabled = false;    
+})
+
+Subscribe("Page1", function() {
+    enabled = true;    
+})

@@ -94,6 +94,11 @@ if (global.GAME_INSTANCE_ID == 0)
             {
                 global.CHILD_PROCESS_ID_4 = 0
             }
+            var data = SafeReadJson(working_directory + "GameData.json");
+            global.GameData = data;
+            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] Great! Game Data Stored! Feel free to check the Log.txt in the V: Folder to see your deadline!");
+            
+            
         } 
         else 
         {

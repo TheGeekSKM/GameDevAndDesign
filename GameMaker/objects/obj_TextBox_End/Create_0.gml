@@ -2,8 +2,8 @@
 event_inherited();
 
 // Normalize inputs
-var norm_quality = clamp(Quality, 0, 150) / 100; // e.g. 100 = 1.0, 120 = 1.2
-var norm_interest = clamp(Interest, 0, 150) / 100;
+var norm_quality = clamp(global.GameData.Quality, 0, 150) / 100; // e.g. 100 = 1.0, 120 = 1.2
+var norm_interest = clamp(global.GameData.Interest, 0, 150) / 100;
 
 // Step 1: Estimate potential reach based on Interest
 var base_audience = norm_interest * 5000; // 0–7,500+ potential customers
@@ -12,11 +12,11 @@ var base_audience = norm_interest * 5000; // 0–7,500+ potential customers
 var conversion_rate = 0.2 + (norm_quality * 0.5); // 20% base, up to ~95% for 150 quality
 
 // Step 3: Personal Satisfaction bonus (longevity & updates)
-var satisfaction_bonus = 1 + ((PersonalSatisfactionModifier - 1) * 0.5); 
+var satisfaction_bonus = 1 + ((global.GameData.PersonalSatisfactionModifier - 1) * 0.5); 
 // So 1.75 becomes a 37.5% sales boost
 
 // Step 4: Burnout penalty (launch & marketing weakness)
-var burnout_penalty = 1 - min(Burnout, 10) * 0.04; 
+var burnout_penalty = 1 - min(global.GameData.Burnout, 10) * 0.04; 
 // Max -40% sales at burnout = 10
 
 // Step 5: Final estimated unit sales
