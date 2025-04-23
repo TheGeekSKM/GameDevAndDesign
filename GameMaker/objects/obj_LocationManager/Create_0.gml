@@ -2,39 +2,36 @@ global.LocationManager = id;
 
 MenuStack = [];
 CurrentMenu = undefined;
+function pad_left(_str, _len) {
+    while (string_length(_str) < _len) _str = " " + _str;
+    return _str;
+}
+function pad_right(_str, _len) {
+    while (string_length(_str) < _len) _str += " ";
+    return _str;
+}
 
-function GetAllOptionsInCurrentMenu()
-{
-    var str = $"Files in {CurrentMenu.name}:\n\n";
+function GetAllOptionsInCurrentMenu() {
+    var out = $" Directory of {CurrentMenu.name}\n\n";
+    var opts = CurrentMenu.options;
+    if (array_length(opts) == 0) return out + "  [empty]\n";
+    
+    // Simulate CMD header
+    out += "   Date        Time      " + pad_right("Size", 12) + "Name\n";
+    out += "   ----------  --------  ------------ --------------\n";
+    for (var i = 0; i < array_length(opts); i++) {
+        var itm = opts[i];
+        var meta = itm.meta;
+        var isFolder = (itm.fileType == FileType.DIRECTORY);
+        var dateStr = meta != undefined ? string_copy(meta.created, 1, 10) : "01/01/2024";
+        var timeStr = meta != undefined ? string_copy(meta.created, 11, 8) : "12:00 AM";// + " " + string_copy(meta.created, 18, 2) : "12:00 AM";
+        var sizeStr = isFolder ? "<DIR>" : string(meta.size);
+        sizeStr = pad_left(sizeStr, 10);
+        var nameStr = itm.name;
 
-    if (CurrentMenu != undefined) 
-    {
-        for (var i = 0; i < array_length(CurrentMenu.options); i += 1) 
-        {
-            var fileItem = CurrentMenu.options[i];
-            var line = "";
-
-            if (fileItem.fileType == FileType.DIRECTORY) {
-                line = $"{i + 1}. {string(fileItem.name)} (Folder)";
-            } 
-            else if (fileItem.fileType == FileType.FILE) {
-                line = $"{i + 1}. {string(fileItem.name)} (File)";
-            }
-
-            // Add newline only if it's not the last item
-            if (i < array_length(CurrentMenu.options) - 1) {
-                line += "\n";
-            }
-
-            str += line;
-        }
+        out += "   " + dateStr + "  " + timeStr + "  " + sizeStr + "  " + nameStr + "\n";
     }
-
-    if (array_length(CurrentMenu.options) == 0) {
-        str += "No files in this directory.";
-    }
-
-    return str;
+    return out;
 }
 
 function TryOpenElement(_FileItemName)

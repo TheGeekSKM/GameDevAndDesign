@@ -18,6 +18,8 @@ scroll_speed = 0.2;
 atBottom = false;
 atTop = false;
 
+textTransform = 0.6;
+
 
 function __getTotalLineHeight()
 {
@@ -30,20 +32,22 @@ function __getTotalLineHeight()
     return result;
 }
 
-function AddMessage(_msg) {
+function AddMessage(_msg, _trimEndline = false) {
+    // REMOVE leading or trailing whitespace/newlines
+    _msg = string_trim(_msg);
     array_push(message_list, _msg);
+    
+    var scrib = scribble(_msg)
+      .align(fa_left, fa_top)
+      .starting_format("VCR_OSD_Mono")
+      .transform(textTransform,textTransform,0)
+      .wrap(sprite_width / textTransform);
+    
+    var h = scrib.get_height() * textTransform;
+    array_push(line_heights, h);
 
-    var scribbleStruct = scribble($"{_msg}")
-        .align(fa_left, fa_top)
-        .starting_format("VCR_OSD_Mono")
-        .transform(0.75, 0.75, 0)
-        .wrap(sprite_width * 1.333);
-
-    var lineHeight = scribbleStruct.get_height();
-    array_push(line_heights, lineHeight);
-
-    var total_height = __getTotalLineHeight() + ((array_length(line_heights) - 1) * padding);
-    target_scroll_offset = max(0, total_height - display_height);
+    var total = __getTotalLineHeight() + ((array_length(line_heights)-1) * padding);
+    target_scroll_offset = max(0, total - display_height);
 }
 
 

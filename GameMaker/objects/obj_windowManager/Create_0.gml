@@ -62,11 +62,13 @@ else if (global.GAME_INSTANCE_ID == 1)
 
 else if (global.GAME_INSTANCE_ID == 2)
 {
+    window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     room_goto(rmChat);
 }
 
 else if (global.GAME_INSTANCE_ID == 3)
 {
+    window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     room_goto(rmTextDisplay);
 }
 
@@ -82,11 +84,13 @@ else if (global.GAME_INSTANCE_ID == 4)
         Quality : 0,
         Burnout : 0,
     }
+    window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     room_goto(rmGamePlanner);
 }
 
 else if (global.GAME_INSTANCE_ID == 5)
 {
+    window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     room_goto(rmCommands);
 }
 

@@ -20,6 +20,7 @@ enum InvalidCommandError
 }
 function CommandLibrary() constructor 
 {
+
     function AddCommand(_keyword, _paramCount, _callbackArray) 
     {
         var command = new Command(_keyword, _paramCount, _callbackArray);
