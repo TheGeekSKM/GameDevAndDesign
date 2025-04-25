@@ -32,29 +32,7 @@ function __getTotalLineHeight()
     return result;
 }
 
-// function ObfuscateText(_msg, _burnout) {
-//     var out = "";
-    
-//     // Start distorting from burnout 5 onward
-//     var intensity = clamp((_burnout - 5) / 5, 0, 1); 
-//     // 5 burnout = 0% obfuscation, 10 burnout = 100%
 
-//     for (var i = 1; i <= string_length(_msg); i++) {
-//         var c = string_char_at(_msg, i);
-
-//         // Obfuscate this character with a chance based on intensity
-//         if (random() < intensity) {
-//             // Replace with a random printable character
-//             // You can swap this range for glitchier output later
-//             var randChar = chr(irandom_range(33, 126)); 
-//             out += randChar;
-//         } else {
-//             out += c;
-//         }
-//     }
-
-//     return out;
-// }
 
 function ObfuscateText(_msg, _burnout) {
     var out = "";
@@ -91,7 +69,7 @@ function ObfuscateText(_msg, _burnout) {
                     // Optional color flicker if burnout is very high
                     if (intensity > 0.85 && random(1) < 0.5) {
                         var flicker = ChooseFromArray(flickerColors);
-                        echo(flicker)
+                        echo(flicker, true)
                         corruptChar = flicker + corruptChar + "[/]";
                     }
                 }
@@ -109,28 +87,7 @@ function ObfuscateText(_msg, _burnout) {
     return out;
 }
 
-// function AddMessage(_msg, _trimEndline = false) {
-//     _msg = string_trim(_msg);
 
-//     // Start obfuscating softly from burnout 5
-//     if (global.GameData != undefined && global.GameData.Burnout >= 5) {
-//         _msg = ObfuscateText(_msg, global.GameData.Burnout);
-//     }
-
-//     array_push(message_list, _msg);
-    
-//     var scrib = scribble(_msg)
-//         .align(fa_left, fa_top)
-//         .starting_format("VCR_OSD_Mono")
-//         .transform(textTransform, textTransform, 0)
-//         .wrap(sprite_width / textTransform);
-    
-//     var h = scrib.get_height() * textTransform;
-//     array_push(line_heights, h);
-
-//     var total = __getTotalLineHeight() + ((array_length(message_list)-1) * padding);
-//     target_scroll_offset = max(0, total - display_height);
-// }
 
 function AddMessage(_msg, _trimEndline = false) {
     _msg = string_trim(_msg);

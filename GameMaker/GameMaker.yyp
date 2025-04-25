@@ -176,6 +176,7 @@
     {"id":{"name":"obj_InputField_MM","path":"objects/obj_InputField_MM/obj_InputField_MM.yy",},},
     {"id":{"name":"obj_KeyboardCursor","path":"objects/obj_KeyboardCursor/obj_KeyboardCursor.yy",},},
     {"id":{"name":"obj_LocationManager","path":"objects/obj_LocationManager/obj_LocationManager.yy",},},
+    {"id":{"name":"obj_MiniGameManager","path":"objects/obj_MiniGameManager/obj_MiniGameManager.yy",},},
     {"id":{"name":"obj_ModalWindow_DUPE","path":"objects/obj_ModalWindow_DUPE/obj_ModalWindow_DUPE.yy",},},
     {"id":{"name":"obj_ModalWindow","path":"objects/obj_ModalWindow/obj_ModalWindow.yy",},},
     {"id":{"name":"obj_Mouse","path":"objects/obj_Mouse/obj_Mouse.yy",},},
