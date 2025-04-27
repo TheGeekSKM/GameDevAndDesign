@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureGroup>
+  <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="2048">default_0.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="1024" texheight="2048">default_1.bz2</texture>
+  <tpe x="2" y="2" tpage="default_0.bz2">spr_gui_guide_ProgrammingGame_0d5fc8f6-80d5-4031-afcc-8393be832f5a.tpe</tpe>
+  <tpe x="2" y="2" tpage="default_1.bz2">spr_background_ProgrammingGame_408b6f03-259a-4838-89cd-33f1c0f00be1.tpe</tpe>
+  <tpe x="2" y="1086" tpage="default_0.bz2">spr_documentationBackground_ProgrammingGame_db518b39-c40c-452d-a447-acf36042530c.tpe</tpe>
+  <tpe x="2" y="1538" tpage="default_0.bz2">spr_SetupPhaseBackground_ProgrammingGame_c0eb5e5a-e678-4083-9dc4-b5212e2f5c3f.tpe</tpe>
+  <tpe x="806" y="1086" tpage="default_0.bz2">VCR_OSD_Mono_ProgrammingGame_VCR_OSD_Mono.tpe</tpe>
+  <tpe x="806" y="1602" tpage="default_0.bz2">spr_mainMenu_ProgrammingGame_fd2857f9-be63-4b0a-a83b-e46f5be4e74f.tpe</tpe>
+  <tpe x="1210" y="1602" tpage="default_0.bz2">fnt_gui_normal_ProgrammingGame_fnt_gui_normal.tpe</tpe>
+  <tpe x="806" y="1830" tpage="default_0.bz2">font_console_ProgrammingGame_font_console.tpe</tpe>
+  <tpe x="1066" y="1862" tpage="default_0.bz2">scribble_fallback_font_ProgrammingGame_scribble_fallback_font.tpe</tpe>
+  <tpe x="1322" y="1086" tpage="default_0.bz2">spr_gear_ProgrammingGame_4df48ca1-34b6-4bbb-a4e1-414eaa479d57.tpe</tpe>
+  <tpe x="806" y="1962" tpage="default_0.bz2">spr_widget_slider_box_ProgrammingGame_9df415b5-822e-4f05-9d42-5b1f78aebfad.tpe</tpe>
+  <tpe x="1322" y="1218" tpage="default_0.bz2">spr_functionHolder_ProgrammingGame_35aa088d-6cdc-4f38-8731-400942fdcb04.tpe</tpe>
+  <tpe x="1322" y="1282" tpage="default_0.bz2">spr_seq_cam_ProgrammingGame_ae44e8ac-6f38-4a08-829b-ebcc74c21b59.tpe</tpe>
+  <tpe x="1422" y="1282" tpage="default_0.bz2">spr_display_ProgrammingGame_0bae76ff-2fc8-4cc0-8fb1-4951c329d67e.tpe</tpe>
+  <tpe x="1322" y="1358" tpage="default_0.bz2">spr_panel_ProgrammingGame_f3e2ef21-f2da-4f75-a8c8-d9ee1213e3d9.tpe</tpe>
+  <tpe x="1390" y="1366" tpage="default_0.bz2">spr_widget_button_ProgrammingGame_88f9bc66-971f-445f-b8df-6eb2cd9e9ca3.tpe</tpe>
+  <tpe x="1322" y="1426" tpage="default_0.bz2">spr_widget_button_ProgrammingGame_9a530893-70df-400f-8473-18fe09d7c854.tpe</tpe>
+  <tpe x="1442" y="1366" tpage="default_0.bz2">spr_box_Middle_ProgrammingGame_3e96e024-f827-4404-abdf-9d0ed8c537cd.tpe</tpe>
+  <tpe x="1442" y="1366" tpage="default_0.bz2">spr_box_ProgrammingGame_3e96e024-f827-4404-abdf-9d0ed8c537cd.tpe</tpe>
+  <tpe x="1390" y="1418" tpage="default_0.bz2">spr_mouse5_ProgrammingGame_3e5aa1fb-47a1-4ee6-a353-771cb0f36039.tpe</tpe>
+  <tpe x="1322" y="1474" tpage="default_0.bz2">spr_mouse5_ProgrammingGame_d980c2f3-fa3f-4985-8fa0-8aa8eabc340e.tpe</tpe>
+  <tpe x="1442" y="1402" tpage="default_0.bz2">spr_mouse5_ProgrammingGame_cde2471f-96c4-42ec-a967-c4c6c4be74bc.tpe</tpe>
+  <tpe x="1374" y="1454" tpage="default_0.bz2">spr_mouse5_ProgrammingGame_b42720b5-2cab-4b4b-b2ab-f7a01e7d00b9.tpe</tpe>
+  <tpe x="1454" y="1086" tpage="default_0.bz2">spr_mouse5_ProgrammingGame_00880db3-6861-4511-9898-1167b0c2c62f.tpe</tpe>
+  <tpe x="1322" y="1510" tpage="default_0.bz2">spr_mouse5_ProgrammingGame_90600d27-89d2-49c7-9947-b5de143cdeb1.tpe</tpe>
+  <tpe x="1426" y="1435" tpage="default_0.bz2">gooey_ProgrammingGame_c0f54926-adf2-4be7-bd61-12d28b85d061.tpe</tpe>
+  <tpe x="1358" y="1487" tpage="default_0.bz2">spr_cursor_arrow_ProgrammingGame_6b94a3d6-728e-4987-b364-45f6e4928b69.tpe</tpe>
+  <tpe x="1454" y="1117" tpage="default_0.bz2">spr_widget_slider_position_ProgrammingGame_c2aeec40-b486-4534-8154-ceb787a03b51.tpe</tpe>
+  <tpe x="1322" y="1537" tpage="default_0.bz2">spr_widget_slider_position_ProgrammingGame_ce7c853e-b568-4b76-b001-cd5539e9c611.tpe</tpe>
+  <tpe x="1458" y="1435" tpage="default_0.bz2">spr_ssave_demo_player_down_ProgrammingGame_571693f0-f06a-41e9-82a7-b11574b14ddb.tpe</tpe>
+  <tpe x="1407" y="1454" tpage="default_0.bz2">spr_ssave_demo_player_down_ProgrammingGame_be2f0286-51c9-4731-941d-c5d6c2eb123e.tpe</tpe>
+  <tpe x="1382" y="1487" tpage="default_0.bz2">spr_ssave_demo_player_down_ProgrammingGame_caf02a5a-7345-4d5b-8693-3dbd6c19bab5.tpe</tpe>
+  <tpe x="1356" y="1515" tpage="default_0.bz2">spr_ssave_demo_player_up_ProgrammingGame_1c152c03-9cf8-44f3-953e-57e735467958.tpe</tpe>
+  <tpe x="1454" y="1137" tpage="default_0.bz2">spr_ssave_demo_player_up_ProgrammingGame_7567b1b7-10fd-47c2-83aa-528439421bf6.tpe</tpe>
+  <tpe x="1342" y="1537" tpage="default_0.bz2">spr_ssave_demo_player_up_ProgrammingGame_d38993d2-14fa-4a7b-ab3f-bf8f01e7f553.tpe</tpe>
+  <tpe x="1374" y="1426" tpage="default_0.bz2">spr_ssave_demo_player_left_ProgrammingGame_57d69775-1e3d-4cb3-a2f4-5156948bb94e.tpe</tpe>
+  <tpe x="1322" y="1557" tpage="default_0.bz2">spr_ssave_demo_player_left_ProgrammingGame_cd1f1dba-56e3-40a1-a36a-685dc1c6dce5.tpe</tpe>
+  <tpe x="1470" y="1455" tpage="default_0.bz2">spr_ssave_demo_player_left_ProgrammingGame_f0423ca4-33c7-4108-9353-9fd5275cb252.tpe</tpe>
+  <tpe x="1400" y="1487" tpage="default_0.bz2">spr_ssave_demo_player_right_ProgrammingGame_4fd9b8fb-7a6f-4c7f-94a6-87753390c47c.tpe</tpe>
+  <tpe x="1382" y="1507" tpage="default_0.bz2">spr_ssave_demo_player_right_ProgrammingGame_652f3793-360f-4229-932f-af53e41cc1bc.tpe</tpe>
+  <tpe x="1454" y="1157" tpage="default_0.bz2">spr_ssave_demo_player_right_ProgrammingGame_d07483c7-1647-469e-8b88-01f556356829.tpe</tpe>
+  <tpe x="1360" y="1535" tpage="default_0.bz2">spr_bug_ProgrammingGame_e8da1f7e-5f14-46a1-8ce7-bcd738ab4079.tpe</tpe>
+  <tpe x="1360" y="1535" tpage="default_0.bz2">spr_bug23_ProgrammingGame_282f9098-e0c3-486a-9709-84aec21113c1.tpe</tpe>
+  <tpe x="1338" y="1557" tpage="default_0.bz2">spr_bug23_ProgrammingGame_528f3573-740b-4bba-8f83-10f9e1b505a2.tpe</tpe>
+  <tpe x="1322" y="1577" tpage="default_0.bz2">spr_player_ProgrammingGame_1d1882c6-6380-4318-ada8-f9860ff76eda.tpe</tpe>
+  <tpe x="1470" y="1475" tpage="default_0.bz2">spr_player_ProgrammingGame_f1630346-fea4-41f4-bc0f-c624fa28fd52.tpe</tpe>
+  <tpe x="1426" y="1418" tpage="default_0.bz2">spr_pointer_ProgrammingGame_70e0691f-012c-4f53-8899-9a57b033aec0.tpe</tpe>
+  <tpe x="1472" y="1137" tpage="default_0.bz2">scribble_fallback_bulletpoint_ProgrammingGame_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
+  <tpe x="1358" y="1474" tpage="default_0.bz2">spr_block_ProgrammingGame_4a3c7bfd-1d0b-4859-99d5-8ea9335063fe.tpe</tpe>
+  <tpe x="1390" y="1358" tpage="default_0.bz2">spr_bullet_ProgrammingGame_2a88a37d-d298-4e71-b4b4-0c68b432a2d5.tpe</tpe>
+  <tpe x="1374" y="1446" tpage="default_0.bz2">spr_pixel_ProgrammingGame_c6297ff6-6c93-44e7-bce1-c01ad1373730.tpe</tpe>
+</TextureGroup>

@@ -1,0 +1,1 @@
+if (global.vars.pause and pauseable_FreezeStep) exit;

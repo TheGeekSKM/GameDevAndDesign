@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Compiler",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Compiler",
+  "parent":{
+    "name":"CompilerSystem",
+    "path":"folders/Scripts/CompilerSystem.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
