@@ -1,6 +1,6 @@
-/// @description Text Editor Object - Enhanced (Surface Clipping)
+currentFunctionObject = noone;
 
-// --- Initialization (Create Event) ---
+
 
 global.CodeEditor = id;
 
@@ -35,6 +35,90 @@ selectionEndLine = 0;
 selectionEndCol = 0;
 
 editorSurface = -1;
+funcName = "";
+
+Subscribe("NewFunctionSlotSelected", function(currentFuncObj) {
+    if (currentFuncObj == currentFunctionObject) return;
+    
+    currentFunctionObject = currentFuncObj;
+    funcName = "";
+    
+    lines = [""];
+    cursorLine = 0;
+    cursorCol = 0;
+    scrollOffset = 0;
+    keywords = ["move", "hotfix", "angle", "function", "var", "if", "else", "for", "while", "return", "true", "false"];
+    autocompleteIndex = 0;
+    cursorVisible = true;
+    cursorTimer = 0;
+    backspaceHeld = 0;
+    deleteHeld = 0;
+    
+    selectionActive = false;
+    selectionStartLine = 0;
+    selectionStartCol = 0;
+    selectionEndLine = 0;
+    selectionEndCol = 0;
+    
+    if (currentFunctionObject.functionScript != "")
+    {
+        var _lines = string_split(currentFunctionObject.functionScript, "\n");
+        for (var i = 0; i < array_length(_lines); i++) {
+            lines[i] = _lines[i];
+        } 
+    }
+})
+
+Subscribe("Compiled", function(_id) 
+{
+    var str = ""; 
+    for (var i = 0; i < array_length(lines); i++) {
+        var line = lines[i];
+        
+        if (funcName == "" && string_starts_with(line, "function"))
+        {
+            var splitString = string_split_ext(line, [" ", "(", ")"])
+            if (array_length(splitString) > 1) 
+            {
+                funcName = splitString[1];
+            }
+        }
+        str = string_concat(str, lines[i], "\n");
+    }
+    
+    var canCompile = ValidateSyntax(str);
+    if (canCompile.Valid)
+    {
+        var compiledCodeStruct = CompileCode(str);
+        if (compiledCodeStruct.Errors == undefined)
+        {
+            _id.compiledCode = compiledCodeStruct;
+            OpenModalWindow("SUCCESS", "Successfully Compiled Code!")
+        }
+        else 
+        {
+            _id.compiledCode = [];
+            for (var i = 0; i < array_length(compiledCodeStruct.Errors); i++) {
+                OpenModalWindow("ERROR", compiledCodeStruct.Errors[i]);
+            }
+        }
+    }
+    else 
+    {
+        _id.compiledCode = [];
+        OpenModalWindow("ERROR", canCompile.Error);
+    }
+    
+    _id.functionScript = str;
+    
+    if (funcName != "")
+    {
+        _id.functionName = funcName;
+    }
+    else {
+        _id.functionName = "EMPTY";
+    }
+})
 
 
 if (!surface_exists(editorSurface)) {

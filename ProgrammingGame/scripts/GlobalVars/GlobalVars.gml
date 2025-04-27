@@ -45,3 +45,11 @@ function Command(_name, _cost, _inputMultiplier, _description, _callBackFunc, _r
 function AddCommandToLibrary(_command) {
     global.vars.CommandLibrary[$ _command.Name] = _command;
 }
+
+
+function OpenModalWindow(_title, _text)
+{
+    var inst = instance_create_depth(irandom_range(-120 + 400, 120 + 400), irandom_range(-120 + 224, 120 + 224), -500, obj_ModalWindow);
+    inst.SetTitle(_title);
+    inst.SetText(_text);
+}

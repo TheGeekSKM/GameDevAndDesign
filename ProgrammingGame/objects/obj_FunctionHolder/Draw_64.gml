@@ -1,5 +1,5 @@
 draw_self();
-if (functionScript != "")
+if (functionScript != "" && functionScript != "\n")
 {
     scribble($"{Index + 1}")
         .align(fa_left, fa_top)
@@ -26,4 +26,13 @@ else
         .starting_format("VCR_OSD_Mono", c_gray)
         .transform(1, 1, image_angle)
         .draw(x, y);     
+}
+
+if (array_length(compiledCode) > 0)
+{
+    scribble($"Code Compiled")
+        .align(fa_center, fa_top)
+        .starting_format("VCR_OSD_Mono", c_yellow)
+        .transform(0.5, 0.5, image_angle)
+        .draw(x, y + 12);
 }
