@@ -20,7 +20,26 @@ if (movement != 0 && shiftHeld)
     CurrentIndexUpdated();
 }
 
-if (keyboard_check_pressed(ord("E")) && shiftHeld && ctrlHeld)
+if (keyboard_check_pressed(ord("C")) && shiftHeld && ctrlHeld)
 {
     Raise("Compiled", currentFunctionSlot)
+}
+
+if (keyboard_check_pressed(ord("E")) && shiftHeld && ctrlHeld)
+{
+    if (obj_FuncHolder_1.compiledCode != undefined
+        || obj_FuncHolder_2.compiledCode != undefined
+        || obj_FuncHolder_3.compiledCode != undefined)
+    {
+        global.CompiledCode1 = obj_FuncHolder_1.compiledCode;
+        global.CompiledCode2 = obj_FuncHolder_2.compiledCode;
+        global.CompiledCode3 = obj_FuncHolder_3.compiledCode;
+        OpenModalWindow("SET UP SUCCESS", "All the code has been compiled and saved. Close this Window to continue!", function() {
+            Transition(rmGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);    
+        })
+    }
+    else 
+    {
+        OpenModalWindow("ERROR", "At least one Function Slot needs to have compiled code.")
+    }
 }

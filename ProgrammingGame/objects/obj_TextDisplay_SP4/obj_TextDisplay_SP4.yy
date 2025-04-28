@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_TextDisplay_SP3",
+  "%Name":"obj_TextDisplay_SP4",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_TextDisplay_SP3",
+  "name":"obj_TextDisplay_SP4",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"Text","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[wave][c_player]Ctrl + Shift + C[/] to [c_yellow]Compile Code",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"Text","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[wave][c_player]Ctrl + Shift + E[/] to [c_yellow]Continue",},
   ],
   "parent":{
     "name":"SetUp",

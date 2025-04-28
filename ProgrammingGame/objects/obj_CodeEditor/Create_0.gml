@@ -97,7 +97,7 @@ Subscribe("Compiled", function(_id)
         }
         else 
         {
-            _id.compiledCode = [];
+            _id.compiledCode = undefined;
             for (var i = 0; i < array_length(compiledCodeStruct.Errors); i++) {
                 OpenModalWindow("ERROR", compiledCodeStruct.Errors[i]);
             }
@@ -105,7 +105,7 @@ Subscribe("Compiled", function(_id)
     }
     else 
     {
-        _id.compiledCode = [];
+        _id.compiledCode = undefined;
         OpenModalWindow("ERROR", canCompile.Error);
     }
     

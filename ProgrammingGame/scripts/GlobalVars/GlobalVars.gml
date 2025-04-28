@@ -47,9 +47,10 @@ function AddCommandToLibrary(_command) {
 }
 
 
-function OpenModalWindow(_title, _text)
+function OpenModalWindow(_title, _text, _onCloseCallBack = undefined)
 {
-    var inst = instance_create_depth(irandom_range(-120 + 400, 120 + 400), irandom_range(-120 + 224, 120 + 224), -500, obj_ModalWindow);
+    var inst = instance_create_depth(irandom_range(-120 + 600, 120 + 600), irandom_range(-120 + 224, 120 + 224), -10, obj_ModalWindow);
     inst.SetTitle(_title);
     inst.SetText(_text);
+    inst.SetOnCloseCallback(_onCloseCallBack);
 }

@@ -162,6 +162,7 @@
     {"id":{"name":"obj_TextDisplay_SP_Player","path":"objects/obj_TextDisplay_SP_Player/obj_TextDisplay_SP_Player.yy",},},
     {"id":{"name":"obj_TextDisplay_SP2","path":"objects/obj_TextDisplay_SP2/obj_TextDisplay_SP2.yy",},},
     {"id":{"name":"obj_TextDisplay_SP3","path":"objects/obj_TextDisplay_SP3/obj_TextDisplay_SP3.yy",},},
+    {"id":{"name":"obj_TextDisplay_SP4","path":"objects/obj_TextDisplay_SP4/obj_TextDisplay_SP4.yy",},},
     {"id":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},},
     {"id":{"name":"obj_ui_parent","path":"objects/obj_ui_parent/obj_ui_parent.yy",},},
     {"id":{"name":"obj_ui_pixel","path":"objects/obj_ui_pixel/obj_ui_pixel.yy",},},
