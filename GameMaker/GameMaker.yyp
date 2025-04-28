@@ -129,7 +129,6 @@
     {"$GMIncludedFile":"","%Name":"libmodal.dll","CopyToMask":-1,"filePath":"datafiles/programmingGame","name":"libmodal.dll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"libxprocess.dll","CopyToMask":-1,"filePath":"datafiles/programmingGame","name":"libxprocess.dll","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"options.ini","CopyToMask":-1,"filePath":"datafiles/programmingGame","name":"options.ini","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"28280.tmp","CopyToMask":-1,"filePath":"datafiles/programmingGame/proc","name":"28280.tmp","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
