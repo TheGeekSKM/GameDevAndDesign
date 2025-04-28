@@ -13,6 +13,8 @@ variableStore = ds_map_create();
 loopStack = [];
 loopNum = 1;
 
+currentCodeStruct = undefined;
+
 /// @function StartInterpreter(_compiledStruct)
 function StartInterpreter(_compiledStruct) {
     if (_compiledStruct == undefined || (variable_struct_exists(_compiledStruct, "Errors") && _compiledStruct.Errors != undefined)) {
@@ -30,7 +32,10 @@ function StartInterpreter(_compiledStruct) {
     
     compiledInstructions = _compiledStruct.CompiledArray;
     lineMapping = _compiledStruct.LineMapping;
-    currentIndex = 0; lastResult = undefined; currentRawLine = -1;
+    currentIndex = 0; 
+    lastResult = undefined; 
+    currentCodeStruct = _compiledStruct;
+    currentRawLine = -1;
     loopStack = []
     loopNum = 1;
     isRunning = true; 
@@ -43,11 +48,19 @@ function StartInterpreter(_compiledStruct) {
 function StopInterpreter() 
 {
     isRunning = false; 
+    currentCodeStruct = undefined;
+    alarm[0] = -1;
     compiledInstructions = []; 
-    lineMapping = []; currentRawLine = -1;
+    lineMapping = []; 
+    currentRawLine = -1;
     ds_map_clear(variableStore); 
     loopStack = [];
     show_debug_message("Interpreter stopped.");
+}
+
+function SubtractMemoryCost(_cost) 
+{
+    obj_Player.TakeDamage(_cost); 
 }
 
 /// @function ExecuteInstruction(_instr)
@@ -69,6 +82,9 @@ function ExecuteInstruction(_instr)
             
             variableStore[? varName] = real(varValueStr);
             show_debug_message(string_concat("Declared '", varName, "' = ", string(variableStore[? varName]))); 
+
+            // TODO: Subtract memory cost for the variable from the memory pool.
+            SubtractMemoryCost(1);
         } 
         else 
         { 
@@ -144,6 +160,9 @@ function ExecuteInstruction(_instr)
             } 
             else 
             {
+                // TODO: Subtract memory cost for the loop from the memory pool.
+                SubtractMemoryCost(1);
+
                 array_push(loopStack, { remaining_count: loopCount, loop_body_start_index: currentIndex + 1 });
                 show_debug_message(string_concat("Starting Repeat block, count = ", string(loopCount)));
             }
@@ -177,11 +196,13 @@ function ExecuteInstruction(_instr)
         {
             currentIndex -= jumpBackOffset; 
             show_debug_message(string_concat("Repeating loop, ", string(currentLoop.remaining_count), " remaining.")); 
+            // TODO: Add memory cost for each loop iteration to the memory pool. Optional
         } 
         else 
         {
             array_pop(loopStack); 
             show_debug_message("Finished Repeat block."); 
+            // TODO: Subtract memory cost for the loop from the memory pool. Optional
         } 
         return; 
     }
@@ -265,6 +286,10 @@ function ExecuteInstruction(_instr)
 
     try 
     {
+        // TODO: Add memory cost for the command to the memory pool.
+        var cost = GetInstructionMemoryCost(string_lower(commandName));
+        SubtractMemoryCost(cost);
+
         var returnVal = command.CallBackFunc(actualParamValue);
         if (variable_struct_exists(command, "ReturnsValue") && command.ReturnsValue) 
         { 

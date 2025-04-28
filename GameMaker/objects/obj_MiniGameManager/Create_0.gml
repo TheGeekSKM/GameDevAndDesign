@@ -5,6 +5,7 @@ EnvironmentSetVariable("OWNER_WINDOW_ID", string(int64(window_handle())));
 
 function LaunchProgrammingMinigame()
 {
+    
     if (os_type == os_windows) 
     {
         if (!global.programmingGameID) 

@@ -1,4 +1,4 @@
-isplay_width = sprite_width;
+display_width = sprite_width;
 display_height = sprite_height;
 padding = 5;
 font_used = VCR_OSD_Mono; // Optional: assign a font here

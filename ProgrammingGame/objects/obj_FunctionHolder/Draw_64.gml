@@ -36,3 +36,13 @@ if (array_length(compiledCode) > 0)
         .transform(0.5, 0.5, image_angle)
         .draw(x, y + 12);
 }
+
+if (hovered)
+{
+    scribble($"Left Click to Execute || Right Click to View Code")
+        .align(fa_center, fa_bottom)
+        .starting_format("VCR_OSD_Mono", c_yellow)
+        .transform(0.5, 0.5, image_angle)
+        .sdf_outline(c_black, 3)
+        .draw(x, y - (sprite_height / 2) - 12);
+}

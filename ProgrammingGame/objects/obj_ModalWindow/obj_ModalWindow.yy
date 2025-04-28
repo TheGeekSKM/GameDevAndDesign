@@ -9,7 +9,9 @@
   ],
   "managed":true,
   "name":"obj_ModalWindow",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_GUI_interactable","path":"objects/obj_GUI_interactable/obj_GUI_interactable.yy",},"propertyId":{"name":"Depth","path":"objects/obj_GUI_interactable/obj_GUI_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-50",},
+  ],
   "parent":{
     "name":"UI",
     "path":"folders/Objects/_Base/UI.yy",

@@ -1,5 +1,5 @@
 AddCommandToLibrary(new Command("move", 2, 0, "Moves the player forward", function(_value) {
-    show_message($"Moved by {_value} units.");    
+    Raise("Move", _value); 
 }))
 
 var findAngleCommand = new Command(
@@ -21,7 +21,7 @@ AddCommandToLibrary(findAngleCommand);
 AddCommandToLibrary(
     new Command(
         "turn", 2, 0, "Turns the player by an angle", function(_value) {
-            show_message($"Turned by {_value} degrees");
+            Raise("Turn", _value);
         }, false
     )
 )
@@ -29,7 +29,7 @@ AddCommandToLibrary(
 AddCommandToLibrary(
     new Command(
         "turnto", 2, 0, "Turns the player to face an angle", function(_value) {
-            show_message($"Turned to face {_value} degrees");
+            Raise("TurnTo", _value);
         }, false
     )
 )
@@ -37,7 +37,12 @@ AddCommandToLibrary(
 AddCommandToLibrary(
     new Command(
         "shoot", 3, 0, "Shoots forward", function(_value) {
-            show_message($"Shot forward {_value} times");
+            Raise("Shoot", _value);
         }, false
     )
 )
+
+if (file_exists(working_directory + "TextDisplay.json"))
+{
+    file_delete(working_directory + "TextDisplay.json")
+}

@@ -124,20 +124,7 @@ var gameDevFolder = new Directory("GameDev",
         }
     }),
     new FileItem("GameMaker.exe", function() { 
-        var quality = random_range(15, 35);
-        global.GameData.Quality += quality;
-        
-        var burnout = round(quality / 15);
-        global.GameData.Burnout += burnout;
-        Raise("BurnoutModified", global.GameData.Burnout);
-
-        global.GameData.CurrentDay++;
-        if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
-        {
-            Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
-        }
-        
-        global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You made a lot of progress in 8hrs, despite the tremendous lack of prebuilt systems! Check your log to see updates! Don't forget to Devlog!!");
+       obj_MiniGameManager.LaunchProgrammingMinigame();
     }),
     new FileItem("VisualStudio.exe", function() { 
         var quality = random_range(10, 50);
@@ -159,7 +146,7 @@ var gameDevFolder = new Directory("GameDev",
 JournalFolder = new FileItem("Log.txt", function() {
         
         OpenTextDisplay(
-        $"Log ({current_month}/{current_day}/{current_year}, {current_hour}:{current_minute})",
+        $"Log ({current_month}/{current_day + global.GameData.CurrentDay}/{current_year}, {current_hour}:{current_minute})",
         $"Current Statistics: \n1. Game Name: {global.GameData.Name}\n2. Number of Days in Project: {global.GameData.CurrentDay}/{global.GameData.MaxNumOfDays} days\n3. Public Interest: {global.GameData.Interest}\n4. Burnout Level: {global.GameData.Burnout}"
         )}
 );

@@ -377,7 +377,8 @@ function CompileCode(_code) {
             CompiledArray: compiledInstructions,
             LineMapping: instructionToRawLineMap,
             Cost: memoryCost,
-            Errors: undefined
+            Errors: undefined,
+            RawCode: _code,
         };
     }
 }

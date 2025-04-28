@@ -16,6 +16,7 @@ global.CHILD_PROCESS_ID_5 = 0;
 global.GAME_INSTANCE_ID = int64(bool(EnvironmentGetVariableExists("PROG_GAME_INSTANCE_ID")) ? EnvironmentGetVariable("PROG_GAME_INSTANCE_ID") : string(0));
 EnvironmentSetVariable("PROG_GAME_INSTANCE_ID", string(global.GAME_INSTANCE_ID + 1));
 
+
 if (global.GAME_INSTANCE_ID == 0)
 {
     // do nothing really
@@ -23,6 +24,11 @@ if (global.GAME_INSTANCE_ID == 0)
 else if (global.GAME_INSTANCE_ID == 1)
 {
     room_goto(rmDocumentation);
+    window_set_position((display_get_width() / 2), (display_get_height() / 2) - window_get_height());
+}
+else if (global.GAME_INSTANCE_ID == 2)
+{
+    room_goto(rmCodeDisplay);
     window_set_position((display_get_width() / 2), (display_get_height() / 2) - window_get_height());
 }
 
