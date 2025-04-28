@@ -49,3 +49,24 @@ if (text_selected && (keyboard_check_pressed(vk_backspace) || keyboard_check_pre
     text = "";
     text_selected = false;
 }
+
+if (keyboard_check_pressed(vk_up))
+{
+    recentlyEnteredCommandIndex--;
+    if (recentlyEnteredCommandIndex < 0)
+    {
+        recentlyEnteredCommandIndex = 0;
+    }
+    
+    text = recentlyEnteredCommands[recentlyEnteredCommandIndex];
+}
+else if (keyboard_check_pressed(vk_down))
+{
+    recentlyEnteredCommandIndex++;
+    if (recentlyEnteredCommandIndex >= array_length(recentlyEnteredCommands))
+    {
+        recentlyEnteredCommandIndex = array_length(recentlyEnteredCommands) - 1;
+    }
+    
+    text = recentlyEnteredCommands[recentlyEnteredCommandIndex];
+}

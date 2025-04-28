@@ -2,7 +2,7 @@
 topLeftX = x - (sprite_width / 2);
 topLeftY = y - (sprite_height / 2);
 
-
+var shiftHeld = keyboard_check(vk_lshift);
 
 // Move left/right
 if (keyboard_check_pressed(vk_left)) cursorPos = max(0, cursorPos - 1);
@@ -13,6 +13,7 @@ if (point_in_rectangle(guiMouseX, guiMouseY, topLeftX, topLeftY, topLeftX + spri
     
     // Scroll one "step" per wheel tick
     var scroll_dir = mouse_wheel_up() - mouse_wheel_down();
+    scroll_dir = (shiftHeld && keyboard_check_pressed(vk_up)) - (shiftHeld && keyboard_check_pressed(vk_down));
     var scroll_step = 32;
     target_scroll_offset -= scroll_dir * scroll_step;
 }

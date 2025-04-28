@@ -9,10 +9,16 @@ currentParamArray = [];
 
 text_selected = false;
 
+recentlyEnteredCommands = [];
+recentlyEnteredCommandIndex = -1;
+
 function EnterPressed()
 {
     if (text != "" && text != undefined)
     {
+        array_push(recentlyEnteredCommands, text);
+        recentlyEnteredCommandIndex = array_length(recentlyEnteredCommands) - 1;
+
         // separate the text before the (
         text = string_lower(string_trim(text));
         var textSplit = string_split_ext(text, [ "(", ")", ",", " "], true);
@@ -34,6 +40,11 @@ function EnterPressed()
             commandParamArray = [];
             return;
         }
+        else {
+            text = "";
+            commandParamArray = [];
+        }
+        
     }
 
     FailedToRunCommand();

@@ -186,6 +186,7 @@
     {"id":{"name":"obj_shell","path":"objects/obj_shell/obj_shell.yy",},},
     {"id":{"name":"obj_ssave_demo_player","path":"objects/obj_ssave_demo_player/obj_ssave_demo_player.yy",},},
     {"id":{"name":"obj_ssave_demo","path":"objects/obj_ssave_demo/obj_ssave_demo.yy",},},
+    {"id":{"name":"obj_StatsDisplay","path":"objects/obj_StatsDisplay/obj_StatsDisplay.yy",},},
     {"id":{"name":"obj_TextBox_Commands","path":"objects/obj_TextBox_Commands/obj_TextBox_Commands.yy",},},
     {"id":{"name":"obj_TextBox_Display","path":"objects/obj_TextBox_Display/obj_TextBox_Display.yy",},},
     {"id":{"name":"obj_TextBox_End","path":"objects/obj_TextBox_End/obj_TextBox_End.yy",},},

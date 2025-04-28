@@ -11,7 +11,7 @@ scribble(title)
     .draw(topLeftX + 32, topLeftY + 16);
 
 scribble(text)
-    .align(fa_left, fa_middle)
+    .align(fa_left, fa_top)
     .starting_format("VCR_OSD_Mono", c_white)
     .transform(0.75, 0.75, 0)
     .wrap(285 * 1.3333)

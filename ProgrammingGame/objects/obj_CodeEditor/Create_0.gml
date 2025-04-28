@@ -113,10 +113,10 @@ Subscribe("Compiled", function(_id)
     
     if (funcName != "")
     {
-        _id.functionName = funcName;
+        _id.functionName = funcName + "()";
     }
     else {
-        _id.functionName = "EMPTY";
+        _id.functionName = "MAIN()";
     }
 })
 

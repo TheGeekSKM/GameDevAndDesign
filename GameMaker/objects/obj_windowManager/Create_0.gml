@@ -72,6 +72,7 @@ else if (global.GAME_INSTANCE_ID == 4)
         CurrentDay : 0,
         Quality : 0,
         Burnout : 0,
+        Designed : false
     }
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     room_goto(rmGamePlanner);
