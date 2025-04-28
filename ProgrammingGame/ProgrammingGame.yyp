@@ -143,6 +143,7 @@
     {"id":{"name":"obj_FuncHolder_2","path":"objects/obj_FuncHolder_2/obj_FuncHolder_2.yy",},},
     {"id":{"name":"obj_FuncHolder_3","path":"objects/obj_FuncHolder_3/obj_FuncHolder_3.yy",},},
     {"id":{"name":"obj_FunctionHolder","path":"objects/obj_FunctionHolder/obj_FunctionHolder.yy",},},
+    {"id":{"name":"obj_GameManager","path":"objects/obj_GameManager/obj_GameManager.yy",},},
     {"id":{"name":"obj_GUI_interactable","path":"objects/obj_GUI_interactable/obj_GUI_interactable.yy",},},
     {"id":{"name":"obj_MAINMENU_KeyCheck","path":"objects/obj_MAINMENU_KeyCheck/obj_MAINMENU_KeyCheck.yy",},},
     {"id":{"name":"obj_ModalWindow_DUPE","path":"objects/obj_ModalWindow_DUPE/obj_ModalWindow_DUPE.yy",},},
