@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Room",
-    "path":"folders/Objects/_Base/Room.yy",
+    "path":"folders/_ProgrammingMiniGame/Objects/_Base/Room.yy",
   },
   "parentObjectId":null,
   "persistent":false,

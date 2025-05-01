@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"SyntaxValidator",
+  "%Name":"AdditionalFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"SyntaxValidator",
+  "name":"AdditionalFunctions",
   "parent":{
     "name":"CompilerSystem",
     "path":"folders/_ProgrammingMiniGame/Scripts/CompilerSystem.yy",

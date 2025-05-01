@@ -6,7 +6,7 @@
   "name":"Compiler",
   "parent":{
     "name":"CompilerSystem",
-    "path":"folders/Scripts/CompilerSystem.yy",
+    "path":"folders/_ProgrammingMiniGame/Scripts/CompilerSystem.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

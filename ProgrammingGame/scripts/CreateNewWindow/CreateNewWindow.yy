@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CreateNewWindow",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"CompilerSystem",
+    "path":"folders/_ProgrammingMiniGame/Scripts/CompilerSystem.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

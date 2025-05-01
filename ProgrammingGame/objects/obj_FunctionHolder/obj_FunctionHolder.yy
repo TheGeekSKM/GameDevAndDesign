@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"SetUp",
-    "path":"folders/Objects/SetUp.yy",
+    "path":"folders/_ProgrammingMiniGame/Objects/SetUp.yy",
   },
   "parentObjectId":null,
   "persistent":false,

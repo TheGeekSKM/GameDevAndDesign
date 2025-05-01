@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"_Components",
-    "path":"folders/Objects/UI/_Components.yy",
+    "path":"folders/_ProgrammingMiniGame/Objects/UI/_Components.yy",
   },
   "parentObjectId":{
     "name":"obj_ModalWindow",

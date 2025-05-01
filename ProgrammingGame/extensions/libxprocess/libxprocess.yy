@@ -168,7 +168,7 @@
   "packageId":"",
   "parent":{
     "name":"Extensions",
-    "path":"folders/Extensions.yy",
+    "path":"folders/_ProgrammingMiniGame/Extensions.yy",
   },
   "productId":"",
   "resourceType":"GMExtension",

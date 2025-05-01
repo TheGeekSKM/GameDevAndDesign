@@ -21,7 +21,7 @@
   "name":"rmSetUp",
   "parent":{
     "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "path":"folders/_ProgrammingMiniGame/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

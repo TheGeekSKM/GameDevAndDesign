@@ -27,7 +27,7 @@
   "name":"seq_SetUp",
   "parent":{
     "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "path":"folders/_ProgrammingMiniGame/Sequences.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,

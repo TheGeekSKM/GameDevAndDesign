@@ -13,7 +13,7 @@
   ],
   "parent":{
     "name":"SetUp",
-    "path":"folders/Objects/SetUp.yy",
+    "path":"folders/_ProgrammingMiniGame/Objects/SetUp.yy",
   },
   "parentObjectId":{
     "name":"obj_TextDisplay",

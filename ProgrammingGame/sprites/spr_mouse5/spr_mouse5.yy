@@ -31,7 +31,7 @@
   "origin":0,
   "parent":{
     "name":"Mouse",
-    "path":"folders/Sprites/Mouse.yy",
+    "path":"folders/_ProgrammingMiniGame/Sprites/Mouse.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
