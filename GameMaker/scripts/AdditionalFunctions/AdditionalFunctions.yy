@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AdditionalFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AdditionalFunctions",
+  "parent":{
+    "name":"CompilerSystem",
+    "path":"folders/_ProgrammingMiniGame/Scripts/CompilerSystem.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

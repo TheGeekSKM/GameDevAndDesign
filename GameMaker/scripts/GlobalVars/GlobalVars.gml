@@ -10,6 +10,8 @@ function Vars() constructor {
 		Raise("Resume", _id);
 		pause = false;
 	}
+    
+    CommandLibrary = {};
 }
 
 global.vars = new Vars();

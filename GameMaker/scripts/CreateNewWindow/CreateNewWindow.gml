@@ -1,6 +1,6 @@
 function CreateNewWindow(_id)
 {
-    if (global.GAME_INSTANCE_ID != 0) return false; // Only allow parent to create
+    if (global.GAME_INSTANCE_ID != 0 && _id != 7) return false; // Only allow parent to create
     
     // Prevent duplicate launch
     switch (_id) {
@@ -32,6 +32,18 @@ function CreateNewWindow(_id)
             if (global.CHILD_PROCESS_ID_5 != 0) return false;
             EnvironmentSetVariable("GAME_INSTANCE_ID", string(5));
             global.CHILD_PROCESS_ID_5 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            break;
+        
+        case 6:
+            if (global.CHILD_PROCESS_ID_6 != 0) return false;
+            EnvironmentSetVariable("GAME_INSTANCE_ID", string(6));
+            global.CHILD_PROCESS_ID_6 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
+            break;
+        
+        case 7:
+            if (global.CHILD_PROCESS_ID_7 != 0) return false;
+            EnvironmentSetVariable("GAME_INSTANCE_ID", string(7));
+            global.CHILD_PROCESS_ID_7 = ExecProcessFromArgVAsync(GetArgVFromProcid(ProcIdFromSelf()));
             break;
     }
 
