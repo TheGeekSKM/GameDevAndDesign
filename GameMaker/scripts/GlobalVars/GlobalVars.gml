@@ -15,3 +15,5 @@ function Vars() constructor {
 }
 
 global.vars = new Vars();
+
+enum PlayerState { Normal, Dashing, Attacking }
