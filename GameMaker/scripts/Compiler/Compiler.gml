@@ -5,6 +5,12 @@
 /// @returns {Struct}    Struct containing { FunctionName, CompiledArray, LineMapping, Cost, Errors (optional) }
 
 function CompileCode(_code) {
+    
+    if (_code == "" || string_lettersdigits(_code) == "")
+    {
+        array_push(errors, string_concat("No code is present."));
+    }
+    
     var compiledInstructions = [];
     var memoryCost = 0;
     var instructionToRawLineMap = [];
@@ -20,6 +26,8 @@ function CompileCode(_code) {
 
     var insideFunction = false;
     var functionName = "Main";
+    
+    
 
     for (var i = 0; i < array_length(lines); i++) 
     {

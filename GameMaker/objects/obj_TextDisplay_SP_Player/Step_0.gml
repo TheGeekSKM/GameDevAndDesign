@@ -35,7 +35,7 @@ if (keyboard_check_pressed(ord("E")) && shiftHeld && ctrlHeld)
         global.CompiledCode2 = obj_FuncHolder_2.compiledCode;
         global.CompiledCode3 = obj_FuncHolder_3.compiledCode;
         OpenModalWindow("SET UP SUCCESS", "All the code has been compiled and saved. Close this Window to continue!", function() {
-            Transition(rmGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);    
+            Transition(rmProgrammingGame, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);    
         })
     }
     else 

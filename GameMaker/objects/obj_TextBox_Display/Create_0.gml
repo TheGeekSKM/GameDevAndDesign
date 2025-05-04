@@ -2,7 +2,7 @@
 event_inherited();
 title = "";
 
-var displayStruct = SafeReadJson(working_directory + "TextDisplay.json");
+var displayStruct = SafeReadJson(working_directory + "FunctionDisplay.json");
 
 if (displayStruct != undefined) {
     title = displayStruct[$ "title"];

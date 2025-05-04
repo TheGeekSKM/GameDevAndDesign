@@ -7,8 +7,8 @@ switch (currentState)
 {
     case CameraMode.FollowObject:
         if (!instance_exists(FollowingObject)) break; 
-        cX = FollowingObject.x - (CamWidth / 2);
-        cY = FollowingObject.y - (CamHeight / 2);
+        cX = lerp(cX, FollowingObject.x - (CamWidth / 2), 0.1);
+        cY = lerp(cY, FollowingObject.y - (CamHeight / 2), 0.1);
     break;
     
     case CameraMode.FollowMouseDrag: 

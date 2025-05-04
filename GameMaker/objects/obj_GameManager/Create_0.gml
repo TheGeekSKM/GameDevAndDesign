@@ -42,7 +42,7 @@ AddCommandToLibrary(
     )
 )
 
-if (file_exists(working_directory + "TextDisplay.json"))
+if (file_exists(working_directory + "FunctionDisplay.json"))
 {
-    file_delete(working_directory + "TextDisplay.json")
+    file_delete(working_directory + "FunctionDisplay.json")
 }

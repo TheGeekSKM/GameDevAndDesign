@@ -5,11 +5,19 @@
 /// @returns {Struct}    Struct containing { Valid: bool, Error: string (empty if valid) }
 
 function ValidateSyntax(_rawCode) {
+    
+    if (_rawCode == "" || string_lettersdigits(_rawCode) == "")
+    {
+        return { Valid: false, Error: string_concat("No code is present.") };
+    }
+    
     var lines = string_split(_rawCode, "\n");
     var braceBalance = 0;
     var insideFunction = false;
     var blockTypeStack = [];
     var declaredVariables = ds_list_create();
+    
+    
 
     for (var i = 0; i < array_length(lines); i += 1) {
         var lineNumber = i + 1;

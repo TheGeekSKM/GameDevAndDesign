@@ -129,6 +129,13 @@ ApplyMovementAndCollision(obj_Solid);
 #endregion
 
 image_xscale = facing;
+if (hsp != 0 || vsp != 0 || !onGround)
+{
+    image_index = 0;
+}
+else {
+    image_index = 1;
+}
 
 trail_update_timer--;
 
@@ -138,6 +145,7 @@ if (trail_update_timer <= 0) {
     // Add current position to the start of the list
     // Storing as an array [x, y] within the list
     ds_list_insert(trail_points, 0, [x, y]);
+    
 
     // Remove the oldest point if the list exceeds the maximum length
     while (ds_list_size(trail_points) > max_trail_length) {

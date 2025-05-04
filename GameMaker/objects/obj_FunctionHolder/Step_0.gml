@@ -21,7 +21,7 @@ if (point_in_rectangle(guiMouseX, guiMouseY, x - (sprite_width / 2), y - (sprite
         }
         str = json_stringify(str);
         
-        SafeWriteJson(game_save_id + "TextDisplay.json", str);
+        SafeWriteJson(game_save_id + "FunctionDisplay.json", str);
         
         CreateNewWindow(2);
         

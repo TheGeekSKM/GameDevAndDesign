@@ -11,6 +11,17 @@ topLeftY = 0;
 topRightX = 0;
 topRightY = 0;
 
+text = "";
+function SetText(_text)
+{
+    text = _text;
+}
+
+onCloseCallback = undefined;
+function SetOnCloseCallback(_callback)
+{
+    onCloseCallback = _callback;
+}
 
 title = Name;
 function SetTitle(_name) 
@@ -40,6 +51,7 @@ function OnMouseLeftClickRelease()
     
     if (point_in_rectangle(guiMouseX, guiMouseY, topRightX - 31, topRightY + 1, topRightX - 1, topRightY + 31))
     {
+        if (onCloseCallback != undefined) onCloseCallback();
         instance_destroy(); 
     }
 }
