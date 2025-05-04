@@ -1,4 +1,4 @@
-global.Score = 0;
+global.ProgrammingScore = 0;
 
 ___ = {
     maxHealth : 80,
@@ -37,7 +37,7 @@ function TakeDamage(_damage)
             
         programmingResults = {
             PlayedGame : true,
-            Score : global.Score
+            Score : global.ProgrammingScore
         };
         
         var jsonText = json_stringify(programmingResults, true);

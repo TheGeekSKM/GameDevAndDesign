@@ -44,11 +44,11 @@ if (global.CanMove)
     }    
 }
 
-if (global.Score >= 18)
+if (global.ProgrammingScore >= 18)
 {
     programmingResults = {
         PlayedGame : true,
-        Score : global.Score
+        Score : global.ProgrammingScore
     };
     
     var jsonText = json_stringify(programmingResults, true);
@@ -75,7 +75,7 @@ if (keyboard_check_pressed(ord("Q")))
 {
     programmingResults = {
         PlayedGame : true,
-        Score : global.Score
+        Score : global.ProgrammingScore
     };
     
     var jsonText = json_stringify(programmingResults, true);

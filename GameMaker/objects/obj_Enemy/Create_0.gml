@@ -21,7 +21,7 @@ function TakeDamage(_damage)
     {
         ___.currentHealth = 0;
         if (___.onDeathCallback != undefined) ___.onDeathCallback();
-        global.Score += 1;
+        global.ProgrammingScore += 1;
     }
     else 
     {
