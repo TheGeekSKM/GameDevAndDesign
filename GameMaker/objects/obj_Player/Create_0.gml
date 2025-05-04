@@ -42,7 +42,7 @@ function TakeDamage(_damage)
         
         var jsonText = json_stringify(programmingResults, true);
         
-        var tempPath = string_concat(global.FilePath, ".tmp")
+        var tempPath = string_concat(global.ProgrammingFilePath, ".tmp")
         
         var file = file_text_open_write(tempPath);
         if (file != -1)
@@ -52,8 +52,8 @@ function TakeDamage(_damage)
     
             if (file_exists(tempPath))
             {
-                file_delete(global.FilePath); 
-                file_rename(tempPath, global.FilePath); 
+                file_delete(global.ProgrammingFilePath); 
+                file_rename(tempPath, global.ProgrammingFilePath); 
             }
         }
         

@@ -1,0 +1,1 @@
+global.EditingFilePath = game_save_id + "EditingResults.json";
