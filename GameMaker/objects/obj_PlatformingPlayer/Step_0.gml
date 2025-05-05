@@ -152,3 +152,8 @@ if (trail_update_timer <= 0) {
         ds_list_delete(trail_points, ds_list_size(trail_points) - 1);
     }
 }
+
+if (crossedBarier)
+{
+    timePlaying++;
+}

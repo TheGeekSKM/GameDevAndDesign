@@ -77,6 +77,9 @@ trail_end_alpha = 0.0;          // Alpha at the oldest end of the trail (usually
 // Trail Settings (Duplicate? Keeping both for now based on input)
 trailCooldown = 0;
 
+timePlaying = 0;
+crossedBarier = false;
+
 // Placeholder/Helper Functions defined in Create Event
 // Note: It's generally better practice to define these as script functions or methods
 // outside the Create Event for better organization and potential reuse.
@@ -173,7 +176,16 @@ function PlayerStateNormal(coyoteMax, _jumpBufferMax, _dashBufferMax)
     // Attacking
     if (attackPrimaryPressed && attackPrimaryCooldown <= 0)
     {
-        AttackPrimary(); // Call the function defined below
+        var attackSuccess = AttackPrimary();
+        if (attackSuccess) 
+        {
+            attackPrimaryCooldown = attackPrimaryCooldownMax;
+            vsp = jumpForce; 
+        } 
+        else 
+        {
+            attackPrimaryCooldown = 5;
+        }
         attackPrimaryCooldown = attackPrimaryCooldownMax;
     }
     if (attackSecondaryPressed && attackSecondaryCooldown <= 0)
@@ -388,13 +400,54 @@ function ApplyMovementAndCollision(_solidObject)
     }
 }
 
+
+
 function AttackPrimary()
 {
     // Primary attack logic here
     show_debug_message("Player used Primary Attack!");
+
+    var enemy = collision_circle(x, y, 32, obj_PlatformingEnemy, false, true);
+    if (instance_exists(enemy))
+    {
+        enemy.TakeDamage(0.5);
+        obj_camera.AddCameraShake(2);
+        return true; 
+    }
+    return false;
 }
 function AttackSecondary()
 {
     // Secondary attack logic here
     show_debug_message("Player used Secondary Attack!");
+}
+
+maxHealth = 50;
+currentHealth = maxHealth;
+function TakeDamage(_damage)
+{
+    currentHealth -= _damage;
+    obj_camera.AddCameraShake(5);
+    if (currentHealth <= 0)
+    {
+        currentHealth = 0;
+            
+        var editingResults = {
+            PlayedGame : true,
+            Score : timePlaying / game_get_speed(gamespeed_fps)
+        };
+        
+        var jsonText = json_stringify(editingResults, true);
+        SafeWriteJson(global.EditingFilePath, jsonText);
+        Transition(rmDonw, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
+    }
+    else 
+    {
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+    
+    
 }

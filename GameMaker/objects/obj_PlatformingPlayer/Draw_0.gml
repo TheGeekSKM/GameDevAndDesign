@@ -61,6 +61,12 @@ if (_list_size > 1) {
 
     draw_primitive_end();
 }
+
+if (attackPrimaryCooldown > 0)
+{
+    draw_sprite_ext(spr_attackCircle, 0, x, y, 1, 1, 0, c_white, attackPrimaryCooldown / attackPrimaryCooldownMax);
+}
+
 draw_self();
 
 

@@ -21,7 +21,7 @@ function TakeDamage(_damage)
     {
         ___.currentHealth = 0;
         if (___.onDeathCallback != undefined) ___.onDeathCallback();
-        global.ProgrammingScore += 1;
+            instance_destroy();
     }
     else 
     {
@@ -32,9 +32,7 @@ function TakeDamage(_damage)
     }
 }
 
-
-
-Init(5);
+Init(1);
 
 _counter = (1.25 * 60);
 canShoot = false;
