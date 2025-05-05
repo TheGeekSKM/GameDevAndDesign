@@ -52,6 +52,8 @@ if (text_selected && (keyboard_check_pressed(vk_backspace) || keyboard_check_pre
 
 if (keyboard_check_pressed(vk_up))
 {
+    if (array_length(recentlyEnteredCommands) == 0) return;
+    
     recentlyEnteredCommandIndex--;
     if (recentlyEnteredCommandIndex < 0)
     {
@@ -62,11 +64,12 @@ if (keyboard_check_pressed(vk_up))
 }
 else if (keyboard_check_pressed(vk_down))
 {
+    if (array_length(recentlyEnteredCommands) == 0) return;
+    
     recentlyEnteredCommandIndex++;
-    if (recentlyEnteredCommandIndex >= array_length(recentlyEnteredCommands))
+    if (recentlyEnteredCommandIndex > array_length(recentlyEnteredCommands) - 1)
     {
         recentlyEnteredCommandIndex = array_length(recentlyEnteredCommands) - 1;
     }
-    
     text = recentlyEnteredCommands[recentlyEnteredCommandIndex];
 }

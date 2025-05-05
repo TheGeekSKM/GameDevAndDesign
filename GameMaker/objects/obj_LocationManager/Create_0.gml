@@ -154,21 +154,7 @@ JournalFolder = new FileItem("Log.txt", function() {
 devLogFolder = new Directory("DevLog", 
 [
     new FileItem("OBS.exe", function() { 
-        var interest = random_range(10, 50);
-        global.GameData.Interest += interest;
- 
-        var burnout = round(interest / 10);
-        global.GameData.Burnout += burnout;
-        Raise("BurnoutModified", global.GameData.Burnout);
-
-
-        global.GameData.CurrentDay++;
-        if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
-        {
-            Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
-        }        
- 
-        global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You made a lot of progress in 8hrs! Your devlog got {global.GameData.Interest} views!! Check your log to see updates! Don't forget to Devlog!!");
+        obj_MiniGameManager.LaunchEditingMinigame();
     }),
 ]);
 

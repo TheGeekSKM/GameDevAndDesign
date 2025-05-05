@@ -138,7 +138,7 @@ if (global.GAME_INSTANCE_ID == 0)
             file_text_close(fd);
             if (str == "CHILD_PROCESS_DIED") 
             {
-                global.CHILD_PROCESS_ID_6 = 0
+                global.MiniGameManager.ProgrammingGameEnded();
             }
         } 
         else 
@@ -178,7 +178,7 @@ if (global.GAME_INSTANCE_ID == 0)
             file_text_close(fd);
             if (str == "CHILD_PROCESS_DIED") 
             {
-                global.CHILD_PROCESS_ID_8 = 0
+                global.MiniGameManager.EditingGameEnded();
             }
         } 
         else 

@@ -880,7 +880,6 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"roomId":{"name":"rmInit2","path":"rooms/rmInit2/rmInit2.yy",},},
-    {"roomId":{"name":"rmEditingGame","path":"rooms/rmEditingGame/rmEditingGame.yy",},},
     {"roomId":{"name":"rmMainMenu","path":"rooms/rmMainMenu/rmMainMenu.yy",},},
     {"roomId":{"name":"rmEditingMainMenu","path":"rooms/rmEditingMainMenu/rmEditingMainMenu.yy",},},
     {"roomId":{"name":"rmMainMenuProg","path":"rooms/rmMainMenuProg/rmMainMenuProg.yy",},},
@@ -896,6 +895,7 @@
     {"roomId":{"name":"rmSetUp","path":"rooms/rmSetUp/rmSetUp.yy",},},
     {"roomId":{"name":"rmDocumentation","path":"rooms/rmDocumentation/rmDocumentation.yy",},},
     {"roomId":{"name":"rmProgrammingGame","path":"rooms/rmProgrammingGame/rmProgrammingGame.yy",},},
+    {"roomId":{"name":"rmEditingGame","path":"rooms/rmEditingGame/rmEditingGame.yy",},},
     {"roomId":{"name":"rmEditingEnd","path":"rooms/rmEditingEnd/rmEditingEnd.yy",},},
   ],
   "templateType":"game",

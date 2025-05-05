@@ -17,7 +17,8 @@ function EnterPressed()
     if (text != "" && text != undefined)
     {
         array_push(recentlyEnteredCommands, text);
-        recentlyEnteredCommandIndex = array_length(recentlyEnteredCommands) - 1;
+        recentlyEnteredCommandIndex = array_length(recentlyEnteredCommands);
+        echo(recentlyEnteredCommands)
 
         // separate the text before the (
         text = string_lower(string_trim(text));

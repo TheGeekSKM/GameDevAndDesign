@@ -13,7 +13,7 @@ if (point_in_rectangle(guiMouseX, guiMouseY, topLeftX, topLeftY, topLeftX + spri
     
     // Scroll one "step" per wheel tick
     var scroll_dir = mouse_wheel_up() - mouse_wheel_down();
-    scroll_dir = (shiftHeld && keyboard_check_pressed(vk_up)) - (shiftHeld && keyboard_check_pressed(vk_down));
+    scroll_dir += (shiftHeld && keyboard_check_pressed(vk_up)) - (shiftHeld && keyboard_check_pressed(vk_down)) * 2;
     var scroll_step = 32;
     target_scroll_offset -= scroll_dir * scroll_step;
 }

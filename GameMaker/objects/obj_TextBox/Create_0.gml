@@ -20,6 +20,7 @@ atTop = false;
 
 textTransform = 0.6;
 
+cursorPos = 0;
 
 function __getTotalLineHeight()
 {
