@@ -406,12 +406,13 @@ function AttackPrimary()
 {
     // Primary attack logic here
     show_debug_message("Player used Primary Attack!");
+    obj_camera.AddCameraShake(2);
 
     var enemy = collision_circle(x, y, 32, obj_PlatformingEnemy, false, true);
     if (instance_exists(enemy))
     {
         enemy.TakeDamage(0.5);
-        obj_camera.AddCameraShake(2);
+        
         return true; 
     }
     return false;
@@ -427,7 +428,7 @@ currentHealth = maxHealth;
 function TakeDamage(_damage)
 {
     currentHealth -= _damage;
-    obj_camera.AddCameraShake(5);
+    obj_camera.AddCameraShake(10);
     if (currentHealth <= 0)
     {
         currentHealth = 0;
