@@ -143,7 +143,7 @@ Subscribe("Compiled", function(_id)
     if (canCompile.Valid)
     {
         var compiledCodeStruct = CompileCode(str); // Assuming this returns compiled code or errors
-        if (!variable_struct_exists(compiledCodeStruct, "Errors")) // Check if Errors key is missing (success)
+        if (compiledCodeStruct.Errors == undefined) 
         {
             if (instance_exists(_id)) _id.compiledCode = compiledCodeStruct;
             OpenModalWindow("SUCCESS", "Successfully Compiled Code!");

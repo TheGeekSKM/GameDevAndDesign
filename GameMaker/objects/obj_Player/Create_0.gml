@@ -115,6 +115,6 @@ Subscribe("EscPressed", function() {
 
 
 
-Init(20);
+Init(200);
 
 _counter = 0;

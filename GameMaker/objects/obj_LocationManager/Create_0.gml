@@ -292,7 +292,7 @@ var desktopFolder = new Directory("V:",
     gamesFolder,
     moviesFolder,
     mailManager,
-    gameSteamPage
+    //gameSteamPage
 ]);
 
 __openMenu(desktopFolder);

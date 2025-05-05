@@ -3,13 +3,13 @@ event_inherited();
 padding = 20;
 textTransform = 0.75;
 
-AddMessage(@"[scale, 2][c_player]var ([c_aqua]variableName[c_player]) = ([c_aqua]variableValue[c_player]);[/]
-- This stores the value of [c_aqua]variableValue[/] in the variable [c_aqua]variableName[/].
-- These scope of the variable is limited to the function it is defined in.
-- Currently, the only supported data type is [c_yellow]INTEGER[/]
-- Also, as of right now, variabes are [c_yellow]IMMUTABLE[/], meaning they cannot be changed after they are defined. 
-- Example: [slant][c_player]var [c_aqua]bungus[c_player] = [c_aqua]FindAngleToEnemy()[c_player];[/] 
-        -> This stores the angle to the nearest enemy in the variable [c_aqua]bungus[/].");
+//AddMessage(@"[scale, 2][c_player]var ([c_aqua]variableName[c_player]) = ([c_aqua]variableValue[c_player]);[/]
+//- This stores the value of [c_aqua]variableValue[/] in the variable [c_aqua]variableName[/].
+//- These scope of the variable is limited to the function it is defined in.
+//- Currently, the only supported data type is [c_yellow]INTEGER[/]
+//- Also, as of right now, variabes are [c_yellow]IMMUTABLE[/], meaning they cannot be changed after they are defined. 
+//- Example: [slant][c_player]var [c_aqua]bungus[c_player] = [c_aqua]FindAngleToEnemy()[c_player];[/] 
+        //-> This stores the angle to the nearest enemy in the variable [c_aqua]bungus[/].");
 
 AddMessage(@"[scale, 2][c_player]Move([c_aqua]numOfSteps[c_player] : [c_yellow]INTEGER[c_player]);[/]
 - Moves the player in the direction it is facing by the number of steps specified in the [c_aqua]numOfSteps[/] variable. 

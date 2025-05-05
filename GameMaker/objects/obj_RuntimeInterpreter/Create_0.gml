@@ -300,7 +300,7 @@ function ExecuteInstruction(_instr)
     catch (_exception) 
     { 
         var errorLineInfo = (currentRawLine != -1) ? string_concat("(Raw Line: ", string(currentRawLine), ")") : "";
-        show_message(string_concat("RUNTIME ERROR in '", commandName, "' ", errorLineInfo, ":\n", _exception.message));
+        OpenModalWindow("ERROR", string_concat("RUNTIME ERROR in '", commandName, "' ", errorLineInfo, ":\n", _exception.message))
         StopInterpreter();
     }
 }

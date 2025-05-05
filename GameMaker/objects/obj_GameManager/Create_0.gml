@@ -9,7 +9,7 @@ var findAngleCommand = new Command(
     "Finds the angle to the nearest bug.", // Description
     function(_value) {
         // Example simple logic (replace with real gameplay logic)
-        var angle = irandom(360); 
+        var angle = irandom(360);
         return angle;
     },
     true

@@ -107,12 +107,13 @@ function ScribbleHighlightSyntax(rawCode, customKeywords = {}, colors = {}, case
 
         // Return word with or without color tags
         if (colorTag != "") {
-            /
+            
             return colorTag + word + colsStruct.def; // Use the original 'word' casing for display
         } else {
+            // No highlighting needed for this word
             return word;
         }
-    } 
+    } // End of ProcessWord function definition
 
     // --- Main Parsing Logic (Character by Character) ---
     var result = colDefault; // Start with default color
@@ -190,11 +191,11 @@ function ScribbleHighlightSyntax(rawCode, customKeywords = {}, colors = {}, case
                 }
                 break;
 
-        } 
+        } // End switch
 
         i++; // Move to next character
 
-    } 
+    } // End while loop
 
     // Process any remaining word after the loop finishes
     if (currentWord != "") {
@@ -207,8 +208,50 @@ function ScribbleHighlightSyntax(rawCode, customKeywords = {}, colors = {}, case
     }
 
     return result;
-} 
+} // End of ScribbleHighlightSyntax function
 
 
+// --- Example Usage (Place in an object's Draw Event) ---
+/*
+// Assume global.vars.CommandLibrary exists and is a struct like:
+// global.vars = { CommandLibrary: { move: 1, jump: 1, attack: 1 } };
 
+var myRawCode =
+@"// This is player code!
+var target = instance_nearest(x, y, obj_enemy);
+var dist = distance_to_object(target);
+
+if (dist < 100) {
+    // Move towards target
+    move_towards_point(target.x, target.y, 3.5);
+    show_debug_message(""Chasing enemy!""); // Example string
+} else {
+    speed = 0; // Stop
+}
+Jump(); // A global command? (Will now be highlighted if 'jump' is in CommandLibrary)
+var myNum = -12.5 + 5;
+#macro ENEMY_TYPE_A 0 // Example macro
+";
+
+var customKeywordsExample = {
+    functions: ["instance_nearest", "distance_to_object", "move_towards_point", "show_debug_message"],
+    types: ["obj_enemy"],
+    constants: ["ENEMY_TYPE_A"] // Note: Macros might need special handling if not simple words
+};
+
+// Example overriding only one color
+var customColorsExample = {
+    custom_functions: "[c_orange]" // Override default function color
+};
+
+// Call the refactored function
+// Using default colors except for functions
+// Set caseSensitive to false for custom keywords if desired
+var highlightedCode = ScribbleHighlightSyntax(myRawCode, customKeywordsExample, customColorsExample, true); // true = custom keywords are case sensitive
+
+// Draw using Scribble
+// Make sure you have initialized Scribble earlier (e.g., scribble_init())
+scribble(highlightedCode).draw(x, y); // Draw at object's x, y
+
+*/
 
