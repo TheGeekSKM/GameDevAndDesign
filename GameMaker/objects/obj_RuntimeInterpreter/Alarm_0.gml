@@ -5,10 +5,11 @@ while (isRunning && executedCount < instructionsPerAlarmTick)
 {
     if (currentIndex >= array_length(compiledInstructions)) 
     { 
-        show_debug_message("Interpreter end."); StopInterpreter(); break; 
+        show_message($"Interpreter end. Current Index: {currentIndex}"); StopInterpreter(); return; 
     }
 
     var instr = compiledInstructions[currentIndex];
+    show_message($"Current Instruction: {instr}\nInstruction Index: {currentIndex} our of TotalCommands: {array_length(compiledInstructions) - 1}")
     if (currentIndex < array_length(lineMapping)) 
     { 
         currentRawLine = lineMapping[currentIndex]; 
@@ -16,7 +17,7 @@ while (isRunning && executedCount < instructionsPerAlarmTick)
     else 
     { 
         currentRawLine = -1; 
-        show_debug_message(string_concat("Warning: Missing line map index ", string(currentIndex))); 
+        show_message(string_concat("Warning: Missing line map index ", string(currentIndex))); 
     }
 
     var indexBeforeExecute = currentIndex;
