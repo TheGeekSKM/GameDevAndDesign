@@ -124,5 +124,5 @@ max_scroll = 0;
 var str = SafeReadJson(game_save_id + "FunctionDisplay.json")
 if (str != undefined)
 {
-    AddMessage(str.TextDisplay);
+    AddMessage(ScribbleHighlightSyntax(str.TextDisplay));
 }

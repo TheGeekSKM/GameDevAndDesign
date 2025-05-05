@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SyntaxHighlighting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SyntaxHighlighting",
+  "parent":{
+    "name":"Systems",
+    "path":"folders/Scripts/Systems.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

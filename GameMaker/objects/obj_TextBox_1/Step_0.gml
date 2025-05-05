@@ -8,8 +8,8 @@ if (point_in_rectangle(guiMouseX, guiMouseY, x, y, x + sprite_width, y + sprite_
     
     // Scroll one "step" per wheel tick
     scroll_dir = mouse_wheel_up() - mouse_wheel_down();
-    if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) scroll_dir = 0.5;
-    if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) scroll_dir = -0.5;
+    if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) scroll_dir += 0.5;
+    if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) scroll_dir += -0.5;
     var scroll_step = 32;
     target_scroll_offset -= scroll_dir * scroll_step;
 }

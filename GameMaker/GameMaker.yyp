@@ -769,6 +769,7 @@
     {"id":{"name":"string_length_scribble","path":"scripts/string_length_scribble/string_length_scribble.yy",},},
     {"id":{"name":"string_width_scribble_ext","path":"scripts/string_width_scribble_ext/string_width_scribble_ext.yy",},},
     {"id":{"name":"string_width_scribble","path":"scripts/string_width_scribble/string_width_scribble.yy",},},
+    {"id":{"name":"SyntaxHighlighting","path":"scripts/SyntaxHighlighting/SyntaxHighlighting.yy",},},
     {"id":{"name":"SyntaxValidator","path":"scripts/SyntaxValidator/SyntaxValidator.yy",},},
     {"id":{"name":"TextBox","path":"scripts/TextBox/TextBox.yy",},},
     {"id":{"name":"Transitions","path":"scripts/Transitions/Transitions.yy",},},

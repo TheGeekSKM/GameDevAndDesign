@@ -46,4 +46,4 @@ else if (global.GameData.Burnout > 7) {
     finalText = string_concat(finalText, "I don't think I can keep this up...I'm not sure I wanna code anymore...\n");
 }
 
-AddMessage(finalText);
+AddMessage(finalText, true, false);

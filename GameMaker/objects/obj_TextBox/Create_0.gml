@@ -90,10 +90,10 @@ function ObfuscateText(_msg, _burnout) {
 
 
 
-function AddMessage(_msg, _trimEndline = false) {
+function AddMessage(_msg, _trimEndline = false, useBurnout = true) {
     _msg = string_trim(_msg);
 
-    if (variable_global_exists("GameData") && global.GameData.Burnout >= 5) {
+    if (useBurnout && variable_global_exists("GameData") && global.GameData.Burnout >= 5) {
         _msg = ObfuscateText(_msg, global.GameData.Burnout);
     }
 
