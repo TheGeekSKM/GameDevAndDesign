@@ -35,3 +35,8 @@ scroll_offset = lerp(scroll_offset, target_scroll_offset, scroll_speed);
 atTop = (scroll_offset <= 1);
 atBottom = (abs(scroll_offset - max_scroll) <= 1);
 
+if (variable_global_exists("GameData") && global.GameData[$ "Burnout"] != undefined)
+{
+    burnoutNum = global.GameData.Burnout > 8 ? 1 : 0;
+}
+

@@ -890,7 +890,6 @@
     {"roomId":{"name":"rmGamePlanner","path":"rooms/rmGamePlanner/rmGamePlanner.yy",},},
     {"roomId":{"name":"rmTextDisplay","path":"rooms/rmTextDisplay/rmTextDisplay.yy",},},
     {"roomId":{"name":"rmCommands","path":"rooms/rmCommands/rmCommands.yy",},},
-    {"roomId":{"name":"rmEnd","path":"rooms/rmEnd/rmEnd.yy",},},
     {"roomId":{"name":"rmCodeDisplay","path":"rooms/rmCodeDisplay/rmCodeDisplay.yy",},},
     {"roomId":{"name":"rmDonw","path":"rooms/rmDonw/rmDonw.yy",},},
     {"roomId":{"name":"rmSetUp","path":"rooms/rmSetUp/rmSetUp.yy",},},
@@ -899,6 +898,7 @@
     {"roomId":{"name":"rmMainMenuProg","path":"rooms/rmMainMenuProg/rmMainMenuProg.yy",},},
     {"roomId":{"name":"rmEditingGame","path":"rooms/rmEditingGame/rmEditingGame.yy",},},
     {"roomId":{"name":"rmEditingEnd","path":"rooms/rmEditingEnd/rmEditingEnd.yy",},},
+    {"roomId":{"name":"rmEnd","path":"rooms/rmEnd/rmEnd.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

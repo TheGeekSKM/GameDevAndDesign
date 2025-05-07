@@ -48,7 +48,7 @@ function TryOpenElement(_FileItemName)
     }
 
     if (!foundFileItem) {
-        global.MainTextBox.AddMessage($"ERROR: FileItem [slant]\"{_FileItemName}\"[/] not found in current directory.");
+        global.MainTextBox.AddMessage($"[shake]ERROR:[/] FileItem [slant]\"{_FileItemName}\"[/] not found in current directory.");
         return;
     }
 
@@ -76,7 +76,7 @@ function GoBackMenu()
             CurrentMenu = MenuStack[0];
         }
     
-        global.MainTextBox.AddMessage($"{current_hour}:{current_minute}:{current_second} -> Move Back to Directory: {CurrentMenu.name}");
+        global.MainTextBox.AddMessage($"[c_lime]{current_hour}:{current_minute}:{current_second}[/] -> Move Back to Directory: {CurrentMenu.name}");
         global.MainTextBox.AddMessage($"{GetAllOptionsInCurrentMenu()}");
     }
     
@@ -99,8 +99,8 @@ function __openMenu(_folder)
     array_push(MenuStack, _folder);
     CurrentMenu = _folder;
     
-    global.MainTextBox.AddMessage($"{current_hour}:{current_minute}:{current_second} -> Opened Directory: {_folder.name}");
-    global.MainTextBox.AddMessage($"{current_hour}:{current_minute}:{current_second} -> Current Path: {GetCurrentPath()}");
+    global.MainTextBox.AddMessage($"[c_lime]{current_hour}:{current_minute}:{current_second}[/] -> Opened Directory: {_folder.name}");
+    global.MainTextBox.AddMessage($"[c_lime]{current_hour}:{current_minute}:{current_second}[/] -> Current Path: {GetCurrentPath()}");
     global.MainTextBox.AddMessage($"{GetAllOptionsInCurrentMenu()}");
     
     
@@ -111,22 +111,30 @@ function __openFileItem(_FileItem) { _FileItem.Call(); }
 var gameDevFolder = new Directory("GameDev", 
 [
     new FileItem("Trello.exe", function() { 
-        var data = SafeReadJson(working_directory + "GameData.json");
-        if (data == undefined)
+        if (variable_global_exists("GameData")) 
         {
-            OpenGamePlanner();
-            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] Game Designed! Open Trello.exe again to confirm it (It's a system error, just go with it)!");
-            
-        }
-        else {
-            global.GameData = data;
-            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] Great! Game Data Stored! Feel free to check the Log.txt in the V: Folder to see your deadline!");
-        }
+            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You already designed a game! Open [c_gold]GameMaker.exe[/], [c_gold]VisualStudio.exe[/], or [c_gold]V:/DevLog/OBS.exe[/] to work on it!");
+            return;
+        } 
+        OpenGamePlanner();
     }),
-    new FileItem("GameMaker.exe", function() { 
-       obj_MiniGameManager.LaunchProgrammingMinigame();
+    new FileItem("GameMaker.exe", function() 
+    {
+        if (!variable_global_exists("GameData")) 
+        {
+            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You haven't designed a game yet! Start [c_gold]Trello.exe[/] first to design a game with the [c_lime][wave]'start'[/] command!");
+            return;
+        }         
+        obj_MiniGameManager.LaunchProgrammingMinigame();
     }),
     new FileItem("VisualStudio.exe", function() { 
+
+        if (!variable_global_exists("GameData")) 
+        {
+            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You haven't designed a game yet! Start [c_gold]Trello.exe[/] first to design a game with the [c_lime][wave]'start'[/] command!");
+            return;
+        } 
+
         var quality = random_range(10, 50);
         global.GameData.Quality += quality;
         
@@ -145,15 +153,33 @@ var gameDevFolder = new Directory("GameDev",
 
 JournalFolder = new FileItem("Log.txt", function() {
         
-        OpenTextDisplay(
-        $"Log ({current_month}/{current_day + global.GameData.CurrentDay}/{current_year}, {current_hour}:{current_minute})",
-        $"Current Statistics: \n1. Game Name: {global.GameData.Name}\n2. Number of Days in Project: {global.GameData.CurrentDay}/{global.GameData.MaxNumOfDays} days\n3. Public Interest: {global.GameData.Interest}\n4. Burnout Level: {global.GameData.Burnout}"
-        )}
+    var currentStats = string_concat("Current Statistics: \n1. Game Name: ", 
+        global.GameData.Name, "\n2. Number of Days in Project: ", 
+        global.GameData.CurrentDay, "/", 
+        global.GameData.MaxNumOfDays, " days\n3. Public Interest: ", 
+        global.GameData.Interest, "\n4. Burnout Level: ", 
+        global.GameData.Burnout
+    );
+    
+    var logText = string_concat(
+        "Log (", current_month, 
+        "/", current_day + global.GameData.CurrentDay, 
+        "/", current_year, ", ", 
+        current_hour, ":", 
+        current_minute, ")"
+    );
+    
+    OpenTextDisplay(logText, currentStats)}
 );
 
 devLogFolder = new Directory("DevLog", 
 [
-    new FileItem("OBS.exe", function() { 
+    new FileItem("OBS.exe", function() {
+        if (!variable_global_exists("GameData")) 
+        {
+            global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You haven't designed a game yet! Start [c_gold]V:/GameDev/Trello.exe[/] first to design a game with the [c_lime][wave]'start'[/] command!");
+            return;
+        } 
         obj_MiniGameManager.LaunchEditingMinigame();
     }),
 ]);
@@ -174,7 +200,7 @@ function RestGames()
         Transition(rmEnd, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
     }    
 
-    global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You rested and played video games for day. It was nice...hopefully...your anxiety didn't actually let you enjoy too much...Check your log to see updates! Don't forget to WORK!!");   
+    global.MainTextBox.AddMessage($"[c_lime]NOTE:[/] You rested and played video games for day. It was nice...[wave]hopefully[/]...your anxiety didn't actually let you enjoy too much...Check your log to see updates! Don't forget to WORK!!");   
 }
 
 gamesFolder = new Directory("Games", 

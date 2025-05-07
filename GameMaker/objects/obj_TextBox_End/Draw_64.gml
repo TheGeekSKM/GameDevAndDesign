@@ -1,14 +1,13 @@
-// Inherit the parent event
-event_inherited();
-
-draw_sprite(spr_TextDisplay_Foreground, 0, 0, 0);
-
-scribble(title)
-    .align(fa_left, fa_middle)
+draw_self();
+scribble(text)
+    .align(fa_center, fa_middle)
     .starting_format("VCR_OSD_Mono", c_white)
     .transform(1, 1, 0)
-    .draw(100, 12)
+    .wrap(728)
+    .draw(x, y);
 
-if (!atTop) draw_sprite_ext(spr_ScrollNotif, 0, x, y - (sprite_height / 2) - 5, 0.75, 0.75, 0, c_white, 1);
-
-if (!atBottom) draw_sprite_ext(spr_ScrollNotif, 0, x, y + (sprite_height / 2) + 5, 0.75, -0.75, 0, c_white, 1);
+scribble("[c_gold]The Game Is Done")
+    .align(fa_left, fa_middle)
+    .starting_format("VCR_OSD_Mono", c_white)
+    .transform(1.2, 1.2, 0)
+    .draw(16, 16);

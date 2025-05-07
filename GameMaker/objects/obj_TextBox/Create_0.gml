@@ -41,7 +41,7 @@ function ObfuscateText(_msg, _burnout) {
 
     var glitchChars = ["@", "#", "*", "~", "&", "?", "!", "%", "+", "="];
     var vowels = "aeiou";
-    var flickerColors = ["c_red", "c_lime", "c_yellow", "c_aqua"];
+    var flickerColors = ["[c_red]", "[c_lime]", "[c_yellow]", "[c_aqua]"];
 
     var word = "";
     var wordBuffer = "";
@@ -120,3 +120,5 @@ function ClearBox()
     target_scroll_offset = 0;
     scroll_speed = 0.2;
 }
+
+burnoutNum = 0;
