@@ -1,1 +1,0 @@
-global.ProgrammingFilePath = game_save_id + "ProgrammingResults.json";

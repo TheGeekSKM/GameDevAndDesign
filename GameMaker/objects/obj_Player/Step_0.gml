@@ -52,21 +52,7 @@ if (global.ProgrammingScore >= 18)
     };
     
     var jsonText = json_stringify(programmingResults, true);
-    
-    var tempPath = string_concat(global.ProgrammingFilePath, ".tmp")
-    
-    var file = file_text_open_write(tempPath);
-    if (file != -1)
-    {
-        file_text_write_string(file, jsonText);
-        file_text_close(file);
-
-        if (file_exists(tempPath))
-        {
-            file_delete(global.ProgrammingFilePath); 
-            file_rename(tempPath, global.ProgrammingFilePath); 
-        }
-    }
+    SafeWriteJson(global.ProgrammingFilePath, jsonText);
     
     Transition(rmDonw, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 }
@@ -80,20 +66,20 @@ if (keyboard_check_pressed(ord("Q")))
     
     var jsonText = json_stringify(programmingResults, true);
     
-    var tempPath = string_concat(global.ProgrammingFilePath, ".tmp")
+    //var tempPath = string_concat(global.ProgrammingFilePath, ".tmp")
+    //var file = file_text_open_write(tempPath);
+    //if (file != -1)
+    //{
+        //file_text_write_string(file, jsonText);
+        //file_text_close(file);
+        //if (file_exists(tempPath))
+        //{
+            //file_delete(global.ProgrammingFilePath); 
+            //file_rename(tempPath, global.ProgrammingFilePath); 
+        //}
+    //}
     
-    var file = file_text_open_write(tempPath);
-    if (file != -1)
-    {
-        file_text_write_string(file, jsonText);
-        file_text_close(file);
-
-        if (file_exists(tempPath))
-        {
-            file_delete(global.ProgrammingFilePath); 
-            file_rename(tempPath, global.ProgrammingFilePath); 
-        }
-    }
+    SafeWriteJson(global.ProgrammingFilePath, jsonText);
     
     Transition(rmDonw, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 }
