@@ -48,7 +48,7 @@ function TryOpenElement(_FileItemName)
     }
 
     if (!foundFileItem) {
-        global.MainTextBox.AddMessage($"[shake]ERROR:[/] FileItem [slant]\"{_FileItemName}\"[/] not found in current directory.");
+        global.MainTextBox.AddMessage($"[c_red]ERROR:[/] FileItem [slant]\"{_FileItemName}\"[/] not found in current directory.");
         return;
     }
 

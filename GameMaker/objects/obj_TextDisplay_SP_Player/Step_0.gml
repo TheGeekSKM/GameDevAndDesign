@@ -43,3 +43,8 @@ if (keyboard_check_pressed(ord("E")) && shiftHeld && ctrlHeld)
         OpenModalWindow("ERROR", "At least one Function Slot needs to have compiled code.")
     }
 }
+
+if (keyboard_check_pressed(ord("O")) && ctrlHeld)
+{
+    url_open("https://saimangipudi.dev/code-snippet.html")
+}

@@ -64,4 +64,6 @@ SetText(@"1. You have [c_gold]3 Function Slots[/]. Navigate through them to open
 3. Use [c_gold][wave]Ctrl + Shift + C[/] to Compile your code. Any errors in your code will be displayed during compilations.
 4. Use [c_gold][wave]Ctrl + Shift + E[/] once you are satisfied with all of your functions.
 
-Your goal is to [c_player]Shoot Bugs before you run out of Allocated Memory.[/] Good Luck.")
+Your goal is to [c_player]Shoot Bugs before you run out of Allocated Memory.[/] Good Luck.
+
+[size, 2][c_player][slant]Press [c_gold][wave]Ctrl + O[/wave][c_player] to open Code Snippets that you can Copy/Paste")
