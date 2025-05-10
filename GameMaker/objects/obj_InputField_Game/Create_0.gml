@@ -61,6 +61,56 @@ commandLibrary.AddCommand("help", 0, [function() {
     CreateNewWindow(5);
 }]);
 
+function EnterPressed()
+{
+    if (text != "" && text != undefined)
+    {
+        array_push(recentlyEnteredCommands, text);
+        recentlyEnteredCommandIndex = array_length(recentlyEnteredCommands);
+        echo(recentlyEnteredCommands)
+        
+        var fileOptionsArray = global.LocationManager.GetFileNameArrayInCurrentMenu();
+        for (var i = 0; i < array_length(fileOptionsArray); i++) {
+            if (string_trim(string_lower(text)) == string_trim(string_lower(fileOptionsArray[i])))
+            {
+                if (global.LocationManager.GetFileTypeFromName(fileOptionsArray[i]) == FileType.FILE)
+                {
+                    text = string_concat("start ", fileOptionsArray[i]);
+                }
+            }
+        }
+
+        // separate the text before the (
+        text = string_lower(string_trim(text));
+        var textSplit = string_split_ext(text, [ "(", ")", ",", " "], true);
+        var commandName = textSplit[0];
+
+        currentKeyword = commandName;
+        
+        var commandParamArray = [];
+        for (var i = 1; i < array_length(textSplit); i += 1) {
+            array_push(commandParamArray, textSplit[i]);
+        }
+
+        currentParamArray = commandParamArray;
+
+        var couldRun = commandLibrary.RunCommand(commandName, commandParamArray);
+        
+        if (couldRun) {
+            text = "";
+            commandParamArray = [];
+            return;
+        }
+        else {
+            text = "";
+            commandParamArray = [];
+        }
+        
+    }
+
+    FailedToRunCommand();
+}
+
 //commandLibrary.AddCommand("mainmenu", 0, [function() {
     //global.WindowManager.GameEnd();
     //Transition(rmInit2, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);

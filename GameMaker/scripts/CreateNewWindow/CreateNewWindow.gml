@@ -63,8 +63,8 @@ function OpenTextDisplay(_title, _text)
     if (global.GAME_INSTANCE_ID != 0) return false; // Only allow parent to create
 
     var textDisplay = {
-        "title": _title,
-        "text": string_trim(_text)
+        title: _title,
+        text: string_trim(_text)
     }
 
     var textJSON = json_stringify(textDisplay);

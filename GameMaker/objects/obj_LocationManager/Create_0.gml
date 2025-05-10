@@ -11,6 +11,30 @@ function pad_right(_str, _len) {
     return _str;
 }
 
+function GetFileNameArrayInCurrentMenu() 
+{
+    var returnArr = [];
+    for (var i = 0; i < array_length(CurrentMenu.options); i += 1) 
+    {
+        array_push(returnArr, CurrentMenu.options[i].name);
+    }
+    return returnArr;
+}
+
+function GetFileTypeFromName(_name) 
+{
+    var fileType = FileType.FILE;
+    for (var i = 0; i < array_length(CurrentMenu.options); i += 1) 
+    {
+        if (string_lower(CurrentMenu.options[i].name) == string_lower(_name)) 
+        {
+            fileType = CurrentMenu.options[i].fileType;
+            break;
+        }
+    }
+    return fileType;
+}
+
 function GetAllOptionsInCurrentMenu() {
     var out = $" Directory of {CurrentMenu.name}\n\n";
     var opts = CurrentMenu.options;
@@ -296,18 +320,22 @@ gameSteamPage = new FileItem("MySteamPage.html", function() { show_message("BETA
 toDoList = new FileItem("ToDoList.txt", function() { OpenTextDisplay("To Do List", @"[c_yellow][scale, 2]How To Make A Video Game (Easy Edition)[/]
 
 Step #1: Open Trello and plan for game (I think it's in the GameDev folder..?)
+[c_gold]cd [c_cyan]GameDev [c_grey][slant]-> This will navigate to the GameDev folder.[/]
+[c_gold]start [c_cyan]Trello.exe [c_grey][slant]-> This will open Trello.[/]
 
 Step #2: Open GameMaker and work on game!
+[c_gold]dir [c_grey][slant]-> This will help me check what folder I'm in.[/]
+[c_gold]start [c_cyan]GameMaker.exe [c_grey]or [c_gold]start VisualStudio.exe [c_grey][slant]-> I can start up GameMaker.exe or VisualStudio.exe when I'm in the GameDev folder.[/]
 
 Step #3: Go to Log and write!
+[c_gold]cd [c_cyan].. [c_grey][slant]-> This will take me out of my current folder and it should leave me in the Main V: folder[/]
+[c_gold]start [c_cyan]Log.txt [c_grey][slant]-> This will open the Log.txt file, so I can check in on the game's progress...and how I'm feeling...[/]
 
 Step #4: Make Devlog with OBS
+[c_gold]cd [c_cyan]DevLog [c_grey][slant]-> This will take me to the DevLog folder.[/]
+[c_gold]start [c_cyan]OBS.exe [c_grey][slant]-> This will open OBS, so I can record my Devlog.[/]
 
-Step #5: Check Emails from Publishers
-
-Step #6: Check Steam Page Reviews
-
-Step #7: NEVER EVER REST!!! DON'T DO IT!! ONLY HARDCORE WIN!!! There 100% is a win state of life and you DEFINITELY don't keep growing as a person. Rest and Recovery DEFINITELY are not priorities and if you ever rest, your professors and your friends will laugh at you, stupid!") });
+Step #8: NEVER EVER REST!!! DON'T DO IT!! ONLY HARDCORE WIN!!! There 100% is a win state of life and you DEFINITELY don't keep growing as a person. Rest and Recovery DEFINITELY are not priorities and if you ever rest, your professors and your friends will laugh at you, stupid!") });
 
 var desktopFolder = new Directory("V:", 
 [

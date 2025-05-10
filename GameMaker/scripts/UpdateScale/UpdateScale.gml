@@ -1,23 +1,34 @@
-function UpdateScale(_internalW, _internalH)
+function UpdateScale(_baseW, _baseH, centerWindow = true)
 {
+    // 1) Current monitor size
     var monW = display_get_width();
     var monH = display_get_height();
 
-    var scale = floor(min(monW / _internalW, monH / _internalH));
-    scale = max(scale, 1);
+    // 2) How many times bigger (or smaller) than 1080p
+    var scale = monH / 1080.0;
 
-    // Resize application surface to *room* design size
-    surface_resize(application_surface, _internalW, _internalH);
+    // 3) Calculate new window size
+    var winW = round(_baseW * scale);
+    var winH = round(_baseH * scale);
 
-    // Resize window to scaled size
-    window_set_size(_internalW * scale, _internalH * scale + 2);
+    //   Make sure we don't exceed monitor width (ultra-wide monitors)
+    if (winW > monW)
+    {
+        var overscale = monW / winW;
+        winW = round(winW * overscale);
+        winH = round(winH * overscale);
+        scale = winW / _baseW;          // update scale to final value
+    }
 
-    // Center (optional)
-    window_set_position((monW - window_get_width()) div 2,
-                        (monH - window_get_height()) div 2);
+    // 4) Keep the internal render size fixed (your design res)
+    surface_resize(application_surface, _baseW, _baseH);
 
-    // Store for Draw GUI scaling
+    // 5) Resize and center the window
+    window_set_size(winW, winH);
+    window_set_position((monW - winW) div 2, (monH - winH) div 2);
+
+    // 6) Store scale for GUI draw
     global.viewScale  = scale;
-    global.viewWidth  = _internalW;
-    global.viewHeight = _internalH;
+    global.baseWidth  = _baseW;
+    global.baseHeight = _baseH;
 }

@@ -1,1 +1,1 @@
-UpdateScale(room_width, room_height)
+UpdateScale(room_width, room_height, false)

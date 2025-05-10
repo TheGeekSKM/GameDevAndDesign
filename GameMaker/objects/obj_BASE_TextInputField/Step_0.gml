@@ -73,3 +73,8 @@ else if (keyboard_check_pressed(vk_down))
     }
     text = recentlyEnteredCommands[recentlyEnteredCommandIndex];
 }
+
+if (keyboard_check_pressed(vk_tab))
+{
+    AttemptAutocomplete();
+}

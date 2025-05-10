@@ -50,18 +50,27 @@ if (global.GAME_INSTANCE_ID == 0)
 
 else if (global.GAME_INSTANCE_ID == 1)
 {
-    room_goto(rmCredits);
     window_set_position((display_get_width() / 2), (display_get_height() / 2) - window_get_height());
+    window_set_caption("Credits")
+    room_goto(rmCredits);
+
 }
 
 else if (global.GAME_INSTANCE_ID == 2)
 {
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
+    window_set_caption("Message Viewer")
     room_goto(rmChat);
 }
 
 else if (global.GAME_INSTANCE_ID == 3)
 {
+    var data = SafeReadJson(working_directory + "TextDisplay.json");
+    if (data != undefined)
+    {
+        window_set_caption(string_letters(data.title));
+    }
+    
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     room_goto(rmTextDisplay);
 }
@@ -79,6 +88,9 @@ else if (global.GAME_INSTANCE_ID == 4)
         Burnout : 0,
         Designed : false
     }
+    
+    window_set_caption("Trello.exe");
+    
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     room_goto(rmGamePlanner);
 }
@@ -86,24 +98,28 @@ else if (global.GAME_INSTANCE_ID == 4)
 else if (global.GAME_INSTANCE_ID == 5)
 {
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
+    window_set_caption("Command Help Window");
     room_goto(rmCommands);
 }
 
 else if (global.GAME_INSTANCE_ID == 6)
 {
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
+    window_set_caption("GameMaker.exe");
     room_goto(rmMainMenuProg);
 }
 
 else if (global.GAME_INSTANCE_ID == 7)
 {
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
+    window_set_caption("GameMaker Documentation");
     room_goto(rmDocumentation);
 }
 
 else if (global.GAME_INSTANCE_ID == 8)
 {
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
+    window_set_caption("OBS.exe");
     room_goto(rmEditingMainMenu);
 }
 
