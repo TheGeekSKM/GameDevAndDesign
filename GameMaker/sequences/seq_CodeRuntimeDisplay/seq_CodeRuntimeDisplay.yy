@@ -54,27 +54,25 @@
               {"$Keyframe<RealKeyframe>":"","Channels":{
                   "0":{"$RealKeyframe":"","AnimCurveId":null,"EmbeddedAnimCurve":{"$GMAnimCurve":"","%Name":"Position","channels":[
                         {"$GMAnimCurveChannel":"","%Name":"x","colour":4290799884,"name":"x","points":[
-                            {"th0":-0.25,"th1":0.24595869,"tv0":0.0,"tv1":-719.6792,"x":0.0,"y":555.09436,},
-                            {"th0":-0.1607408,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":91.09436,},
+                            {"th0":-0.25,"th1":0.24595869,"tv0":0.0,"tv1":679.3523,"x":0.0,"y":-822.90564,},
+                            {"th0":-0.1607408,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":-384.90567,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                         {"$GMAnimCurveChannel":"","%Name":"y","colour":4281083598,"name":"y","points":[
                             {"th0":0.0,"th1":0.18666667,"tv0":0.0,"tv1":0.0,"x":0.0,"y":-190.5,},
-                            {"th0":-0.18666667,"th1":0.013333333,"tv0":0.0,"tv1":0.0,"x":0.93333334,"y":-190.5,},
-                            {"th0":-0.013333333,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":-190.5,},
+                            {"th0":-0.013333333,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":-174.5,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                       ],"function":2,"name":"Position","resourceType":"GMAnimCurve","resourceVersion":"2.0",},"RealValue":0.0,"resourceType":"RealKeyframe","resourceVersion":"2.0",},
                   "1":{"$RealKeyframe":"","AnimCurveId":null,"EmbeddedAnimCurve":{"$GMAnimCurve":"","%Name":"Position","channels":[
                         {"$GMAnimCurveChannel":"","%Name":"x","colour":4290799884,"name":"x","points":[
-                            {"th0":-0.25,"th1":0.24595869,"tv0":0.0,"tv1":-719.6792,"x":0.0,"y":555.09436,},
-                            {"th0":-0.1607408,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":91.09436,},
+                            {"th0":-0.25,"th1":0.24595869,"tv0":0.0,"tv1":679.3523,"x":0.0,"y":-822.90564,},
+                            {"th0":-0.1607408,"th1":0.25,"tv0":0.0,"tv1":0.0,"x":1.0,"y":-384.90567,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                         {"$GMAnimCurveChannel":"","%Name":"y","colour":4281083598,"name":"y","points":[
                             {"th0":0.0,"th1":0.18666667,"tv0":0.0,"tv1":0.0,"x":0.0,"y":-190.5,},
-                            {"th0":-0.18666667,"th1":0.013333333,"tv0":0.0,"tv1":0.0,"x":0.93333334,"y":-190.5,},
-                            {"th0":-0.013333333,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":-190.5,},
+                            {"th0":-0.013333333,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":-174.5,},
                           ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
                       ],"function":2,"name":"Position","resourceType":"GMAnimCurve","resourceVersion":"2.0",},"RealValue":0.0,"resourceType":"RealKeyframe","resourceVersion":"2.0",},
-                },"Disabled":false,"id":"79056d2b-c4fa-4898-b36d-d188bd28a94a","IsCreationKey":false,"Key":0.0,"Length":15.0,"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"2.0","Stretch":true,},
+                },"Disabled":false,"id":"269c9841-bfe7-40a4-823a-c4cd98c1e0cb","IsCreationKey":false,"Key":0.0,"Length":15.0,"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"2.0","Stretch":false,},
             ],"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"position","resourceType":"GMRealTrack","resourceVersion":"2.0","trackColour":4282970846,"tracks":[],"traits":0,},
         {"$GMRealTrack":"","%Name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<RealKeyframe>":"","Keyframes":[
               {"$Keyframe<RealKeyframe>":"","Channels":{

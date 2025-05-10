@@ -429,6 +429,7 @@ function TakeDamage(_damage)
 {
     currentHealth -= _damage;
     obj_camera.AddCameraShake(10);
+    instance_create_layer(x, y, layer, obj_HitFeedback);
     if (currentHealth <= 0)
     {
         currentHealth = 0;

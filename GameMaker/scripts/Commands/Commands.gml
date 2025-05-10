@@ -50,7 +50,7 @@ function CommandLibrary() constructor
             var str = $"Command [slant]\"{_commandKeyword}\"[/] does not exist in the library.";
             if (variable_global_exists("MainTextBox"))
             {
-                global.MainTextBox.AddMessage($"[c_yellow]WARNING: [\]{str}");
+                global.MainTextBox.AddMessage($"[c_yellow]WARNING: [\]{str}\n    [c_player]TIP:[/] Use the [wave][c_gold]\"dir\"[/] command to view valid names in the current folder!");
             }
             else {
                 var notif = instance_create_depth(400, 224, -1000, obj_BadCode);
@@ -65,7 +65,7 @@ function CommandLibrary() constructor
             var str = $"Command [slant]\"{_commandKeyword}\"[/] has an invalid number of parameters. Expected {command[1]} params, but got {array_length(_commandParamArray)}, instead.";
             if (variable_global_exists("MainTextBox"))
             {
-                global.MainTextBox.AddMessage($"[c_yellow]WARNING: [\]{str}");
+                global.MainTextBox.AddMessage($"[c_yellow]WARNING: [\]{str}\n    [c_player]TIP:[/] Use the [wave][c_gold]\"help\"[/] command to view the different commands and their required Parameters!");
             }
             else {
                 var notif = instance_create_depth(400, 224, -1000, obj_BadCode);

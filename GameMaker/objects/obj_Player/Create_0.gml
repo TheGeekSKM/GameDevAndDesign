@@ -11,6 +11,8 @@ ___ = {
     numberOfShots : 0,
     shootSpeed : 30,
 }
+canSpawnHitParticles = false;
+hitParticlesIndex = 0;
 
 codeRuntimeSequence = layer_sequence_create("GUI", 0, 0, seq_CodeRuntimeDisplay)
 layer_sequence_pause(codeRuntimeSequence);
@@ -47,6 +49,17 @@ function GetCurrentHealth()
 function TakeDamage(_damage)
 {
     ___.currentHealth -= _damage;
+    
+    if (_damage > 0)
+    {
+        instance_create_layer(x, y, layer, obj_HitFeedback);
+        with(obj_camera)
+        {
+            AddCameraShake(10);
+        }
+    }
+    
+    
     if (___.currentHealth <= 0)
     {
         ___.currentHealth = 0;
@@ -90,7 +103,6 @@ function TakeDamage(_damage)
             Percentage : ___.currentHealth / ___.maxHealth,
         })
     }
-    
     
 }
 

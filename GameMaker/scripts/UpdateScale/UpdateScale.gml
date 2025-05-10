@@ -1,4 +1,4 @@
-function UpdateScale(_baseW, _baseH, centerWindow = true)
+function UpdateScale(_baseW, _baseH, centerWindow = false)
 {
     // 1) Current monitor size
     var monW = display_get_width();
@@ -25,7 +25,8 @@ function UpdateScale(_baseW, _baseH, centerWindow = true)
 
     // 5) Resize and center the window
     window_set_size(winW, winH);
-    window_set_position((monW - winW) div 2, (monH - winH) div 2);
+    //if (centerWindow) window_set_position((monW - winW) div 2, (monH - winH) div 2);
+    //else window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
 
     // 6) Store scale for GUI draw
     global.viewScale  = scale;

@@ -23,3 +23,5 @@ if (place_meeting(x, y, ___.targetObjects)) {
     
     _hitObject.TakeDamage(irandom_range(3, 5));
 }
+
+image_angle = ___.direction;

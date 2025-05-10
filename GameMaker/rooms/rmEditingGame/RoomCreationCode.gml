@@ -1,1 +1,1 @@
-UpdateScale(800, 448)
+UpdateScale(800, 448, true)

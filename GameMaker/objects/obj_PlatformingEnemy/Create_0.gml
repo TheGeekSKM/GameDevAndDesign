@@ -17,6 +17,8 @@ function Init(_maxHealth, _onDamageCallback = undefined, _onDeathCallback = unde
 function TakeDamage(_damage)
 {
     ___.currentHealth -= _damage;
+    var inst = instance_create_layer(x, y, layer, obj_HitFeedback);
+    inst.image_angle = random(360);
     if (___.currentHealth <= 0)
     {
         ___.currentHealth = 0;

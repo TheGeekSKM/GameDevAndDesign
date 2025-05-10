@@ -91,3 +91,8 @@ if (keyboard_check_pressed(ord("Q")))
     
     Transition(rmDonw, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 }
+
+if (canSpawnHitParticles)
+{
+    
+}
