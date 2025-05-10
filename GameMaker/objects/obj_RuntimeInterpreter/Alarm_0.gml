@@ -1,5 +1,12 @@
 if (!isRunning) return;
 
+if (variable_global_exists("PlayerCurrentlyActing") && global.PlayerCurrentlyActing || global.CanMove)
+{
+    alarm[0] = tickDelay;
+    //show_message($"Player Currently Acting")
+    return;
+}
+
 var executedCount = 0;
 while (isRunning && executedCount < instructionsPerAlarmTick) 
 {
@@ -23,12 +30,19 @@ while (isRunning && executedCount < instructionsPerAlarmTick)
     }
 
     var indexBeforeExecute = currentIndex;
+    Raise("ExecutingInstruction", currentRawLine);
     ExecuteInstruction(instr);
+    
     if (isRunning && currentIndex == indexBeforeExecute) 
     {
         currentIndex += 1;
     }
     executedCount++;
+    
+    if (!isRunning || (variable_global_exists("PlayerCurrentlyActing") && global.PlayerCurrentlyActing || global.CanMove))
+    {
+        break;
+    }
 }
 
 if (isRunning) { alarm[0] = tickDelay; }

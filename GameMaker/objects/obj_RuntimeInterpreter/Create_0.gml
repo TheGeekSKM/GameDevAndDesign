@@ -13,6 +13,9 @@ loopNum = 0;
 variableStore = ds_map_create();
 loopStack = [];
 
+currentStruct = undefined;
+
+
 
 // --- Clean Up Event ---
 if (ds_exists(variableStore, ds_type_map)) { ds_map_destroy(variableStore); }
@@ -30,6 +33,12 @@ function StartInterpreter(_compiledStruct) {
         isRunning = false; 
         return;
     }
+    
+    currentStruct = _compiledStruct;
+    Raise("StartingInterpreter", _compiledStruct);
+    
+    
+    
     compiledInstructions = _compiledStruct.CompiledArray;
     lineMapping = _compiledStruct.LineMapping;
     currentIndex = 0; 
@@ -45,6 +54,10 @@ function StartInterpreter(_compiledStruct) {
 
 /// @function            StopInterpreter()
 function StopInterpreter() {
+    Raise("StoppingInterpreter", id);
+    
+
+    
     isRunning = false; 
     alarm[0] = -1;
     compiledInstructions = []; 
@@ -53,6 +66,7 @@ function StopInterpreter() {
     loopNum = 0;
     ds_map_clear(variableStore); 
     loopStack = [];
+    currentStruct = undefined;
     //show_message("Interpreter stopped.");
 }
 
@@ -62,6 +76,7 @@ function ExecuteInstruction(_instr) {
         return;
     }
     //show_message(string_concat("Executing: ", _instr));
+    
 
     // --- Handle Variable Declaration (Direct Value) ---
     if (string_starts_with(_instr, "DeclareVar(")) {

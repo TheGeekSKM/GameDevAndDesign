@@ -3,6 +3,14 @@ else image_index = 0;
 
 // ----- Turning ----- //
 ___.angle = lerp(___.angle, ___.goalAngle, 0.1);
+if (abs(___.angle - ___.goalAngle) <= 0.15)
+{
+    ___.angle = ___.goalAngle;
+    if (global.PlayerCurrentlyActing)
+    {
+        global.PlayerCurrentlyActing = false;
+    }
+}
 
 // ----- Movement ----- //
 if (___.canMove)

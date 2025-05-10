@@ -12,7 +12,24 @@ ___ = {
     shootSpeed : 30,
 }
 
+codeRuntimeSequence = layer_sequence_create("GUI", 0, 0, seq_CodeRuntimeDisplay)
+layer_sequence_pause(codeRuntimeSequence);
+
+Subscribe("StartingInterpreter", function(_data) {
+    layer_sequence_headdir(codeRuntimeSequence, seqdir_right);
+    layer_sequence_play(codeRuntimeSequence);
+})
+
+Subscribe("StoppingInterpreter", function(_data) {
+    layer_sequence_headdir(codeRuntimeSequence, seqdir_left);
+    layer_sequence_play(codeRuntimeSequence);
+})
+
+
+
+
 global.CanMove = false;
+global.PlayerCurrentlyActing = false;
 
 function Init(_maxHealth, _onDamageCallback = undefined, _onDeathCallback = undefined)
 {
@@ -78,18 +95,21 @@ function TakeDamage(_damage)
 }
 
 Subscribe("Turn", function(_angle) {
+    global.PlayerCurrentlyActing = true;
     ___.goalAngle += _angle;
     if (___.goalAngle > 360) ___.goalAngle -= 360;
     if (___.goalAngle < 0) ___.goalAngle += 360;
 })
 
 Subscribe("TurnTo", function(_angle) {
+    global.PlayerCurrentlyActing = true;
     ___.goalAngle = _angle;
     if (___.goalAngle > 360) ___.goalAngle -= 360;
     if (___.goalAngle < 0) ___.goalAngle += 360;
 })
 
 Subscribe("Move", function(_numOfSteps) {
+    global.PlayerCurrentlyActing = true;
     ___.canMove = true;
     Raise("CanMove", true);
     global.CanMove = true;
@@ -98,11 +118,13 @@ Subscribe("Move", function(_numOfSteps) {
 
 
 Subscribe("Shoot", function(_numOfShots) {
+    global.PlayerCurrentlyActing = true;
     ___.numberOfShots = _numOfShots;
     alarm[1] = ___.shootSpeed;
 })
 
 Subscribe("EscPressed", function() {
+    global.PlayerCurrentlyActing = false;
     alarm[0] = -1;
     ___.canMove = false;
     Raise("CanMove", false);

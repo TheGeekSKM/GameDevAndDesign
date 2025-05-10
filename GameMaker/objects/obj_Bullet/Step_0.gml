@@ -1,6 +1,5 @@
 
 if (!global.CanMove) return;
-    show_debug_message($"canMove {___.moveSpeed}")
 
 var xMove = lengthdir_x(___.moveSpeed, ___.direction);
 var yMove = lengthdir_y(___.moveSpeed, ___.direction);
