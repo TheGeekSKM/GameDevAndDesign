@@ -1,3 +1,6 @@
+#macro INTERNAL_WIDTH 800
+#macro INTERNAL_HEIGHT 448
+
 global.WindowManager = id;
 
 // min number of game instances (one based)

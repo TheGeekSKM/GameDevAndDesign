@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rmChat",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rmChat/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,

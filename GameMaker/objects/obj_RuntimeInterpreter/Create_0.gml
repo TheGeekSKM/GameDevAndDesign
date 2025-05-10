@@ -8,6 +8,7 @@ isRunning = false;
 instructionsPerAlarmTick = 2;
 tickDelay = 5;
 currentRawLine = -1;
+loopNum = 0;
 
 variableStore = ds_map_create();
 loopStack = [];
@@ -25,7 +26,7 @@ function StartInterpreter(_compiledStruct) {
     {
         var errorMsg = "Interpreter Error: Cannot start with invalid code.";
         if (variable_struct_exists(_compiledStruct, "Errors") && _compiledStruct.Errors != undefined && array_length(_compiledStruct.Errors) > 0) { errorMsg = string_concat(errorMsg, "\nFirst Error: ", _compiledStruct.Errors[0]); }
-        show_message(errorMsg); 
+        //show_message(errorMsg); 
         isRunning = false; 
         return;
     }
@@ -36,8 +37,10 @@ function StartInterpreter(_compiledStruct) {
     currentRawLine = -1;
     ds_map_clear(variableStore);
     loopStack = [];
-    isRunning = true; alarm[0] = tickDelay;
-    show_message("Interpreter started.");
+    isRunning = true; 
+    alarm[0] = tickDelay;
+    loopNum = 0;
+    //show_message("Interpreter started.");
 }
 
 /// @function            StopInterpreter()
@@ -47,9 +50,10 @@ function StopInterpreter() {
     compiledInstructions = []; 
     lineMapping = []; 
     currentRawLine = -1;
+    loopNum = 0;
     ds_map_clear(variableStore); 
     loopStack = [];
-    show_message("Interpreter stopped.");
+    //show_message("Interpreter stopped.");
 }
 
 /// @function            ExecuteInstruction(_instr)
@@ -57,7 +61,7 @@ function ExecuteInstruction(_instr) {
     if (_instr == "" || _instr == undefined) {
         return;
     }
-    show_message(string_concat("Executing: ", _instr));
+    //show_message(string_concat("Executing: ", _instr));
 
     // --- Handle Variable Declaration (Direct Value) ---
     if (string_starts_with(_instr, "DeclareVar(")) {
@@ -67,10 +71,10 @@ function ExecuteInstruction(_instr) {
             var varName = string_copy(content, 1, commaPos - 1);
             var varValueStr = string_copy(content, commaPos + 1, string_length(content) - commaPos);
             variableStore[? varName] = real(varValueStr);
-            show_message(string_concat("Declared '", varName, "' = ", string(variableStore[? varName])));
+            //show_message(string_concat("Declared '", varName, "' = ", string(variableStore[? varName])));
             // TODO: Subtract memory cost for variable declaration/storage
         } else {
-            show_message(string_concat("Error: Malformed DeclareVar: ", _instr));
+            //show_message(string_concat("Error: Malformed DeclareVar: ", _instr));
             StopInterpreter();
         }
         return;
@@ -83,22 +87,22 @@ function ExecuteInstruction(_instr) {
          if (commaPos > 0) {
             var varName = string_copy(content, 1, commaPos - 1);
             var valueSource = string_copy(content, commaPos + 1, string_length(content) - commaPos); // Should be "[result]"
-            show_message(string_concat("Value source: ", valueSource));
+            //show_message(string_concat("Value source: ", valueSource));
 
             if (valueSource == "[result]") {
                 if (lastResult != undefined) {
                     variableStore[? varName] = lastResult;
-                    show_message(string_concat("Assigned '", varName, "' = ", string(lastResult), " from [result]"));
+                    //show_message(string_concat("Assigned '", varName, "' = ", string(lastResult), " from [result]"));
                     // TODO: Subtract memory cost for assignment operation (optional)
                 } else {
-                    show_message(string_concat("Warning: AssignVar trying to use [result] for '", varName,"' but last result was undefined. Variable not assigned."));
+                    //show_message(string_concat("Warning: AssignVar trying to use [result] for '", varName,"' but last result was undefined. Variable not assigned."));
                 }
             } else {
-                show_message(string_concat("Error: Malformed AssignVar instruction. Expected '[result]' as source: ", _instr, " (found: ", valueSource, ")"));
+                //show_message(string_concat("Error: Malformed AssignVar instruction. Expected '[result]' as source: ", _instr, " (found: ", valueSource, ")"));
                 StopInterpreter();
             }
          } else {
-             show_message(string_concat("Error: Malformed AssignVar instruction: ", _instr));
+             //show_message(string_concat("Error: Malformed AssignVar instruction: ", _instr));
              StopInterpreter();
          }
          return;
@@ -107,7 +111,7 @@ function ExecuteInstruction(_instr) {
     // --- Handle RepeatStart ---
     if (string_starts_with(_instr, "RepeatStart(")) 
     {
-        var content = string_copy(_instr, 13, string_length(_instr) - 13 - 1);
+        var content = string_copy(_instr, 13, string_length(_instr) - 13);
         var commaPos = string_pos(",", content);
         var jumpOffsetPos = string_pos("jump_offset:", content);
         if (commaPos > 0 && jumpOffsetPos > commaPos) 
@@ -133,7 +137,7 @@ function ExecuteInstruction(_instr) {
                      } 
                      else 
                      {
-                        show_message(string_concat("Error: Variable '", paramValue, "' not found for Repeat."));
+                        //show_message(string_concat("Error: Variable '", paramValue, "' not found for Repeat."));
                         StopInterpreter();
                         return;
                      }
@@ -146,20 +150,20 @@ function ExecuteInstruction(_instr) {
                     } 
                     else 
                     {
-                        show_message("Warning: Repeat using [result] but last result undefined. Repeating 0 times.");
+                        //show_message("Warning: Repeat using [result] but last result undefined. Repeating 0 times.");
                         loopCount = 0;
                     }
                 } 
                 else 
                 {
-                    show_message(string_concat("Error: Unknown param type in RepeatStart: ", paramType));
+                    //show_message(string_concat("Error: Unknown param type in RepeatStart: ", paramType));
                     StopInterpreter();
                     return;
                 }
             } 
             else 
             {
-                show_message(string_concat("Error: Malformed param part in RepeatStart: ", paramPart));
+                //show_message(string_concat("Error: Malformed param part in RepeatStart: ", paramPart));
                 StopInterpreter();
                 return;
             }
@@ -168,18 +172,18 @@ function ExecuteInstruction(_instr) {
             if (loopCount <= 0) 
             {
                 currentIndex += jumpOffset;
-                show_message(string_concat("Repeat count is ", string(loopCount), ", skipping loop block."));
+                //show_message(string_concat("Repeat count is ", string(loopCount), ", skipping loop block."));
             } 
             else 
             {
                 // TODO: Subtract memory cost for entering/managing a loop (optional)
                 array_push(loopStack, { remaining_count: loopCount, loop_body_start_index: currentIndex + 1 });
-                show_message(string_concat("Starting Repeat block, count = ", string(loopCount)));
+                //show_message(string_concat("Starting Repeat block, count = ", string(loopCount)));
             }
         } 
         else 
         {
-            show_message(string_concat("Error: Malformed RepeatStart: ", _instr));
+            //show_message(string_concat("Error: Malformed RepeatStart: ", _instr));
             StopInterpreter();
         }
         return;
@@ -190,25 +194,27 @@ function ExecuteInstruction(_instr) {
     {
         if (array_length(loopStack) == 0) 
         {
-            show_message("Error: RepeatEnd encountered without active loop on stack.");
+            //show_message("Error: RepeatEnd encountered without active loop on stack.");
             StopInterpreter();
             return;
         }
-        var content = string_copy(_instr, 11, string_length(_instr) - 11 - 1);
+        var content = string_copy(_instr, 11, string_length(_instr) - 11);
         var jumpOffsetStr = string_copy(content, 13, string_length(content) - 12);
         var jumpBackOffset = real(jumpOffsetStr);
         var currentLoop = loopStack[array_length(loopStack) - 1];
-        currentLoop.remaining_count -= 1;
+        currentLoop.remaining_count -= (1 + loopNum);
         if (currentLoop.remaining_count > 0) 
         {
             currentIndex -= jumpBackOffset;
-            show_message(string_concat("Repeating loop, ", string(currentLoop.remaining_count), " remaining."));
+            loopNum++;
+            //show_message(string_concat("Repeating loop, ", string(currentLoop.remaining_count), " remaining."));
             // TODO: Subtract memory cost for each loop iteration (optional)
         } 
         else 
         {
+            loopNum = 0;
             array_pop(loopStack);
-            show_message("Finished Repeat block.");
+            //show_message("Finished Repeat block.");
             // TODO: Add back memory cost for managing loop if subtracted in RepeatStart (optional)
         }
         return;
@@ -229,7 +235,7 @@ function ExecuteInstruction(_instr) {
         } 
         else 
         {
-            show_message(string_concat("Error: Mismatched parentheses: ", _instr));
+            //show_message(string_concat("Error: Mismatched parentheses: ", _instr));
             StopInterpreter();
             return;
         }
@@ -242,13 +248,13 @@ function ExecuteInstruction(_instr) {
 
     if (commandName == "") 
     {
-        show_message("Error: Empty command name encountered.");
+        //show_message("Error: Empty command name encountered.");
         StopInterpreter();
         return;
     }
     if (global.vars.CommandLibrary[$ commandName] == undefined) 
     {
-        show_message(string_concat("Error: Command '", commandName, "' not found."));
+        //show_message(string_concat("Error: Command '", commandName, "' not found."));
         StopInterpreter();
         return;
     }
@@ -261,7 +267,7 @@ function ExecuteInstruction(_instr) {
         actualParamValue = lastResult;
         if (actualParamValue == undefined) 
         {
-            show_message(string_concat("Warning: Using [result] for '", commandName, "' but undefined."));
+            //show_message(string_concat("Warning: Using [result] for '", commandName, "' but undefined."));
         }
     } 
     else if (string_starts_with(paramString, "lookup:")) 
@@ -273,7 +279,7 @@ function ExecuteInstruction(_instr) {
         } 
         else 
         {
-            show_message(string_concat("Error: Variable '", varName, "' not found."));
+            //show_message(string_concat("Error: Variable '", varName, "' not found."));
             StopInterpreter();
             return;
         }
@@ -292,7 +298,7 @@ function ExecuteInstruction(_instr) {
     } 
     else 
     {
-        show_message(string_concat("Error: Unknown param format '", paramString, "'."));
+        //show_message(string_concat("Error: Unknown param format '", paramString, "'."));
         StopInterpreter();
         return;
     }
@@ -304,7 +310,7 @@ function ExecuteInstruction(_instr) {
         if (variable_struct_exists(command, "ReturnsValue") && command.ReturnsValue)
         {
             lastResult = returnVal;
-            show_message(string_concat("'", commandName, "' returned: ", string(lastResult)));
+            //show_message(string_concat("'", commandName, "' returned: ", string(lastResult)));
         }
     }
     catch (_exception)
@@ -312,7 +318,7 @@ function ExecuteInstruction(_instr) {
         var errorLineInfo = (currentRawLine != -1)
             ? string_concat("(Raw Line: ", string(currentRawLine), ")")
             : "";
-        show_message(string_concat("RUNTIME ERROR in '", commandName, "' ", errorLineInfo, ":\n", _exception.message));
+        //show_message(string_concat("RUNTIME ERROR in '", commandName, "' ", errorLineInfo, ":\n", _exception.message));
         StopInterpreter();
     }
 }
