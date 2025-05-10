@@ -25,6 +25,12 @@ if (ds_exists(variableStore, ds_type_map)) { ds_map_destroy(variableStore); }
 
 /// @function            StartInterpreter(_compiledStruct)
 function StartInterpreter(_compiledStruct) {
+    if (_compiledStruct[$ "CompiledArray"] == undefined) 
+    {
+        isRunning = false; 
+        return;
+    }
+    
     if (_compiledStruct == undefined || (variable_struct_exists(_compiledStruct, "Errors") && _compiledStruct.Errors != undefined)) 
     {
         var errorMsg = "Interpreter Error: Cannot start with invalid code.";
@@ -35,9 +41,8 @@ function StartInterpreter(_compiledStruct) {
     }
     
     currentStruct = _compiledStruct;
+    
     Raise("StartingInterpreter", _compiledStruct);
-    
-    
     
     compiledInstructions = _compiledStruct.CompiledArray;
     lineMapping = _compiledStruct.LineMapping;

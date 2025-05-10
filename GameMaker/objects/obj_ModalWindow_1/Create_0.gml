@@ -32,6 +32,8 @@ function SetTitle(_name)
 }
 
 mouseOverClose = false;
+registerEnter = false;
+alarm[0] = 30;
 
 
 

@@ -21,7 +21,7 @@ var burnout_penalty = 1 - min(global.GameData.Burnout, 10) * 0.04;
 
 // Step 5: Final estimated unit sales
 var estimated_sales = base_audience * conversion_rate * satisfaction_bonus * burnout_penalty;
-estimated_sales = round(max(0, estimated_sales));
+estimated_sales = round(max(0, estimated_sales) / 100);
 
 var qualityText = "Terrible Quality [slant](You probably don't want people to see this game...)[/]";
 var qualityNum = global.GameData.Quality / 100
@@ -35,9 +35,8 @@ else if (qualityNum > 0.25) qualityText = "Bad Quality [slant](Minimally Develop
 var gameDataText = "Game Data: \n\n";
 gameDataText = string_concat(gameDataText, $"GameName: {global.GameData.Name}\n");
 gameDataText = string_concat(gameDataText, $"Quality: {qualityText}\n");
-gameDataText = string_concat(gameDataText, $"Interest: {global.GameData.Interest / 5} Wishlists\n");
+gameDataText = string_concat(gameDataText, $"Interest: {round(global.GameData.Interest / 5)} Wishlists\n");
 gameDataText = string_concat(gameDataText, $"Estimated Sales: {estimated_sales}\n");
-gameDataText = string_concat(gameDataText, $"Burnout: {global.GameData.Burnout}\n");
 gameDataText = string_concat(gameDataText, $"Personal Satisfaction Modifier: {global.GameData.PersonalSatisfactionModifier}\n\n");
 
 var finalProfitText = "Final Profit: $" + string(estimated_sales * 3) + "\n\n"; // Assuming $10 per unit

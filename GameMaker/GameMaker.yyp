@@ -227,6 +227,7 @@
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
     {"id":{"name":"obj_PlayerAboveYDisplay","path":"objects/obj_PlayerAboveYDisplay/obj_PlayerAboveYDisplay.yy",},},
     {"id":{"name":"obj_PlayerBullet","path":"objects/obj_PlayerBullet/obj_PlayerBullet.yy",},},
+    {"id":{"name":"obj_PopUpText","path":"objects/obj_PopUpText/obj_PopUpText.yy",},},
     {"id":{"name":"obj_rm_pausable","path":"objects/obj_rm_pausable/obj_rm_pausable.yy",},},
     {"id":{"name":"obj_ROOM_interactable","path":"objects/obj_ROOM_interactable/obj_ROOM_interactable.yy",},},
     {"id":{"name":"obj_roomResizer","path":"objects/obj_roomResizer/obj_roomResizer.yy",},},

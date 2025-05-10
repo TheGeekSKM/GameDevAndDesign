@@ -1,1 +1,0 @@
-UpdateScale(room_width, room_height, true)

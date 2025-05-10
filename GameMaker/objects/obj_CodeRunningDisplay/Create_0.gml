@@ -4,6 +4,8 @@ currentLine = 0;
 text = "";
 lineMapArray = [];
 Subscribe("StartingInterpreter", function(_compiledStruct) {
+    if (_compiledStruct[$ "RawCode"] == undefined) return;
+    
     currentStruct = _compiledStruct;
     currentLine = 0;
     lineMapArray = [];

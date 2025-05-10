@@ -115,3 +115,28 @@ function EnterPressed()
     //global.WindowManager.GameEnd();
     //Transition(rmInit2, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 //}]);
+
+currentBurnoutValue = 0;
+Subscribe("BurnoutModified", function(burnoutAmount) {
+    var value = burnoutAmount - currentBurnoutValue;
+    var text = "";
+    var textCol = c_white;
+    
+    if (value > 0)
+    {
+        text = $"Burnout +{value}";
+        textCol = c_red;
+    }
+    else 
+    {
+        text = $"Burnout -{value}";
+        textCol = c_lime;
+    }
+    
+    instance_create_depth(600, 750, depth - 5, obj_PopUpText, {
+        textToDisplay : text,
+        textColor : textCol
+    })
+    
+    currentBurnoutValue = burnoutAmount;
+})

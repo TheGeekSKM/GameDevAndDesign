@@ -2,7 +2,7 @@ draw_self();
 scribble(text)
     .align(fa_center, fa_middle)
     .starting_format("VCR_OSD_Mono", c_white)
-    .transform(1, 1, 0)
+    .transform(0.8, 0.8, 0)
     .wrap(728)
     .draw(x, y);
 

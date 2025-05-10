@@ -1,5 +1,7 @@
 function UpdateScale(_baseW, _baseH, centerWindow = false)
 {
+    if (window_get_fullscreen()) return;
+    
     // 1) Current monitor size
     var monW = display_get_width();
     var monH = display_get_height();

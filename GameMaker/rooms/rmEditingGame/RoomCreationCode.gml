@@ -1,1 +1,0 @@
-UpdateScale(800, 448, true)
