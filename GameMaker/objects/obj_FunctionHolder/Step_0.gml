@@ -17,7 +17,7 @@ if (point_in_rectangle(guiMouseX, guiMouseY, x - (sprite_width / 2), y - (sprite
         // open the code in a different window
         global.TextDisplay = functionScript;
         var str = {
-            TextDisplay : functionScript
+            TextDisplay : ScribbleHighlightSyntax(functionScript)
         }
         str = json_stringify(str);
         
