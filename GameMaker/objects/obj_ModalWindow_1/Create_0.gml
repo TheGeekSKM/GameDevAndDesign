@@ -68,4 +68,6 @@ SetText(@"1. You have [c_gold]3 Function Slots[/]. Navigate through them to open
 
 Your goal is to [c_player]Shoot Bugs before you run out of Allocated Memory.[/] Good Luck.
 
+[slant][c_grey]Note: The GameScript Documentation page should have opened in your browser[/]
+
 [size, 2][c_player][slant]Press [c_gold][wave]Ctrl + O[/wave][c_player] to open Code Snippets that you can Copy/Paste")

@@ -15,6 +15,13 @@ if (abs(___.angle - ___.goalAngle) <= 0.15)
 // ----- Movement ----- //
 if (___.canMove)
 {
+    _allocationCounter++;
+    if (_allocationCounter >= 30)
+    {
+        TakeDamage(5, true);
+        _allocationCounter = 0;
+    }
+    
     var _x = lengthdir_x(1, ___.angle);
     var _y = lengthdir_y(1, ___.angle);
     
@@ -38,7 +45,7 @@ else if (keyboard_check_pressed(vk_numpad3) || keyboard_check_pressed(ord("3")))
 
 if (keyboard_check_pressed(vk_numpad0))
 {
-    TakeDamage(2);
+    TakeDamage(2, true);
 }
 
 

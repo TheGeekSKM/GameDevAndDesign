@@ -144,6 +144,7 @@
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"code-snippet.html","CopyToMask":-1,"filePath":"datafiles/Pages","name":"code-snippet.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"documentation.html","CopyToMask":-1,"filePath":"datafiles/Pages","name":"documentation.html","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
@@ -682,6 +683,7 @@
     {"id":{"name":"input_x","path":"scripts/input_x/input_x.yy",},},
     {"id":{"name":"input_xy","path":"scripts/input_xy/input_xy.yy",},},
     {"id":{"name":"input_y","path":"scripts/input_y/input_y.yy",},},
+    {"id":{"name":"openUrL","path":"scripts/openUrL/openUrL.yy",},},
     {"id":{"name":"perlin_noise_lib","path":"scripts/perlin_noise_lib/perlin_noise_lib.yy",},},
     {"id":{"name":"ReadWriteSystems","path":"scripts/ReadWriteSystems/ReadWriteSystems.yy",},},
     {"id":{"name":"scr_example","path":"scripts/scr_example/scr_example.yy",},},

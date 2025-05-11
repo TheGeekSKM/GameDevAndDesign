@@ -30,7 +30,7 @@ Subscribe("StoppingInterpreter", function(_data) {
 
 
 
-global.CanMove = false;
+
 global.PlayerCurrentlyActing = false;
 
 function Init(_maxHealth, _onDamageCallback = undefined, _onDeathCallback = undefined)
@@ -46,11 +46,11 @@ function GetCurrentHealth()
     return ___.currentHealth;
 }
 
-function TakeDamage(_damage)
+function TakeDamage(_damage, _noFeedback = false)
 {
     ___.currentHealth -= _damage;
     
-    if (_damage > 0)
+    if (_damage > 0 && !_noFeedback)
     {
         instance_create_layer(x, y, layer, obj_HitFeedback);
         with(obj_camera)
@@ -58,7 +58,15 @@ function TakeDamage(_damage)
             AddCameraShake(10);
         }
     }
-    
+    else if (_noFeedback)
+    {
+        if (!layer_exists("GUI")) layer_create(-150, "GUI")
+        var guiCoords = RoomToGUICoords(x, y);
+        var inst = instance_create_layer(guiCoords.x, guiCoords.y, "GUI", obj_PopUpText, {
+            textToDisplay : $"Allocated Memory -{_damage}",
+            textColor : c_yellow
+        });
+    }
     
     if (___.currentHealth <= 0)
     {
@@ -111,6 +119,9 @@ Subscribe("Turn", function(_angle) {
     ___.goalAngle += _angle;
     if (___.goalAngle > 360) ___.goalAngle -= 360;
     if (___.goalAngle < 0) ___.goalAngle += 360;
+        
+    var cost = round(min(1, _angle / 45));
+    TakeDamage(cost, true);
 })
 
 Subscribe("TurnTo", function(_angle) {
@@ -118,13 +129,15 @@ Subscribe("TurnTo", function(_angle) {
     ___.goalAngle = _angle;
     if (___.goalAngle > 360) ___.goalAngle -= 360;
     if (___.goalAngle < 0) ___.goalAngle += 360;
+        
+    var cost = round(min(2, _angle / 45));
+    TakeDamage(cost, true);
 })
 
 Subscribe("Move", function(_numOfSteps) {
     global.PlayerCurrentlyActing = true;
     ___.canMove = true;
     Raise("CanMove", true);
-    global.CanMove = true;
     alarm[0] = _numOfSteps * 30;
 })
 
@@ -140,7 +153,6 @@ Subscribe("EscPressed", function() {
     alarm[0] = -1;
     ___.canMove = false;
     Raise("CanMove", false);
-    global.CanMove = false;
     
     alarm[1] = -1;
     ___.numberOfShots = 0;
@@ -152,3 +164,4 @@ Subscribe("EscPressed", function() {
 Init(200);
 
 _counter = 0;
+_allocationCounter = 0;

@@ -14,6 +14,8 @@ variableStore = ds_map_create();
 loopStack = [];
 
 currentStruct = undefined;
+global.CanMove = false;
+
 
 
 
@@ -41,7 +43,7 @@ function StartInterpreter(_compiledStruct) {
     }
     
     currentStruct = _compiledStruct;
-    
+    global.CanMove = true;
     Raise("StartingInterpreter", _compiledStruct);
     
     compiledInstructions = _compiledStruct.CompiledArray;
@@ -61,7 +63,7 @@ function StartInterpreter(_compiledStruct) {
 function StopInterpreter() {
     Raise("StoppingInterpreter", id);
     
-
+    global.CanMove = false;
     
     isRunning = false; 
     alarm[0] = -1;
