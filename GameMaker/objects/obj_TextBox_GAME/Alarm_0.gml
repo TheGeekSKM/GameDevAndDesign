@@ -1,0 +1,1 @@
+AddMessage($"[c_gold]MAIL:[/] New Email Recieved from [slant]gGlint@CrunchCorpGames.xyz[/]. Start the [c_gold][wave]MailManager.exe[/] in the [c_gold]V:[/] drive to see it!")

@@ -1,26 +1,41 @@
-Read(); 
 
-
+// Calculate top-left corner
 topLeftX = x - (sprite_width / 2);
 topLeftY = y - (sprite_height / 2);
 
-if (!point_in_rectangle(
-        guiMouseX, guiMouseY, 
-        x - (sprite_width / 2), y - (sprite_width / 2),  
-        x + (sprite_width / 2), y + (sprite_width / 2)))
-{
-    return;
+var shiftHeld = keyboard_check(vk_lshift);
+
+
+// Scroll input only when mouse is over the box
+if (point_in_rectangle(guiMouseX, guiMouseY, topLeftX, topLeftY, topLeftX + sprite_width, topLeftY + sprite_height)) {
+    
+    // Scroll one "step" per wheel tick
+    var scroll_dir = mouse_wheel_up() - mouse_wheel_down();
+    scroll_dir += (shiftHeld && keyboard_check_pressed(vk_up)) - (shiftHeld && keyboard_check_pressed(vk_down)) * 2;
+    var scroll_step = 32;
+    target_scroll_offset -= scroll_dir * scroll_step;
 }
 
-    
-// Scroll with mouse wheel
-var scroll_dir = mouse_wheel_up() - mouse_wheel_down();
-__target_scroll_offset -= scroll_dir * (line_height + padding);
+// Calculate total scrollable content height properly
+var content_height = __getTotalLineHeight() + (array_length(line_heights) - 1) * padding;
 
-// Clamp to scrollable range
-var content_height = array_length(message_list) * (line_height + padding);
-__target_scroll_offset = clamp(__target_scroll_offset, 0, max(0, content_height - display_height));
+// Prevent overscroll: clamp so last line ends at the bottom
+var max_scroll = max(0, content_height - display_height);
+target_scroll_offset = clamp(target_scroll_offset, 0, max_scroll);
+
+// Clamp scroll again for safety
+scroll_offset = clamp(scroll_offset, 0, max_scroll);
 
 // Smooth scroll
-__scroll_offset = lerp(__scroll_offset, __target_scroll_offset, scroll_speed);
+scroll_offset = lerp(scroll_offset, target_scroll_offset, scroll_speed);
+
+// Check if we're near top or bottom
+atTop = (scroll_offset <= 1);
+atBottom = (abs(scroll_offset - max_scroll) <= 1);
+
+
+if (variable_global_exists("GameData") && global.GameData[$ "Burnout"] != undefined)
+{
+    burnoutNum = global.GameData.Burnout > 8 ? 1 : 0;
+}
 

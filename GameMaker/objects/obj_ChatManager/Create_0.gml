@@ -14,7 +14,6 @@ chatMessages.json =
 display_width = sprite_width;
 display_height = sprite_height;
 padding = 5;
-line_height = 20;
 font_used = VCR_OSD_Mono; // Optional: assign a font here
 text_color = c_white;
 
@@ -23,74 +22,153 @@ topLeftY = 0;
 
 // State
 message_list = [];
-__scroll_offset = 0;
-__target_scroll_offset = 0;
+line_heights = [];
+scroll_offset = 0;
+target_scroll_offset = 0;
 scroll_speed = 0.2;
 
-function AddMessage(_msg) {
+atBottom = false;
+atTop = false;
+
+textTransform = 0.6;
+
+cursorPos = 0;
+
+function __getTotalLineHeight()
+{
+    var result = 0;
+    for (var i = 0; i < array_length(line_heights); i++)
+    {
+        result += line_heights[i];
+    }
+    
+    return result;
+}
+
+
+
+function ObfuscateText(_msg, _burnout) {
+    var out = "";
+    var intensity = clamp((_burnout - 5) / 5, 0, 1);  // 0 at burnout 5, 1 at 10
+
+    var glitchChars = ["@", "#", "*", "~", "&", "?", "!", "%", "+", "="];
+    var vowels = "aeiou";
+    var flickerColors = ["[c_red]", "[c_lime]", "[c_yellow]", "[c_aqua]"];
+
+    var word = "";
+    var wordBuffer = "";
+
+    for (var i = 1; i <= string_length(_msg); i++) {
+        var c = string_char_at(_msg, i);
+
+        if (c == " " || i == string_length(_msg)) {
+            if (i == string_length(_msg)) word += c;
+
+            var corrupted = "";
+            var maxCorrupt = ceil(string_length(word) / 5);
+
+            for (var j = 1; j <= string_length(word); j++) {
+                var wc = string_char_at(word, j);
+                var corruptChar = wc;
+
+                if (irandom_range(0, string_length(word)) < maxCorrupt && random(1) < intensity) {
+                    // Option 1: replace vowel with random le1tter
+                    if (string_pos(wc, vowels) > 0 && random(1) < 0.5) {
+                        corruptChar = chr(irandom_range(97, 122));
+                    } else {
+                        corruptChar = ChooseFromArray(glitchChars);
+                    }
+
+                    // Optional color flicker if burnout is very high
+                    if (intensity > 0.85 && random(1) < 0.5) {
+                        var flicker = ChooseFromArray(flickerColors);
+                        echo(flicker, true)
+                        corruptChar = flicker + corruptChar + "[/]";
+                    }
+                }
+
+                corrupted += corruptChar;
+            }
+
+            out += corrupted + (c == " " ? " " : "");
+            word = "";
+        } else {
+            word += c;
+        }
+    }
+
+    return out;
+}
+
+
+
+function AddMessage(_msg, _trimEndline = false, useBurnout = true) {
+    _msg = string_trim(_msg);
+
+    if (useBurnout && variable_global_exists("GameData") && global.GameData.Burnout >= 5) {
+        _msg = ObfuscateText(_msg, global.GameData.Burnout);
+    }
+
     array_push(message_list, _msg);
     
-    var scribbleStruct = scribble($"> {_msg}")
+    var scrib = scribble(_msg)
         .align(fa_left, fa_top)
         .starting_format("VCR_OSD_Mono")
-        .transform(0.75, 0.75, 0)
-        .wrap(780 * 1.333)
+        .transform(textTransform, textTransform, 0)
+        .wrap(sprite_width / textTransform);
     
-    line_height = scribbleStruct.get_height();
-    
-    var total_height = array_length(message_list) * (line_height + padding);
-    if (total_height > display_height) {
-        var overflow = total_height - display_height;
-        target_scroll_offset = overflow;
+    var h = scrib.get_height() * textTransform;
+    array_push(line_heights, h);
+
+    var total = __getTotalLineHeight() + ((array_length(message_list)-1) * padding);
+    target_scroll_offset = max(0, total - display_height);
+}
+
+
+burnoutNum = 0;
+
+function SaveMessage(_from, _subject, _text)
+{
+    var time = "";
+    if (variable_global_exists("GameData") && global.GameData[$ "CurrentDay"] != undefined)
+    {
+        time = string_concat(current_month, "/", current_day + global.GameData.CurrentDay, "/", current_year);
     }
-}
-
-function ClearBox()
-{
-    message_list = [];
-    scroll_offset = 0;
-    target_scroll_offset = 0;
-    scroll_speed = 0.2;
-}
-
-
-
-currentMessageLength = array_length(message_list);
-
-function SaveMessage(_from, _text)
-{
-    var filePath = working_directory + "chatMessages.json";
-    var chatMessages = SafeReadJson(filePath);
+    else {
+        time = string_concat(current_month, "/", current_day, "/", current_year);
+    }
     
-    if (chatMessages == undefined) chatMessages = []; // Initialize if file doesn't exist or is empty
+    var chatStruct = {
+        From: _from,
+        Subject: _subject,
+        TimeSaved : time,
+        Text: _text
+    }
+    chatStruct = json_stringify(chatStruct);
+    SafeWriteJson(working_directory + "chatMessages.json", chatStruct);
     
-    var newMessage = {"from": _from, "text": _text};
-    array_push(chatMessages, newMessage); // Add the new message to the array
+    if (!variable_global_exists("MainTextBox")) return;
     
-    var jsonString = json_stringify(chatMessages); // Convert the array to a JSON string
-    SafeWriteJson(filePath, jsonString); // Write the JSON string to the file safely
+    global.MainTextBox.AddMessage($"[c_gold]MAIL:[/] New Email Recieved from [slant]{_from}[/]. Start the [c_gold][wave]MailManager.exe[/] in the [c_gold]V:[/] drive to see it!")
 }
 
 function Read()
 {
     var filePath = working_directory + "chatMessages.json";
-    var chatMessages = SafeReadJson(filePath);
     
-    if (array_length(chatMessages) > currentMessageLength)
+    var data = SafeReadJson(filePath);
+    if (data != undefined)
     {
-        for (var i = currentMessageLength; i < array_length(chatMessages); i++) {
-            var message = chatMessages[i];
-            AddMessage(message.from + ": " + message.text); // Add the new message to the text box
-        }
-        currentMessageLength = array_length(chatMessages); // Update the current message length
-    }
-    else 
-    {
-        ClearBox(); // Clear the text box if no new messages
+        message_list = [];
+        line_heights = [];
+        scroll_offset = 0;
+        target_scroll_offset = 0;
+        scroll_speed = 0.2;
         
-        for (var i = 0; i < array_length(chatMessages); i += 1) {
-            var message = chatMessages[i];
-            AddMessage(message.from + ": " + message.text); // Add the new message to the text box
-        }
+        atBottom = false;
+        atTop = false;
+        AddMessage(string_concat("[c_grey][slant]<", data.TimeSaved, ">[/slant] ", "From: [c_aqua]", data.From, ",[/]\n\n", "[c_grey]Subject: [c_aqua]", data.Subject, "[/]\n\n[c_grey]Message:[/]\n",data.Text))
     }
 }
+
+Read();

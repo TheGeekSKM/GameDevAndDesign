@@ -62,7 +62,7 @@ else if (global.GAME_INSTANCE_ID == 2)
 {
     window_set_position(random_range(0, display_get_width() - window_get_width()), random_range(0, display_get_height() - window_get_height()));
     window_set_caption("Message Viewer")
-    UpdateScale(300, 500);
+    UpdateScale(800, 448 + 2);
     room_goto(rmChat);
 }
 
