@@ -20,5 +20,3 @@ OpenTextDisplay("Starting Notes:", string_concat(part1,"\n\n", part2, "\n\n", "[
 AddMessage("[c_player]NOTE:[/] Please do not hesitate to use the [c_gold][wave]\"help\"[/] command to open the Command Help Window!")
 
 AddMessage("[c_player]UPDATE LOG:[/] The Newest Version of the GESoftware has added [c_aqua][slant]\"Tab\"[/] to Autocomplete!")
-
-alarm[0] = 45;

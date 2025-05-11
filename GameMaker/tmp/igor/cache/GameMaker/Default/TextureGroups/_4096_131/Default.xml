@@ -40,81 +40,118 @@
   <tpe x="262" y="3992" tpage="default_0.bz2">spr_Instructions_GameMaker_dcaa22bc-82c2-45ba-869d-25bb669703bf.tpe</tpe>
   <tpe x="1964" y="1914" tpage="default_0.bz2">spr_seq_cam_GameMaker_ae44e8ac-6f38-4a08-829b-ebcc74c21b59.tpe</tpe>
   <tpe x="962" y="3798" tpage="default_0.bz2">spr_Instructions81_GameMaker_0b160bf1-958d-432e-9fbf-f009dcfa657b.tpe</tpe>
+  <tpe x="1960" y="3772" tpage="default_0.bz2">spr_HitParticles_GameMaker_a363cea5-559c-4b01-b80e-94389c476631.tpe</tpe>
   <tpe x="2" y="3746" tpage="default_0.bz2">spr_mainMenuEditing_audioClipTitle_GameMaker_c506f997-aba2-45f2-8737-3ad60e7ea59b.tpe</tpe>
   <tpe x="314" y="3878" tpage="default_0.bz2">spr_mainMenuEditing_videoClipTitle_GameMaker_4c817732-8a12-439e-98ff-48a0d93d3cf1.tpe</tpe>
-  <tpe x="1960" y="3772" tpage="default_0.bz2">spr_display_GameMaker_0bae76ff-2fc8-4cc0-8fb1-4951c329d67e.tpe</tpe>
+  <tpe x="686" y="3924" tpage="default_0.bz2">spr_HitParticles_GameMaker_efdb934d-b68f-4f1d-b04f-ffae6ebf67f6.tpe</tpe>
+  <tpe x="1964" y="1990" tpage="default_0.bz2">spr_HitParticles_GameMaker_f88ff95a-351b-4643-a480-81575bd73791.tpe</tpe>
+  <tpe x="1082" y="3798" tpage="default_0.bz2">spr_display_GameMaker_0bae76ff-2fc8-4cc0-8fb1-4951c329d67e.tpe</tpe>
+  <tpe x="574" y="3842" tpage="default_0.bz2">spr_HitParticles_GameMaker_f5c32486-6608-4709-a8f0-518bd345e0c7.tpe</tpe>
+  <tpe x="1960" y="3843" tpage="default_0.bz2">spr_HitParticles_GameMaker_da1a77ea-3c14-4c92-9939-41d719acfd61.tpe</tpe>
   <tpe x="0" y="0" tpage="default_1.bz2">_filter_heathaze_noise_sprite__filter_heathaze_fab77ece-6875-44ac-acbc-5d217a1d8340.tpe</tpe>
-  <tpe x="686" y="3924" tpage="default_0.bz2">spr_panel_GameMaker_f3e2ef21-f2da-4f75-a8c8-d9ee1213e3d9.tpe</tpe>
+  <tpe x="766" y="3924" tpage="default_0.bz2">spr_panel_GameMaker_f3e2ef21-f2da-4f75-a8c8-d9ee1213e3d9.tpe</tpe>
+  <tpe x="522" y="3988" tpage="default_0.bz2">spr_HitParticles_GameMaker_c5e67714-3d1b-4268-944f-f47d3719a79f.tpe</tpe>
+  <tpe x="1964" y="2055" tpage="default_0.bz2">spr_HitParticles_GameMaker_71b2bb71-b742-486c-95a2-830dfdbdea9d.tpe</tpe>
+  <tpe x="1998" y="3354" tpage="default_0.bz2">spr_HitParticles_GameMaker_9fbc84e6-b1d1-462a-b169-2f81763c28b1.tpe</tpe>
+  <tpe x="1146" y="3798" tpage="default_0.bz2">spr_HitParticles_GameMaker_68305809-b3c8-4e14-a930-101014cbfe28.tpe</tpe>
   <tpe x="2" y="4064" tpage="default_0.bz2">spr_desktopTitle_GameMaker_fa38fffb-aee5-449d-af7e-5d7b7d03f55c.tpe</tpe>
+  <tpe x="651" y="3842" tpage="default_0.bz2">spr_HitParticles_GameMaker_2af2ec7b-329b-4c72-9ab5-d5ea7b645ace.tpe</tpe>
+  <tpe x="1960" y="3909" tpage="default_0.bz2">spr_HitParticles_GameMaker_ef38a014-0dcd-4818-bbbe-741a6ccadc31.tpe</tpe>
+  <tpe x="766" y="3992" tpage="default_0.bz2">spr_HitParticles_GameMaker_39857fc3-b97d-4f76-8c77-98dd04cf45bd.tpe</tpe>
+  <tpe x="834" y="3842" tpage="default_0.bz2">spr_HitParticles_GameMaker_a9352a60-0eea-4c8a-a075-f6a3ee555c23.tpe</tpe>
   <tpe x="574" y="3746" tpage="default_0.bz2">spr_ScrollNotif_GameMaker_523f77ff-3d94-4481-b476-4ff7c4b21861.tpe</tpe>
-  <tpe x="382" y="3992" tpage="default_0.bz2">spr_CommandWindow_Title_GameMaker_fd92e224-292f-4942-a7e3-83742d000043.tpe</tpe>
-  <tpe x="1920" y="3354" tpage="default_0.bz2">spr_widget_button_GameMaker_88f9bc66-971f-445f-b8df-6eb2cd9e9ca3.tpe</tpe>
-  <tpe x="1082" y="3798" tpage="default_0.bz2">spr_mainMenuEditing_time_GameMaker_83ceeb06-c169-4a79-b6af-69cb3666dc1a.tpe</tpe>
-  <tpe x="1964" y="1990" tpage="default_0.bz2">spr_widget_button_GameMaker_9a530893-70df-400f-8473-18fe09d7c854.tpe</tpe>
-  <tpe x="574" y="3842" tpage="default_0.bz2">spr_GamePlanner_Title_GameMaker_92ed4da6-1c31-4206-b4bf-adf775edbc24.tpe</tpe>
-  <tpe x="206" y="3746" tpage="default_0.bz2">spr_attackCircle_GameMaker_6da67ab4-f104-41fb-84c6-fb00cf4c9929.tpe</tpe>
-  <tpe x="518" y="3878" tpage="default_0.bz2">spr_box_1_GameMaker_7ade4246-02d0-42e7-8756-3b635d61eb85.tpe</tpe>
-  <tpe x="518" y="3878" tpage="default_0.bz2">spr_box_GameMaker_7ade4246-02d0-42e7-8756-3b635d61eb85.tpe</tpe>
-  <tpe x="518" y="3878" tpage="default_0.bz2">spr_box_Middle_GameMaker_3e96e024-f827-4404-abdf-9d0ed8c537cd.tpe</tpe>
-  <tpe x="1960" y="3856" tpage="default_0.bz2">spr_boxBackground_GameMaker_9c586891-7141-4b85-9e9c-6249158121bd.tpe</tpe>
-  <tpe x="2024" y="3354" tpage="default_0.bz2">spr_mouse5_GameMaker_3e5aa1fb-47a1-4ee6-a353-771cb0f36039.tpe</tpe>
-  <tpe x="754" y="3924" tpage="default_0.bz2">spr_mouse5_GameMaker_d980c2f3-fa3f-4985-8fa0-8aa8eabc340e.tpe</tpe>
-  <tpe x="642" y="3746" tpage="default_0.bz2">spr_platformBlue_GameMaker_2bf993bb-8bb2-4290-8ae9-20cfb4c1dcc0.tpe</tpe>
-  <tpe x="642" y="3746" tpage="default_0.bz2">spr_platformBlue66_GameMaker_a2e23e83-4f9d-43bb-bd89-7c10d917643b.tpe</tpe>
-  <tpe x="556" y="3992" tpage="default_0.bz2">spr_platformGreen_GameMaker_fcbc1bfc-51fd-47f3-b9d6-968410e72ca9.tpe</tpe>
-  <tpe x="556" y="3992" tpage="default_0.bz2">spr_platformGreen67_GameMaker_daca349e-c572-4c1d-8405-f15b0f3c4232.tpe</tpe>
-  <tpe x="1218" y="3798" tpage="default_0.bz2">spr_platformOrange_GameMaker_15c7e4f2-f74f-4e85-b0ae-d655ee47ae4b.tpe</tpe>
-  <tpe x="1218" y="3798" tpage="default_0.bz2">spr_platformOrange68_GameMaker_d9149e51-ebec-4e38-b47d-8ba1a341b1b6.tpe</tpe>
-  <tpe x="2016" y="1990" tpage="default_0.bz2">spr_platformRed_GameMaker_0acd4e15-6d1d-4d6e-8d14-a35104311a41.tpe</tpe>
-  <tpe x="1964" y="2038" tpage="default_0.bz2">spr_platformRed64_GameMaker_28bd2a77-98ff-4f8a-b6e1-8d0ce484fa4c.tpe</tpe>
+  <tpe x="592" y="3988" tpage="default_0.bz2">spr_HitParticles_GameMaker_d8f91b29-e86c-4772-a265-d23c98015a92.tpe</tpe>
+  <tpe x="382" y="3992" tpage="default_0.bz2">spr_HitParticles_GameMaker_3a74e546-e8ad-4f2c-b6b1-b6191f83fea2.tpe</tpe>
+  <tpe x="206" y="3746" tpage="default_0.bz2">spr_HitParticles_GameMaker_a9daea46-631c-47e9-b7ed-cce7ef492da2.tpe</tpe>
+  <tpe x="382" y="4052" tpage="default_0.bz2">spr_CommandWindow_Title_GameMaker_fd92e224-292f-4942-a7e3-83742d000043.tpe</tpe>
+  <tpe x="1964" y="2119" tpage="default_0.bz2">spr_widget_button_GameMaker_88f9bc66-971f-445f-b8df-6eb2cd9e9ca3.tpe</tpe>
+  <tpe x="1920" y="3354" tpage="default_0.bz2">spr_HitParticles_GameMaker_897a7f07-fbfb-48fb-834e-1661c3ce0d3b.tpe</tpe>
+  <tpe x="1214" y="3798" tpage="default_0.bz2">spr_mainMenuEditing_time_GameMaker_83ceeb06-c169-4a79-b6af-69cb3666dc1a.tpe</tpe>
+  <tpe x="1998" y="3415" tpage="default_0.bz2">spr_widget_button_GameMaker_9a530893-70df-400f-8473-18fe09d7c854.tpe</tpe>
+  <tpe x="314" y="3908" tpage="default_0.bz2">spr_GamePlanner_Title_GameMaker_92ed4da6-1c31-4206-b4bf-adf775edbc24.tpe</tpe>
+  <tpe x="1146" y="3853" tpage="default_0.bz2">spr_HitParticles_GameMaker_7ca24c2d-c181-4f89-ac1a-89902d02654f.tpe</tpe>
+  <tpe x="518" y="3878" tpage="default_0.bz2">spr_HitParticles_GameMaker_d7edcd82-47d5-41a4-978d-307da8ccc219.tpe</tpe>
+  <tpe x="834" y="3924" tpage="default_0.bz2">spr_HitParticles_GameMaker_887da45e-d7e2-44b1-afa2-454110935e91.tpe</tpe>
+  <tpe x="828" y="3992" tpage="default_0.bz2">spr_HitParticles_GameMaker_ada67acd-de4a-47db-9089-e0dcbcc01480.tpe</tpe>
+  <tpe x="2025" y="3909" tpage="default_0.bz2">spr_HitParticles_GameMaker_e4fbc39b-2c3a-4001-bb76-2f5a3be02fc7.tpe</tpe>
+  <tpe x="592" y="4047" tpage="default_0.bz2">spr_HitParticles_GameMaker_555e8073-5247-4430-9be0-3490e42985d6.tpe</tpe>
+  <tpe x="893" y="3842" tpage="default_0.bz2">spr_attackCircle_GameMaker_6da67ab4-f104-41fb-84c6-fb00cf4c9929.tpe</tpe>
+  <tpe x="713" y="3842" tpage="default_0.bz2">spr_box_1_GameMaker_7ade4246-02d0-42e7-8756-3b635d61eb85.tpe</tpe>
+  <tpe x="713" y="3842" tpage="default_0.bz2">spr_box_GameMaker_7ade4246-02d0-42e7-8756-3b635d61eb85.tpe</tpe>
+  <tpe x="713" y="3842" tpage="default_0.bz2">spr_box_Middle_GameMaker_3e96e024-f827-4404-abdf-9d0ed8c537cd.tpe</tpe>
+  <tpe x="642" y="3746" tpage="default_0.bz2">spr_boxBackground_1_GameMaker_9c586891-7141-4b85-9e9c-6249158121bd.tpe</tpe>
+  <tpe x="648" y="3988" tpage="default_0.bz2">spr_boxBackground_GameMaker_9c586891-7141-4b85-9e9c-6249158121bd.tpe</tpe>
+  <tpe x="260" y="3746" tpage="default_0.bz2">spr_mouse5_GameMaker_3e5aa1fb-47a1-4ee6-a353-771cb0f36039.tpe</tpe>
+  <tpe x="439" y="3992" tpage="default_0.bz2">spr_mouse5_GameMaker_d980c2f3-fa3f-4985-8fa0-8aa8eabc340e.tpe</tpe>
+  <tpe x="2016" y="2119" tpage="default_0.bz2">spr_platformBlue_GameMaker_2bf993bb-8bb2-4290-8ae9-20cfb4c1dcc0.tpe</tpe>
+  <tpe x="2016" y="2119" tpage="default_0.bz2">spr_platformBlue66_GameMaker_a2e23e83-4f9d-43bb-bd89-7c10d917643b.tpe</tpe>
+  <tpe x="1964" y="2171" tpage="default_0.bz2">spr_platformGreen_GameMaker_fcbc1bfc-51fd-47f3-b9d6-968410e72ca9.tpe</tpe>
+  <tpe x="1964" y="2171" tpage="default_0.bz2">spr_platformGreen67_GameMaker_daca349e-c572-4c1d-8405-f15b0f3c4232.tpe</tpe>
+  <tpe x="1350" y="3798" tpage="default_0.bz2">spr_platformOrange_GameMaker_15c7e4f2-f74f-4e85-b0ae-d655ee47ae4b.tpe</tpe>
+  <tpe x="1350" y="3798" tpage="default_0.bz2">spr_platformOrange68_GameMaker_d9149e51-ebec-4e38-b47d-8ba1a341b1b6.tpe</tpe>
+  <tpe x="1998" y="3463" tpage="default_0.bz2">spr_platformRed_GameMaker_0acd4e15-6d1d-4d6e-8d14-a35104311a41.tpe</tpe>
+  <tpe x="1195" y="3853" tpage="default_0.bz2">spr_platformRed64_GameMaker_28bd2a77-98ff-4f8a-b6e1-8d0ce484fa4c.tpe</tpe>
+  <tpe x="893" y="3882" tpage="default_0.bz2">spr_HitParticles_GameMaker_cca948f8-3004-4e5e-a314-7cf19f1502e0.tpe</tpe>
   <tpe x="299" y="4064" tpage="default_0.bz2">spr_mouse5_GameMaker_cde2471f-96c4-42ec-a967-c4c6c4be74bc.tpe</tpe>
-  <tpe x="574" y="3857" tpage="default_0.bz2">spr_mouse5_GameMaker_b42720b5-2cab-4b4b-b2ab-f7a01e7d00b9.tpe</tpe>
-  <tpe x="242" y="3746" tpage="default_0.bz2">spr_mouse5_GameMaker_00880db3-6861-4511-9898-1167b0c2c62f.tpe</tpe>
-  <tpe x="1996" y="3856" tpage="default_0.bz2">spr_mouse5_GameMaker_90600d27-89d2-49c7-9947-b5de143cdeb1.tpe</tpe>
-  <tpe x="1960" y="3892" tpage="default_0.bz2">gooey_GameMaker_c0f54926-adf2-4be7-bd61-12d28b85d061.tpe</tpe>
-  <tpe x="1998" y="3390" tpage="default_0.bz2">Firefox_GameMaker_591ed238-0c2b-478e-b300-43f5b0860f9f.tpe</tpe>
-  <tpe x="790" y="3924" tpage="default_0.bz2">Google_Chrome_GameMaker_251bbcb2-e8de-4a9d-b490-5f94ab566dc4.tpe</tpe>
-  <tpe x="754" y="3960" tpage="default_0.bz2">Gmail_GameMaker_d12f47bb-a570-4dfd-b9a5-72678c308ccb.tpe</tpe>
-  <tpe x="757" y="3842" tpage="default_0.bz2">spr_cursor_arrow_GameMaker_6b94a3d6-728e-4987-b364-45f6e4928b69.tpe</tpe>
+  <tpe x="878" y="3924" tpage="default_0.bz2">spr_HitParticles_GameMaker_57966de7-bab8-4ece-a992-58d13ba87b24.tpe</tpe>
+  <tpe x="878" y="3963" tpage="default_0.bz2">spr_mouse5_GameMaker_b42720b5-2cab-4b4b-b2ab-f7a01e7d00b9.tpe</tpe>
+  <tpe x="828" y="4033" tpage="default_0.bz2">spr_mouse5_GameMaker_00880db3-6861-4511-9898-1167b0c2c62f.tpe</tpe>
+  <tpe x="2034" y="3843" tpage="default_0.bz2">spr_HitParticles_GameMaker_acaf2baf-18da-406e-91bf-29634d0b4b46.tpe</tpe>
+  <tpe x="2025" y="3948" tpage="default_0.bz2">spr_mouse5_GameMaker_90600d27-89d2-49c7-9947-b5de143cdeb1.tpe</tpe>
+  <tpe x="629" y="4043" tpage="default_0.bz2">gooey_GameMaker_c0f54926-adf2-4be7-bd61-12d28b85d061.tpe</tpe>
+  <tpe x="556" y="4052" tpage="default_0.bz2">spr_HitParticles_GameMaker_85e23f09-2a19-4c14-b9e8-8d7b4c76b524.tpe</tpe>
+  <tpe x="929" y="3842" tpage="default_0.bz2">Firefox_GameMaker_591ed238-0c2b-478e-b300-43f5b0860f9f.tpe</tpe>
+  <tpe x="749" y="3842" tpage="default_0.bz2">Google_Chrome_GameMaker_251bbcb2-e8de-4a9d-b490-5f94ab566dc4.tpe</tpe>
+  <tpe x="1971" y="3354" tpage="default_0.bz2">spr_HitParticles_GameMaker_e4959a9b-6e9a-4e70-8d15-3289a7e7f668.tpe</tpe>
+  <tpe x="713" y="3878" tpage="default_0.bz2">Gmail_GameMaker_d12f47bb-a570-4dfd-b9a5-72678c308ccb.tpe</tpe>
+  <tpe x="678" y="3746" tpage="default_0.bz2">spr_cursor_arrow_GameMaker_6b94a3d6-728e-4987-b364-45f6e4928b69.tpe</tpe>
+  <tpe x="684" y="3996" tpage="default_0.bz2">spr_HitParticles_GameMaker_e1ce1540-3d03-40c7-9199-1c927cc84227.tpe</tpe>
   <tpe x="2" y="3776" tpage="default_0.bz2">Youtube_GameMaker_00aedcc3-402d-4b9c-9a49-38943be0e79c.tpe</tpe>
+  <tpe x="475" y="3992" tpage="default_0.bz2">spr_HitParticles_GameMaker_5190255f-1669-4fb7-83b0-c92744205105.tpe</tpe>
   <tpe x="2041" y="3282" tpage="default_0.bz2">spr_mouse_GameMaker_412024b2-8581-4eb8-8c73-1de449264b67.tpe</tpe>
   <tpe x="2041" y="3282" tpage="default_0.bz2">spr_mouse_GameMaker_5c651c19-8f2f-44f4-9cf0-6a8f6e2d6421.tpe</tpe>
   <tpe x="2041" y="3282" tpage="default_0.bz2">spr_mouse_GameMaker_aa0bcb56-8ab3-4c29-b7be-0fc4e0b599f9.tpe</tpe>
   <tpe x="2041" y="3282" tpage="default_0.bz2">spr_mouse_GameMaker_abdb4416-f38b-4c24-a7d1-3c5f0766fc10.tpe</tpe>
   <tpe x="2041" y="3282" tpage="default_0.bz2">spr_mouse_GameMaker_bf53a5ae-9ba1-4921-84c0-909e28243d6d.tpe</tpe>
   <tpe x="2041" y="3282" tpage="default_0.bz2">spr_mouse_GameMaker_c53adfa1-8ed3-46b3-a509-9041c1d1d4eb.tpe</tpe>
-  <tpe x="678" y="3746" tpage="default_0.bz2">spr_enemy_GameMaker_01f5dc1d-63bb-40d1-9627-0ad8a65b7590.tpe</tpe>
-  <tpe x="592" y="3992" tpage="default_0.bz2">spr_enemy_GameMaker_242260b1-a9dd-416b-97f4-b049bc111768.tpe</tpe>
-  <tpe x="382" y="4010" tpage="default_0.bz2">spr_enemy_GameMaker_550b160a-ca2c-4b5c-b913-77aad70ba516.tpe</tpe>
-  <tpe x="1254" y="3798" tpage="default_0.bz2">spr_enemy_GameMaker_8248b26b-2ce2-4b14-8f4b-e2ceac35574b.tpe</tpe>
-  <tpe x="1082" y="3818" tpage="default_0.bz2">spr_platformingPlayer_GameMaker_335df920-7509-4694-ac87-401f87be70dc.tpe</tpe>
-  <tpe x="2016" y="2026" tpage="default_0.bz2">spr_platformingPlayer_GameMaker_a2a10c80-3546-496b-a033-a020d269777d.tpe</tpe>
-  <tpe x="1964" y="2074" tpage="default_0.bz2">spr_widget_slider_position_GameMaker_c2aeec40-b486-4534-8154-ceb787a03b51.tpe</tpe>
-  <tpe x="333" y="4064" tpage="default_0.bz2">spr_widget_slider_position_GameMaker_ce7c853e-b568-4b76-b001-cd5539e9c611.tpe</tpe>
-  <tpe x="554" y="3878" tpage="default_0.bz2">spr_ssave_demo_player_down_GameMaker_571693f0-f06a-41e9-82a7-b11574b14ddb.tpe</tpe>
-  <tpe x="273" y="3746" tpage="default_0.bz2">spr_ssave_demo_player_down_GameMaker_be2f0286-51c9-4731-941d-c5d6c2eb123e.tpe</tpe>
-  <tpe x="242" y="3777" tpage="default_0.bz2">spr_ssave_demo_player_down_GameMaker_caf02a5a-7345-4d5b-8693-3dbd6c19bab5.tpe</tpe>
-  <tpe x="1996" y="3883" tpage="default_0.bz2">spr_ssave_demo_player_up_GameMaker_1c152c03-9cf8-44f3-953e-57e735467958.tpe</tpe>
-  <tpe x="2030" y="3390" tpage="default_0.bz2">spr_ssave_demo_player_up_GameMaker_7567b1b7-10fd-47c2-83aa-528439421bf6.tpe</tpe>
-  <tpe x="1960" y="3920" tpage="default_0.bz2">spr_ssave_demo_player_up_GameMaker_d38993d2-14fa-4a7b-ab3f-bf8f01e7f553.tpe</tpe>
-  <tpe x="1998" y="3418" tpage="default_0.bz2">spr_ssave_demo_player_left_GameMaker_57d69775-1e3d-4cb3-a2f4-5156948bb94e.tpe</tpe>
-  <tpe x="1972" y="3354" tpage="default_0.bz2">spr_ssave_demo_player_left_GameMaker_cd1f1dba-56e3-40a1-a36a-685dc1c6dce5.tpe</tpe>
-  <tpe x="2024" y="3418" tpage="default_0.bz2">spr_ssave_demo_player_left_GameMaker_f0423ca4-33c7-4108-9353-9fd5275cb252.tpe</tpe>
-  <tpe x="790" y="3952" tpage="default_0.bz2">spr_ssave_demo_player_right_GameMaker_4fd9b8fb-7a6f-4c7f-94a6-87753390c47c.tpe</tpe>
-  <tpe x="818" y="3842" tpage="default_0.bz2">spr_ssave_demo_player_right_GameMaker_652f3793-360f-4229-932f-af53e41cc1bc.tpe</tpe>
-  <tpe x="754" y="3984" tpage="default_0.bz2">spr_ssave_demo_player_right_GameMaker_d07483c7-1647-469e-8b88-01f556356829.tpe</tpe>
-  <tpe x="2" y="4079" tpage="default_0.bz2">spr_bug_GameMaker_e8da1f7e-5f14-46a1-8ce7-bcd738ab4079.tpe</tpe>
-  <tpe x="2" y="4079" tpage="default_0.bz2">spr_bug23_GameMaker_282f9098-e0c3-486a-9709-84aec21113c1.tpe</tpe>
-  <tpe x="607" y="3857" tpage="default_0.bz2">spr_bug23_GameMaker_528f3573-740b-4bba-8f83-10f9e1b505a2.tpe</tpe>
-  <tpe x="30" y="3776" tpage="default_0.bz2">spr_player_GameMaker_1d1882c6-6380-4318-ada8-f9860ff76eda.tpe</tpe>
-  <tpe x="2041" y="3306" tpage="default_0.bz2">spr_player_GameMaker_f1630346-fea4-41f4-bc0f-c624fa28fd52.tpe</tpe>
-  <tpe x="698" y="3746" tpage="default_0.bz2">spr_pound_GameMaker_246270ec-0147-4a48-98ac-cac013aa3aa6.tpe</tpe>
-  <tpe x="314" y="3908" tpage="default_0.bz2">spr_upPointer_GameMaker_7b5dd83f-16b7-418c-a9ab-0c1014b9cac9.tpe</tpe>
-  <tpe x="642" y="3782" tpage="default_0.bz2">spr_pointer_entity_GameMaker_6dbc7db2-bf15-4d6c-8ca9-f767698989dc.tpe</tpe>
-  <tpe x="678" y="3766" tpage="default_0.bz2">spr_pointer_GameMaker_70e0691f-012c-4f53-8899-9a57b033aec0.tpe</tpe>
-  <tpe x="592" y="4012" tpage="default_0.bz2">scribble_fallback_bulletpoint_GameMaker_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
+  <tpe x="439" y="4028" tpage="default_0.bz2">spr_HitParticles_GameMaker_d172122c-c275-4bbc-8e59-f7cd6b080424.tpe</tpe>
+  <tpe x="2032" y="2055" tpage="default_0.bz2">spr_enemy_GameMaker_01f5dc1d-63bb-40d1-9627-0ad8a65b7590.tpe</tpe>
+  <tpe x="2016" y="2155" tpage="default_0.bz2">spr_enemy_GameMaker_242260b1-a9dd-416b-97f4-b049bc111768.tpe</tpe>
+  <tpe x="1964" y="2207" tpage="default_0.bz2">spr_enemy_GameMaker_550b160a-ca2c-4b5c-b913-77aad70ba516.tpe</tpe>
+  <tpe x="1386" y="3798" tpage="default_0.bz2">spr_enemy_GameMaker_8248b26b-2ce2-4b14-8f4b-e2ceac35574b.tpe</tpe>
+  <tpe x="2034" y="3463" tpage="default_0.bz2">spr_platformingPlayer_GameMaker_335df920-7509-4694-ac87-401f87be70dc.tpe</tpe>
+  <tpe x="1998" y="3499" tpage="default_0.bz2">spr_platformingPlayer_GameMaker_a2a10c80-3546-496b-a033-a020d269777d.tpe</tpe>
+  <tpe x="1195" y="3889" tpage="default_0.bz2">spr_widget_slider_position_GameMaker_c2aeec40-b486-4534-8154-ceb787a03b51.tpe</tpe>
+  <tpe x="1231" y="3818" tpage="default_0.bz2">spr_widget_slider_position_GameMaker_ce7c853e-b568-4b76-b001-cd5539e9c611.tpe</tpe>
+  <tpe x="928" y="3882" tpage="default_0.bz2">spr_HitParticles_GameMaker_321e5e17-328c-4d1c-bc4b-721ca5f32d9e.tpe</tpe>
+  <tpe x="296" y="3746" tpage="default_0.bz2">spr_ssave_demo_player_down_GameMaker_571693f0-f06a-41e9-82a7-b11574b14ddb.tpe</tpe>
+  <tpe x="333" y="4064" tpage="default_0.bz2">spr_ssave_demo_player_down_GameMaker_be2f0286-51c9-4731-941d-c5d6c2eb123e.tpe</tpe>
+  <tpe x="911" y="3924" tpage="default_0.bz2">spr_ssave_demo_player_down_GameMaker_caf02a5a-7345-4d5b-8693-3dbd6c19bab5.tpe</tpe>
+  <tpe x="869" y="3996" tpage="default_0.bz2">spr_ssave_demo_player_up_GameMaker_1c152c03-9cf8-44f3-953e-57e735467958.tpe</tpe>
+  <tpe x="834" y="3967" tpage="default_0.bz2">spr_ssave_demo_player_up_GameMaker_7567b1b7-10fd-47c2-83aa-528439421bf6.tpe</tpe>
+  <tpe x="859" y="4033" tpage="default_0.bz2">spr_ssave_demo_player_up_GameMaker_d38993d2-14fa-4a7b-ab3f-bf8f01e7f553.tpe</tpe>
+  <tpe x="2034" y="3874" tpage="default_0.bz2">spr_ssave_demo_player_left_GameMaker_57d69775-1e3d-4cb3-a2f4-5156948bb94e.tpe</tpe>
+  <tpe x="911" y="3963" tpage="default_0.bz2">spr_ssave_demo_player_left_GameMaker_cd1f1dba-56e3-40a1-a36a-685dc1c6dce5.tpe</tpe>
+  <tpe x="661" y="4024" tpage="default_0.bz2">spr_ssave_demo_player_left_GameMaker_f0423ca4-33c7-4108-9353-9fd5275cb252.tpe</tpe>
+  <tpe x="661" y="4047" tpage="default_0.bz2">spr_ssave_demo_player_right_GameMaker_4fd9b8fb-7a6f-4c7f-94a6-87753390c47c.tpe</tpe>
+  <tpe x="629" y="4071" tpage="default_0.bz2">spr_ssave_demo_player_right_GameMaker_652f3793-360f-4229-932f-af53e41cc1bc.tpe</tpe>
+  <tpe x="957" y="3851" tpage="default_0.bz2">spr_ssave_demo_player_right_GameMaker_d07483c7-1647-469e-8b88-01f556356829.tpe</tpe>
+  <tpe x="2" y="4079" tpage="default_0.bz2">spr_HitParticles_GameMaker_38a8d4b3-833d-42fa-8265-1fe5acc684b1.tpe</tpe>
+  <tpe x="777" y="3842" tpage="default_0.bz2">spr_bug_GameMaker_e8da1f7e-5f14-46a1-8ce7-bcd738ab4079.tpe</tpe>
+  <tpe x="777" y="3842" tpage="default_0.bz2">spr_bug23_GameMaker_282f9098-e0c3-486a-9709-84aec21113c1.tpe</tpe>
+  <tpe x="749" y="3870" tpage="default_0.bz2">spr_bug23_GameMaker_528f3573-740b-4bba-8f83-10f9e1b505a2.tpe</tpe>
+  <tpe x="1971" y="3382" tpage="default_0.bz2">spr_player_GameMaker_1d1882c6-6380-4318-ada8-f9860ff76eda.tpe</tpe>
+  <tpe x="651" y="3901" tpage="default_0.bz2">spr_player_GameMaker_f1630346-fea4-41f4-bc0f-c624fa28fd52.tpe</tpe>
+  <tpe x="497" y="3908" tpage="default_0.bz2">spr_HitParticles_GameMaker_46a58419-3349-4d88-90dc-421c0cf99925.tpe</tpe>
+  <tpe x="741" y="3898" tpage="default_0.bz2">spr_pound_GameMaker_246270ec-0147-4a48-98ac-cac013aa3aa6.tpe</tpe>
+  <tpe x="642" y="3782" tpage="default_0.bz2">spr_upPointer_GameMaker_7b5dd83f-16b7-418c-a9ab-0c1014b9cac9.tpe</tpe>
+  <tpe x="260" y="3782" tpage="default_0.bz2">spr_HitParticles_GameMaker_1e84e14a-58a5-4515-bfcd-585f22765687.tpe</tpe>
+  <tpe x="702" y="3746" tpage="default_0.bz2">spr_pointer_entity_GameMaker_6dbc7db2-bf15-4d6c-8ca9-f767698989dc.tpe</tpe>
+  <tpe x="678" y="3774" tpage="default_0.bz2">spr_pointer_GameMaker_70e0691f-012c-4f53-8899-9a57b033aec0.tpe</tpe>
+  <tpe x="710" y="3996" tpage="default_0.bz2">scribble_fallback_bulletpoint_GameMaker_16f4267b-6bb8-4d8f-a47a-c16693dce482.tpe</tpe>
   <tpe x="2052" y="1990" tpage="default_0.bz2">spr_block_GameMaker_4a3c7bfd-1d0b-4859-99d5-8ea9335063fe.tpe</tpe>
   <tpe x="2" y="4056" tpage="default_0.bz2">spr_bullet_GameMaker_2a88a37d-d298-4e71-b4b4-0c68b432a2d5.tpe</tpe>
-  <tpe x="2052" y="3150" tpage="default_0.bz2">spr_pixel_GameMaker_c6297ff6-6c93-44e7-bce1-c01ad1373730.tpe</tpe>
-  <tpe x="2052" y="3150" tpage="default_0.bz2">spr_trailPixel_GameMaker_99356300-3398-4f3d-9ddc-bd92ccfc9487.tpe</tpe>
+  <tpe x="1920" y="3403" tpage="default_0.bz2">spr_HitParticles_GameMaker_ccc253dd-c5ed-4dcb-8a7e-6af036520ee4.tpe</tpe>
+  <tpe x="2" y="3913" tpage="default_0.bz2">spr_pixel_GameMaker_c6297ff6-6c93-44e7-bce1-c01ad1373730.tpe</tpe>
+  <tpe x="2" y="3913" tpage="default_0.bz2">spr_trailPixel_GameMaker_99356300-3398-4f3d-9ddc-bd92ccfc9487.tpe</tpe>
 </TextureGroup>

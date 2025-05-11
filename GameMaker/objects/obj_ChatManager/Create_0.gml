@@ -171,4 +171,7 @@ function Read()
     }
 }
 
-Read();
+if (canDraw) 
+{
+    Read();
+}
