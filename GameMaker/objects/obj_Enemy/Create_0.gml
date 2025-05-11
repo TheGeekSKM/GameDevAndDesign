@@ -24,6 +24,7 @@ function TakeDamage(_damage)
         ___.currentHealth = 0;
         if (___.onDeathCallback != undefined) ___.onDeathCallback();
         global.ProgrammingScore += 1;
+        instance_destroy();
     }
     else 
     {

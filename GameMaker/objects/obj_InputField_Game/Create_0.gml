@@ -116,9 +116,8 @@ function EnterPressed()
     //Transition(rmInit2, seqTrans_In_CornerSlide, seqTrans_Out_CornerSlide);
 //}]);
 
-currentBurnoutValue = 0;
 Subscribe("BurnoutModified", function(burnoutAmount) {
-    var value = burnoutAmount - currentBurnoutValue;
+    var value = burnoutAmount;
     var text = "";
     var textCol = c_white;
     
@@ -133,12 +132,11 @@ Subscribe("BurnoutModified", function(burnoutAmount) {
         textCol = c_lime;
     }
     
-    instance_create_depth(600, 750, depth - 5, obj_PopUpText, {
+    instance_create_depth(400, 420, depth - 5, obj_PopUpText, {
         textToDisplay : text,
         textColor : textCol
     })
     
-    currentBurnoutValue = burnoutAmount;
 })
 
 alarm[0] = 45;
@@ -208,7 +206,7 @@ function GeneratePublisherEmail(_interest, _quality, _currentDay, _maxNumOfDays)
     }
     array_push(sections, deadlineText);
 
-    array_shuffle(sections);
+    sections = array_shuffle(sections);
     var msg = string_concat(sections[0], "\n\n", sections[1], "\n\n", sections[2]);
 
     var critical = min(_interest, _quality);

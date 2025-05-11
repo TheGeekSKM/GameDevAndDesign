@@ -11,4 +11,5 @@ ___.numberOfShots -= 1;
 if (___.numberOfShots >= 0) alarm[1] = ___.shootSpeed;
 else {
     global.PlayerCurrentlyActing = false;
+    global.CanMove = false;
 }

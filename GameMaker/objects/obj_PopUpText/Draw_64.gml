@@ -4,4 +4,4 @@ scribble(textToDisplay)
     .blend(textColor, textAlpha)
     .transform(1.2, 1.2, 0)
     .sdf_outline(c_black, 2)
-    .draw(guiCoords.x, guiCoords.y);
+    .draw(x, y);

@@ -164,7 +164,7 @@ gameDevFolder = new Directory("GameDev",
         
         var burnout = round(quality / 10);
         global.GameData.Burnout += burnout;
-        Raise("BurnoutModified", global.GameData.Burnout);
+        Raise("BurnoutModified", burnout);
 
         global.GameData.CurrentDay++;
         if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -215,7 +215,7 @@ function RestGames()
 
     var burnout = round(interest / 7) + irandom_range(0, 3);
     global.GameData.Burnout -= burnout;
-    Raise("BurnoutModified", global.GameData.Burnout);
+    Raise("BurnoutModified", burnout);
 
 
     global.GameData.CurrentDay++;
@@ -241,7 +241,7 @@ function RestMovies()
 
     var burnout = round(interest / 7) + irandom_range(0, 3);
     global.GameData.Burnout -= burnout;
-    Raise("BurnoutModified", global.GameData.Burnout);
+    Raise("BurnoutModified", burnout);
 
 
     global.GameData.CurrentDay++;

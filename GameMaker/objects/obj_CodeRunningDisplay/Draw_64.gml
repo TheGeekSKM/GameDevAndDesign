@@ -12,7 +12,8 @@ if (currentStruct != undefined)
         scribble(txt)
             .align(fa_left, fa_top)
             .starting_format("VCR_OSD_Mono", c_white)
-            .transform(0.75, 0.75, image_angle)
+            .transform(0.5, 0.5, image_angle)
+            .wrap(sprite_width * 2 - 20)
             .draw(x + 10, y + 10 + (i * 24 * 0.75));
     }
 }

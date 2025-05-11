@@ -7,7 +7,7 @@
   "managed":true,
   "name":"obj_TextDisplay_SP5",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"Text","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[c_player] Eliminate as many Bugs as you can before you run out of memory!\\nPress [c_gold][wave]'Esc'[/wave][c_player] at any time to stop running a function!",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_TextDisplay","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"propertyId":{"name":"Text","path":"objects/obj_TextDisplay/obj_TextDisplay.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"[c_player] Eliminate as many Bugs as you can before you run out of memory!\\nPress [c_gold][wave]'Esc'[/wave][c_player] at any time to stop execution.\\n You will regain Memory when not executing functions.",},
   ],
   "parent":{
     "name":"SetUp",

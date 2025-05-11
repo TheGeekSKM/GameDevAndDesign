@@ -33,7 +33,6 @@ AddCommandToLibrary(
     new Command(
         "turnto", 2, 0, "Turns the player to face an angle", function(_value) {
             Raise("TurnTo", _value);
-            show_message($"Turning to {_value}")
         }, false
     )
 )

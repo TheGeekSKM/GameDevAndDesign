@@ -31,8 +31,8 @@ function ProgrammingGameEnded()
             global.GameData.Quality += quality;
             
             var burnout = round(quality / 15);
-            global.GameData.Burnout += min(burnout, 1);
-            Raise("BurnoutModified", global.GameData.Burnout);
+            global.GameData.Burnout += max(burnout, 1);
+            Raise("BurnoutModified", max(burnout, 1));
     
             global.GameData.CurrentDay++;
             if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -54,8 +54,8 @@ function ProgrammingGameEnded()
             global.GameData.Quality += quality;
             
             var burnout = round(quality / 15);
-            global.GameData.Burnout += min(burnout, 1);
-            Raise("BurnoutModified", global.GameData.Burnout);
+            global.GameData.Burnout += max(burnout, 1);
+            Raise("BurnoutModified", max(burnout, 1));
     
             global.GameData.CurrentDay++;
             if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -90,8 +90,8 @@ function EditingGameEnded()
             global.GameData.Interest += quality;
             
             var burnout = round(quality / 15);
-            global.GameData.Burnout += min(burnout, 1);
-            Raise("BurnoutModified", global.GameData.Burnout);
+            global.GameData.Burnout += max(burnout, 1);
+            Raise("BurnoutModified", max(burnout, 1));
     
             global.GameData.CurrentDay++;
             if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)
@@ -112,8 +112,8 @@ function EditingGameEnded()
             global.GameData.Interest += quality;
             
             var burnout = round(quality / 15);
-            global.GameData.Burnout += min(burnout, 1);
-            Raise("BurnoutModified", global.GameData.Burnout);
+            global.GameData.Burnout += max(burnout, 1);
+            Raise("BurnoutModified", max(burnout, 1));
     
             global.GameData.CurrentDay++;
             if (global.GameData.CurrentDay >= global.GameData.MaxNumOfDays)

@@ -3,13 +3,12 @@ else image_index = 0;
 
 // ----- Turning ----- //
 ___.angle = lerp(___.angle, ___.goalAngle, 0.1);
-if (abs(___.angle - ___.goalAngle) <= 0.15)
+if (abs(___.angle - ___.goalAngle) <= 0.15 && !_doOnce)
 {
     ___.angle = ___.goalAngle;
-    if (global.PlayerCurrentlyActing)
-    {
-        global.PlayerCurrentlyActing = false;
-    }
+    _doOnce = true;
+    global.PlayerCurrentlyActing = false;
+    
 }
 
 // ----- Movement ----- //
@@ -49,10 +48,10 @@ if (keyboard_check_pressed(vk_numpad0))
 }
 
 
-if (global.CanMove)
+if (!global.CanMove)
 {
     _counter++;
-    if (_counter >= 2 * 60)
+    if (_counter >= 3 * 60)
     {
         TakeDamage(-5);
         _counter = 0;

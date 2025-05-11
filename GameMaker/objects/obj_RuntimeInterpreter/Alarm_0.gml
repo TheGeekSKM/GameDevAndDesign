@@ -1,8 +1,8 @@
 if (!isRunning) return;
 
-if (variable_global_exists("PlayerCurrentlyActing") && global.PlayerCurrentlyActing || global.CanMove)
+if (variable_global_exists("PlayerCurrentlyActing") && global.PlayerCurrentlyActing)
 {
-    alarm[0] = tickDelay;
+    alarm[0] = irandom_range(5, 10);
     //show_message($"Player Currently Acting")
     return;
 }

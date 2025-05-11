@@ -91,9 +91,9 @@ function PlayerStateNormal(coyoteMax, _jumpBufferMax, _dashBufferMax)
     var moveInput = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left) || keyboard_check(ord("A")));
     var jumpPressed = keyboard_check_pressed(vk_space) || keyboard_check_pressed(ord("W"));
     var jumpHeld = keyboard_check(vk_space) || keyboard_check(ord("W"));
-    var dashPressed = keyboard_check_pressed(vk_lshift);
-    var attackPrimaryPressed = keyboard_check_pressed(ord("J"));
-    var attackSecondaryPressed = keyboard_check_pressed(ord("K"));
+    var dashPressed = keyboard_check_pressed(ord("J")) || keyboard_check_pressed(vk_shift);
+    var attackPrimaryPressed = keyboard_check_pressed(ord("K"));
+    var attackSecondaryPressed = false;
 
     // Input Buffering
     if (jumpPressed) jumpBufferTimer = _jumpBufferMax;

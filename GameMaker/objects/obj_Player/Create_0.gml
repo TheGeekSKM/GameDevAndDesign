@@ -60,12 +60,12 @@ function TakeDamage(_damage, _noFeedback = false)
     }
     else if (_noFeedback)
     {
-        if (!layer_exists("GUI")) layer_create(-150, "GUI")
-        var guiCoords = RoomToGUICoords(x, y);
-        var inst = instance_create_layer(guiCoords.x, guiCoords.y, "GUI", obj_PopUpText, {
-            textToDisplay : $"Allocated Memory -{_damage}",
-            textColor : c_yellow
-        });
+        //if (!layer_exists("GUI")) layer_create(-150, "GUI")
+        //var guiCoords = RoomToGUICoords(x, y);
+        //var inst = instance_create_layer(guiCoords.x, guiCoords.y, "GUI", obj_PopUpText, {
+            //textToDisplay : $"Allocated Memory -{_damage}",
+            //textColor : c_yellow
+        //});
     }
     
     if (___.currentHealth <= 0)
@@ -116,6 +116,7 @@ function TakeDamage(_damage, _noFeedback = false)
 
 Subscribe("Turn", function(_angle) {
     global.PlayerCurrentlyActing = true;
+    _doOnce = false;
     ___.goalAngle += _angle;
     if (___.goalAngle > 360) ___.goalAngle -= 360;
     if (___.goalAngle < 0) ___.goalAngle += 360;
@@ -126,6 +127,8 @@ Subscribe("Turn", function(_angle) {
 
 Subscribe("TurnTo", function(_angle) {
     global.PlayerCurrentlyActing = true;
+    
+    _doOnce = false;
     ___.goalAngle = _angle;
     if (___.goalAngle > 360) ___.goalAngle -= 360;
     if (___.goalAngle < 0) ___.goalAngle += 360;
@@ -136,6 +139,7 @@ Subscribe("TurnTo", function(_angle) {
 
 Subscribe("Move", function(_numOfSteps) {
     global.PlayerCurrentlyActing = true;
+    global.CanMove = true;
     ___.canMove = true;
     Raise("CanMove", true);
     alarm[0] = _numOfSteps * 30;
@@ -150,6 +154,7 @@ Subscribe("Shoot", function(_numOfShots) {
 
 Subscribe("EscPressed", function() {
     global.PlayerCurrentlyActing = false;
+    global.CanMove = false;
     alarm[0] = -1;
     ___.canMove = false;
     Raise("CanMove", false);
@@ -161,7 +166,8 @@ Subscribe("EscPressed", function() {
 
 
 
-Init(200);
+Init(50);
 
 _counter = 0;
 _allocationCounter = 0;
+_doOnce = false;
