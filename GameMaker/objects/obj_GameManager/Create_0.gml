@@ -8,9 +8,10 @@ var findAngleCommand = new Command(
     0,                      // No input multiplier needed
     "Finds the angle to the nearest bug.", // Description
     function(_value) {
-        // Example simple logic (replace with real gameplay logic)
-        var angle = irandom(360);
-        show_message($"Angle: {angle}")
+        var nearestBug = instance_nearest(obj_Player.x, obj_Player.y, obj_Enemy);
+        
+        if (instance_exists(nearestBug)) var angle = point_direction(obj_Player.x, obj_Player.y, nearestBug.x, nearestBug.y)
+        else angle = random(360);
         return angle;
     },
     true
