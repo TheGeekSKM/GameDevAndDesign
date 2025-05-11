@@ -90,7 +90,7 @@ function ObfuscateText(_msg, _burnout) {
 
 
 
-function AddMessage(_msg, _trimEndline = false, useBurnout = true) {
+function AddMessage(_msg, _trimEndline = false, useBurnout = true, scrollToBottom = true) {
     _msg = string_trim(_msg);
 
     if (useBurnout && variable_global_exists("GameData") && global.GameData.Burnout >= 5) {
@@ -108,8 +108,16 @@ function AddMessage(_msg, _trimEndline = false, useBurnout = true) {
     var h = scrib.get_height() * textTransform;
     array_push(line_heights, h);
 
-    var total = __getTotalLineHeight() + ((array_length(message_list)-1) * padding);
-    target_scroll_offset = max(0, total - display_height);
+    if (scrollToBottom)
+    {
+        var total = __getTotalLineHeight() + ((array_length(message_list)-1) * padding);
+        target_scroll_offset = max(0, total - display_height);
+    }
+}
+
+function ScrollToTop()
+{
+    target_scroll_offset = 0;
 }
 
 

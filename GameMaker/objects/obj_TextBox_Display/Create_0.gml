@@ -13,3 +13,4 @@ if (displayStruct != undefined) {
 }
 
 AddMessage(text);
+ScrollToTop();

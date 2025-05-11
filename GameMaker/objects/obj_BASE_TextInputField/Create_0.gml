@@ -67,19 +67,19 @@ function AttemptAutocomplete()
 
     var autocorrected = false;
 
-    // loop through the command library
-    var commandList = struct_get_names(global.vars.CommandLibrary);
-    var commandListLength = array_length(commandList);
-
-    for (var i = 0; i < commandListLength; i += 1) 
-    {
-        if (string_starts_with(string_lower(commandList[i]), string_lower(lastWord)))
-        {
-            lastWord = commandList[i];
-            autocorrected = true;
-            break;
-        }
-    }
+    //// loop through the command library
+    //var commandList = struct_get_names(global.vars.CommandLibrary);
+    //var commandListLength = array_length(commandList);
+//
+    //for (var i = 0; i < commandListLength; i += 1) 
+    //{
+        //if (string_starts_with(string_lower(commandList[i]), string_lower(lastWord)))
+        //{
+            //lastWord = commandList[i];
+            //autocorrected = true;
+            //break;
+        //}
+    //}
 
     if (!autocorrected)
     {
@@ -98,7 +98,7 @@ function AttemptAutocomplete()
         }
     }
 
-    if (!autocorrected)
+    if (!autocorrected && variable_global_exists("LocationManager"))
     {
         // loop through the current files in the current directory
         var optionsArray = global.LocationManager.GetFileNameArrayInCurrentMenu();

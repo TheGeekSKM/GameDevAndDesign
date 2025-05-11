@@ -46,5 +46,12 @@ if (keyboard_check_pressed(ord("E")) && shiftHeld && ctrlHeld)
 
 if (keyboard_check_pressed(ord("O")) && ctrlHeld)
 {
-    url_open("https://saimangipudi.dev/code-snippet.html")
+    if (os_is_network_connected())
+    {
+        url_open("https://saimangipudi.dev/code-snippet.html")
+    }
+    else 
+    {
+        url_open("Pages/code-snippet.html");
+    }
 }

@@ -28,3 +28,5 @@ AddMessage(@"[c_yellow][scale, 2]exit[/]
 AddMessage(@"[c_yellow][scale, 2]cd ..[/]
 - Exits out of the current directory and goes to the previous directory.
 - No parameters are required.");
+
+ScrollToTop();
