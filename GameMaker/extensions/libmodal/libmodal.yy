@@ -50,7 +50,7 @@
   "packageId":"",
   "parent":{
     "name":"Extensions",
-    "path":"folders/_ProgrammingMiniGame/Extensions.yy",
+    "path":"folders/Extensions.yy",
   },
   "productId":"",
   "resourceType":"GMExtension",
